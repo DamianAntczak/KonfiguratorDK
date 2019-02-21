@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konfigurator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://hilding.pl/viewHilding/js/owl.carousel.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" media="none" onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/style.css?ver=1" >
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/lightbox.css" media="none" onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/owl.theme.css" media="none" onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/owl.carousel.css"  media="none" onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://dagrejs.github.io/project/graphlib/latest/graphlib.js"></script>
+    <script src="configurator.js"></script>
+</head>
+<body>
+<section class="container margin-top-180 margin-bottom-75 show-section configurator">
+    <div class="row">
+        <div class="col-md-6 configurator-left">
+            <div id="configurator-preview" class="wrapper">
+                <div class="configurator-img" style="z-index: 1000;">
+                    <h5>Wymiar i cena prezentowanego<br> zestawu:</h5>
+                    <span id="price" class="blue-text configurator-price"></span>
+                    <p id="price-vat" hidden>Cena zawiera podatek VAT 23%</p>
+                </div>
+                <img id="base-img" class="img-responsive configurator-img" src="renders/tlo001.jpg" alt="Glamour"/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row margin-bottom-25">
+                <div class="text-center">
+                    <h5 id="step-number" class="configurator-uppercase">Krok 1</h5>
+                    <p id="step-title" class="blue-text configurator-uppercase bold"></p>
+                    <button id="skip-step" type="button" class="btn btn-link" onclick="configurator.skipStep()">Pomiń ten krok>></button>
+                </div>
+            </div>
+            <div class="row">
+                <div id="step-content" class="col-sm-12">
+
+                </div>
+            </div>
+            <div class="row" style="padding-top: 75px">
+                <div class="col-sm-6">
+                    <button id="previous-step" type="button" class="btn btn-link blue-text bold configurator-uppercase" onclick="configurator.previousStep()">wezgłowie </button>
+                </div>
+                <div class="col-sm-6">
+                    <button id="next-step" type="button" class="btn btn-link blue-text bold configurator-uppercase" onclick="configurator.start('step_2')"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

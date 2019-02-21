@@ -1,0 +1,39 @@
+(function($) {
+    
+    $.fn.scrollTo  = function( options ) {
+        
+        var targetTop = function( TargetElement ){
+            return TargetElement.offset().top;
+        };
+        
+        var defaults = {
+            target: 'body',
+            speed: 0,
+            effect: 'easeOutBounce',
+            hidden: false
+        };
+        
+        var options = jQuery.extend( defaults, options );
+        
+        return this.each(function(){
+            var $this = $(this);
+            var speed = options.speed;
+            if( speed == 0 )
+                speed = targetTop( $this ) - ( targetTop( $this ) * 0.4 );
+            
+            if( options.hidden == true && targetTop( $this ) < $(window).height() ){
+                $this.remove();
+                return true;
+            }
+            
+            $this.bind( 'click', function( oEvent ) {
+                oEvent.preventDefault();
+
+                $( 'html, body' ).animate({scrollTop: targetTop( $( options.target ) ) }, 
+                    speed, options.effect );
+            });
+        });
+         
+    };
+    
+})(jQuery);
