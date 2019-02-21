@@ -112,9 +112,10 @@ class Configurator {
                 '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onImageClick($(this))">' +
                 '<div class="square" style="background-image: url(\'' + node.img + '\')" />' +
                 '</div>' +
-                '<div class="row"><h6 class="text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
-                '<div><h6 class="bold">Wymiar i cena</h6></div>' +
-                '<div><span class="node-price blue-text" id="node-price-' + node_name + '" class="blue-text"></span></div>' +
+                '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
+                '<h6 class="dimension-price">Wymiar i cena</h6>' +
+                '<div><p class="node-price blue-text" id="node-price-' + node_name + '" class="blue-text"></p>' +
+                '<p style="font-size: 6px;">Cena zawiera podatek VAT 23 %</p></div>' +
                 this.addOption(node_name) +
                 '</div>' +
                 '</div>']);
@@ -220,7 +221,7 @@ class Configurator {
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
                 console.log(color);
-                html += '<div class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
+                html += '<div onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
                 // html += '</div>';
             });
             html += '</div>';
@@ -232,7 +233,7 @@ class Configurator {
 
     onColorSelect(selectedColor) {
         var $this = $(selectedColor);
-        $this.addClass('color-selected');
+        $this.toggleClass('color-selected');
     }
 
 }

@@ -16,6 +16,17 @@
     font-weight: 400;
 }
 
+.item-label{
+    font-weight: 600;
+    min-height: 26.4px;
+}
+
+.dimension-price{
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -56,11 +67,12 @@
 .img_tkan {
     width: 45px;
     height: 45px;
+    padding: 2px;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 5px;
-    background-origin: padding-box;
+    margin: 3px;
     float: left;
+    background-clip: content-box;
 }
 
 .div-img_tkan{
@@ -90,4 +102,9 @@
 .label-small {
     font-size: small;
     font-weight: normal;
+}
+
+#step-number, #step-title{
+    font-size: 2rem;
+    font-weight: 500;
 }
