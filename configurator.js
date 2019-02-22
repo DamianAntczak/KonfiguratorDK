@@ -21,6 +21,7 @@
 
 
 class Step {
+
     constructor(number, title, nextStep, skipEnable, img) {
         this.number = number;
         this.title = title;
@@ -28,6 +29,7 @@ class Step {
         this.previous = null;
         this.skipEnable = skipEnable;
         this.img = img;
+        this.selectedNodes = [];
     }
 }
 
@@ -80,7 +82,9 @@ class Configurator {
     }
 
     start(step) {
-        console.log(this.graph.node(step).label);
+        var starNode = this.graph.node(step);
+        console.log(starNode.label);
+        this.step.selectedNodes[0] = starNode;
         var successors = this.graph.successors(step);
         console.log(successors);
         var stepElement = $('#step-content');
@@ -109,7 +113,7 @@ class Configurator {
             carousel.trigger('add.owl.carousel',
                 ['<div class="owl-item">' +
                 '<div class="col-sm-12">' +
-                '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onImageClick($(this))">' +
+                '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
                 '<div class="square" style="background-image: url(\'' + node.img + '\')" />' +
                 '</div>' +
                 '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
@@ -139,6 +143,7 @@ class Configurator {
                 $owl.trigger('refresh.owl.carousel');
                 console.log($owl.find('#node-price-' + node_name));
                 console.log($owl.find('#node-price-' + node_name).html());
+                configurator.step.selectedNodes[2] = node;
             });
 
             $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
@@ -151,7 +156,7 @@ class Configurator {
         this.refresh(this.graph.node(step));
     }
 
-    onImageClick(selectedImg) {
+    onPartClick(selectedImg) {
         console.log(selectedImg);
         var $this = $(selectedImg);
         $('.box').removeClass('carousel-box-selected').addClass('carousel-box');
@@ -164,12 +169,14 @@ class Configurator {
             var nodeName = $this.attr("node_name");
             var baseNode = configurator.graph.node(nodeName);
             console.log(baseNode);
-            $('#configurator-preview').append('<img class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
+            var mainNode = configurator.step.selectedNodes[0]
+            $('#configurator-preview').append('<img style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
             console.log(nodeName);
             var node = configurator.graph.node($('#select-' + nodeName).val());
             console.log(node.price.g1);
             $('#price').text(node.price.g1.toFixed(2).replace('.', ',') + ' PLN*');
             $('#price-vat').removeAttr('hidden');
+            configurator.step.selectedNodes[1] = baseNode;
         }
     }
 
@@ -250,7 +257,7 @@ $(document)
 
 // Add node "a" to the graph with no label
             g.setNode("start", {});
-            g.setNode("step_1", {label: 'wybierz bazę', number: 1});
+            g.setNode("step_1", {label: 'wybierz bazę', number: 1, zIndex: 10});
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'https://hilding.pl/png/product/base-box.jpg',
@@ -305,7 +312,7 @@ $(document)
 
             g.setNode("colors_7", {});
 
-            g.setNode("step_2", {label: 'wybierz wezgłowie', number: 2});
+            g.setNode("step_2", {label: 'wybierz wezgłowie', number: 2, zIndex: 5});
             g.setNode("glamour", {
                 label: 'Glamour',
                 img: 'https://hilding.pl/png/product/glamour.jpg',
