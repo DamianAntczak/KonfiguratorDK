@@ -22,10 +22,10 @@
 
 class Step {
 
-    constructor(number, title, nextStep, skipEnable, img) {
+
+    constructor(number, title, skipEnable, img) {
         this.number = number;
         this.title = title;
-        this.nextStep = nextStep;
         this.previous = null;
         this.skipEnable = skipEnable;
         this.img = img;
@@ -37,7 +37,7 @@ class Configurator {
     constructor(startStep, graph) {
         this.step = startStep;
         this.graph = graph;
-        this.allSteps = [startStep];
+        this.allSteps = [];
         this.stepIndex = 0;
     }
 
@@ -57,9 +57,9 @@ class Configurator {
     }
 
     previousStep() {
-        this.step = this.step.previous;
-        this.refresh();
         $('#configurator-preview img').last().remove();
+        console.log(this.allSteps[this.stepIndex - 1].selectedNodes[0]);
+        this.loadLevel(this.allSteps[0].selectedNodes[0].node);
     }
 
     skipStep() {
@@ -77,12 +77,15 @@ class Configurator {
             $("#previous-step").show();
             $("#previous-step").text('<< poprzedni krok: ' + this.step.previous.title);
         }
-        if (this.step.nextStep == null) {
-            $('#next-step').hide();
-        } else {
-            $('#next-step').show();
-            $('#next-step').text('następny krok: ' + this.step.nextStep.title + ' >>');
-        }
+        // if (this.step.nextStep !== null) {
+        //     $('#next-step').hide();
+        // } else {
+        //     $('#next-step').show();
+        //     $('#next-step').text('następny krok: ' + this.step.nextStep.title + ' >>');
+        // }
+        $('#next-step').show();
+        $('#next-step').text('następny krok: ' + this.step.title + ' >>');
+
         if (this.step.skipEnable) {
             $('#skip-step').show();
         } else {
@@ -90,13 +93,14 @@ class Configurator {
         }
     }
 
-    start(step) {
+    loadLevel(step) {
+
         var starNode = this.graph.node(step);
         console.log(starNode.label);
+        this.step = new Step(starNode.number, "bazę", false, 'baza kontynetalna_roko08.png');
         this.step.selectedNodes[0] = starNode;
         // this.graph
         var successors = this.graph.successors(step);
-        console.log(successors);
         var stepElement = $('#step-content');
         stepElement.html('');
         var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel owl-theme"));
@@ -146,13 +150,9 @@ class Configurator {
             $(document.body).on('change', '#select-' + node_name, function () {
                 var nodeName = $(this).val();
                 var node = configurator.graph.node(nodeName);
-                // console.log(node.price.g1);
-                // $('#price').text(node.price.g1.toFixed(2).replace('.', ',') + ' PLN*');
                 var $owl = $('.configurator-base-carousel');
                 $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
                 $owl.trigger('refresh.owl.carousel');
-                console.log($owl.find('#node-price-' + node_name));
-                console.log($owl.find('#node-price-' + node_name).html());
                 configurator.step.selectedNodes[2] = node;
             });
 
@@ -164,10 +164,24 @@ class Configurator {
         $('#item-color').remove();
         $('#step-content').after(this.addColor());
         this.refresh(this.graph.node(step));
+
+
+        console.log('Step index: ' + this.stepIndex)
+        this.allSteps[this.stepIndex] = this.step;
+        console.log(this.stepIndex);
+        console.log(this.stepIndex - 1);
+        console.log(this.stepIndex - 1);
+        if(this.allSteps[this.stepIndex - 1] !== undefined){
+            $("#previous-step").show();
+            $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
+        }
+        else {
+            $("#previous-step").hide();
+        }
+        this.stepIndex += 1;
     }
 
     onPartClick(selectedImg) {
-        console.log(selectedImg);
         var $this = $(selectedImg);
         $('.box').removeClass('carousel-box-selected').addClass('carousel-box');
         var mainNode = configurator.step.selectedNodes[0];
@@ -175,7 +189,7 @@ class Configurator {
             $this.removeAttr('style').removeClass('clicked');
             $this.removeClass('carousel-box-selected').addClass('carousel-box');
             $this.attr("node_name");
-            $('#configurator-preview').find('#render-' + mainNode.name).remove();
+            $('#configurator-preview').find('#render-' + mainNode.node).remove();
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
         } else {
@@ -183,19 +197,14 @@ class Configurator {
             $this.removeClass('carousel-box').addClass('carousel-box-selected');
             var nodeName = $this.attr("node_name");
             var baseNode = configurator.graph.node(nodeName);
-            console.log(baseNode);
-
-            var find = $('#configurator-preview').find('#render-' + mainNode.name);
-            console.log(mainNode.name);
+            var find = $('#configurator-preview').find('#render-' + mainNode.node);
             if (find.length === 0) {
-                $('#configurator-preview').append('<img id="render-' + mainNode.name + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
+                $('#configurator-preview').append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
             }
             else {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
-            console.log(nodeName);
             var node = configurator.graph.node($('#select-' + nodeName).val());
-            console.log(node.price.g1);
             $('#price').text(configurator.numberWithSpaces(node.price.g1) + ' PLN*').removeAttr('hidden');
             $('#price-vat').removeAttr('hidden');
             configurator.step.selectedNodes[1] = baseNode;
@@ -249,7 +258,6 @@ class Configurator {
             html += '<div class="row">';
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
-                console.log(color);
                 html += '<div onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
                 // html += '</div>';
             });
@@ -278,8 +286,8 @@ $(document)
             var g = new Graph();
 
 // Add node "a" to the graph with no label
-            g.setNode("start", {});
-            g.setNode("step_1", {name: 'base', label: 'wybierz bazę', number: 1, zIndex: 10});
+            g.setNode("loadLevel", {});
+            g.setNode("step_1", {node: 'step_1', label: 'wybierz bazę', number: 1, zIndex: 10});
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'https://hilding.pl/png/product/base-box.jpg',
@@ -334,7 +342,7 @@ $(document)
 
             g.setNode("colors_7", {});
 
-            g.setNode("step_2", {label: 'wybierz wezgłowie', number: 2, zIndex: 5});
+            g.setNode("step_2", {node: 'step_2', label: 'wybierz wezgłowie', number: 2, zIndex: 5});
             g.setNode("glamour", {
                 label: 'Glamour',
                 img: 'https://hilding.pl/png/product/glamour.jpg',
@@ -382,7 +390,7 @@ $(document)
 // => `[ 'a', 'b', 'c' ]`
 
 // Add a directed edge from "a" to "b", but assign no label
-            g.setEdge("start", "step_1");
+            g.setEdge("loadLevel", "step_1");
 
 // Add a directed edge from "c" to "d" with an Object label.
 // Since "d" did not exist prior to this call it is automatically
@@ -430,29 +438,16 @@ $(document)
             g.setEdge("urban", "urban_160_95");
             g.setEdge("urban", "urban_180_95");
 
-// => `[ { v: 'a', w: 'b' },
-//       { v: 'c', w: 'd' } ]`.
-
-// Which edges leave node "a"?
-            console.log(g.successors("step_1"));
-            console.log(g.successors("base_box"));
-// => `[ { v: 'a', w: 'b' } ]`
-
-// Which edges enter and leave node "d"?
-// => `[ { v: 'c
             var serialized = graphlib.json.write(g);
             console.log(serialized)
 
-            var otomana = new Step(4, "otomanę", null, false, 'materac_tapicerowany_roko08.png');
-            var materac = new Step(3, "materac", otomana, false, 'wezglowie_urban_95_roko08.png');
-            var nohead = new Step(2, "wezgłowie", materac, true, 'baza kontynetalna_roko08.png');
-            var base = new Step(1, "bazę", nohead, false, 'baza kontynetalna_roko08.png');
+            var otomana = new Step(4, "otomanę", false, 'materac_tapicerowany_roko08.png');
+            var materac = new Step(3, "materac", false, 'wezglowie_urban_95_roko08.png');
+            var nohead = new Step(2, "wezgłowie", true, 'baza kontynetalna_roko08.png');
+            var base = new Step(1, "bazę", false, 'baza kontynetalna_roko08.png');
             configurator = new Configurator(base, g);
-            configurator.start("step_1");
+            configurator.loadLevel("step_1");
             configurator.refresh();
-            // console.log(configurator.nextStep());
-
-            // $( "#speed" ).selectmenu();
         }
     )
 ;
