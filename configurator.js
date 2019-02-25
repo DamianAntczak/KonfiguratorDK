@@ -37,6 +37,8 @@ class Configurator {
     constructor(startStep, graph) {
         this.step = startStep;
         this.graph = graph;
+        this.allSteps = [startStep];
+        this.stepIndex = 0;
     }
 
     nextStep() {
@@ -362,6 +364,10 @@ $(document)
                 render: 'wezglowie_urban_95_roko08.png'
             });
 
+            g.setNode("urban_140_95", {label: '140/95', price: {g1: 749, g2: 849}});
+            g.setNode("urban_160_95", {label: '160/95', price: {g1: 799, g2: 899}});
+            g.setNode("urban_180_95", {label: '180/95', price: {g1: 899, g2: 999}});
+
 // => true
 
 // What nodes are in the graph?
@@ -405,13 +411,17 @@ $(document)
             g.setEdge("160_200", "colors_7");
             g.setEdge("180_200", "colors_7");
 
+            g.setEdge("step_2", "urban");
             g.setEdge("step_2", "glamour");
             g.setEdge("step_2", "vintage");
             g.setEdge("step_2", "electric");
             g.setEdge("step_2", "ladylike");
             g.setEdge("step_2", "preppy");
             g.setEdge("step_2", "momiko");
-            g.setEdge("step_2", "urban");
+
+            g.setEdge("urban", "urban_140_95");
+            g.setEdge("urban", "urban_160_95");
+            g.setEdge("urban", "urban_180_95");
 
 // => `[ { v: 'a', w: 'b' },
 //       { v: 'c', w: 'd' } ]`.

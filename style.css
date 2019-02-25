@@ -1,4 +1,4 @@
-.configurator-left {
+img#base-img {
     border-right: 1px solid #868686;
 }
 
@@ -9,6 +9,10 @@
 .configurator-price {
     font-size: 35px;
     font-weight: bold;
+}
+
+div.price-info{
+    padding-left: 10%;
 }
 
 .node-price{
@@ -107,4 +111,10 @@
 #step-number, #step-title{
     font-size: 2rem;
     font-weight: 500;
+}
+
+.input-sm{
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
