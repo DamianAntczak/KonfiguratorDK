@@ -41,6 +41,13 @@ class Configurator {
         this.stepIndex = 0;
     }
 
+    numberWithSpaces(x) {
+        x = x.toFixed(2);
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        return parts.join(",");
+    }
+
     nextStep() {
         let actualStep = this.step;
         this.step = this.step.nextStep;
@@ -87,7 +94,7 @@ class Configurator {
         var starNode = this.graph.node(step);
         console.log(starNode.label);
         this.step.selectedNodes[0] = starNode;
-        this.graph
+        // this.graph
         var successors = this.graph.successors(step);
         console.log(successors);
         var stepElement = $('#step-content');
@@ -142,7 +149,7 @@ class Configurator {
                 // console.log(node.price.g1);
                 // $('#price').text(node.price.g1.toFixed(2).replace('.', ',') + ' PLN*');
                 var $owl = $('.configurator-base-carousel');
-                $owl.find('#node-price-' + node_name).html(node.price.g1.toFixed(2).replace('.', ',') + ' PLN');
+                $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
                 $owl.trigger('refresh.owl.carousel');
                 console.log($owl.find('#node-price-' + node_name));
                 console.log($owl.find('#node-price-' + node_name).html());
@@ -169,8 +176,8 @@ class Configurator {
             $this.removeClass('carousel-box-selected').addClass('carousel-box');
             $this.attr("node_name");
             $('#configurator-preview').find('#render-' + mainNode.name).remove();
-            $('#price').attr("hidden",true);
-            $('#price-vat').attr("hidden",true);
+            $('#price').attr("hidden", true);
+            $('#price-vat').attr("hidden", true);
         } else {
             $this.addClass('clicked');
             $this.removeClass('carousel-box').addClass('carousel-box-selected');
@@ -189,7 +196,7 @@ class Configurator {
             console.log(nodeName);
             var node = configurator.graph.node($('#select-' + nodeName).val());
             console.log(node.price.g1);
-            $('#price').text(node.price.g1.toFixed(2).replace('.', ',') + ' PLN*').removeAttr('hidden');
+            $('#price').text(configurator.numberWithSpaces(node.price.g1) + ' PLN*').removeAttr('hidden');
             $('#price-vat').removeAttr('hidden');
             configurator.step.selectedNodes[1] = baseNode;
         }
@@ -272,7 +279,7 @@ $(document)
 
 // Add node "a" to the graph with no label
             g.setNode("start", {});
-            g.setNode("step_1", {name: 'base',label: 'wybierz bazę', number: 1, zIndex: 10});
+            g.setNode("step_1", {name: 'base', label: 'wybierz bazę', number: 1, zIndex: 10});
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'https://hilding.pl/png/product/base-box.jpg',
