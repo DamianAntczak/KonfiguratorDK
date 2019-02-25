@@ -353,8 +353,8 @@ $(document)
                 img: 'https://hilding.pl/png/product/vintage.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
-            g.setNode("electric", {
-                label: 'Electric',
+            g.setNode("eclectic", {
+                label: 'Eclectic',
                 img: 'https://hilding.pl/png/product/electric.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
@@ -382,6 +382,32 @@ $(document)
             g.setNode("urban_140_95", {label: '140/95', price: {g1: 749, g2: 849}});
             g.setNode("urban_160_95", {label: '160/95', price: {g1: 799, g2: 899}});
             g.setNode("urban_180_95", {label: '180/95', price: {g1: 899, g2: 999}});
+            g.setNode("urban_200_95", {label: '180/95', price: {g1: 999, g2: 1099}});
+
+            g.setNode("preppy_140_95", {label: '140/95', price: {g1: 1169, g2: 1269}});
+            g.setNode("preppy_160_95", {label: '160/95', price: {g1: 1199, g2: 1299}});
+            g.setNode("preppy_180_95", {label: '180/95', price: {g1: 1299, g2: 1399}});
+            g.setNode("preppy_200_95", {label: '200/95', price: {g1: 1399, g2: 1499}});
+
+            g.setNode("glamour_140_95", {label: '140/95', price: {g1: 1369, g2: 1469}});
+            g.setNode("glamour_160_95", {label: '160/95', price: {g1: 1399, g2: 1499}});
+            g.setNode("glamour_180_95", {label: '180/95', price: {g1: 1559, g2: 1659}});
+            g.setNode("glamour_200_95", {label: '200/95', price: {g1: 1699, g2: 1799}});
+
+            g.setNode("vintage_140_95", {label: '140/95', price: {g1: 1029, g2: 1129}});
+            g.setNode("vintage_160_95", {label: '160/95', price: {g1: 1059, g2: 1159}});
+            g.setNode("vintage_180_95", {label: '180/95', price: {g1: 1159, g2: 1259}});
+            g.setNode("vintage_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}});
+
+            g.setNode("momiko_140_95", {label: '140/95', price: {g1: 869, g2: 969}});
+            g.setNode("momiko_160_95", {label: '160/95', price: {g1: 899, g2: 999}});
+            g.setNode("momiko_180_95", {label: '180/95', price: {g1: 999, g2: 1099}});
+            g.setNode("momiko_200_95", {label: '200/95', price: {g1: 1099, g2: 1199}});
+
+            g.setNode("eclectic_140_95", {label: '140/95', price: {g1: 969, g2: 1069}});
+            g.setNode("eclectic_160_95", {label: '160/95', price: {g1: 999, g2: 1099}});
+            g.setNode("eclectic_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}});
+            g.setNode("eclectic_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}});
 
 // => true
 
@@ -427,16 +453,42 @@ $(document)
             g.setEdge("180_200", "colors_7");
 
             g.setEdge("step_2", "urban");
+            g.setEdge("step_2", "preppy");
             g.setEdge("step_2", "glamour");
             g.setEdge("step_2", "vintage");
-            g.setEdge("step_2", "electric");
+            g.setEdge("step_2", "eclectic");
             g.setEdge("step_2", "ladylike");
-            g.setEdge("step_2", "preppy");
             g.setEdge("step_2", "momiko");
 
             g.setEdge("urban", "urban_140_95");
             g.setEdge("urban", "urban_160_95");
             g.setEdge("urban", "urban_180_95");
+            g.setEdge("urban","urban_200_95");
+
+            g.setEdge("preppy","preppy_140_95");
+            g.setEdge("preppy","preppy_160_95");
+            g.setEdge("preppy","preppy_180_95");
+            g.setEdge("preppy","preppy_200_95");
+
+            g.setEdge("glamour","glamour_140_95");
+            g.setEdge("glamour","glamour_160_95");
+            g.setEdge("glamour","glamour_180_95");
+            g.setEdge("glamour","glamour_200_95");
+
+            g.setEdge("vintage","vintage_140_95");
+            g.setEdge("vintage","vintage_160_95");
+            g.setEdge("vintage","vintage_180_95");
+            g.setEdge("vintage","vintage_200_95");
+
+            g.setEdge("momiko","momiko_140_95");
+            g.setEdge("momiko","momiko_160_95");
+            g.setEdge("momiko","momiko_180_95");
+            g.setEdge("momiko","momiko_200_95");
+
+            g.setEdge("eclectic","eclectic_140_95");
+            g.setEdge("eclectic","eclectic_160_95");
+            g.setEdge("eclectic","eclectic_180_95");
+            g.setEdge("eclectic","eclectic_200_95");
 
             var serialized = graphlib.json.write(g);
             console.log(serialized)
