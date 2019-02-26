@@ -404,10 +404,15 @@ $(document)
             g.setNode("momiko_180_95", {label: '180/95', price: {g1: 999, g2: 1099}});
             g.setNode("momiko_200_95", {label: '200/95', price: {g1: 1099, g2: 1199}});
 
-            g.setNode("eclectic_140_95", {label: '140/95', price: {g1: 969, g2: 1069}});
-            g.setNode("eclectic_160_95", {label: '160/95', price: {g1: 999, g2: 1099}});
-            g.setNode("eclectic_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}});
-            g.setNode("eclectic_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}});
+            g.setNode("eclectic_140_95", {label: '140/95', price: {g1: 1069, g2: 1169}});
+            g.setNode("eclectic_160_95", {label: '160/95', price: {g1: 1099, g2: 1199}});
+            g.setNode("eclectic_180_95", {label: '180/95', price: {g1: 1199, g2: 1299}});
+            g.setNode("eclectic_200_95", {label: '200/95', price: {g1: 1399, g2: 1499}});
+
+            g.setNode("ladylike_140_95", {label: '140/95', price: {g1: 969, g2: 1069}});
+            g.setNode("ladylike_160_95", {label: '160/95', price: {g1: 999, g2: 1099}});
+            g.setNode("ladylike_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}});
+            g.setNode("ladylike_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}});
 
 // => true
 
@@ -489,6 +494,11 @@ $(document)
             g.setEdge("eclectic","eclectic_160_95");
             g.setEdge("eclectic","eclectic_180_95");
             g.setEdge("eclectic","eclectic_200_95");
+
+            g.setEdge("ladylike","ladylike_140_95");
+            g.setEdge("ladylike","ladylike_160_95");
+            g.setEdge("ladylike","ladylike_180_95");
+            g.setEdge("ladylike","ladylike_200_95");
 
             var serialized = graphlib.json.write(g);
             console.log(serialized)
