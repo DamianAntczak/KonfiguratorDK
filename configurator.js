@@ -49,11 +49,21 @@ class Configurator {
     }
 
     nextStep() {
-        let actualStep = this.step;
-        this.step = this.step.nextStep;
-        this.step.previous = actualStep;
-        this.refresh();
-        $('#configurator-preview').append('<img class="img-responsive configurator-img" src="renders/' + this.step.img + '" />');
+        // let actualStep = this.step;
+        // this.step = this.step.nextStep;
+        // this.step.previous = actualStep;
+        // this.refresh();
+        // $('#configurator-preview').append('<img class="img-responsive configurator-img" src="renders/' + this.step.img + '" />');
+
+        var selectedNode = this.step.selectedNodes[2];
+        console.log(selectedNode);
+        if(selectedNode.nextStep == 'summary'){
+            console.log('Yeeeaaah');
+            this.loadSummary();
+        }
+        else {
+            this.loadLevel(selectedNode.nextStep);
+        }
     }
 
     previousStep() {
@@ -171,7 +181,7 @@ class Configurator {
         console.log(this.stepIndex);
         console.log(this.stepIndex - 1);
         console.log(this.stepIndex - 1);
-        if(this.allSteps[this.stepIndex - 1] !== undefined){
+        if (this.allSteps[this.stepIndex - 1] !== undefined) {
             $("#previous-step").show();
             $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
         }
@@ -273,6 +283,16 @@ class Configurator {
         $this.toggleClass('color-selected');
     }
 
+    loadSummary() {
+        var stepElement = $('#step-content');
+        stepElement.html('');
+        // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Podsumowanie')));
+        let str = '<h2 class="text-center">podsumowanie</h2>';
+        this.allSteps.forEach(step => {
+            str += step.title + '</br>';
+        });
+        stepElement.html(str);
+    }
 }
 
 
@@ -314,25 +334,25 @@ $(document)
                 render: 'baza kontynetalna_roko08.png'
             });
 
-            g.setNode("base_box_100_200", {label: '100/200', price: {g1: 1199, g2: 1299}});
-            g.setNode("base_box_140_200", {label: '140/200', price: {g1: 1299, g2: 1749}});
-            g.setNode("base_box_160_200", {label: '160/200', price: {g1: 1769, g2: 1869}});
-            g.setNode("base_box_180_200", {label: '180/200', price: {g1: 2099, g2: 2199}});
+            g.setNode("base_box_100_200", {label: '100/200', price: {g1: 1199, g2: 1299}, nextStep: 'step_2'});
+            g.setNode("base_box_140_200", {label: '140/200', price: {g1: 1299, g2: 1749}, nextStep: 'step_2'});
+            g.setNode("base_box_160_200", {label: '160/200', price: {g1: 1769, g2: 1869}, nextStep: 'step_2'});
+            g.setNode("base_box_180_200", {label: '180/200', price: {g1: 2099, g2: 2199}, nextStep: 'step_2'});
 
-            g.setNode("baza_kontynentalna_80_200", {label: '80/200', price: {g1: 1599, g2: 1749}});
-            g.setNode("baza_kontynentalna_90_200", {label: '90/200', price: {g1: 1649, g2: 1799}});
-            g.setNode("baza_kontynentalna_100_200", {label: '100/200', price: {g1: 1799, g2: 1949}});
-            g.setNode("baza_kontynentalna_140_200", {label: '140/200', price: {g1: 2099, g2: 2299}});
+            g.setNode("baza_kontynentalna_80_200", {label: '80/200', price: {g1: 1599, g2: 1749}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_90_200", {label: '90/200', price: {g1: 1649, g2: 1799}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_100_200", {label: '100/200', price: {g1: 1799, g2: 1949}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_140_200", {label: '140/200', price: {g1: 2099, g2: 2299}, nextStep: 'step_2'});
 
-            g.setNode("baza_kontynentalna_z_szuflada_80_200", {label: '80/200', price: {g1: 1999, g2: 2199}});
-            g.setNode("baza_kontynentalna_z_szuflada_90_200", {label: '90/200', price: {g1: 2159, g2: 2359}});
-            g.setNode("baza_kontynentalna_z_szuflada_100_200", {label: '100/200', price: {g1: 2349, g2: 2549}});
-            g.setNode("baza_kontynentalna_z_szuflada_140_200", {label: '140/200', price: {g1: 3199, g2: 3399}});
+            g.setNode("baza_kontynentalna_z_szuflada_80_200", {label: '80/200', price: {g1: 1999, g2: 2199}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_z_szuflada_90_200", {label: '90/200', price: {g1: 2159, g2: 2359}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_z_szuflada_100_200", {label: '100/200', price: {g1: 2349, g2: 2549}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_z_szuflada_140_200", {label: '140/200', price: {g1: 3199, g2: 3399}, nextStep: 'step_2'});
 
-            g.setNode("box_podnoszony_80_200", {label: '80/200', price: {g1: 2249, g2: 2399}});
-            g.setNode("box_podnoszony_90_200", {label: '90/200', price: {g1: 2399, g2: 2549}});
-            g.setNode("box_podnoszony_100_200", {label: '100/200', price: {g1: 2659, g2: 2859}});
-            g.setNode("box_podnoszony_100_200", {label: '140/200', price: {g1: 3659, g2: 3859}});
+            g.setNode("box_podnoszony_80_200", {label: '80/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
+            g.setNode("box_podnoszony_90_200", {label: '90/200', price: {g1: 2399, g2: 2549}, nextStep: 'step_2'});
+            g.setNode("box_podnoszony_100_200", {label: '100/200', price: {g1: 2659, g2: 2859}, nextStep: 'step_2'});
+            g.setNode("box_podnoszony_100_200", {label: '140/200', price: {g1: 3659, g2: 3859}, nextStep: 'step_2'});
 
             g.setNode("90_200", {label: '90/200'});
             g.setNode("140_200", {label: '140/200'});
@@ -343,6 +363,7 @@ $(document)
             g.setNode("colors_7", {});
 
             g.setNode("step_2", {node: 'step_2', label: 'wybierz wezgłowie', number: 2, zIndex: 5});
+
             g.setNode("glamour", {
                 label: 'Glamour',
                 img: 'https://hilding.pl/png/product/glamour.jpg',
@@ -379,40 +400,67 @@ $(document)
                 render: 'wezglowie_urban_95_roko08.png'
             });
 
-            g.setNode("urban_140_95", {label: '140/95', price: {g1: 749, g2: 849}});
-            g.setNode("urban_160_95", {label: '160/95', price: {g1: 799, g2: 899}});
-            g.setNode("urban_180_95", {label: '180/95', price: {g1: 899, g2: 999}});
-            g.setNode("urban_200_95", {label: '180/95', price: {g1: 999, g2: 1099}});
+            g.setNode("urban_140_95", {label: '140/95', price: {g1: 749, g2: 849}, nextStep: 'step_3'});
+            g.setNode("urban_160_95", {label: '160/95', price: {g1: 799, g2: 899}, nextStep: 'step_3'});
+            g.setNode("urban_180_95", {label: '180/95', price: {g1: 899, g2: 999}, nextStep: 'step_3'});
+            g.setNode("urban_200_95", {label: '180/95', price: {g1: 999, g2: 1099}, nextStep: 'step_3'});
 
-            g.setNode("preppy_140_95", {label: '140/95', price: {g1: 1169, g2: 1269}});
-            g.setNode("preppy_160_95", {label: '160/95', price: {g1: 1199, g2: 1299}});
-            g.setNode("preppy_180_95", {label: '180/95', price: {g1: 1299, g2: 1399}});
-            g.setNode("preppy_200_95", {label: '200/95', price: {g1: 1399, g2: 1499}});
+            g.setNode("preppy_140_95", {label: '140/95', price: {g1: 1169, g2: 1269}, nextStep: 'step_3'});
+            g.setNode("preppy_160_95", {label: '160/95', price: {g1: 1199, g2: 1299}, nextStep: 'step_3'});
+            g.setNode("preppy_180_95", {label: '180/95', price: {g1: 1299, g2: 1399}, nextStep: 'step_3'});
+            g.setNode("preppy_200_95", {label: '200/95', price: {g1: 1399, g2: 1499}, nextStep: 'step_3'});
 
-            g.setNode("glamour_140_95", {label: '140/95', price: {g1: 1369, g2: 1469}});
-            g.setNode("glamour_160_95", {label: '160/95', price: {g1: 1399, g2: 1499}});
-            g.setNode("glamour_180_95", {label: '180/95', price: {g1: 1559, g2: 1659}});
-            g.setNode("glamour_200_95", {label: '200/95', price: {g1: 1699, g2: 1799}});
+            g.setNode("glamour_140_95", {label: '140/95', price: {g1: 1369, g2: 1469}, nextStep: 'step_3'});
+            g.setNode("glamour_160_95", {label: '160/95', price: {g1: 1399, g2: 1499}, nextStep: 'step_3'});
+            g.setNode("glamour_180_95", {label: '180/95', price: {g1: 1559, g2: 1659}, nextStep: 'step_3'});
+            g.setNode("glamour_200_95", {label: '200/95', price: {g1: 1699, g2: 1799}, nextStep: 'step_3'});
 
-            g.setNode("vintage_140_95", {label: '140/95', price: {g1: 1029, g2: 1129}});
-            g.setNode("vintage_160_95", {label: '160/95', price: {g1: 1059, g2: 1159}});
-            g.setNode("vintage_180_95", {label: '180/95', price: {g1: 1159, g2: 1259}});
-            g.setNode("vintage_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}});
+            g.setNode("vintage_140_95", {label: '140/95', price: {g1: 1029, g2: 1129}, nextStep: 'step_3'});
+            g.setNode("vintage_160_95", {label: '160/95', price: {g1: 1059, g2: 1159}, nextStep: 'step_3'});
+            g.setNode("vintage_180_95", {label: '180/95', price: {g1: 1159, g2: 1259}, nextStep: 'step_3'});
+            g.setNode("vintage_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}, nextStep: 'step_3'});
 
-            g.setNode("momiko_140_95", {label: '140/95', price: {g1: 869, g2: 969}});
-            g.setNode("momiko_160_95", {label: '160/95', price: {g1: 899, g2: 999}});
-            g.setNode("momiko_180_95", {label: '180/95', price: {g1: 999, g2: 1099}});
-            g.setNode("momiko_200_95", {label: '200/95', price: {g1: 1099, g2: 1199}});
+            g.setNode("momiko_140_95", {label: '140/95', price: {g1: 869, g2: 969}, nextStep: 'step_3'});
+            g.setNode("momiko_160_95", {label: '160/95', price: {g1: 899, g2: 999}, nextStep: 'step_3'});
+            g.setNode("momiko_180_95", {label: '180/95', price: {g1: 999, g2: 1099}, nextStep: 'step_3'});
+            g.setNode("momiko_200_95", {label: '200/95', price: {g1: 1099, g2: 1199}, nextStep: 'step_3'});
 
-            g.setNode("eclectic_140_95", {label: '140/95', price: {g1: 1069, g2: 1169}});
-            g.setNode("eclectic_160_95", {label: '160/95', price: {g1: 1099, g2: 1199}});
-            g.setNode("eclectic_180_95", {label: '180/95', price: {g1: 1199, g2: 1299}});
-            g.setNode("eclectic_200_95", {label: '200/95', price: {g1: 1399, g2: 1499}});
+            g.setNode("eclectic_140_95", {label: '140/95', price: {g1: 1069, g2: 1169}, nextStep: 'step_3'});
+            g.setNode("eclectic_160_95", {label: '160/95', price: {g1: 1099, g2: 1199}, nextStep: 'step_3'});
+            g.setNode("eclectic_180_95", {label: '180/95', price: {g1: 1199, g2: 1299}, nextStep: 'step_3'});
+            g.setNode("eclectic_200_95", {label: '200/95', price: {g1: 1399, g2: 1499}, nextStep: 'step_3'});
 
-            g.setNode("ladylike_140_95", {label: '140/95', price: {g1: 969, g2: 1069}});
-            g.setNode("ladylike_160_95", {label: '160/95', price: {g1: 999, g2: 1099}});
-            g.setNode("ladylike_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}});
-            g.setNode("ladylike_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}});
+            g.setNode("ladylike_140_95", {label: '140/95', price: {g1: 969, g2: 1069}, nextStep: 'step_3'});
+            g.setNode("ladylike_160_95", {label: '160/95', price: {g1: 999, g2: 1099}, nextStep: 'step_3'});
+            g.setNode("ladylike_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}, nextStep: 'step_3'});
+            g.setNode("ladylike_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}, nextStep: 'step_3'});
+
+            g.setNode("step_3", {node: 'step_3', label: 'wybierz nożki', number: 3, zIndex: 15});
+
+            g.setNode("stozek_owal_buk", {
+                label: 'Stożek owal buk',
+                img: 'https://hilding.pl/png/product/stozek-owal-buk.jpg',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("stozek_owal_dab", {
+                label: 'Stożek owal dąb',
+                img: 'https://hilding.pl/png/product/stozek-owal-dab.jpg',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("stozek_owal_wenge", {
+                label: 'Stożek owal wenge',
+                img: 'https://hilding.pl/png/product/stozek-owal-wenge.jpg',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("stozek_owal_buk_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'summary'});
+            g.setNode("stozek_owal_wenge_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'summary'});
+            g.setNode("stozek_owal_dab_16", {label: '200/95', price: {g1: 132, g2: 132}, nextStep: 'summary'});
+
+            g.setNode("step_4", {node: 'step_4', label: 'wybierz materac', number: 3, zIndex: 20});
+
 
 // => true
 
@@ -468,37 +516,45 @@ $(document)
             g.setEdge("urban", "urban_140_95");
             g.setEdge("urban", "urban_160_95");
             g.setEdge("urban", "urban_180_95");
-            g.setEdge("urban","urban_200_95");
+            g.setEdge("urban", "urban_200_95");
 
-            g.setEdge("preppy","preppy_140_95");
-            g.setEdge("preppy","preppy_160_95");
-            g.setEdge("preppy","preppy_180_95");
-            g.setEdge("preppy","preppy_200_95");
+            g.setEdge("preppy", "preppy_140_95");
+            g.setEdge("preppy", "preppy_160_95");
+            g.setEdge("preppy", "preppy_180_95");
+            g.setEdge("preppy", "preppy_200_95");
 
-            g.setEdge("glamour","glamour_140_95");
-            g.setEdge("glamour","glamour_160_95");
-            g.setEdge("glamour","glamour_180_95");
-            g.setEdge("glamour","glamour_200_95");
+            g.setEdge("glamour", "glamour_140_95");
+            g.setEdge("glamour", "glamour_160_95");
+            g.setEdge("glamour", "glamour_180_95");
+            g.setEdge("glamour", "glamour_200_95");
 
-            g.setEdge("vintage","vintage_140_95");
-            g.setEdge("vintage","vintage_160_95");
-            g.setEdge("vintage","vintage_180_95");
-            g.setEdge("vintage","vintage_200_95");
+            g.setEdge("vintage", "vintage_140_95");
+            g.setEdge("vintage", "vintage_160_95");
+            g.setEdge("vintage", "vintage_180_95");
+            g.setEdge("vintage", "vintage_200_95");
 
-            g.setEdge("momiko","momiko_140_95");
-            g.setEdge("momiko","momiko_160_95");
-            g.setEdge("momiko","momiko_180_95");
-            g.setEdge("momiko","momiko_200_95");
+            g.setEdge("momiko", "momiko_140_95");
+            g.setEdge("momiko", "momiko_160_95");
+            g.setEdge("momiko", "momiko_180_95");
+            g.setEdge("momiko", "momiko_200_95");
 
-            g.setEdge("eclectic","eclectic_140_95");
-            g.setEdge("eclectic","eclectic_160_95");
-            g.setEdge("eclectic","eclectic_180_95");
-            g.setEdge("eclectic","eclectic_200_95");
+            g.setEdge("eclectic", "eclectic_140_95");
+            g.setEdge("eclectic", "eclectic_160_95");
+            g.setEdge("eclectic", "eclectic_180_95");
+            g.setEdge("eclectic", "eclectic_200_95");
 
-            g.setEdge("ladylike","ladylike_140_95");
-            g.setEdge("ladylike","ladylike_160_95");
-            g.setEdge("ladylike","ladylike_180_95");
-            g.setEdge("ladylike","ladylike_200_95");
+            g.setEdge("ladylike", "ladylike_140_95");
+            g.setEdge("ladylike", "ladylike_160_95");
+            g.setEdge("ladylike", "ladylike_180_95");
+            g.setEdge("ladylike", "ladylike_200_95");
+
+            g.setEdge("step_3", "stozek_owal_buk");
+            g.setEdge("step_3", "stozek_owal_dab");
+            g.setEdge("step_3", "stozek_owal_wenge");
+
+            g.setEdge("stozek_owal_buk", "stozek_owal_buk_16");
+            g.setEdge("stozek_owal_wenge", "stozek_owal_wenge_16");
+            g.setEdge("stozek_owal_dab", "stozek_owal_dab_16");
 
             var serialized = graphlib.json.write(g);
             console.log(serialized)
