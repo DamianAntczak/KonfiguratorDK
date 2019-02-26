@@ -289,7 +289,8 @@ class Configurator {
         // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Podsumowanie')));
         let str = '<h2 class="text-center">podsumowanie</h2>';
         this.allSteps.forEach(step => {
-            str += step.title + '</br>';
+            var priceNode = step.selectedNodes[2];
+            str += '<div class="col-sm-12">' + step.selectedNodes[0].label + ' ' + this.numberWithSpaces(priceNode.price.g1) +' PLN</div>';
         });
         stepElement.html(str);
     }
