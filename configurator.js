@@ -287,11 +287,15 @@ class Configurator {
         var stepElement = $('#step-content');
         stepElement.html('');
         // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Podsumowanie')));
-        let str = '<h2 class="text-center">podsumowanie</h2>';
+        let str = '<h2 class="text-center text-uppercase">podsumowanie</h2>';
+        let priceSum = 0.0;
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
             str += '<div class="col-sm-12">' + step.selectedNodes[0].label + ' ' + this.numberWithSpaces(priceNode.price.g1) +' PLN</div>';
+            priceSum += priceNode.price.g1;
         });
+
+        str += '<h3>' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
         stepElement.html(str);
     }
 }
