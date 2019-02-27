@@ -88,7 +88,7 @@ class Configurator {
             $("#previous-step").hide();
         } else {
             $("#previous-step").show();
-            $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].label);
+            $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
         }
         // if (this.step.nextStep !== null) {
         //     $('#next-step').hide();
@@ -110,7 +110,7 @@ class Configurator {
 
         var starNode = this.graph.node(step);
         console.log(starNode.label);
-        this.step = new Step(starNode.number, "bazę", false, 'baza kontynetalna_roko08.png');
+        this.step = new Step(starNode.number, starNode.title, false, 'baza kontynetalna_roko08.png');
         this.step.selectedNodes[0] = starNode;
         // this.graph
         var successors = this.graph.successors(step);
@@ -216,7 +216,11 @@ class Configurator {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
             var node = configurator.graph.node($('#select-' + nodeName).val());
-            $('#price').text(configurator.numberWithSpaces(node.price.g1) + ' PLN*').removeAttr('hidden');
+            let price = 0.0;
+            configurator.allSteps.forEach(step => {
+                price += step.selectedNodes[2].price.g1;
+            });
+            $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
             $('#price-vat').removeAttr('hidden');
             configurator.step.selectedNodes[1] = baseNode;
         }
@@ -294,7 +298,7 @@ class Configurator {
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
             str += '<div class="row summary-price-row"">';
-            str += '<div class="col-sm-6">' + step.selectedNodes[0].label + '</div>';
+            str += '<div class="col-sm-6">' + step.selectedNodes[0].title + '</div>';
             str += '<div class="col-sm-6 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN</div>' +
                 '</div>';
             priceSum += priceNode.price.g1;
@@ -318,7 +322,7 @@ $(document)
 
 // Add node "a" to the graph with no label
             g.setNode("loadLevel", {});
-            g.setNode("step_1", {node: 'step_1', label: 'wybierz bazę', number: 1, zIndex: 10});
+            g.setNode("step_1", {node: 'step_1', title:'baza', label: 'wybierz bazę', number: 1, zIndex: 10});
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'https://hilding.pl/png/product/base-box.jpg',
@@ -397,7 +401,7 @@ $(document)
 
             g.setNode("colors_7", {});
 
-            g.setNode("step_2", {node: 'step_2', label: 'wybierz wezgłowie', number: 2, zIndex: 5});
+            g.setNode("step_2", {node: 'step_2', title:'wezgłowie', label: 'wybierz wezgłowie', number: 2, zIndex: 5});
 
             g.setNode("glamour", {
                 label: 'Glamour',
@@ -470,7 +474,7 @@ $(document)
             g.setNode("ladylike_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}, nextStep: 'step_3'});
             g.setNode("ladylike_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}, nextStep: 'step_3'});
 
-            g.setNode("step_3", {node: 'step_3', label: 'wybierz nożki', number: 3, zIndex: 15});
+            g.setNode("step_3", {node: 'step_3', title:'nóżki', label: 'wybierz nożki', number: 3, zIndex: 15});
 
             g.setNode("stozek_owal_buk", {
                 label: 'Stożek owal buk',
