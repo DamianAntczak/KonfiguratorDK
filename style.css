@@ -56,12 +56,16 @@ div.price-info{
 }
 
 .summary-price-row{
-    border: 1px solid #337abd;
+    border: 2px solid #337abd;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 10px;
 }
 
+div.summary-price-row div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .configurator-img {
     position: absolute;

@@ -298,14 +298,17 @@ class Configurator {
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
             str += '<div class="row summary-price-row"">';
-            str += '<div class="col-sm-6">' + step.selectedNodes[0].title + '</div>';
-            str += '<div class="col-sm-6 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN</div>' +
+            str += '<div class="col-sm-6 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label + '</div>';
+            str += '<div class="col-sm-6 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                 '</div>';
             priceSum += priceNode.price.g1;
         });
         str += '</div>';
-
-        str += '<h3>' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
+        str += '<div class="col-sm-6 col-sm-offset-6">';
+        str += '<h5>Wymiar i cena prezentowanego<br> zestawu:</h5>';
+        str += '<h3 class="blue-text">' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
+        str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
+        str += '</div>';
         stepElement.html(str);
     }
 }
@@ -322,7 +325,7 @@ $(document)
 
 // Add node "a" to the graph with no label
             g.setNode("loadLevel", {});
-            g.setNode("step_1", {node: 'step_1', title:'baza', label: 'wybierz bazę', number: 1, zIndex: 10});
+            g.setNode("step_1", {node: 'step_1', title: 'baza', label: 'wybierz bazę', number: 1, zIndex: 10});
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'https://hilding.pl/png/product/base-box.jpg',
@@ -393,15 +396,9 @@ $(document)
             g.setNode("box_podnoszony_100_200", {label: '100/200', price: {g1: 2659, g2: 2859}, nextStep: 'step_2'});
             g.setNode("box_podnoszony_100_200", {label: '140/200', price: {g1: 3659, g2: 3859}, nextStep: 'step_2'});
 
-            g.setNode("90_200", {label: '90/200'});
-            g.setNode("140_200", {label: '140/200'});
-            g.setNode("160_200", {label: '160/200'});
-            g.setNode("180_200", {label: '180/200'});
-            g.setNode("200_200", {label: '200/200'});
-
             g.setNode("colors_7", {});
 
-            g.setNode("step_2", {node: 'step_2', title:'wezgłowie', label: 'wybierz wezgłowie', number: 2, zIndex: 5});
+            g.setNode("step_2", {node: 'step_2', title: 'wezgłowie', label: 'wybierz wezgłowie', number: 2, zIndex: 5});
 
             g.setNode("glamour", {
                 label: 'Glamour',
@@ -474,7 +471,7 @@ $(document)
             g.setNode("ladylike_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}, nextStep: 'step_3'});
             g.setNode("ladylike_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}, nextStep: 'step_3'});
 
-            g.setNode("step_3", {node: 'step_3', title:'nóżki', label: 'wybierz nożki', number: 3, zIndex: 15});
+            g.setNode("step_3", {node: 'step_3', title: 'nóżki', label: 'wybierz nożki', number: 3, zIndex: 15});
 
             g.setNode("stozek_owal_buk", {
                 label: 'Stożek owal buk',
