@@ -57,11 +57,11 @@ class Configurator {
 
         var selectedNode = this.step.selectedNodes[2];
         console.log(selectedNode);
-        if(selectedNode.nextStep == 'summary'){
+        this.stepIndex = this.stepIndex + 1;
+        if (selectedNode.nextStep == 'summary') {
             console.log('Yeeeaaah');
             this.loadSummary();
-        }
-        else {
+        } else {
             this.loadLevel(selectedNode.nextStep);
         }
     }
@@ -69,7 +69,8 @@ class Configurator {
     previousStep() {
         $('#configurator-preview img').last().remove();
         console.log(this.allSteps[this.stepIndex - 1].selectedNodes[0]);
-        this.loadLevel(this.allSteps[0].selectedNodes[0].node);
+        this.stepIndex = this.stepIndex - 1;
+        this.loadLevel(this.allSteps[this.stepIndex].selectedNodes[0].node);
     }
 
     skipStep() {
@@ -81,11 +82,13 @@ class Configurator {
         console.log($('#step-title'));
         $('#step-number').text('Krok ' + node.number);
         $('#step-title').text(node.label);
-        if (this.step.previous == null) {
+        console.log('Step index:' + (this.stepIndex - 1));
+        console.log(this.allSteps[this.stepIndex - 1]);
+        if (this.allSteps[this.stepIndex - 1] == null) {
             $("#previous-step").hide();
         } else {
             $("#previous-step").show();
-            $("#previous-step").text('<< poprzedni krok: ' + this.step.previous.title);
+            $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].label);
         }
         // if (this.step.nextStep !== null) {
         //     $('#next-step').hide();
@@ -184,11 +187,10 @@ class Configurator {
         if (this.allSteps[this.stepIndex - 1] !== undefined) {
             $("#previous-step").show();
             $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
-        }
-        else {
+        } else {
             $("#previous-step").hide();
         }
-        this.stepIndex += 1;
+        // this.stepIndex += 1;
     }
 
     onPartClick(selectedImg) {
@@ -210,8 +212,7 @@ class Configurator {
             var find = $('#configurator-preview').find('#render-' + mainNode.node);
             if (find.length === 0) {
                 $('#configurator-preview').append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
-            }
-            else {
+            } else {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
             var node = configurator.graph.node($('#select-' + nodeName).val());
@@ -287,13 +288,18 @@ class Configurator {
         var stepElement = $('#step-content');
         stepElement.html('');
         // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Podsumowanie')));
-        let str = '<h2 class="text-center text-uppercase">podsumowanie</h2>';
+        let str = '<div class="col-sm-12">';
+        str += '<h2 class="text-center text-uppercase">podsumowanie</h2>';
         let priceSum = 0.0;
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
-            str += '<div class="col-sm-12">' + step.selectedNodes[0].label + ' ' + this.numberWithSpaces(priceNode.price.g1) +' PLN</div>';
+            str += '<div class="row summary-price-row"">';
+            str += '<div class="col-sm-6">' + step.selectedNodes[0].label + '</div>';
+            str += '<div class="col-sm-6 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN</div>' +
+                '</div>';
             priceSum += priceNode.price.g1;
         });
+        str += '</div>';
 
         str += '<h3>' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
         stepElement.html(str);
@@ -346,13 +352,37 @@ $(document)
 
             g.setNode("baza_kontynentalna_80_200", {label: '80/200', price: {g1: 1599, g2: 1749}, nextStep: 'step_2'});
             g.setNode("baza_kontynentalna_90_200", {label: '90/200', price: {g1: 1649, g2: 1799}, nextStep: 'step_2'});
-            g.setNode("baza_kontynentalna_100_200", {label: '100/200', price: {g1: 1799, g2: 1949}, nextStep: 'step_2'});
-            g.setNode("baza_kontynentalna_140_200", {label: '140/200', price: {g1: 2099, g2: 2299}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_100_200", {
+                label: '100/200',
+                price: {g1: 1799, g2: 1949},
+                nextStep: 'step_2'
+            });
+            g.setNode("baza_kontynentalna_140_200", {
+                label: '140/200',
+                price: {g1: 2099, g2: 2299},
+                nextStep: 'step_2'
+            });
 
-            g.setNode("baza_kontynentalna_z_szuflada_80_200", {label: '80/200', price: {g1: 1999, g2: 2199}, nextStep: 'step_2'});
-            g.setNode("baza_kontynentalna_z_szuflada_90_200", {label: '90/200', price: {g1: 2159, g2: 2359}, nextStep: 'step_2'});
-            g.setNode("baza_kontynentalna_z_szuflada_100_200", {label: '100/200', price: {g1: 2349, g2: 2549}, nextStep: 'step_2'});
-            g.setNode("baza_kontynentalna_z_szuflada_140_200", {label: '140/200', price: {g1: 3199, g2: 3399}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_z_szuflada_80_200", {
+                label: '80/200',
+                price: {g1: 1999, g2: 2199},
+                nextStep: 'step_2'
+            });
+            g.setNode("baza_kontynentalna_z_szuflada_90_200", {
+                label: '90/200',
+                price: {g1: 2159, g2: 2359},
+                nextStep: 'step_2'
+            });
+            g.setNode("baza_kontynentalna_z_szuflada_100_200", {
+                label: '100/200',
+                price: {g1: 2349, g2: 2549},
+                nextStep: 'step_2'
+            });
+            g.setNode("baza_kontynentalna_z_szuflada_140_200", {
+                label: '140/200',
+                price: {g1: 3199, g2: 3399},
+                nextStep: 'step_2'
+            });
 
             g.setNode("box_podnoszony_80_200", {label: '80/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
             g.setNode("box_podnoszony_90_200", {label: '90/200', price: {g1: 2399, g2: 2549}, nextStep: 'step_2'});
