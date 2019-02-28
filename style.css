@@ -152,10 +152,3 @@ button.btn-star{
     border-radius: 5px;
     text-align: center;
 }
-
-.start-img{
-    background-image: url('img/konfigurator_start.png');
-    background-position: center top;
-    background-size: cover;
-    height: auto !important;
-}
