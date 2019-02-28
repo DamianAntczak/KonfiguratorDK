@@ -101,8 +101,10 @@ class Configurator {
         //     $('#next-step').show();
         //     $('#next-step').text('następny krok: ' + this.step.nextStep.title + ' >>');
         // }
-        $('#next-step').show();
-        $('#next-step').text('następny krok: ' + this.step.title + ' >>');
+        // $('#next-step').show();
+        // console.log('Node ');
+        // console.log(node);
+        // $('#next-step').text('następny krok: ' + this.step.title + ' >>');
 
         if (this.step.skipEnable) {
             $('#skip-step').show();
@@ -114,6 +116,7 @@ class Configurator {
     loadLevel(step) {
 
         this.showStepInfo();
+        $('#next-step').hide();
 
         var starNode = this.graph.node(step);
         console.log(starNode.label);
@@ -204,7 +207,6 @@ class Configurator {
         $('#step-number').show();
         $('#step-title').show();
         $('#item-color').show();
-        $('#next-step').show();
     }
 
     onPartClick(selectedImg) {
@@ -237,6 +239,14 @@ class Configurator {
             $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
             $('#price-vat').removeAttr('hidden');
             configurator.step.selectedNodes[1] = baseNode;
+
+            $('#next-step').show();
+            console.log('Node ');
+            console.log(baseNode);
+            let nextStep = configurator.graph.node(node.nextStep);
+            console.log('nextStep');
+            console.log(nextStep);
+            $('#next-step').text('następny krok: ' + nextStep.title + ' >>');
         }
     }
 
