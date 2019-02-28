@@ -151,7 +151,7 @@ button.btn-star{
 
 .btn-star{
     position: absolute;
-    top: 75%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -163,4 +163,13 @@ button.btn-star{
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+}
+
+.configurator-start-text{
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    z-index: 25;
+    transform: translate(-50%, -50%)
 }

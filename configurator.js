@@ -1,24 +1,3 @@
-// $(document).ready(function() {
-//
-//     $('.configurator-base-carousel').owlCarousel({
-//         loop: true,
-//         margin: 3,
-//         nav: true,
-//         responsive: {
-//             0: {
-//                 items: 1
-//             },
-//             600: {
-//                 items: 3
-//             },
-//             1000: {
-//                 items: 5
-//             }
-//         }
-//     })
-//
-// });
-
 
 class Step {
 
@@ -131,6 +110,7 @@ class Configurator {
             loop: false,
             items: 3,
             nav: true,
+            mouseDrag: false,
             margin: 30,
             navText: ['<i class="svg prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>', '<i class="svg next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>'],
             responsive: {
@@ -160,15 +140,6 @@ class Configurator {
                 this.addOption(node_name) +
                 '</div>' +
                 '</div>']);
-
-            // console.log($('#select-' + node_name).val());
-            // var firstSelected = this.graph.node($('#select-' + node_name).val());
-            // carousel.find('#node-price-'+node_name).html('Test');
-            // carousel.trigger('refresh.owl.carousel');
-            //
-            // var $owl = $('.configurator-base-carousel');
-            // var firstNode = this.graph.successors(node_name)[0];
-            // $owl.find('#node-price-'+node_name).html(firstNode.price.g1.toFixed(2).replace('.', ',') + ' PLN');
 
             $(document.body).on('change', '#select-' + node_name, function () {
                 var nodeName = $(this).val();
@@ -339,7 +310,7 @@ class Configurator {
         str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
         str += '</div>';
         str += '<div class="row summary-btn-row">';
-        str += '<div class="col-sm-4 text-center"><button class="btn text-uppercase btn-summary">Znajdź salon</button></div>';
+        str += '<div class="col-sm-4 text-center"><button class="btn text-uppercase btn-summary" onclick="location.href=\'https://hilding.pl/index/whereBuy\'" >Znajdź salon</button></div>';
         str += '<div class="col-sm-4 text-center"><button class="btn text-uppercase btn-summary">Zamów online</button></div>';
         str += '<div class="col-sm-4 text-center"><button class="btn text-uppercase btn-summary">Wydrukuj</button></div>';
         str += '</div>';
@@ -353,11 +324,9 @@ $(document)
     .ready(
         function () {
             var Graph = graphlib.Graph;
-
-// Create a new directed graph
             var g = new Graph();
 
-// Add node "a" to the graph with no label
+            g.setNode("summary",{node: 'summary', title: 'Podsumowanie'});
             g.setNode("loadLevel", {});
             g.setNode("step_1", {node: 'step_1', title: 'baza', label: 'wybierz bazę', number: 1, zIndex: 10});
             g.setNode("base_box", {
