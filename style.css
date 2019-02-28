@@ -62,6 +62,18 @@ div.price-info{
     margin-top: 10px;
 }
 
+.summary-btn-row{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+}
+
+button.btn-summary{
+    background-color: #307bbf;
+    border-radius: 0px;
+    color: white;
+}
+
 div.summary-price-row div{
     padding-top: 10px;
     padding-bottom: 10px;

@@ -59,7 +59,6 @@ class Configurator {
         console.log(selectedNode);
         this.stepIndex = this.stepIndex + 1;
         if (selectedNode.nextStep == 'summary') {
-            console.log('Yeeeaaah');
             this.loadSummary();
         } else {
             this.loadLevel(selectedNode.nextStep);
@@ -113,6 +112,8 @@ class Configurator {
     }
 
     loadLevel(step) {
+
+        this.showStepInfo();
 
         var starNode = this.graph.node(step);
         console.log(starNode.label);
@@ -197,6 +198,13 @@ class Configurator {
             $("#previous-step").hide();
         }
         // this.stepIndex += 1;
+    }
+
+    showStepInfo() {
+        $('#step-number').show();
+        $('#step-title').show();
+        $('#item-color').show();
+        $('#next-step').show();
     }
 
     onPartClick(selectedImg) {
@@ -295,6 +303,11 @@ class Configurator {
     }
 
     loadSummary() {
+        $('#step-number').hide();
+        $('#step-title').hide();
+        $('#item-color').hide();
+        $('#next-step').hide();
+
         var stepElement = $('#step-content');
         stepElement.html('');
         // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Podsumowanie')));
@@ -310,15 +323,15 @@ class Configurator {
             priceSum += priceNode.price.g1;
         });
         str += '</div>';
-        str += '<div class="col-sm-6 col-sm-offset-6">';
+        str += '<div class="col-sm-6 col-sm-offset-6 margin-top-25 margin-bottom-25">';
         str += '<h5>Wymiar i cena prezentowanego<br> zestawu:</h5>';
         str += '<h3 class="blue-text">' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
         str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
         str += '</div>';
-        str += '<div class="row">';
-        str += '<div class="col-sm-3"><button class="btn text-uppercase">Znajdź salon</button></div>';
-        str += '<div class="col-sm-3"><button class="btn text-uppercase">Zamów online</button></div>';
-        str += '<div class="col-sm-3"><button class="btn text-uppercase">Wydrukuj</button></div>';
+        str += '<div class="row summary-btn-row">';
+        str += '<div class="col-sm-4 text-center"><button class="btn text-uppercase btn-summary">Znajdź salon</button></div>';
+        str += '<div class="col-sm-4 text-center"><button class="btn text-uppercase btn-summary">Zamów online</button></div>';
+        str += '<div class="col-sm-4 text-center"><button class="btn text-uppercase btn-summary">Wydrukuj</button></div>';
         str += '</div>';
         stepElement.html(str);
     }
