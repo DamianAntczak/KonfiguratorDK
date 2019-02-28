@@ -78,6 +78,12 @@ class Configurator {
 
     }
 
+    start(){
+        $('#configurator-start-view').remove();
+        $('#configurator').show();
+        this.loadLevel("step_1");
+    }
+
     refresh(node) {
         console.log($('#step-title'));
         $('#step-number').text('Krok ' + node.number);
@@ -308,6 +314,11 @@ class Configurator {
         str += '<h5>Wymiar i cena prezentowanego<br> zestawu:</h5>';
         str += '<h3 class="blue-text">' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
         str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
+        str += '</div>';
+        str += '<div class="row">';
+        str += '<div class="col-sm-3"><button class="btn text-uppercase">Znajdź salon</button></div>';
+        str += '<div class="col-sm-3"><button class="btn text-uppercase">Zamów online</button></div>';
+        str += '<div class="col-sm-3"><button class="btn text-uppercase">Wydrukuj</button></div>';
         str += '</div>';
         stepElement.html(str);
     }
@@ -600,8 +611,6 @@ $(document)
             var nohead = new Step(2, "wezgłowie", true, 'baza kontynetalna_roko08.png');
             var base = new Step(1, "bazę", false, 'baza kontynetalna_roko08.png');
             configurator = new Configurator(base, g);
-            configurator.loadLevel("step_1");
-            configurator.refresh();
         }
     )
 ;

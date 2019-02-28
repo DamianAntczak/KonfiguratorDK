@@ -129,3 +129,33 @@ div.summary-price-row div{
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
 }
+
+button.btn-star{
+    background-color: #b3d646;
+    color: white;
+    position: absolute;
+    text-align: center;
+}
+
+.btn-star{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.start-img{
+    background-image: url('img/konfigurator_start.png');
+    background-position: center top;
+    background-size: cover;
+    height: auto !important;
+}
