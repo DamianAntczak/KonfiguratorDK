@@ -173,3 +173,7 @@ button.btn-star{
     z-index: 25;
     transform: translate(-50%, -50%)
 }
+
+div.owl-nav{
+    margin-left: -30px;
+}
