@@ -474,31 +474,61 @@ $(document)
             g.setNode("ladylike_180_95", {label: '180/95', price: {g1: 1099, g2: 1199}, nextStep: 'step_3'});
             g.setNode("ladylike_200_95", {label: '200/95', price: {g1: 1259, g2: 1359}, nextStep: 'step_3'});
 
-            g.setNode("step_3", {node: 'step_3', title: 'nóżki', label: 'wybierz nożki', number: 3, zIndex: 15});
+            g.setNode("step_3", {node: 'step_3', title: 'nóżki', label: 'wybierz nożki', number: 3, zIndex: 3});
 
             g.setNode("stozek_owal_buk", {
                 label: 'Stożek owal buk',
                 img: 'https://hilding.pl/png/product/stozek-owal-buk.jpg',
-                render: 'materac_salsa.png'
+                render: 'n04_03.png'
             });
 
             g.setNode("stozek_owal_dab", {
                 label: 'Stożek owal dąb',
                 img: 'https://hilding.pl/png/product/stozek-owal-dab.jpg',
-                render: 'materac_salsa.png'
+                render: 'n04_03.png'
             });
 
             g.setNode("stozek_owal_wenge", {
                 label: 'Stożek owal wenge',
                 img: 'https://hilding.pl/png/product/stozek-owal-wenge.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("stozek_owal_buk_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'step_4'});
+            g.setNode("stozek_owal_wenge_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'step_4'});
+            g.setNode("stozek_owal_dab_16", {label: '200/95', price: {g1: 132, g2: 132}, nextStep: 'step_4'});
+
+            g.setNode("step_4", {node: 'step_4', title: 'materac', label: 'wybierz materac', number: 4, zIndex: 25});
+
+            g.setNode("materac_tango", {
+                label: 'Blues',
+                img: 'https://hilding.pl/png/product/tango.jpg',
                 render: 'materac_salsa.png'
             });
 
-            g.setNode("stozek_owal_buk_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'summary'});
-            g.setNode("stozek_owal_wenge_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'summary'});
-            g.setNode("stozek_owal_dab_16", {label: '200/95', price: {g1: 132, g2: 132}, nextStep: 'summary'});
+            g.setNode("materac_step", {
+                label: 'Step',
+                img: 'https://hilding.pl/png/product/step.jpg',
+                render: 'materac_salsa.png'
+            });
 
-            g.setNode("step_4", {node: 'step_4', label: 'wybierz materac', number: 3, zIndex: 20});
+            g.setNode("materac_salsa", {
+                label: 'Salsa',
+                img: 'https://hilding.pl/png/product/salsa.jpg',
+                render: 'materac_salsa.png'
+            });
+
+
+            g.setNode("materac_tango_80_200", {label: '80/200', price: {g1: 1029, g2: 1029}, nextStep: 'summary'});
+
+            g.setNode("materac_step_80_200", {label: '80/200', price: {g1: 509, g2: 509}, nextStep: 'summary'});
+            g.setNode("materac_step_90_200", {label: '90/200', price: {g1: 509, g2: 509}, nextStep: 'summary'});
+            g.setNode("materac_step_100_200", {label: '100/200', price: {g1: 569, g2: 569}, nextStep: 'summary'});
+
+            g.setNode("materac_salsa_80_200", {label: '80/200', price: {g1: 1119, g2: 1119}, nextStep: 'summary'});
+            g.setNode("materac_salsa_90_200", {label: '90/200', price: {g1: 1119, g2: 1119}, nextStep: 'summary'});
+            g.setNode("materac_salsa_100_200", {label: '100/200', price: {g1: 1359, g2: 1359}, nextStep: 'summary'});
+            g.setNode("materac_salsa_120_200", {label: '120/200', price: {g1: 1519, g2: 1519}, nextStep: 'summary'});
 
 
 // => true
@@ -594,6 +624,22 @@ $(document)
             g.setEdge("stozek_owal_buk", "stozek_owal_buk_16");
             g.setEdge("stozek_owal_wenge", "stozek_owal_wenge_16");
             g.setEdge("stozek_owal_dab", "stozek_owal_dab_16");
+
+            g.setEdge("step_4", "materac_tango");
+            g.setEdge("step_4", "materac_step");
+            g.setEdge("step_4", "materac_salsa");
+
+            g.setEdge("materac_tango", "materac_tango_80_200");
+
+            g.setEdge("materac_step", "materac_step_80_200");
+            g.setEdge("materac_step", "materac_step_90_200");
+            g.setEdge("materac_step", "materac_step_100_200");
+
+            g.setEdge("materac_salsa", "materac_salsa_80_200");
+            g.setEdge("materac_salsa", "materac_salsa_90_200");
+            g.setEdge("materac_salsa", "materac_salsa_100_200");
+            g.setEdge("materac_salsa", "materac_salsa_120_200");
+
 
             var serialized = graphlib.json.write(g);
             console.log(serialized)
