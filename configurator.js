@@ -144,9 +144,18 @@ class Configurator {
                 var nodeName = $(this).val();
                 var node = configurator.graph.node(nodeName);
                 var $owl = $('.configurator-base-carousel');
-                $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
+                var price = 0.0;
+                if (configurator.step.selectedNodes[3] !== undefined && configurator.step.selectedNodes[3].g === 2) {
+                    price = node.price.g2;
+                }
+                else {
+                    price = node.price.g1;
+                }
+
+                $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
                 $owl.trigger('refresh.owl.carousel');
                 configurator.step.selectedNodes[2] = node;
+                configurator.showPrice();
             });
 
             $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
@@ -160,6 +169,7 @@ class Configurator {
         console.log(starNode);
         if (starNode.colors !== undefined) {
             $('#step-content').after(this.addColor(starNode.colors));
+            $('.img_tkan:first').addClass('color-selected');
         }
 
         this.refresh(this.graph.node(step));
@@ -203,8 +213,9 @@ class Configurator {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
             var node = configurator.graph.node($('#select-' + nodeName).val());
-            this.showPrice();
             configurator.step.selectedNodes[1] = baseNode;
+            configurator.step.selectedNodes[2] = node;
+            this.showPrice();
 
             $('#next-step').show();
             console.log('Node ');
@@ -286,6 +297,7 @@ class Configurator {
 
         function addImageToDom(colors, group) {
             html += '<div class="row">';
+            var counter = 0;
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
                 html += '<div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
@@ -307,7 +319,6 @@ class Configurator {
 
         let colorNode = configurator.graph.node($this.attr('color'));
         configurator.step.selectedNodes[3] = colorNode;
-        configurator.showPrice();
 
         $('.img_tkan').removeClass('color-selected');
 
@@ -332,6 +343,7 @@ class Configurator {
             }
         });
 
+        configurator.showPrice();
         $this.toggleClass('color-selected');
     }
 
@@ -348,12 +360,12 @@ class Configurator {
         str += '<h2 class="text-center text-uppercase">podsumowanie</h2>';
         let priceSum = 0.0;
         let fabricName = function (step) {
-            return step.selectedNodes[3] !== undefined ?  step.selectedNodes[3].name : '';
+            return step.selectedNodes[3] !== undefined ? step.selectedNodes[3].name : '';
         };
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
             str += '<div class="row summary-price-row"">';
-            str += '<div class="col-sm-6 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label + ' ' + fabricName(step) +'</div>';
+            str += '<div class="col-sm-6 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label.replace(/<br[^>]*>/gi,' ') + ' ' + fabricName(step) + '</div>';
             str += '<div class="col-sm-6 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                 '</div>';
             priceSum += priceNode.price.g1;
