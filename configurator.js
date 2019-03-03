@@ -1,4 +1,3 @@
-
 class Step {
 
 
@@ -56,7 +55,7 @@ class Configurator {
 
     }
 
-    start(){
+    start() {
         $('#configurator-start-view').remove();
         $('#configurator').show();
         this.loadLevel("step_1");
@@ -156,22 +155,23 @@ class Configurator {
         carousel.trigger('refresh.owl.carousel');
 
         $('#item-color').remove();
-        $('#step-content').after(this.addColor());
+
+        console.log('starNode.colors');
+        console.log(starNode);
+        if(starNode.colors !== undefined) {
+            $('#step-content').after(this.addColor());
+        }
+
         this.refresh(this.graph.node(step));
 
-
-        console.log('Step index: ' + this.stepIndex)
         this.allSteps[this.stepIndex] = this.step;
-        console.log(this.stepIndex);
-        console.log(this.stepIndex - 1);
-        console.log(this.stepIndex - 1);
+
         if (this.allSteps[this.stepIndex - 1] !== undefined) {
             $("#previous-step").show();
             $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
         } else {
             $("#previous-step").hide();
         }
-        // this.stepIndex += 1;
     }
 
     showStepInfo() {
@@ -238,13 +238,13 @@ class Configurator {
 
     addColor() {
         var colors = {
-            g1: [{name: 'Ontario', url: 'https://hilding.pl/png/product/Ontario-22_1524204950.png'},
-                {name: 'Riviera', url: 'https://hilding.pl/png/product/riviera_62_1524205137.png'},
-                {name: 'Eren', url: 'https://hilding.pl/png/product/Eren01Beige_1524204261.png'}],
-            g2: [{name: 'Roko', url: 'https://hilding.pl/png/product/ROKO01_lightBeige_1524205239.png'},
-                {name: 'Aspen', url: 'https://hilding.pl/png/product/Aspen_01_white_1524138625.png'},
-                {name: 'Long Island', url: 'https://hilding.pl/png/product/LONG_ISLAND_01_white_1524204547.png'},
-                {name: 'River', url: 'https://hilding.pl/png/product/River_01_White_1524205036.png'},
+            g1: [{name: 'Novel', url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'},
+                {name: 'Roko', url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'},
+                {name: 'Aspen', url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'}],
+            g2: [{name: 'River', url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'},
+                {name: 'Eren', url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'},
+                {name: 'Ontario', url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'},
+                {name: 'Riviera', url: 'https://hilding.pl/png/product/riviera__38_1524205099.png'},
                 // {name: 'Novel', url: 'https://hilding.pl/png/product/Novel_02_cream_1524204866.png'},
             ]
         };
@@ -326,33 +326,41 @@ $(document)
             var Graph = graphlib.Graph;
             var g = new Graph();
 
-            g.setNode("summary",{node: 'summary', title: 'Podsumowanie'});
+            g.setNode("summary", {node: 'summary', title: 'Podsumowanie'});
             g.setNode("loadLevel", {});
-            g.setNode("step_1", {node: 'step_1', title: 'baza', label: 'wybierz bazę', number: 1, zIndex: 10});
+            g.setNode("step_1", {
+                node: 'step_1',
+                title: 'baza',
+                label: 'wybierz bazę',
+                number: 1,
+                zIndex: 10,
+                colors: 'colors_7'
+            });
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'https://hilding.pl/png/product/base-box.jpg',
-                render: 'baza kontynetalna_roko08.png'
+                render: 'baza kontynetalna_roko08.png',
+
             });
             g.setNode("baza_kontynentalna", {
                 label: 'Kontynent',
                 img: 'https://hilding.pl/png/product/kontynent.jpg',
-                render: 'baza kontynetalna_roko08.png'
+                render: 'baza kontynetalna_roko08.png',
             });
             g.setNode("baza_kontynentalna_z_szuflada", {
                 label: 'Kontynent</br>z szufladą',
                 img: 'https://hilding.pl/png/product/kontynent-z-szuflada.jpg',
-                render: 'baza kontynetalna_roko08.png'
+                render: 'baza kontynetalna_roko08.png',
             });
             g.setNode("baza_tapicerowana", {
                 label: 'Baza tapicerowana',
                 img: 'https://hilding.pl/png/product/baza-tapicerowana.jpg',
-                render: 'baza kontynetalna_roko08.png'
+                render: 'baza kontynetalna_roko08.png',
             });
             g.setNode("box_podnoszony", {
                 label: 'Box-podnoszony',
                 img: 'https://hilding.pl/png/product/box-podnoszony.jpg',
-                render: 'baza kontynetalna_roko08.png'
+                render: 'baza kontynetalna_roko08.png',
             });
 
             g.setNode("base_box_100_200", {label: '100/200', price: {g1: 1199, g2: 1299}, nextStep: 'step_2'});
@@ -401,7 +409,24 @@ $(document)
 
             g.setNode("colors_7", {});
 
-            g.setNode("step_2", {node: 'step_2', title: 'wezgłowie', label: 'wybierz wezgłowie', number: 2, zIndex: 5});
+            g.setNode("color_novel", {g: 1, img: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'});
+            g.setNode("color_roko", {g: 1, img: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'});
+            g.setNode("color_aspen", {g: 1, img: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'});
+
+            g.setNode("color_river", {g: 2, img: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'});
+            g.setNode("color_eren", {g: 2, img: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'});
+            g.setNode("color_ontario", {g: 2, img: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'});
+            g.setNode("color_riviera", {g: 2, img: 'https://hilding.pl/png/product/riviera__38_1524205099.png'});
+
+
+            g.setNode("step_2", {
+                node: 'step_2',
+                title: 'wezgłowie',
+                label: 'wybierz wezgłowie',
+                number: 2,
+                zIndex: 5,
+                colors: 'colors_7'
+            });
 
             g.setNode("glamour", {
                 label: 'Glamour',
@@ -570,9 +595,15 @@ $(document)
             g.setEdge("box_podnoszony", "box_podnoszony_100_200");
             g.setEdge("box_podnoszony", "box_podnoszony_100_200");
 
-            g.setEdge("140_200", "colors_7");
-            g.setEdge("160_200", "colors_7");
-            g.setEdge("180_200", "colors_7");
+
+            g.setEdge("colors_7", "color_novel");
+            g.setEdge("colors_7", "color_roko");
+            g.setEdge("colors_7", "color_aspen");
+            g.setEdge("colors_7", "color_river");
+            g.setEdge("colors_7", "color_eren");
+            g.setEdge("colors_7", "color_ontario");
+            g.setEdge("colors_7", "color_riviera");
+
 
             g.setEdge("step_2", "urban");
             g.setEdge("step_2", "preppy");
