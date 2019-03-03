@@ -158,8 +158,8 @@ class Configurator {
 
         console.log('starNode.colors');
         console.log(starNode);
-        if(starNode.colors !== undefined) {
-            $('#step-content').after(this.addColor());
+        if (starNode.colors !== undefined) {
+            $('#step-content').after(this.addColor(starNode.colors));
         }
 
         this.refresh(this.graph.node(step));
@@ -236,29 +236,36 @@ class Configurator {
         return '';
     }
 
-    addColor() {
-        var colors = {
-            g1: [{name: 'Novel', url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'},
-                {name: 'Roko', url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'},
-                {name: 'Aspen', url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'}],
-            g2: [{name: 'River', url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'},
-                {name: 'Eren', url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'},
-                {name: 'Ontario', url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'},
-                {name: 'Riviera', url: 'https://hilding.pl/png/product/riviera__38_1524205099.png'},
-                // {name: 'Novel', url: 'https://hilding.pl/png/product/Novel_02_cream_1524204866.png'},
-            ]
-        };
+    addColor(colorsNode) {
+        var allColorsNodeNames = this.graph.successors(colorsNode);
+        var allColors = [];
+
+        allColorsNodeNames.forEach(node => {
+            allColors.push(this.graph.node(node));
+        });
+
+        var g1Colors = allColors.filter(function(color){
+            return color.g == 1;
+        });
+
+        var g2Colors = allColors.filter(function(color){
+            return color.g == 2;
+        });
+
+        g1Colors.forEach(color => {
+            console.log(color.name);
+        });
 
         var html = '<div id="item-color" class="col-sm-12">' +
             '<h5 class="text-center">Wybierz tkaninę</h5>' +
             '<div class="row">';
 
         html += '<div class="col-sm-4 col-lg-offset-1">';
-        addImageToDom(colors.g1, 'I');
+        addImageToDom(g1Colors, 'I');
         html += '</div>';
 
         html += '<div class="col-sm-7">';
-        addImageToDom(colors.g2, 'II');
+        addImageToDom(g2Colors, 'II');
         html += '</div>';
 
         html += '</div>';
@@ -409,14 +416,42 @@ $(document)
 
             g.setNode("colors_7", {});
 
-            g.setNode("color_novel", {g: 1, img: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'});
-            g.setNode("color_roko", {g: 1, img: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'});
-            g.setNode("color_aspen", {g: 1, img: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'});
+            g.setNode("color_novel", {
+                g: 1,
+                name: 'novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'
+            });
+            g.setNode("color_roko", {
+                g: 1,
+                name: 'roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'
+            });
+            g.setNode("color_aspen", {
+                g: 1,
+                name: 'aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'
+            });
 
-            g.setNode("color_river", {g: 2, img: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'});
-            g.setNode("color_eren", {g: 2, img: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'});
-            g.setNode("color_ontario", {g: 2, img: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'});
-            g.setNode("color_riviera", {g: 2, img: 'https://hilding.pl/png/product/riviera__38_1524205099.png'});
+            g.setNode("color_river", {
+                g: 2,
+                name: 'river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'
+            });
+            g.setNode("color_eren", {
+                g: 2,
+                name: 'eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'
+            });
+            g.setNode("color_ontario", {
+                g: 2,
+                name: 'ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'
+            });
+            g.setNode("color_riviera", {
+                g: 2,
+                name: 'riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png'
+            });
 
 
             g.setNode("step_2", {
