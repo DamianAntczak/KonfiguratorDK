@@ -203,12 +203,7 @@ class Configurator {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
             var node = configurator.graph.node($('#select-' + nodeName).val());
-            let price = 0.0;
-            configurator.allSteps.forEach(step => {
-                price += step.selectedNodes[2].price.g1;
-            });
-            $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
-            $('#price-vat').removeAttr('hidden');
+            this.showPrice();
             configurator.step.selectedNodes[1] = baseNode;
 
             $('#next-step').show();
@@ -219,6 +214,24 @@ class Configurator {
             console.log(nextStep);
             $('#next-step').text('następny krok: ' + nextStep.title + ' >>');
         }
+    }
+
+    showPrice() {
+        let price = 0.0;
+        configurator.allSteps.forEach(step => {
+            if (step.selectedNodes[3] !== undefined) {
+                if (step.selectedNodes[3].g === 1) {
+                    price += step.selectedNodes[2].price.g1;
+                } else {
+                    price += step.selectedNodes[2].price.g2;
+                }
+            }
+            else {
+                price += step.selectedNodes[2].price.g1;
+            }
+        });
+        $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
+        $('#price-vat').removeAttr('hidden');
     }
 
     addOption(node_name) {
@@ -244,11 +257,11 @@ class Configurator {
             allColors.push(this.graph.node(node));
         });
 
-        var g1Colors = allColors.filter(function(color){
+        var g1Colors = allColors.filter(function (color) {
             return color.g == 1;
         });
 
-        var g2Colors = allColors.filter(function(color){
+        var g2Colors = allColors.filter(function (color) {
             return color.g == 2;
         });
 
@@ -275,7 +288,7 @@ class Configurator {
             html += '<div class="row">';
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
-                html += '<div onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
+                html += '<div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
                 // html += '</div>';
             });
             html += '</div>';
@@ -287,6 +300,38 @@ class Configurator {
 
     onColorSelect(selectedColor) {
         var $this = $(selectedColor);
+
+        console.log('selectedColor');
+        console.log(selectedColor);
+        console.log($this.attr('color'));
+
+        let colorNode = configurator.graph.node($this.attr('color'));
+        configurator.step.selectedNodes[3] = colorNode;
+        configurator.showPrice();
+
+        $('.img_tkan').removeClass('color-selected');
+
+        // this.graph
+        var successors = configurator.graph.successors(this.step.selectedNodes[0].node);
+        var $owl = $('.configurator-base-carousel');
+
+        successors.forEach(base_node_name => {
+            console.log(base_node_name);
+            // let baseNode = configurator.graph.node(base_node_name);
+
+            var val = $('#select-' + base_node_name).val();
+            console.log(val);
+            var node = configurator.graph.node(val);
+            console.log(node);
+            if (node !== undefined) {
+                if (colorNode.g === 1) {
+                    $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
+                } else {
+                    $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
+                }
+            }
+        });
+
         $this.toggleClass('color-selected');
     }
 
@@ -302,10 +347,13 @@ class Configurator {
         let str = '<div class="col-sm-12">';
         str += '<h2 class="text-center text-uppercase">podsumowanie</h2>';
         let priceSum = 0.0;
+        let fabricName = function (step) {
+            return step.selectedNodes[3] !== undefined ?  step.selectedNodes[3].name : '';
+        };
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
             str += '<div class="row summary-price-row"">';
-            str += '<div class="col-sm-6 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label + '</div>';
+            str += '<div class="col-sm-6 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label + ' ' + fabricName(step) +'</div>';
             str += '<div class="col-sm-6 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                 '</div>';
             priceSum += priceNode.price.g1;
@@ -419,37 +467,44 @@ $(document)
             g.setNode("color_novel", {
                 g: 1,
                 name: 'novel',
+                node: 'color_novel',
                 url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'
             });
             g.setNode("color_roko", {
                 g: 1,
                 name: 'roko',
+                node: 'color_roko',
                 url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'
             });
             g.setNode("color_aspen", {
                 g: 1,
                 name: 'aspen',
+                node: 'color_aspen',
                 url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'
             });
 
             g.setNode("color_river", {
                 g: 2,
                 name: 'river',
+                node: 'color_river',
                 url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'
             });
             g.setNode("color_eren", {
                 g: 2,
                 name: 'eren',
+                node: 'color_eren',
                 url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'
             });
             g.setNode("color_ontario", {
                 g: 2,
                 name: 'ontario',
+                node: 'color_ontario',
                 url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'
             });
             g.setNode("color_riviera", {
                 g: 2,
                 name: 'riviera',
+                node: 'color_riviera',
                 url: 'https://hilding.pl/png/product/riviera__38_1524205099.png'
             });
 
