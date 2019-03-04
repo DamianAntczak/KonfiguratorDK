@@ -126,6 +126,8 @@ class Configurator {
         });
         successors.forEach(node_name => {
             var node = this.graph.node(node_name);
+            var successors = this.graph.successors(node_name);
+            var counter = successors.length;
             carousel.trigger('add.owl.carousel',
                 ['<div class="owl-item">' +
                 '<div class="col-sm-12">' +
@@ -136,9 +138,13 @@ class Configurator {
                 '<h6 class="dimension-price">Wymiar i cena</h6>' +
                 '<div><p class="node-price blue-text" id="node-price-' + node_name + '" class="blue-text"></p>' +
                 '<p style="font-size: 6px;">Cena zawiera podatek VAT 23 %</p></div>' +
-                this.addOption(node_name) +
+                this.addOption(node_name, successors) +
                 '</div>' +
                 '</div>']);
+
+            if(counter === 1){
+                $('#select-' + node_name ).parent().hide();
+            }
 
             $(document.body).on('change', '#select-' + node_name, function () {
                 var nodeName = $(this).val();
@@ -249,8 +255,7 @@ class Configurator {
         $('#price-vat').removeAttr('hidden');
     }
 
-    addOption(node_name) {
-        var successors = this.graph.successors(node_name);
+    addOption(node_name, successors) {
         if (successors.length > 0) {
             var sb = '<div class="form-group">';
             sb += '<label class="label-small" for="select-' + node_name + '">Rozmiar</label>';

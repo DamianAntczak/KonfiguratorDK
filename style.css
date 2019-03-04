@@ -90,6 +90,7 @@ div.summary-price-row div{
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
+    min-width: 120px;
 }
 
 .img_tkan {
@@ -138,9 +139,6 @@ div.summary-price-row div{
     font-weight: 500;
 }
 
-.input-sm{
-    border-radius: 0 !important;
-}
 
 div.start-content{
     position: absolute;
@@ -166,6 +164,7 @@ button.btn-star{
 
 .configurator-start-text{
     color: white;
+    margin-bottom: 25px;
 }
 
 div.owl-nav{
@@ -174,4 +173,8 @@ div.owl-nav{
 
 div#configurator-start-view{
     position: relative;
+}
+
+select.configurator-select{
+    border-radius: 0 !important;
 }
