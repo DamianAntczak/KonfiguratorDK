@@ -193,6 +193,7 @@ class Configurator {
     onPartClick(selectedImg) {
         var $this = $(selectedImg);
         $('.box').removeClass('carousel-box-selected').addClass('carousel-box');
+        var nodeName = $this.attr("node_name");
         var mainNode = configurator.step.selectedNodes[0];
         if ($this.hasClass('clicked')) {
             $this.removeAttr('style').removeClass('clicked');
@@ -201,10 +202,11 @@ class Configurator {
             $('#configurator-preview').find('#render-' + mainNode.node).remove();
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
+            $('#select-' + nodeName).prop("disabled","disabled");
         } else {
             $this.addClass('clicked');
             $this.removeClass('carousel-box').addClass('carousel-box-selected');
-            var nodeName = $this.attr("node_name");
+
             var baseNode = configurator.graph.node(nodeName);
             var find = $('#configurator-preview').find('#render-' + mainNode.node);
             if (find.length === 0) {
@@ -212,6 +214,8 @@ class Configurator {
             } else {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
+            $('.configurator-select').prop("disabled","disabled");
+            $('#select-' + nodeName).removeAttr("disabled");
             var node = configurator.graph.node($('#select-' + nodeName).val());
             configurator.step.selectedNodes[1] = baseNode;
             configurator.step.selectedNodes[2] = node;
@@ -250,7 +254,7 @@ class Configurator {
         if (successors.length > 0) {
             var sb = '<div class="form-group">';
             sb += '<label class="label-small" for="select-' + node_name + '">Rozmiar</label>';
-            sb += '<select class="form-control input-sm" name="base-size" id="select-' + node_name + '">';
+            sb += '<select disabled class="configurator-select form-control input-sm" name="base-size" id="select-' + node_name + '">';
             successors.forEach(s => {
                 var node = this.graph.node(s);
                 sb += '<option value="' + s + '">' + node.label + '</option>';
@@ -468,6 +472,13 @@ $(document)
                 price: {g1: 3199, g2: 3399},
                 nextStep: 'step_2'
             });
+
+            g.setNode("baza_tapicerowana_90_200", {label: '90/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
+
+            g.setNode("baza_tapicerowana_140_200", {label: '140/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
+            g.setNode("baza_tapicerowana_160_200", {label: '180/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
+            g.setNode("baza_tapicerowana_200_200", {label: '200/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
+
 
             g.setNode("box_podnoszony_80_200", {label: '80/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
             g.setNode("box_podnoszony_90_200", {label: '90/200', price: {g1: 2399, g2: 2549}, nextStep: 'step_2'});
@@ -691,6 +702,11 @@ $(document)
             g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_90_200");
             g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_100_200");
             g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_140_200");
+
+            g.setEdge("baza_tapicerowana", "baza_tapicerowana_90_200");
+            g.setEdge("baza_tapicerowana", "baza_tapicerowana_140_200");
+            g.setEdge("baza_tapicerowana", "baza_tapicerowana_160_200");
+            g.setEdge("baza_tapicerowana", "baza_tapicerowana_200_200");
 
             g.setEdge("box_podnoszony", "box_podnoszony_80_200");
             g.setEdge("box_podnoszony", "box_podnoszony_90_200");
