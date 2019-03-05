@@ -111,6 +111,7 @@ class Configurator {
             nav: true,
             mouseDrag: false,
             margin: 30,
+            dots: false,
             navText: ['<i class="svg prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>', '<i class="svg next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>'],
             responsive: {
                 0: {
@@ -663,6 +664,8 @@ $(document)
 
 
             g.setNode("materac_tango_80_200", {label: '80/200', price: {g1: 1029, g2: 1029}, nextStep: 'summary'});
+            g.setNode("materac_tango_90_200", {label: '90/200', price: {g1: 1029, g2: 1029}, nextStep: 'summary'});
+            g.setNode("materac_tango_100_200", {label: '100/200', price: {g1: 1299, g2: 1299}, nextStep: 'summary'});
 
             g.setNode("materac_step_80_200", {label: '80/200', price: {g1: 509, g2: 509}, nextStep: 'summary'});
             g.setNode("materac_step_90_200", {label: '90/200', price: {g1: 509, g2: 509}, nextStep: 'summary'});
@@ -784,6 +787,9 @@ $(document)
             g.setEdge("step_4", "materac_salsa");
 
             g.setEdge("materac_tango", "materac_tango_80_200");
+            g.setEdge("materac_tango", "materac_tango_90_200");
+            g.setEdge("materac_tango", "materac_tango_100_200");
+
 
             g.setEdge("materac_step", "materac_step_80_200");
             g.setEdge("materac_step", "materac_step_90_200");
