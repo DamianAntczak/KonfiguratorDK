@@ -710,6 +710,81 @@ $(document)
                 render: 'n04_03.png'
             });
 
+            g.setNode("walek_czern", {
+                label: 'Wałek czerń',
+                img: 'walek_czern.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("walek_czern", {
+                label: 'Wałek czerń',
+                img: 'walek_czern.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("walek_miedz", {
+                label: 'Wałek miedź',
+                img: 'walek_miedz.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("walek_srebro", {
+                label: 'Wałek srebro',
+                img: 'walek_srebro.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("kielich_czern", {
+                label: 'Kielich czerń',
+                img: 'kielich_czern.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("kielich_miedz", {
+                label: 'Kielich miedź',
+                img: 'kielich_miedz.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("kielich_srebro", {
+                label: 'Kielich srebro',
+                img: 'kielich_srebro.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("naroznik_czern", {
+                label: 'Narożnik czerń',
+                img: 'naroznik_czern.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("naroznik_miedz", {
+                label: 'Narożnik miedź',
+                img: 'naroznik_miedz.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("naroznik_srebro", {
+                label: 'Narożnik srebro',
+                img: 'naroznik_srebro.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("ploza_buk", {
+                label: 'Płoza buk',
+                img: 'ploza_buk.jpg',
+                render: 'n04_03.png'
+            });
+            g.setNode("ploza_dab", {
+                label: 'Płoza dąb',
+                img: 'ploza_dab.jpg',
+                render: 'n04_03.png'
+            });
+            g.setNode("ploza_wenge", {
+                label: 'Płoza wenge',
+                img: 'ploza_wenge.jpg',
+                render: 'n04_03.png'
+            });
 
             g.setNode("stozek_owal_buk_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'step_4'});
             g.setNode("stozek_owal_wenge_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'step_4'});
@@ -859,6 +934,21 @@ $(document)
             g.setEdge("step_3", "trojkat_prosty_czern");
             g.setEdge("step_3", "trojkat_prosty_miedz");
             g.setEdge("step_3", "trojkat_prosty_srebro");
+            g.setEdge("step_3", "trojkat_skosny_czern");
+            g.setEdge("step_3", "trojkat_skosny_miedz");
+            g.setEdge("step_3", "trojkat_skosny_srebro");
+            g.setEdge("step_3", "walek_srebro");
+            g.setEdge("step_3", "walek_miedz");
+            g.setEdge("step_3", "walek_srebro");
+            g.setEdge("step_3", "kielich_czern");
+            g.setEdge("step_3", "kielich_miedz");
+            g.setEdge("step_3", "kielich_srebro");
+            g.setEdge("step_3", "naroznik_czern");
+            g.setEdge("step_3", "naroznik_miedz");
+            g.setEdge("step_3", "naroznik_srebro");
+            g.setEdge("step_3", "ploza_dab");
+            g.setEdge("step_3", "ploza_buk");
+            g.setEdge("step_3", "ploza_wenge");
 
 
             g.setEdge("stozek_owal_buk", "stozek_owal_buk_16");
