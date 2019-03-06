@@ -133,7 +133,7 @@ class Configurator {
                 ['<div class="owl-item">' +
                 '<div class="col-sm-12">' +
                 '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
-                '<div class="square" style="background-image: url(\'' + node.img + '\')" />' +
+                '<div class="square" style="background-image: url(\'img/' + node.img + '\')" />' +
                 '</div>' +
                 '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
                 '<h6 class="dimension-price">Wymiar i cena</h6>' +
@@ -415,28 +415,28 @@ $(document)
             });
             g.setNode("base_box", {
                 label: 'Base box',
-                img: 'https://hilding.pl/png/product/base-box.jpg',
+                img: 'baza_base_box.jpg',
                 render: 'baza kontynetalna_roko08.png',
 
             });
             g.setNode("baza_kontynentalna", {
                 label: 'Kontynent',
-                img: 'https://hilding.pl/png/product/kontynent.jpg',
+                img: 'kontynent.jpg',
                 render: 'baza kontynetalna_roko08.png',
             });
             g.setNode("baza_kontynentalna_z_szuflada", {
                 label: 'Kontynent</br>z szufladą',
-                img: 'https://hilding.pl/png/product/kontynent-z-szuflada.jpg',
+                img: 'kontynent_z_szuflada.jpg',
                 render: 'baza kontynetalna_roko08.png',
             });
             g.setNode("baza_tapicerowana", {
                 label: 'Baza tapicerowana',
-                img: 'https://hilding.pl/png/product/baza-tapicerowana.jpg',
+                img: 'baza_tapicerowana.jpg',
                 render: 'baza kontynetalna_roko08.png',
             });
             g.setNode("box_podnoszony", {
                 label: 'Box-podnoszony',
-                img: 'https://hilding.pl/png/product/box-podnoszony.jpg',
+                img: 'box_podnoszony.jpg',
                 render: 'baza kontynetalna_roko08.png',
             });
 
@@ -549,37 +549,37 @@ $(document)
 
             g.setNode("glamour", {
                 label: 'Glamour',
-                img: 'https://hilding.pl/png/product/glamour.jpg',
+                img: 'glamour.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
             g.setNode("vintage", {
                 label: 'Vintage',
-                img: 'https://hilding.pl/png/product/vintage.jpg',
+                img: 'vintage.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
             g.setNode("eclectic", {
                 label: 'Eclectic',
-                img: 'https://hilding.pl/png/product/electric.jpg',
+                img: 'electric.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
             g.setNode("ladylike", {
                 label: 'Ladylike',
-                img: 'https://hilding.pl/png/product/ladylike.jpg',
+                img: 'ladylike.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
             g.setNode("preppy", {
                 label: 'Preppy',
-                img: 'https://hilding.pl/png/product/preppy.jpg',
+                img: 'preppy.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
             g.setNode("momiko", {
                 label: 'Momiko',
-                img: 'https://hilding.pl/png/product/momiko.jpg',
+                img: 'momiko.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
             g.setNode("urban", {
                 label: 'Urban',
-                img: 'https://hilding.pl/png/product/urban-wezglowie.jpg',
+                img: 'urban.jpg',
                 render: 'wezglowie_urban_95_roko08.png'
             });
 
@@ -622,21 +622,94 @@ $(document)
 
             g.setNode("stozek_owal_buk", {
                 label: 'Stożek owal buk',
-                img: 'https://hilding.pl/png/product/stozek-owal-buk.jpg',
+                img: 'stozek_owal_buk.jpg',
                 render: 'n04_03.png'
             });
 
             g.setNode("stozek_owal_dab", {
                 label: 'Stożek owal dąb',
-                img: 'https://hilding.pl/png/product/stozek-owal-dab.jpg',
+                img: 'stozek_owal_dab.jpg',
                 render: 'n04_03.png'
             });
 
             g.setNode("stozek_owal_wenge", {
                 label: 'Stożek owal wenge',
-                img: 'https://hilding.pl/png/product/stozek-owal-wenge.jpg',
+                img: 'stozek_owal_wenge.jpg',
                 render: 'n04_03.png'
             });
+
+            g.setNode("stozek_skos_buk", {
+                label: 'Stożek skos buk',
+                img: 'stozek_skos_buk.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("stozek_skos_dab", {
+                label: 'Stożek skos dąb',
+                img: 'stozek_skos_dab.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("stozek_skos_wenge", {
+                label: 'Stożek skos wenge',
+                img: 'stozek_skos_wenge.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("stozek_ze_stopka_czern", {
+                label: 'Stożek ze stópką czerń',
+                img: 'stozek_ze_stopka_czern.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("stozek_ze_stopka_miedz", {
+                label: 'Stożek ze stópką miedź',
+                img: 'stozek_ze_stopka_miedz.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("stozek_ze_stopka_srebro", {
+                label: 'Stożek ze stópką srebro',
+                img: 'stozek_ze_stopka_srebro.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("trojkat_prosty_czern", {
+                label: 'Trójkąt prosty czerń',
+                img: 'trojkat_prosty_czern.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("trojkat_prosty_miedz", {
+                label: 'Trójkąt prosty miedź',
+                img: 'trojkat_prosty_miedz.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("trojkat_prosty_srebro", {
+                label: 'Trójkąt prosty srebro',
+                img: 'trojkat_prosty_srebro.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("trojkat_skosny_czern", {
+                label: 'Trójkąt skośny czerń',
+                img: 'trojkat_skosny_czern.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("trojkat_skosny_miedz", {
+                label: 'Trójkąt skośny miedź',
+                img: 'trojkat_skosny_miedz.jpg',
+                render: 'n04_03.png'
+            });
+
+            g.setNode("trojkat_skosny_srebro", {
+                label: 'Trójkąt skośny srebro',
+                img: 'trojkat_skosny_srebro.jpg',
+                render: 'n04_03.png'
+            });
+
 
             g.setNode("stozek_owal_buk_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'step_4'});
             g.setNode("stozek_owal_wenge_16", {label: '200/95', price: {g1: 100.8, g2: 100.8}, nextStep: 'step_4'});
@@ -777,6 +850,16 @@ $(document)
             g.setEdge("step_3", "stozek_owal_buk");
             g.setEdge("step_3", "stozek_owal_dab");
             g.setEdge("step_3", "stozek_owal_wenge");
+            g.setEdge("step_3", "stozek_skos_buk");
+            g.setEdge("step_3", "stozek_skos_dab");
+            g.setEdge("step_3", "stozek_skos_wenge");
+            g.setEdge("step_3", "stozek_ze_stopka_czern");
+            g.setEdge("step_3", "stozek_ze_stopka_miedz");
+            g.setEdge("step_3", "stozek_ze_stopka_srebro");
+            g.setEdge("step_3", "trojkat_prosty_czern");
+            g.setEdge("step_3", "trojkat_prosty_miedz");
+            g.setEdge("step_3", "trojkat_prosty_srebro");
+
 
             g.setEdge("stozek_owal_buk", "stozek_owal_buk_16");
             g.setEdge("stozek_owal_wenge", "stozek_owal_wenge_16");
