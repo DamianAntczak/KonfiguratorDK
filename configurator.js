@@ -440,16 +440,16 @@ $(document)
                 render: 'baza kontynetalna_roko08.png',
             });
 
-            g.setNode("base_box_100_200", {label: '100/200', price: {g1: 1199, g2: 1299}, nextStep: 'step_2'});
-            g.setNode("base_box_140_200", {label: '140/200', price: {g1: 1299, g2: 1749}, nextStep: 'step_2'});
-            g.setNode("base_box_160_200", {label: '160/200', price: {g1: 1769, g2: 1869}, nextStep: 'step_2'});
-            g.setNode("base_box_180_200", {label: '180/200', price: {g1: 2099, g2: 2199}, nextStep: 'step_2'});
+            g.setNode("base_box_200_200", {label: '200/200', price: {g1: 2*1199, g2: 2*1299}, nextStep: 'step_2'});
+            g.setNode("base_box_140_200", {label: '140/200', price: {g1: 2*1299, g2: 2*1749}, nextStep: 'step_2'});
+            g.setNode("base_box_160_200", {label: '160/200', price: {g1: 2*1769, g2: 2*1869}, nextStep: 'step_2'});
+            g.setNode("base_box_180_200", {label: '180/200', price: {g1: 2*2099, g2: 2*2199}, nextStep: 'step_2'});
 
-            g.setNode("baza_kontynentalna_80_200", {label: '80/200', price: {g1: 1599, g2: 1749}, nextStep: 'step_2'});
-            g.setNode("baza_kontynentalna_90_200", {label: '90/200', price: {g1: 1649, g2: 1799}, nextStep: 'step_2'});
-            g.setNode("baza_kontynentalna_100_200", {
-                label: '100/200',
-                price: {g1: 1799, g2: 1949},
+            g.setNode("baza_kontynentalna_160_200", {label: '160/200', price: {g1: 2*1599, g2: 2*1749}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_180_200", {label: '180/200', price: {g1: 2*1649, g2: 2*1799}, nextStep: 'step_2'});
+            g.setNode("baza_kontynentalna_200_200", {
+                label: '200/200',
+                price: {g1: 2*1799, g2: 2*1949},
                 nextStep: 'step_2'
             });
             g.setNode("baza_kontynentalna_140_200", {
@@ -458,19 +458,19 @@ $(document)
                 nextStep: 'step_2'
             });
 
-            g.setNode("baza_kontynentalna_z_szuflada_80_200", {
-                label: '80/200',
-                price: {g1: 1999, g2: 2199},
+            g.setNode("baza_kontynentalna_z_szuflada_160_200", {
+                label: '160/200',
+                price: {g1: 2*1999, g2: 2*2199},
                 nextStep: 'step_2'
             });
-            g.setNode("baza_kontynentalna_z_szuflada_90_200", {
-                label: '90/200',
-                price: {g1: 2159, g2: 2359},
+            g.setNode("baza_kontynentalna_z_szuflada_180_200", {
+                label: '180/200',
+                price: {g1: 2*2159, g2: 2*2359},
                 nextStep: 'step_2'
             });
-            g.setNode("baza_kontynentalna_z_szuflada_100_200", {
-                label: '100/200',
-                price: {g1: 2349, g2: 2549},
+            g.setNode("baza_kontynentalna_z_szuflada_200_200", {
+                label: '200/200',
+                price: {g1: 2*2349, g2: 2*2549},
                 nextStep: 'step_2'
             });
             g.setNode("baza_kontynentalna_z_szuflada_140_200", {
@@ -479,17 +479,16 @@ $(document)
                 nextStep: 'step_2'
             });
 
-            g.setNode("baza_tapicerowana_90_200", {label: '90/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
+            g.setNode("baza_tapicerowana_140_200", {label: '140/200', price: {g1: 0, g2: 0}, nextStep: 'step_2'});
+            g.setNode("baza_tapicerowana_160_200", {label: '180/200', price: {g1: 0, g2: 0}, nextStep: 'step_2'});
+            g.setNode("baza_tapicerowana_180_200", {label: '90/200', price: {g1: 0, g2: 0}, nextStep: 'step_2'});
+            g.setNode("baza_tapicerowana_200_200", {label: '200/200', price: {g1: 0, g2: 0}, nextStep: 'step_2'});
 
-            g.setNode("baza_tapicerowana_140_200", {label: '140/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
-            g.setNode("baza_tapicerowana_160_200", {label: '180/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
-            g.setNode("baza_tapicerowana_200_200", {label: '200/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
 
-
-            g.setNode("box_podnoszony_80_200", {label: '80/200', price: {g1: 2249, g2: 2399}, nextStep: 'step_2'});
-            g.setNode("box_podnoszony_90_200", {label: '90/200', price: {g1: 2399, g2: 2549}, nextStep: 'step_2'});
-            g.setNode("box_podnoszony_100_200", {label: '100/200', price: {g1: 2659, g2: 2859}, nextStep: 'step_2'});
-            g.setNode("box_podnoszony_100_200", {label: '140/200', price: {g1: 3659, g2: 3859}, nextStep: 'step_2'});
+            g.setNode("box_podnoszony_140_200", {label: '140/200', price: {g1: 3659, g2: 3859}, nextStep: 'step_2'});
+            g.setNode("box_podnoszony_160_200", {label: '160/200', price: {g1: 2*2249, g2: 2*2399}, nextStep: 'step_2'});
+            g.setNode("box_podnoszony_180_200", {label: '180/200', price: {g1: 2*2399, g2: 2*2549}, nextStep: 'step_2'});
+            g.setNode("box_podnoszony_200_200", {label: '200/200', price: {g1: 2*2659, g2: 2*2859}, nextStep: 'step_2'});
 
             g.setNode("colors_7", {});
 
@@ -843,31 +842,30 @@ $(document)
             g.setEdge("step_1", "baza_kontynentalna");
             g.setEdge("step_1", "baza_tapicerowana");
 
-// What edges are in the graph?
-            g.setEdge("base_box", "base_box_100_200");
             g.setEdge("base_box", "base_box_140_200");
             g.setEdge("base_box", "base_box_160_200");
             g.setEdge("base_box", "base_box_180_200");
+            g.setEdge("base_box", "base_box_200_200");
 
-            g.setEdge("baza_kontynentalna", "baza_kontynentalna_80_200");
-            g.setEdge("baza_kontynentalna", "baza_kontynentalna_90_200");
-            g.setEdge("baza_kontynentalna", "baza_kontynentalna_100_200");
             g.setEdge("baza_kontynentalna", "baza_kontynentalna_140_200");
+            g.setEdge("baza_kontynentalna", "baza_kontynentalna_160_200");
+            g.setEdge("baza_kontynentalna", "baza_kontynentalna_180_200");
+            g.setEdge("baza_kontynentalna", "baza_kontynentalna_200_200");
 
-            g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_80_200");
-            g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_90_200");
-            g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_100_200");
             g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_140_200");
+            g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_160_200");
+            g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_180_200");
+            g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_200_200");
 
-            g.setEdge("baza_tapicerowana", "baza_tapicerowana_90_200");
             g.setEdge("baza_tapicerowana", "baza_tapicerowana_140_200");
             g.setEdge("baza_tapicerowana", "baza_tapicerowana_160_200");
+            g.setEdge("baza_tapicerowana", "baza_tapicerowana_180_200");
             g.setEdge("baza_tapicerowana", "baza_tapicerowana_200_200");
 
-            g.setEdge("box_podnoszony", "box_podnoszony_80_200");
-            g.setEdge("box_podnoszony", "box_podnoszony_90_200");
-            g.setEdge("box_podnoszony", "box_podnoszony_100_200");
-            g.setEdge("box_podnoszony", "box_podnoszony_100_200");
+            g.setEdge("box_podnoszony", "box_podnoszony_140_200");
+            g.setEdge("box_podnoszony", "box_podnoszony_160_200");
+            g.setEdge("box_podnoszony", "box_podnoszony_180_200");
+            g.setEdge("box_podnoszony", "box_podnoszony_200_200");
 
 
             g.setEdge("colors_7", "color_novel");
