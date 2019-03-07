@@ -982,7 +982,7 @@ $(document).ready(function () {
         },
         nextStep: 'summary'
     });
-    g.setNode("materac_step_80_200", {
+    g.setNode("materac_step_160_200", {
         label: '80/200',
         price: {
             g1: 509,
@@ -990,7 +990,7 @@ $(document).ready(function () {
         },
         nextStep: 'summary'
     });
-    g.setNode("materac_step_90_200", {
+    g.setNode("materac_step_180_200", {
         label: '90/200',
         price: {
             g1: 509,
@@ -998,7 +998,7 @@ $(document).ready(function () {
         },
         nextStep: 'summary'
     });
-    g.setNode("materac_step_100_200", {
+    g.setNode("materac_step_200_200", {
         label: '100/200',
         price: {
             g1: 569,
@@ -1125,9 +1125,9 @@ $(document).ready(function () {
     g.setEdge("step_4", "materac_step");
     g.setEdge("step_4", "materac_salsa");
     g.setEdge("materac_tango", "materac_tango_80_200");
-    g.setEdge("materac_step", "materac_step_80_200");
-    g.setEdge("materac_step", "materac_step_90_200");
-    g.setEdge("materac_step", "materac_step_100_200");
+    g.setEdge("materac_step", "materac_step_160_200");
+    g.setEdge("materac_step", "materac_step_180_200");
+    g.setEdge("materac_step", "materac_step_200_200");
     g.setEdge("materac_salsa", "materac_salsa_80_200");
     g.setEdge("materac_salsa", "materac_salsa_90_200");
     g.setEdge("materac_salsa", "materac_salsa_100_200");
