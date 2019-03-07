@@ -850,24 +850,33 @@ $(document)
                 render: 'materac_salsa.png'
             });
 
-            g.setNode("materac_blues_160_200", {label: '160/200', price: {g1: 799, g2: 799}, nextStep: 'summary'});
-            g.setNode("materac_blues_180_200", {label: '180/200', price: {g1: 879, g2: 879}, nextStep: 'summary'});
-            g.setNode("materac_blues_200_200", {label: '200/200', price: {g1: 1079, g2: 1079}, nextStep: 'summary'});
+            g.setNode("materac_blues_160_200", {label: '160/200', price: {g1: 799, g2: 799}, nextStep: 'step_6'});
+            g.setNode("materac_blues_180_200", {label: '180/200', price: {g1: 879, g2: 879}, nextStep: 'step_6'});
+            g.setNode("materac_blues_200_200", {label: '200/200', price: {g1: 1079, g2: 1079}, nextStep: 'step_6'});
 
-            g.setNode("materac_jive_160_200", {label: '160/200', price: {g1: 499, g2: 499}, nextStep: 'summary'});
-            g.setNode("materac_jive_180_200", {label: '180/200', price: {g1: 579, g2: 579}, nextStep: 'summary'});
-            g.setNode("materac_jive_200_200", {label: '200/200', price: {g1: 749, g2: 749}, nextStep: 'summary'});
+            g.setNode("materac_jive_160_200", {label: '160/200', price: {g1: 499, g2: 499}, nextStep: 'step_6'});
+            g.setNode("materac_jive_180_200", {label: '180/200', price: {g1: 579, g2: 579}, nextStep: 'step_6'});
+            g.setNode("materac_jive_200_200", {label: '200/200', price: {g1: 749, g2: 749}, nextStep: 'step_6'});
 
-            g.setNode("materac_select_plus_160_200", {label: '160/200', price: {g1: 749, g2: 749}, nextStep: 'summary'});
-            g.setNode("materac_select_plus_180_200", {label: '180/200', price: {g1: 819, g2: 819}, nextStep: 'summary'});
-            g.setNode("materac_select_plus_200_200", {label: '200/200', price: {g1: 1039, g2: 1039}, nextStep: 'summary'});
+            g.setNode("materac_select_plus_160_200", {label: '160/200', price: {g1: 749, g2: 749}, nextStep: 'step_6'});
+            g.setNode("materac_select_plus_180_200", {label: '180/200', price: {g1: 819, g2: 819}, nextStep: 'step_6'});
+            g.setNode("materac_select_plus_200_200", {label: '200/200', price: {g1: 1039, g2: 1039}, nextStep: 'step_6'});
 
-            g.setNode("materac_select_top_160_200", {label: '160/200', price: {g1: 799, g2: 899}, nextStep: 'summary'});
-            g.setNode("materac_select_top_180_200", {label: '180/200', price: {g1: 879, g2: 999}, nextStep: 'summary'});
-            g.setNode("materac_select_top_200_200", {label: '200/200', price: {g1: 1079, g2: 1229}, nextStep: 'summary'});
+            g.setNode("materac_select_top_160_200", {label: '160/200', price: {g1: 799, g2: 899}, nextStep: 'step_6'});
+            g.setNode("materac_select_top_180_200", {label: '180/200', price: {g1: 879, g2: 999}, nextStep: 'step_6'});
+            g.setNode("materac_select_top_200_200", {label: '200/200', price: {g1: 1079, g2: 1229}, nextStep: 'step_6'});
 
-            g.setNode("step_5", {node: 'step_5', title: 'otomana', label: 'wybierz otomanę', number: 6, zIndex: 35});
+            g.setNode("step_6", {node: 'step_6', title: 'otomana', label: 'wybierz otomanę', number: 6, zIndex: 35});
 
+            g.setNode("otomana", {
+                label: 'Otomana',
+                img: 'otomany.png',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("otomana_140", {label: '140/200', price: {g1: 1599, g2: 1849}, nextStep: 'summary'});
+            g.setNode("otomana_160", {label: '160/200', price: {g1: 1699, g2: 2099}, nextStep: 'summary'});
+            g.setNode("otomana_180", {label: '180/200', price: {g1: 1899, g2: 2169}, nextStep: 'summary'});
 
 // => true
 
@@ -1036,6 +1045,12 @@ $(document)
             g.setEdge("materac_select_plus","materac_select_plus_160_200");
             g.setEdge("materac_select_plus","materac_select_plus_180_200");
             g.setEdge("materac_select_plus","materac_select_plus_200_200");
+
+            g.setEdge("step_6","otomana");
+
+            g.setEdge("otomana","otomana_140");
+            g.setEdge("otomana","otomana_160");
+            g.setEdge("otomana","otomana_180");
 
 
             var serialized = graphlib.json.write(g);
