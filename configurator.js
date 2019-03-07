@@ -854,8 +854,8 @@ $(document)
                 render: 'materac_salsa.png'
             });
 
-            g.setNode("materac_pokrowiec_1", {label: '', price: {g1: 0, g2: 0}, nextStep: 'step_4'});
-            g.setNode("materac_tapicerowany_1", {label: '', price: {g1: 0, g2: 0}, nextStep: 'step_4'});
+            g.setNode("materac_pokrowiec_1", {label: '', price: {g1: 0, g2: 0}, nextStep: 'step_pokrowiec'});
+            g.setNode("materac_tapicerowany_1", {label: '', price: {g1: 0, g2: 0}, nextStep: 'step_tapicerowany'});
 
             g.setNode("step_pokrowiec", {
                 node: 'step_4',
