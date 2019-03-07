@@ -792,7 +792,7 @@ $(document)
             g.setNode("step_4", {node: 'step_4', title: 'materac', label: 'wybierz materac', number: 4, zIndex: 25});
 
             g.setNode("materac_tango", {
-                label: 'Blues',
+                label: 'Tango',
                 img: 'https://hilding.pl/png/product/tango.jpg',
                 render: 'materac_salsa.png'
             });
@@ -810,18 +810,63 @@ $(document)
             });
 
 
-            g.setNode("materac_tango_80_200", {label: '80/200', price: {g1: 1029, g2: 1029}, nextStep: 'summary'});
-            g.setNode("materac_tango_90_200", {label: '90/200', price: {g1: 1029, g2: 1029}, nextStep: 'summary'});
-            g.setNode("materac_tango_100_200", {label: '100/200', price: {g1: 1299, g2: 1299}, nextStep: 'summary'});
+            g.setNode("materac_tango_80_200", {label: '80/200', price: {g1: 1029, g2: 1029}, nextStep: 'step_5'});
+            g.setNode("materac_tango_90_200", {label: '90/200', price: {g1: 1029, g2: 1029}, nextStep: 'step_5'});
+            g.setNode("materac_tango_100_200", {label: '100/200', price: {g1: 1299, g2: 1299}, nextStep: 'step_5'});
 
-            g.setNode("materac_step_80_200", {label: '80/200', price: {g1: 509, g2: 509}, nextStep: 'summary'});
-            g.setNode("materac_step_90_200", {label: '90/200', price: {g1: 509, g2: 509}, nextStep: 'summary'});
-            g.setNode("materac_step_100_200", {label: '100/200', price: {g1: 569, g2: 569}, nextStep: 'summary'});
+            g.setNode("materac_step_80_200", {label: '80/200', price: {g1: 509, g2: 509}, nextStep: 'step_5'});
+            g.setNode("materac_step_90_200", {label: '90/200', price: {g1: 509, g2: 509}, nextStep: 'step_5'});
+            g.setNode("materac_step_100_200", {label: '100/200', price: {g1: 569, g2: 569}, nextStep: 'step_5'});
 
-            g.setNode("materac_salsa_80_200", {label: '80/200', price: {g1: 1119, g2: 1119}, nextStep: 'summary'});
-            g.setNode("materac_salsa_90_200", {label: '90/200', price: {g1: 1119, g2: 1119}, nextStep: 'summary'});
-            g.setNode("materac_salsa_100_200", {label: '100/200', price: {g1: 1359, g2: 1359}, nextStep: 'summary'});
-            g.setNode("materac_salsa_120_200", {label: '120/200', price: {g1: 1519, g2: 1519}, nextStep: 'summary'});
+            g.setNode("materac_salsa_80_200", {label: '80/200', price: {g1: 1119, g2: 1119}, nextStep: 'step_5'});
+            g.setNode("materac_salsa_90_200", {label: '90/200', price: {g1: 1119, g2: 1119}, nextStep: 'step_5'});
+            g.setNode("materac_salsa_100_200", {label: '100/200', price: {g1: 1359, g2: 1359}, nextStep: 'step_5'});
+            g.setNode("materac_salsa_120_200", {label: '120/200', price: {g1: 1519, g2: 1519}, nextStep: 'step_5'});
+
+            g.setNode("step_5", {node: 'step_5', title: 'materac nawierzchniowy', label: 'wybierz materac nawierzchniowy', number: 5, zIndex: 30});
+
+            g.setNode("materac_select_plus", {
+                label: 'Select Plus Softex',
+                img: 'jive.jpg',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("materac_blues", {
+                label: 'Blues',
+                img: 'blues.jpg',
+                render: 'materac_salsa.png'
+            });
+
+
+            g.setNode("materac_jive", {
+                label: 'Jive',
+                img: 'jive.jpg',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("materac_select_top", {
+                label: 'Select TOP',
+                img: 'jive.jpg',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("materac_blues_160_200", {label: '160/200', price: {g1: 799, g2: 799}, nextStep: 'summary'});
+            g.setNode("materac_blues_180_200", {label: '180/200', price: {g1: 879, g2: 879}, nextStep: 'summary'});
+            g.setNode("materac_blues_200_200", {label: '200/200', price: {g1: 1079, g2: 1079}, nextStep: 'summary'});
+
+            g.setNode("materac_jive_160_200", {label: '160/200', price: {g1: 499, g2: 499}, nextStep: 'summary'});
+            g.setNode("materac_jive_180_200", {label: '180/200', price: {g1: 579, g2: 579}, nextStep: 'summary'});
+            g.setNode("materac_jive_200_200", {label: '200/200', price: {g1: 749, g2: 749}, nextStep: 'summary'});
+
+            g.setNode("materac_select_plus_160_200", {label: '160/200', price: {g1: 749, g2: 749}, nextStep: 'summary'});
+            g.setNode("materac_select_plus_180_200", {label: '180/200', price: {g1: 819, g2: 819}, nextStep: 'summary'});
+            g.setNode("materac_select_plus_200_200", {label: '200/200', price: {g1: 1039, g2: 1039}, nextStep: 'summary'});
+
+            g.setNode("materac_select_top_160_200", {label: '160/200', price: {g1: 799, g2: 899}, nextStep: 'summary'});
+            g.setNode("materac_select_top_180_200", {label: '180/200', price: {g1: 879, g2: 999}, nextStep: 'summary'});
+            g.setNode("materac_select_top_200_200", {label: '200/200', price: {g1: 1079, g2: 1229}, nextStep: 'summary'});
+
+            g.setNode("step_5", {node: 'step_5', title: 'otomana', label: 'wybierz otomanę', number: 6, zIndex: 35});
 
 
 // => true
@@ -970,6 +1015,27 @@ $(document)
             g.setEdge("materac_salsa", "materac_salsa_90_200");
             g.setEdge("materac_salsa", "materac_salsa_100_200");
             g.setEdge("materac_salsa", "materac_salsa_120_200");
+
+            g.setEdge("step_5", "materac_select_plus");
+            g.setEdge("step_5", "materac_blues");
+            g.setEdge("step_5", "materac_jive");
+            g.setEdge("step_5", "materac_select_top");
+
+            g.setEdge("materac_blues","materac_blues_160_200");
+            g.setEdge("materac_blues","materac_blues_180_200");
+            g.setEdge("materac_blues","materac_blues_200_200");
+
+            g.setEdge("materac_jive","materac_jive_160_200");
+            g.setEdge("materac_jive","materac_jive_180_200");
+            g.setEdge("materac_jive","materac_jive_200_200");
+
+            g.setEdge("materac_select_top","materac_select_top_160_200");
+            g.setEdge("materac_select_top","materac_select_top_180_200");
+            g.setEdge("materac_select_top","materac_select_top_200_200");
+
+            g.setEdge("materac_select_plus","materac_select_plus_160_200");
+            g.setEdge("materac_select_plus","materac_select_plus_180_200");
+            g.setEdge("materac_select_plus","materac_select_plus_200_200");
 
 
             var serialized = graphlib.json.write(g);
