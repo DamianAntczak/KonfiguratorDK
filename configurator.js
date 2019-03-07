@@ -836,8 +836,8 @@ $(document)
 
             g.setNode("step_typ_materaca", {
                 node: 'step_typ_materaca',
-                title: 'materac',
-                label: 'wybierz materac',
+                title: 'typ materac',
+                label: 'wybierz typ materaca',
                 number: 4,
                 zIndex: 25
             });
