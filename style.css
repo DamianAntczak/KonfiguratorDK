@@ -178,3 +178,8 @@ div#configurator-start-view{
 select.configurator-select{
     border-radius: 0 !important;
 }
+
+#skip-step{
+    color:#b2d53a;
+    text-transform: uppercase;
+}
