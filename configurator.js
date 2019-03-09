@@ -51,8 +51,14 @@ class Configurator {
     }
 
     skipStep() {
-        this.nextStep();
-
+        var selectedNode = this.step.selectedNodes[0];
+        console.log(selectedNode);
+        this.stepIndex = this.stepIndex + 1;
+        if (selectedNode.skipToNode == 'summary') {
+            this.loadSummary();
+        } else {
+            this.loadLevel(selectedNode.skipToNode);
+        }
     }
 
     start() {
@@ -84,7 +90,7 @@ class Configurator {
         // console.log(node);
         // $('#next-step').text('następny krok: ' + this.step.title + ' >>');
 
-        if (this.step.skipEnable) {
+        if (this.step.skipEnable !== undefined) {
             $('#skip-step').show();
         } else {
             $('#skip-step').hide();
@@ -97,8 +103,8 @@ class Configurator {
         $('#next-step').hide();
 
         var starNode = this.graph.node(step);
-        console.log(starNode.label);
-        this.step = new Step(starNode.number, starNode.title, false, 'baza kontynetalna_roko08.png');
+        console.log(starNode);
+        this.step = new Step(starNode.number, starNode.title, starNode.skipToNode, 'baza kontynetalna_roko08.png');
         this.step.selectedNodes[0] = starNode;
         // this.graph
         var successors = this.graph.successors(step);
@@ -373,6 +379,7 @@ class Configurator {
         $('#step-title').hide();
         $('#item-color').hide();
         $('#next-step').hide();
+        $('#skip-step').hide();
 
         var stepElement = $('#step-content');
         stepElement.html('');
@@ -385,7 +392,9 @@ class Configurator {
         };
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
-            if (priceNode.price.g1 > 0) {
+            console.log('393');
+            console.log(priceNode);
+            if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 str += '<div class="row summary-price-row"">';
                 str += '<div class="col-sm-7 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label.replace(/<br[^>]*>/gi, ' ') + ' ' + fabricName(step) + '</div>';
                 str += '<div class="col-sm-5 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
@@ -839,7 +848,8 @@ $(document)
                 title: 'typ materac',
                 label: 'wybierz typ materaca',
                 number: 4,
-                zIndex: 25
+                zIndex: 25,
+                skipToNode: 'step_5'
             });
 
             g.setNode("materac_pokrowiec", {
@@ -872,7 +882,14 @@ $(document)
                 zIndex: 25
             });
 
-            g.setNode("step_4", {node: 'step_4', title: 'materac', label: 'wybierz materac', number: 4, zIndex: 25});
+            g.setNode("step_4",
+                {node: 'step_4',
+                title: 'materac',
+                label: 'wybierz materac',
+                number: 4,
+                zIndex: 25,
+                skipToNode: 'step_5'
+            });
 
             g.setNode("materac_tango", {
                 label: 'Tango',
@@ -1020,7 +1037,8 @@ $(document)
                 title: 'materac nawierzchniowy',
                 label: 'wybierz materac nawierzchniowy',
                 number: 5,
-                zIndex: 30
+                zIndex: 30,
+                skipToNode: 'summary'
             });
 
             g.setNode("materac_select_plus", {
