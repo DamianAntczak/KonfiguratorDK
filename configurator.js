@@ -886,15 +886,135 @@ $(document)
 
             g.setNode("stozek_owal_buk_16", {
                 label: '200/95',
-                price: {g1: 100.8, g2: 100.8},
+                price: {g1: 101.0, g2: 101.0},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("stozek_owal_wenge_16", {
                 label: '200/95',
-                price: {g1: 100.8, g2: 100.8},
+                price: {g1: 101.0, g2: 101.0},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("stozek_owal_dab_16", {
+                label: '200/95',
+                price: {g1: 132.0, g2: 132.0},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("stozek_skos_buk_16", {
+                label: '200/95',
+                price: {g1: 36.0, g2: 36.0},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("stozek_skos_dab_16", {
+                label: '200/95',
+                price: {g1: 50, g2: 50},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("stozek_skos_wenge_16", {
+                label: '200/95',
+                price: {g1: 36, g2: 36},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("stozek_ze_stopka_czern_16", {
+                label: '200/95',
+                price: {g1: 173, g2: 173},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("stozek_ze_stopka_miedz_16", {
+                label: '200/95',
+                price: {g1: 211, g2: 211},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("stozek_ze_stopka_srebro_16", {
+                label: '200/95',
+                price: {g1: 163, g2: 163},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("trojkat_prosty_czern_16", {
+                label: '200/95',
+                price: {g1: 108, g2: 108},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("trojkat_prosty_miedz_16", {
+                label: '200/95',
+                price: {g1: 175, g2: 175},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("trojkat_prosty_srebro_16", {
+                label: '200/95',
+                price: {g1: 115, g2: 115},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("trojkat_skosny_czern_16", {
+                label: '200/95',
+                price: {g1: 136, g2: 136},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("trojkat_skosny_miedz_16", {
+                label: '200/95',
+                price: {g1: 208, g2: 208},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("trojkat_skosny_srebro_16", {
+                label: '200/95',
+                price: {g1: 145, g2: 145},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("walek_czern_16", {
+                label: '200/95',
+                price: {g1: 55, g2: 55},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("walek_miedz_16", {
+                label: '200/95',
+                price: {g1: 88, g2: 88},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("walek_srebro_16", {
+                label: '200/95',
+                price: {g1: 61, g2: 61},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("kielich_czern_16", {
+                label: '200/95',
+                price: {g1: 173, g2: 173},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("kielich_miedz_16", {
+                label: '200/95',
+                price: {g1: 211, g2: 211},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("kielich_srebro_16", {
+                label: '200/95',
+                price: {g1: 173, g2: 173},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("naroznik_czern_16", {
+                label: '200/95',
+                price: {g1: 92, g2: 92},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("naroznik_miedz_16", {
+                label: '200/95',
+                price: {g1: 138, g2: 138},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("naroznik_srebro_16", {
+                label: '200/95',
+                price: {g1: 114, g2: 114},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("ploza_buk_16", {
+                label: '200/95',
+                price: {g1: 132, g2: 132},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("ploza_dab_16", {
+                label: '200/95',
+                price: {g1: 132, g2: 132},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("ploza_wenge_16", {
                 label: '200/95',
                 price: {g1: 132, g2: 132},
                 nextStep: 'step_typ_materaca'
@@ -1332,6 +1452,30 @@ $(document)
             g.setEdge("stozek_owal_buk", "stozek_owal_buk_16");
             g.setEdge("stozek_owal_wenge", "stozek_owal_wenge_16");
             g.setEdge("stozek_owal_dab", "stozek_owal_dab_16");
+            g.setEdge("stozek_skos_buk", "stozek_skos_buk_16");
+            g.setEdge("stozek_skos_dab", "stozek_skos_dab_16");
+            g.setEdge("stozek_skos_wenge", "stozek_skos_wenge_16");
+            g.setEdge("stozek_ze_stopka_czern", "stozek_ze_stopka_czern_16");
+            g.setEdge("stozek_ze_stopka_miedz", "stozek_ze_stopka_miedz_16");
+            g.setEdge("stozek_ze_stopka_srebro", "stozek_ze_stopka_srebro_16");
+            g.setEdge("trojkat_prosty_czern", "trojkat_prosty_czern_16");
+            g.setEdge("trojkat_prosty_miedz", "trojkat_prosty_miedz_16");
+            g.setEdge("trojkat_prosty_srebro", "trojkat_prosty_srebro_16");
+            g.setEdge("trojkat_skosny_czern", "trojkat_skosny_czern_16");
+            g.setEdge("trojkat_skosny_miedz", "trojkat_skosny_miedz_16");
+            g.setEdge("trojkat_skosny_srebro", "trojkat_skosny_srebro_16");
+            g.setEdge("walek_srebro", "walek_srebro_16");
+            g.setEdge("walek_miedz", "walek_miedz_16");
+            g.setEdge("walek_srebro", "walek_srebro_16");
+            g.setEdge("kielich_czern", "kielich_czern_16");
+            g.setEdge("kielich_miedz", "kielich_miedz_16");
+            g.setEdge("kielich_srebro", "kielich_srebro_16");
+            g.setEdge("naroznik_czern", "naroznik_czern_16");
+            g.setEdge("naroznik_miedz", "naroznik_miedz_16");
+            g.setEdge("naroznik_srebro", "naroznik_srebro_16");
+            g.setEdge("ploza_dab", "ploza_dab_16");
+            g.setEdge("ploza_buk", "ploza_buk_16");
+            g.setEdge("ploza_wenge", "ploza_wenge_16");
 
             g.setEdge("step_typ_materaca", "materac_pokrowiec");
             g.setEdge("step_typ_materaca", "materac_tapicerowany");
