@@ -51,8 +51,14 @@ class Configurator {
     previousStep() {
         $('#configurator-preview img').last().remove();
         console.log(this.allSteps[this.stepIndex - 1].selectedNodes[0]);
+        this.allSteps.pop();
+        console.log('this.allSteps');
+        console.log(this.allSteps);
         this.stepIndex = this.stepIndex - 1;
-        this.loadLevel(this.allSteps[this.stepIndex].selectedNodes[0].node);
+        var previousStepName = this.allSteps[this.stepIndex].selectedNodes[0].node;
+        this.allSteps[this.stepIndex].selectedNodes = [];
+        this.showPrice();
+        this.loadLevel(previousStepName);
     }
 
     skipStep() {
@@ -271,7 +277,9 @@ class Configurator {
                 }
             }
             else {
-                price += step.selectedNodes[2].price.g1;
+                if(step.selectedNodes[2] != undefined) {
+                    price += step.selectedNodes[2].price.g1;
+                }
             }
         });
         $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
