@@ -123,12 +123,19 @@ class Configurator {
         stepElement.html('');
         var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel owl-theme"));
         var items = 3;
+        var center  = false;
         if (successors.length < 3) {
-            items = successors.length;
-        }
+            if(successors.length === 2) {
+                items = 2;
+            }
+            else {
+                center = true;
+            }
+        };
         var carousel = $('.configurator-base-carousel').owlCarousel({
             loop: false,
             items: items,
+            center: center,
             nav: true,
             mouseDrag: false,
             margin: 30,
@@ -144,7 +151,8 @@ class Configurator {
             //     992: {
             //         items: 3,
             //     }
-            // }
+            // },
+
         });
         let nodePrice = function (node_name) {
             return '<div><h6 class="dimension-price">Wymiar i cena</h6>' +
@@ -1221,6 +1229,7 @@ $(document)
                 label: 'wybierz materac w pokrowcu',
                 number: 4,
                 zIndex: 25,
+                skipToNode: 'step_5',
                 optionsFilter: true
             });
             g.setNode("step_tapicerowany", {
@@ -1229,6 +1238,7 @@ $(document)
                 label: 'wybierz materac tapicerowany',
                 number: 4,
                 zIndex: 25,
+                skipToNode: 'step_5',
                 optionsFilter: true
             });
 
