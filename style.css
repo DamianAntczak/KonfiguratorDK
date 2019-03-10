@@ -101,8 +101,9 @@ div.summary-price-row div{
     background-size: cover;
     background-repeat: no-repeat;
     margin: 3px;
-    float: left;
+    display: inline-block;
     background-clip: content-box;
+    text-align: center;
 }
 
 .div-img_tkan{
@@ -182,4 +183,12 @@ select.configurator-select{
 #skip-step{
     color:#b2d53a;
     text-transform: uppercase;
+}
+
+.center-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+
 }
