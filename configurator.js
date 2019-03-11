@@ -41,7 +41,7 @@ class Configurator {
         if (selectedNode.nextStep == 'summary') {
             this.loadSummary();
         } else {
-            if (configurator.width === 0) {
+            if (configurator.step.number === 1) {
                 configurator.width = selectedNode.width;
             }
             this.loadLevel(selectedNode.nextStep);
