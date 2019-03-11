@@ -472,28 +472,28 @@ $(document)
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'baza_base_box.jpg',
-                render: 'baza kontynetalna_roko08.png',
+                render: '/bazy/baza_base_box_h31_novel13.png',
 
             });
             g.setNode("baza_kontynentalna", {
                 label: 'Kontynent',
                 img: 'kontynent.jpg',
-                render: 'baza kontynetalna_roko08.png',
+                render: '/bazy/baza_kontynentalna_h31_novel13.png',
             });
             g.setNode("baza_kontynentalna_z_szuflada", {
                 label: 'Kontynent</br>z szufladą',
                 img: 'kontynent_z_szuflada.jpg',
-                render: 'baza kontynetalna_roko08.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png',
             });
             g.setNode("baza_tapicerowana", {
                 label: 'Baza tapicerowana',
                 img: 'baza_tapicerowana.jpg',
-                render: 'baza kontynetalna_roko08.png',
+                render: '/bazy/baza_tapicerowana_h34_novel13.png',
             });
             g.setNode("box_podnoszony", {
                 label: 'Box-podnoszony',
                 img: 'box_podnoszony.jpg',
-                render: 'baza kontynetalna_roko08.png',
+                render: '/bazy/baza_box_podnoszony_h39_novel13.png',
             });
 
             g.setNode("base_box_200_200", {
@@ -672,37 +672,37 @@ $(document)
             g.setNode("glamour", {
                 label: 'Glamour',
                 img: 'glamour.jpg',
-                render: 'wezglowie_urban_95_roko08.png'
+                render: '/wezglowia/wezglowie_glamour_115_novel13.png'
             });
             g.setNode("vintage", {
                 label: 'Vintage',
                 img: 'vintage.jpg',
-                render: 'wezglowie_urban_95_roko08.png'
+                render: '/wezglowia/wezglowie_vintage_115_170_novel13.png'
             });
             g.setNode("eclectic", {
                 label: 'Eclectic',
                 img: 'electric.jpg',
-                render: 'wezglowie_urban_95_roko08.png'
+                render: '/wezglowia/wezglowie_eclectic_95_novel13.png'
             });
             g.setNode("ladylike", {
                 label: 'Ladylike',
                 img: 'ladylike.jpg',
-                render: 'wezglowie_urban_95_roko08.png'
+                render: '/wezglowia/wezglowie_preppy_95_170_novel13.png'
             });
             g.setNode("preppy", {
                 label: 'Preppy',
                 img: 'preppy.jpg',
-                render: 'wezglowie_urban_95_roko08.png'
+                render: '/wezglowia/wezglowie_preppy_95_novel13.png'
             });
             g.setNode("momiko", {
                 label: 'Momiko',
                 img: 'momiko.jpg',
-                render: 'wezglowie_urban_95_roko08.png'
+                render: '/wezglowia/wezglowie_momiko_95_novel13.png'
             });
             g.setNode("urban", {
                 label: 'Urban',
                 img: 'urban.jpg',
-                render: 'wezglowie_urban_95_roko08.png'
+                render: '/wezglowia/wezglowie_urban_95_novel13.png'
             });
 
             g.setNode("urban_140_95", {label: '140/95', width: 140, price: {g1: 749, g2: 849}, nextStep: 'step_3'});
