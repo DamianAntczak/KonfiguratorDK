@@ -2462,7 +2462,7 @@ $(document)
             g.setNode("materac_blues", {
                 label: 'Blues',
                 img: 'blues.jpg',
-                render: 'materac_salsa.png'
+                render: 'top_blues.png'
             });
 
 
@@ -2592,7 +2592,7 @@ $(document)
             g.setNode("otomana", {
                 label: 'Otomana',
                 img: 'otomany.png',
-                render: 'materac_salsa.png'
+                render: 'transparent.png'
             });
 
             g.setNode("otomana_140", {label: '140/200', price: {g1: 1599, g2: 1849}, nextStep: 'summary'});
