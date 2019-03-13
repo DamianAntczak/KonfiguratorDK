@@ -2456,7 +2456,7 @@ $(document)
             g.setNode("materac_select_plus", {
                 label: 'Select Plus Softex',
                 img: 'jive.jpg',
-                render: 'materac_salsa.png'
+                render: 'top_blues.png'
             });
 
             g.setNode("materac_blues", {
@@ -2469,13 +2469,13 @@ $(document)
             g.setNode("materac_jive", {
                 label: 'Jive',
                 img: 'jive.jpg',
-                render: 'materac_salsa.png'
+                render: 'top_blues.png'
             });
 
             g.setNode("materac_select_top", {
                 label: 'Select TOP',
                 img: 'jive.jpg',
-                render: 'materac_salsa.png'
+                render: 'top_blues.png'
             });
 
             g.setNode("materac_blues_140_200", {
