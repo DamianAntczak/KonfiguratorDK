@@ -112,6 +112,7 @@ class Configurator {
 
         this.showStepInfo();
         $('#next-step').hide();
+        $('#item-color').remove();
 
         var starNode = this.graph.node(step);
         console.log(starNode);
@@ -936,6 +937,363 @@ $(document)
                 render: '/bazy/baza_tapicerowana_h34_riviera38.png'
             });
 
+            g.setNode("urban_colors_7", {});
+            g.setNode("urban_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'urban_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/wezglowia/wezglowie_urban_95_novel13.png'
+            });
+            g.setNode("urban_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'urban_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/wezglowia/wezglowie_urban_95_roko08.png'
+            });
+            g.setNode("urban_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'urban_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/wezglowia/wezglowie_urban_95_aspen04.png'
+            });
+            g.setNode("urban_river", {
+                g: 2,
+                name: 'river',
+                node: 'urban_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/wezglowia/wezglowie_urban_95_river02.png'
+            });
+            g.setNode("urban_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'urban_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/wezglowia/wezglowie_urban_95_eren07.png'
+            });
+            g.setNode("urban_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'urban_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/wezglowia/wezglowie_urban_95_ontario90.png'
+            });
+            g.setNode("urban_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'urban_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/wezglowia/wezglowie_urban_95_riviera38.png'
+            });
+
+            g.setNode("preppy_colors_7", {});
+            g.setNode("preppy_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'preppy_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/wezglowia/wezglowie_preppy_95_novel13.png'
+            });
+            g.setNode("preppy_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'preppy_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/wezglowia/wezglowie_preppy_95_roko08.png'
+            });
+            g.setNode("preppy_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'preppy_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/wezglowia/wezglowie_preppy_95_aspen04.png'
+            });
+            g.setNode("preppy_river", {
+                g: 2,
+                name: 'river',
+                node: 'preppy_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/wezglowia/wezglowie_preppy_95_river02.png'
+            });
+            g.setNode("preppy_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'preppy_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/wezglowia/wezglowie_preppy_95_eren07.png'
+            });
+            g.setNode("preppy_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'preppy_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/wezglowia/wezglowie_preppy_95_ontario90.png'
+            });
+            g.setNode("preppy_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'preppy_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/wezglowia/wezglowie_preppy_95_riviera38.png'
+            });
+
+            g.setNode("glamour_colors_7", {});
+            g.setNode("glamour_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'glamour_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/wezglowia/wezglowie_glamour_115_novel13.png'
+            });
+            g.setNode("glamour_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'glamour_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/wezglowia/wezglowie_glamour_115_roko08.png'
+            });
+            g.setNode("glamour_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'glamour_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/wezglowia/wezglowie_glamour_115_aspen04.png'
+            });
+            g.setNode("glamour_river", {
+                g: 2,
+                name: 'river',
+                node: 'glamour_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/wezglowia/wezglowie_glamour_115_river02.png'
+            });
+            g.setNode("glamour_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'glamour_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/wezglowia/wezglowie_glamour_115_eren07.png'
+            });
+            g.setNode("glamour_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'glamour_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/wezglowia/wezglowie_glamour_115_ontario90.png'
+            });
+            g.setNode("glamour_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'glamour_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/wezglowia/wezglowie_glamour_115_riviera38.png'
+            });
+
+            g.setNode("vintage_colors_7", {});
+            g.setNode("vintage_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'vintage_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/wezglowia/wezglowie_vintage_95_novel13.png'
+            });
+            g.setNode("vintage_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'vintage_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/wezglowia/wezglowie_vintage_95_roko08.png'
+            });
+            g.setNode("vintage_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'vintage_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/wezglowia/wezglowie_vintage_95_aspen04.png'
+            });
+            g.setNode("vintage_river", {
+                g: 2,
+                name: 'river',
+                node: 'vintage_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/wezglowia/wezglowie_vintage_95_river02.png'
+            });
+            g.setNode("vintage_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'vintage_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/wezglowia/wezglowie_vintage_95_eren07.png'
+            });
+            g.setNode("vintage_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'vintage_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/wezglowia/wezglowie_vintage_95_ontario90.png'
+            });
+            g.setNode("vintage_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'vintage_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/wezglowia/wezglowie_vintage_95_riviera38.png'
+            });
+
+            g.setNode("eclectic_colors_7", {});
+            g.setNode("eclectic_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'eclectic_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/wezglowia/wezglowie_eclectic_95_novel13.png'
+            });
+            g.setNode("eclectic_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'eclectic_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/wezglowia/wezglowie_eclectic_95_roko08.png'
+            });
+            g.setNode("eclectic_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'eclectic_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/wezglowia/wezglowie_eclectic_95_aspen04.png'
+            });
+            g.setNode("eclectic_river", {
+                g: 2,
+                name: 'river',
+                node: 'eclectic_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/wezglowia/wezglowie_eclectic_95_river02.png'
+            });
+            g.setNode("eclectic_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'eclectic_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/wezglowia/wezglowie_eclectic_95_eren07.png'
+            });
+            g.setNode("eclectic_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'eclectic_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/wezglowia/wezglowie_eclectic_95_ontario90.png'
+            });
+            g.setNode("eclectic_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'eclectic_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/wezglowia/wezglowie_eclectic_95_riviera38.png'
+            });
+
+            g.setNode("ladylike_colors_7", {});
+            g.setNode("ladylike_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'ladylike_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/wezglowia/wezglowie_ladylike_115_novel13.png'
+            });
+            g.setNode("ladylike_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'ladylike_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/wezglowia/wezglowie_ladylike_115_roko08.png'
+            });
+            g.setNode("ladylike_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'ladylike_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/wezglowia/wezglowie_ladylike_115_aspen04.png'
+            });
+            g.setNode("ladylike_river", {
+                g: 2,
+                name: 'river',
+                node: 'ladylike_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/wezglowia/wezglowie_ladylike_115_river02.png'
+            });
+            g.setNode("ladylike_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'ladylike_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/wezglowia/wezglowie_ladylike_115_eren07.png'
+            });
+            g.setNode("ladylike_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'ladylike_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/wezglowia/wezglowie_ladylike_115_ontario90.png'
+            });
+            g.setNode("ladylike_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'ladylike_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/wezglowia/wezglowie_ladylike_115_riviera38.png'
+            });
+
+            g.setNode("momiko_colors_7", {});
+            g.setNode("momiko_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'momiko_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/wezglowia/wezglowie_momiko_95_novel13.png'
+            });
+            g.setNode("momiko_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'momiko_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/wezglowia/wezglowie_momiko_95_roko08.png'
+            });
+            g.setNode("momiko_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'momiko_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/wezglowia/wezglowie_momiko_95_aspen04.png'
+            });
+            g.setNode("momiko_river", {
+                g: 2,
+                name: 'river',
+                node: 'momiko_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/wezglowia/wezglowie_momiko_95_river02.png'
+            });
+            g.setNode("momiko_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'momiko_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/wezglowia/wezglowie_momiko_95_eren07.png'
+            });
+            g.setNode("momiko_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'momiko_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/wezglowia/wezglowie_momiko_95_ontario90.png'
+            });
+            g.setNode("momiko_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'momiko_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/wezglowia/wezglowie_momiko_95_riviera38.png'
+            });
+
             g.setNode("step_2", {
                 node: 'step_2',
                 title: 'wezgłowie',
@@ -949,37 +1307,44 @@ $(document)
             g.setNode("glamour", {
                 label: 'Glamour',
                 img: 'glamour.jpg',
-                render: '/wezglowia/wezglowie_glamour_115_novel13.png'
+                render: '/wezglowia/wezglowie_glamour_115_novel13.png',
+                colors: 'glamour_colors_7'
             });
             g.setNode("vintage", {
                 label: 'Vintage',
                 img: 'vintage.jpg',
-                render: '/wezglowia/wezglowie_vintage_115_170_novel13.png'
+                render: '/wezglowia/wezglowie_vintage_95_novel13.png',
+                colors: 'vintage_colors_7'
             });
             g.setNode("eclectic", {
                 label: 'Eclectic',
                 img: 'electric.jpg',
-                render: '/wezglowia/wezglowie_eclectic_95_novel13.png'
+                render: '/wezglowia/wezglowie_eclectic_95_novel13.png',
+                colors: 'eclectic_colors_7'
             });
             g.setNode("ladylike", {
                 label: 'Ladylike',
                 img: 'ladylike.jpg',
-                render: '/wezglowia/wezglowie_preppy_95_170_novel13.png'
+                render: '/wezglowia/wezglowie_ladylike_115_novel13.png',
+                colors: 'ladylike_colors_7'
             });
             g.setNode("preppy", {
                 label: 'Preppy',
                 img: 'preppy.jpg',
-                render: '/wezglowia/wezglowie_preppy_95_novel13.png'
+                render: '/wezglowia/wezglowie_preppy_95_novel13.png',
+                colors: 'preppy_colors_7'
             });
             g.setNode("momiko", {
                 label: 'Momiko',
                 img: 'momiko.jpg',
-                render: '/wezglowia/wezglowie_momiko_95_novel13.png'
+                render: '/wezglowia/wezglowie_momiko_95_novel13.png',
+                colors: 'momiko_colors_7'
             });
             g.setNode("urban", {
                 label: 'Urban',
                 img: 'urban.jpg',
-                render: '/wezglowia/wezglowie_urban_95_novel13.png'
+                render: '/wezglowia/wezglowie_urban_95_novel13.png',
+                colors: 'urban_colors_7'
             });
 
             g.setNode("urban_140_95", {label: '140/95', width: 140, price: {g1: 749, g2: 849}, nextStep: 'step_typ_materaca'});
@@ -2310,7 +2675,63 @@ $(document)
             g.setEdge("tapicerowana_colors_7", "tapicerowana_river");
             g.setEdge("tapicerowana_colors_7", "tapicerowana_eren");
             g.setEdge("tapicerowana_colors_7", "tapicerowana_ontario");
-            g.setEdge("tapicerowana_colors_7", "tapicerowana_riviera")
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_riviera");
+
+            g.setEdge("urban_colors_7", "urban_novel");
+            g.setEdge("urban_colors_7", "urban_roko");
+            g.setEdge("urban_colors_7", "urban_aspen");
+            g.setEdge("urban_colors_7", "urban_river");
+            g.setEdge("urban_colors_7", "urban_eren");
+            g.setEdge("urban_colors_7", "urban_ontario");
+            g.setEdge("urban_colors_7", "urban_riviera");
+
+            g.setEdge("preppy_colors_7", "preppy_novel");
+            g.setEdge("preppy_colors_7", "preppy_roko");
+            g.setEdge("preppy_colors_7", "preppy_aspen");
+            g.setEdge("preppy_colors_7", "preppy_river");
+            g.setEdge("preppy_colors_7", "preppy_eren");
+            g.setEdge("preppy_colors_7", "preppy_ontario");
+            g.setEdge("preppy_colors_7", "preppy_riviera");
+
+            g.setEdge("glamour_colors_7", "glamour_novel");
+            g.setEdge("glamour_colors_7", "glamour_roko");
+            g.setEdge("glamour_colors_7", "glamour_aspen");
+            g.setEdge("glamour_colors_7", "glamour_river");
+            g.setEdge("glamour_colors_7", "glamour_eren");
+            g.setEdge("glamour_colors_7", "glamour_ontario");
+            g.setEdge("glamour_colors_7", "glamour_riviera");
+
+            g.setEdge("vintage_colors_7", "vintage_novel");
+            g.setEdge("vintage_colors_7", "vintage_roko");
+            g.setEdge("vintage_colors_7", "vintage_aspen");
+            g.setEdge("vintage_colors_7", "vintage_river");
+            g.setEdge("vintage_colors_7", "vintage_eren");
+            g.setEdge("vintage_colors_7", "vintage_ontario");
+            g.setEdge("vintage_colors_7", "vintage_riviera");
+
+            g.setEdge("eclectic_colors_7", "eclectic_novel");
+            g.setEdge("eclectic_colors_7", "eclectic_roko");
+            g.setEdge("eclectic_colors_7", "eclectic_aspen");
+            g.setEdge("eclectic_colors_7", "eclectic_river");
+            g.setEdge("eclectic_colors_7", "eclectic_eren");
+            g.setEdge("eclectic_colors_7", "eclectic_ontario");
+            g.setEdge("eclectic_colors_7", "eclectic_riviera");
+
+            g.setEdge("ladylike_colors_7", "ladylike_novel");
+            g.setEdge("ladylike_colors_7", "ladylike_roko");
+            g.setEdge("ladylike_colors_7", "ladylike_aspen");
+            g.setEdge("ladylike_colors_7", "ladylike_river");
+            g.setEdge("ladylike_colors_7", "ladylike_eren");
+            g.setEdge("ladylike_colors_7", "ladylike_ontario");
+            g.setEdge("ladylike_colors_7", "ladylike_riviera");
+
+            g.setEdge("momiko_colors_7", "momiko_novel");
+            g.setEdge("momiko_colors_7", "momiko_roko");
+            g.setEdge("momiko_colors_7", "momiko_aspen");
+            g.setEdge("momiko_colors_7", "momiko_river");
+            g.setEdge("momiko_colors_7", "momiko_eren");
+            g.setEdge("momiko_colors_7", "momiko_ontario");
+            g.setEdge("momiko_colors_7", "momiko_riviera");
 
             g.setEdge("step_2", "urban");
             g.setEdge("step_2", "preppy");
