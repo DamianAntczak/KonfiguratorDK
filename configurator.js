@@ -206,14 +206,7 @@ class Configurator {
 
         carousel.trigger('refresh.owl.carousel');
 
-        $('#item-color').remove();
 
-        console.log('starNode.colors');
-        console.log(starNode);
-        if (starNode.colors !== undefined) {
-            $('#step-content').after(this.addColor(starNode.colors));
-            $('.img_tkan:first').addClass('color-selected');
-        }
 
         this.refresh(this.graph.node(step));
 
@@ -263,6 +256,12 @@ class Configurator {
             configurator.step.selectedNodes[1] = baseNode;
             configurator.step.selectedNodes[2] = node;
             this.showPrice();
+
+            $('#item-color').remove();
+            if (baseNode.colors !== undefined) {
+                $('#step-content').after(this.addColor(baseNode.colors));
+                $('.img_tkan:first').addClass('color-selected');
+            }
 
             $('#next-step').show();
             console.log('Node ');
@@ -380,11 +379,20 @@ class Configurator {
 
         let colorNode = configurator.graph.node($this.attr('color'));
         configurator.step.selectedNodes[3] = colorNode;
+        console.log(colorNode.render);
+        // var mainNode = configurator.step.selectedNodes[1];
+        var mainNode = this.step.selectedNodes[0];
+        var find = $('#configurator-preview').find('#render-' + mainNode.node);
+        if (find.length === 0) {
+            $('#configurator-preview').append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
+        } else {
+            $(find).attr('src', 'renders/' + colorNode.render);
+        }
 
         $('.img_tkan').removeClass('color-selected');
-
         // this.graph
-        var successors = configurator.graph.successors(this.step.selectedNodes[0].node);
+
+        var successors = configurator.graph.successors(mainNode.node);
         var $owl = $('.configurator-base-carousel');
 
         successors.forEach(base_node_name => {
@@ -466,34 +474,37 @@ $(document)
                 label: 'wybierz bazę',
                 number: 1,
                 zIndex: 10,
-                colors: 'colors_7',
                 optionsFilter: false
             });
             g.setNode("base_box", {
                 label: 'Base box',
                 img: 'baza_base_box.jpg',
                 render: '/bazy/baza_base_box_h31_novel13.png',
-
+                colors: 'base_box_colors_7',
             });
             g.setNode("baza_kontynentalna", {
                 label: 'Kontynent',
                 img: 'kontynent.jpg',
                 render: '/bazy/baza_kontynentalna_h31_novel13.png',
+                colors: 'kontynent_colors_7',
             });
             g.setNode("baza_kontynentalna_z_szuflada", {
                 label: 'Kontynent</br>z szufladą',
                 img: 'kontynent_z_szuflada.jpg',
                 render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png',
+                colors: 'kontynent_szuflada_colors_7',
             });
             g.setNode("baza_tapicerowana", {
                 label: 'Baza tapicerowana',
                 img: 'baza_tapicerowana.jpg',
                 render: '/bazy/baza_tapicerowana_h34_novel13.png',
+                colors: 'tapicerowana_colors_7',
             });
             g.setNode("box_podnoszony", {
                 label: 'Box-podnoszony',
                 img: 'box_podnoszony.jpg',
                 render: '/bazy/baza_box_podnoszony_h39_novel13.png',
+                colors: 'base_podnoszony_colors_7',
             });
 
             g.setNode("base_box_140_200", {
@@ -612,52 +623,318 @@ $(document)
                 nextStep: 'step_2'
             });
 
-            g.setNode("colors_7", {});
+            g.setNode("kontynent_colors_7", {});
 
-            g.setNode("color_novel", {
+            g.setNode("kontynent_novel", {
                 g: 1,
                 name: 'novel',
-                node: 'color_novel',
-                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'
+                node: 'kontynent_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/bazy/baza_kontynentalna_h31_novel13.png'
             });
-            g.setNode("color_roko", {
+            g.setNode("kontynent_roko", {
                 g: 1,
                 name: 'roko',
-                node: 'color_roko',
-                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'
+                node: 'kontynent_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/bazy/baza_kontynentalna_h31_roko08.png'
             });
-            g.setNode("color_aspen", {
+            g.setNode("kontynent_aspen", {
                 g: 1,
                 name: 'aspen',
-                node: 'color_aspen',
-                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'
+                node: 'kontynent_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/bazy/baza_kontynentalna_h31_aspen04.png'
             });
 
-            g.setNode("color_river", {
+            g.setNode("kontynent_river", {
                 g: 2,
                 name: 'river',
-                node: 'color_river',
-                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'
+                node: 'kontynent_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/bazy/baza_kontynentalna_h31_river02.png'
             });
-            g.setNode("color_eren", {
+            g.setNode("kontynent_eren", {
                 g: 2,
                 name: 'eren',
-                node: 'color_eren',
-                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'
+                node: 'kontynent_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/bazy/baza_kontynentalna_h31_eren07.png'
             });
-            g.setNode("color_ontario", {
+            g.setNode("kontynent_ontario", {
                 g: 2,
                 name: 'ontario',
-                node: 'color_ontario',
-                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'
+                node: 'kontynent_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/bazy/baza_kontynentalna_h31_ontario90.png'
             });
-            g.setNode("color_riviera", {
+            g.setNode("kontynent_riviera", {
                 g: 2,
                 name: 'riviera',
-                node: 'color_riviera',
-                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png'
+                node: 'kontynent_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/bazy/baza_kontynentalna_h31_riviera38.png'
             });
 
+            g.setNode("kontynent_colors_7", {});
+            g.setNode("kontynent_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'kontynent_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/bazy/baza_kontynentalna_h31_novel13.png'
+            });
+            g.setNode("kontynent_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'kontynent_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/bazy/baza_kontynentalna_h31_roko08.png'
+            });
+            g.setNode("kontynent_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'kontynent_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/bazy/baza_kontynentalna_h31_aspen04.png'
+            });
+
+            g.setNode("kontynent_river", {
+                g: 2,
+                name: 'river',
+                node: 'kontynent_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/bazy/baza_kontynentalna_h31_river02.png'
+            });
+            g.setNode("kontynent_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'kontynent_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/bazy/baza_kontynentalna_h31_eren07.png'
+            });
+            g.setNode("kontynent_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'kontynent_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/bazy/baza_kontynentalna_h31_ontario90.png'
+            });
+            g.setNode("kontynent_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'kontynent_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/bazy/baza_kontynentalna_h31_riviera38.png'
+            });
+
+            g.setNode("kontynent_szuflada_colors_7", {});
+            g.setNode("kontynent_szuflada_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'kontynent_szuflada_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png'
+            });
+            g.setNode("kontynent_szuflada_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'kontynent_szuflada_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_roko08.png'
+            });
+            g.setNode("kontynent_szuflada_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'kontynent_szuflada_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_aspen04.png'
+            });
+
+            g.setNode("kontynent_szuflada_river", {
+                g: 2,
+                name: 'river',
+                node: 'kontynent_szuflada_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_river02.png'
+            });
+            g.setNode("kontynent_szuflada_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'kontynent_szuflada_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_eren07.png'
+            });
+            g.setNode("kontynent_szuflada_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'kontynent_szuflada_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_ontario90.png'
+            });
+            g.setNode("kontynent_szuflada_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'kontynent_szuflada_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/bazy/baza_kontynentalna_szuflady_h34_riviera38.png'
+            });
+
+            g.setNode("base_box_colors_7", {});
+            g.setNode("base_box_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'base_box_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/bazy/baza_base_box_h31_novel13.png'
+            });
+            g.setNode("base_box_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'base_box_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/bazy/baza_base_box_h31_roko08.png'
+            });
+            g.setNode("base_box_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'base_box_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/bazy/baza_base_box_h31_aspen04.png'
+            });
+
+            g.setNode("base_box_river", {
+                g: 2,
+                name: 'river',
+                node: 'base_box_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/bazy/baza_base_box_h31_river02.png'
+            });
+            g.setNode("base_box_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'base_box_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/bazy/baza_base_box_h31_eren07.png'
+            });
+            g.setNode("base_box_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'base_box_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/bazy/baza_base_box_h31_ontario90.png'
+            });
+            g.setNode("base_box_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'base_box_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/bazy/baza_base_box_h31_riviera38.png'
+            });
+
+            g.setNode("base_podnoszony_colors_7", {});
+
+            g.setNode("base_podnoszony_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'base_podnoszony_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/bazy/baza_box_podnoszony_h39_novel13.png'
+            });
+            g.setNode("base_podnoszony_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'base_podnoszony_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/bazy/baza_box_podnoszony_h39_roko08.png'
+            });
+            g.setNode("base_podnoszony_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'base_podnoszony_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/bazy/baza_box_podnoszony_h39_aspen04.png'
+            });
+
+            g.setNode("base_podnoszony_river", {
+                g: 2,
+                name: 'river',
+                node: 'base_podnoszony_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/bazy/baza_box_podnoszony_h39_river02.png'
+            });
+            g.setNode("base_podnoszony_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'base_podnoszony_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/bazy/baza_box_podnoszony_h39_eren07.png'
+            });
+            g.setNode("base_podnoszony_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'base_podnoszony_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/bazy/baza_box_podnoszony_h39_ontario90.png'
+            });
+            g.setNode("base_podnoszony_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'base_podnoszony_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/bazy/baza_box_podnoszony_h39_riviera38.png'
+            });
+
+            g.setNode("tapicerowana_colors_7", {});
+            g.setNode("tapicerowana_novel", {
+                g: 1,
+                name: 'novel',
+                node: 'tapicerowana_novel',
+                url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+                render: '/bazy/baza_tapicerowana_h34_novel13.png'
+            });
+            g.setNode("tapicerowana_roko", {
+                g: 1,
+                name: 'roko',
+                node: 'tapicerowana_roko',
+                url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+                render: '/bazy/baza_tapicerowana_h34_roko08.png'
+            });
+            g.setNode("tapicerowana_aspen", {
+                g: 1,
+                name: 'aspen',
+                node: 'tapicerowana_aspen',
+                url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+                render: '/bazy/baza_tapicerowana_h34_aspen04.png'
+            });
+            g.setNode("tapicerowana_river", {
+                g: 2,
+                name: 'river',
+                node: 'tapicerowana_river',
+                url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+                render: '/bazy/baza_tapicerowana_h34_river02.png'
+            });
+            g.setNode("tapicerowana_eren", {
+                g: 2,
+                name: 'eren',
+                node: 'tapicerowana_eren',
+                url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+                render: '/bazy/baza_tapicerowana_h34_eren07.png'
+            });
+            g.setNode("tapicerowana_ontario", {
+                g: 2,
+                name: 'ontario',
+                node: 'tapicerowana_ontario',
+                url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+                render: '/bazy/baza_tapicerowana_h34_ontario90.png'
+            });
+            g.setNode("tapicerowana_riviera", {
+                g: 2,
+                name: 'riviera',
+                node: 'tapicerowana_riviera',
+                url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+                render: '/bazy/baza_tapicerowana_h34_riviera38.png'
+            });
 
             g.setNode("step_2", {
                 node: 'step_2',
@@ -1964,9 +2241,9 @@ $(document)
             g.setEdge("loadLevel", "step_1");
 
             g.setEdge("step_1", "base_box");
-            g.setEdge("step_1", "baza_kontynentalna_z_szuflada");
             g.setEdge("step_1", "box_podnoszony");
             g.setEdge("step_1", "baza_kontynentalna");
+            g.setEdge("step_1", "baza_kontynentalna_z_szuflada");
             g.setEdge("step_1", "baza_tapicerowana");
 
             g.setEdge("base_box", "base_box_140_200");
@@ -1995,14 +2272,45 @@ $(document)
             g.setEdge("box_podnoszony", "box_podnoszony_200_200");
 
 
-            g.setEdge("colors_7", "color_novel");
-            g.setEdge("colors_7", "color_roko");
-            g.setEdge("colors_7", "color_aspen");
-            g.setEdge("colors_7", "color_river");
-            g.setEdge("colors_7", "color_eren");
-            g.setEdge("colors_7", "color_ontario");
-            g.setEdge("colors_7", "color_riviera");
+            g.setEdge("kontynent_colors_7", "kontynent_novel");
+            g.setEdge("kontynent_colors_7", "kontynent_roko");
+            g.setEdge("kontynent_colors_7", "kontynent_aspen");
+            g.setEdge("kontynent_colors_7", "kontynent_river");
+            g.setEdge("kontynent_colors_7", "kontynent_eren");
+            g.setEdge("kontynent_colors_7", "kontynent_ontario");
+            g.setEdge("kontynent_colors_7", "kontynent_riviera")
 
+            g.setEdge("kontynent_szuflada_colors_7", "kontynent_szuflada_novel");
+            g.setEdge("kontynent_szuflada_colors_7", "kontynent_szuflada_roko");
+            g.setEdge("kontynent_szuflada_colors_7", "kontynent_szuflada_aspen");
+            g.setEdge("kontynent_szuflada_colors_7", "kontynent_szuflada_river");
+            g.setEdge("kontynent_szuflada_colors_7", "kontynent_szuflada_eren");
+            g.setEdge("kontynent_szuflada_colors_7", "kontynent_szuflada_ontario");
+            g.setEdge("kontynent_szuflada_colors_7", "kontynent_szuflada_riviera");
+
+            g.setEdge("base_box_colors_7", "base_box_novel");
+            g.setEdge("base_box_colors_7", "base_box_roko");
+            g.setEdge("base_box_colors_7", "base_box_aspen");
+            g.setEdge("base_box_colors_7", "base_box_river");
+            g.setEdge("base_box_colors_7", "base_box_eren");
+            g.setEdge("base_box_colors_7", "base_box_ontario");
+            g.setEdge("base_box_colors_7", "base_box_riviera");
+
+            g.setEdge("base_podnoszony_colors_7", "base_podnoszony_novel");
+            g.setEdge("base_podnoszony_colors_7", "base_podnoszony_roko");
+            g.setEdge("base_podnoszony_colors_7", "base_podnoszony_aspen");
+            g.setEdge("base_podnoszony_colors_7", "base_podnoszony_river");
+            g.setEdge("base_podnoszony_colors_7", "base_podnoszony_eren");
+            g.setEdge("base_podnoszony_colors_7", "base_podnoszony_ontario");
+            g.setEdge("base_podnoszony_colors_7", "base_podnoszony_riviera");
+
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_novel");
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_roko");
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_aspen");
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_river");
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_eren");
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_ontario");
+            g.setEdge("tapicerowana_colors_7", "tapicerowana_riviera")
 
             g.setEdge("step_2", "urban");
             g.setEdge("step_2", "preppy");
