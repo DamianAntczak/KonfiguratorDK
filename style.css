@@ -87,7 +87,7 @@ div.summary-price-row div{
 .square {
     width: 100%;
     padding-bottom: 100%;
-    -webkit-background-size: cover;
+    -webkit-background-size: contain;
     background-size: cover;
     background-position: center;
     min-width: 120px;
@@ -103,6 +103,17 @@ div.summary-price-row div{
     margin: 3px;
     display: inline-block;
     background-clip: content-box;
+    text-align: center;
+}
+
+.img_cover {
+    width: 45px;
+    height: 45px;
+    padding: 2px;
+    -webkit-background-size:  contain, cover;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    margin: 3px;
     text-align: center;
 }
 

@@ -261,11 +261,11 @@ class Configurator {
             $('#item-color').remove();
             if (baseNode.colors !== undefined) {
                 $('#step-content').after(this.addColor(baseNode.colors));
-                $('.img_tkan:first').addClass('color-selected');
+                $('.tiles:first').addClass('color-selected');
             }
             else if(baseNode.cover !== undefined){
                 $('#step-content').after(this.addCover(baseNode.cover));
-                $('.img_tkan:first').addClass('color-selected');
+                $('.tiles:first').addClass('color-selected');
             }
 
             $('#next-step').show();
@@ -362,7 +362,7 @@ class Configurator {
             html += '<div class="center-block" style="' + style + '">';
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
-                html += '<div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
+                html += '<div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_tkan tiles" style="background-image: url(\'' + color.url + '\')" ></div>';
                 // html += '</div>';
             });
             html += '</div>';
@@ -394,31 +394,34 @@ class Configurator {
 
         html += '<div class="col-sm-12">';
         // html += '<div class="center-block">';
-        addImageToDom(g1Colors, g1Colors[0].name, 'text-align: right;font-size: 9px;');
-        addImageToDom(g2Colors, g2Colors[0].name,'text-align: left;font-size: 9px;');
+        html += '<div class="center-block" style="text-align: center;font-size: 9px;">';
+        if(g1Colors.length > 0) {
+            addImageToDom(g1Colors, g1Colors[0].name);
+        }
+        if(g2Colors.length > 0) {
+            addImageToDom(g2Colors, g2Colors[0].name);
+        }
+        html += '</div>';
         // html += '</div>';
         html += '</div>';
 
         html += '</div>';
         return html + '</div></div>';
 
-        function addImageToDom(colors, group, style) {
+        function addImageToDom(colors, group) {
             // html += '<div class="row">';
             var counter = 0;
-            html += '<div class="col-sm-6">';
-            html += '<div class="center-block" style="' + style + '">';
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
-                html += '<div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
+                html += '<div style="display: inline-block;background-clip: content-box;"><div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_cover tiles" style="background-image: url(\'' + color.url + '\')" >';
                 // html += '</div>';
+                html += '</div>';
             });
-            html += '</div>';
-            // html += '<div class="row">';
-            html += '<h6 class="bold text-uppercase" style="' + style + '">' + group + '</h6>';
+            html += '<span class="bold text-uppercase">' + group + '</span>';
             html += '</div>';
         }
 
-        return html + '</div></div>';
+        return html + '</div>';
     }
 
     onColorSelect(selectedColor) {
@@ -440,32 +443,45 @@ class Configurator {
             $(find).attr('src', 'renders/' + colorNode.render);
         }
 
-        $('.img_tkan').removeClass('color-selected');
+        $('.tiles').removeClass('color-selected');
         // this.graph
 
-        var successors = configurator.graph.successors(mainNode.node);
+        // var successors = configurator.graph.successors(mainNode.node);
         var $owl = $('.configurator-base-carousel');
 
-        successors.forEach(base_node_name => {
-            console.log(base_node_name);
-            // let baseNode = configurator.graph.node(base_node_name);
+        // successors.forEach(base_node_name => {
+        //     console.log(base_node_name);
+        //     // let baseNode = configurator.graph.node(base_node_name);
+        //
+        //     var val = $('#select-' + base_node_name).val();
+        //     console.log(val);
+        //     var node = this.step.selectedNodes[0];
+        //     var base_node_name = node.name;
+        //     console.log(node);
+        //     if (node !== undefined) {
+        //         if (colorNode.g === 1) {
+        //             $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
+        //         } else {
+        //             $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
+        //         }
+        //     }
+        // });
 
-            var val = $('#select-' + base_node_name).val();
-            console.log(val);
-            var node = configurator.graph.node(val);
-            console.log(node);
-            if (node !== undefined) {
-                if (colorNode.g === 1) {
-                    $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
-                } else {
-                    $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
-                }
+        var node = this.step.selectedNodes[2];
+        var base_node_name = this.step.selectedNodes[1].node;
+        console.log(this.step.selectedNodes[1].node);
+        if (node !== undefined) {
+            if (colorNode.g === 1) {
+                $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
+            } else {
+                $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
             }
-        });
+        }
 
         configurator.showPrice();
         $this.toggleClass('color-selected');
     }
+
 
     loadSummary() {
         $('#step-number').hide();
@@ -528,30 +544,35 @@ $(document)
                 optionsFilter: false
             });
             g.setNode("base_box", {
+                node: 'base_box',
                 label: 'Base box',
                 img: 'baza_base_box.jpg',
                 render: '/bazy/baza_base_box_h31_novel13.png',
                 colors: 'base_box_colors_7',
             });
             g.setNode("baza_kontynentalna", {
+                node: 'baza_kontynentalna',
                 label: 'Kontynent',
                 img: 'kontynent.jpg',
                 render: '/bazy/baza_kontynentalna_h31_novel13.png',
                 colors: 'kontynent_colors_7',
             });
             g.setNode("baza_kontynentalna_z_szuflada", {
+                node: 'baza_kontynentalna_z_szuflada',
                 label: 'Kontynent</br>z szufladą',
                 img: 'kontynent_z_szuflada.jpg',
                 render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png',
                 colors: 'kontynent_szuflada_colors_7',
             });
             g.setNode("baza_tapicerowana", {
+                node: 'baza_tapicerowana',
                 label: 'Baza tapicerowana',
                 img: 'baza_tapicerowana.jpg',
                 render: '/bazy/baza_tapicerowana_h34_novel13.png',
                 colors: 'tapicerowana_colors_7',
             });
             g.setNode("box_podnoszony", {
+                node: 'box_podnoszony',
                 label: 'Box-podnoszony',
                 img: 'box_podnoszony.jpg',
                 render: '/bazy/baza_box_podnoszony_h39_novel13.png',
@@ -1344,57 +1365,114 @@ $(document)
                 render: '/wezglowia/wezglowie_momiko_95_riviera38.png'
             });
 
-            g.setNode("cover_velvet_tencel", {});
+            g.setNode("covers_velvet", {});
             g.setNode("cover_velvet", {
                 g: 1,
                 name: 'velvet',
                 node: 'cover_velvet',
                 url: 'https://hilding.pl/png/product/velvet_1501504449.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png'
             });
 
+            g.setNode("covers_velvet_tencel", {});
             g.setNode("cover_tencel", {
                 g: 2,
                 name: 'tencel',
                 node: 'cover_tencel',
                 url: 'https://hilding.pl/png/product/tencel_1501504432.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png'
             });
 
-            g.setNode("cover_elips_medicott", {});
-            g.setNode("cover_merced", {
+            g.setNode("covers_merced_elips", {});
+            g.setNode("cover_merced_1", {
+                g: 1,
+                name: 'merced',
+                node: 'cover_merced_1',
+                url: 'https://hilding.pl/png/product/merced_1501505133.jpg',
+                render: 'materace/materac_salsa_h31.png'
+            });
+            g.setNode("cover_merced_2", {
+                g: 2,
+                name: 'merced',
+                node: 'cover_merced_2',
+                url: 'https://hilding.pl/png/product/merced_1501505133.jpg',
+                render: 'materace/materac_salsa_h31.png'
+            });
+            g.setNode("covers_elips_medicott", {});
+            g.setNode("cover_elips_1", {
                 g: 1,
                 name: 'elips',
-                node: 'cover_elips',
+                node: 'cover_elips_1',
                 url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png'
+            });
+            g.setNode("cover_elips_2", {
+                g: 2,
+                name: 'elips',
+                node: 'cover_elips_2',
+                url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+                render: 'materace/materac_salsa_h31.png'
             });
             g.setNode("cover_medicott", {
                 g: 2,
                 name: 'medicott velur',
                 node: 'cover_medicott',
                 url: 'https://hilding.pl/png/product/medicott_velur_1501507379.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png'
             });
 
+            g.setNode("covers_elips_tencel_top", {});
+            g.setNode("cover_elips_top", {
+                g: 1,
+                name: 'elips',
+                node: 'cover_elips_top',
+                url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+                render: 'materace/top_blues_h31.png'
+            });
+            g.setNode("cover_tencel_top", {
+                g: 2,
+                name: 'tencel',
+                node: 'cover_tencel_top',
+                url: 'https://hilding.pl/png/product/tencel_1501504432.jpg',
+                render: 'materace/top_blues_h31.png'
+            });
 
-            g.setNode("cover_fresh", {});
-            g.setNode("cover_fresh_0", {
+            g.setNode("covers_fresh", {});
+            g.setNode("cover_fresh", {
                 g: 1,
                 name: 'fresh',
-                node: 'cover_fresh_0',
+                node: 'cover_fresh',
                 url: 'https://hilding.pl/png/product/fresh_1501574622.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png'
             });
 
-            g.setNode("cover_medicover", {});
-            g.setNode("cover_medicover_0", {
+            g.setNode("covers_medicover", {});
+            g.setNode("cover_medicover", {
                 g: 1,
                 name: 'Medi-cover',
                 node: 'cover_medicover',
                 url: 'https://hilding.pl/png/product/medicott_1501579581.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png'
             });
+
+            g.setNode("covers_teenage", {});
+            g.setNode("cover_teenage", {
+                g: 1,
+                name: 'Teenage',
+                node: 'cover_teenage',
+                url: 'https://hilding.pl/png/product/teenage_1501584003.jpg',
+                render: 'materace/materac_salsa_h31.png'
+            });
+
+            g.setNode("covers_sensity_top", {});
+            g.setNode("cover_sensity_top", {
+                g: 1,
+                name: 'sensity',
+                node: 'cover_sensity_top',
+                url: 'https://hilding.pl/png/product/fresh_1501574622.jpg',
+                render: 'materace/materac_salsa_h31.png'
+            });
+
 
             g.setNode("m_tap_colors_7", {});
             g.setNode("m_tap_novel", {
@@ -1458,42 +1536,49 @@ $(document)
             });
 
             g.setNode("glamour", {
+                node: 'glamour',
                 label: 'Glamour',
                 img: 'glamour.jpg',
                 render: '/wezglowia/wezglowie_glamour_115_novel13.png',
                 colors: 'glamour_colors_7'
             });
             g.setNode("vintage", {
+                node: 'vintage',
                 label: 'Vintage',
                 img: 'vintage.jpg',
                 render: '/wezglowia/wezglowie_vintage_95_novel13.png',
                 colors: 'vintage_colors_7'
             });
             g.setNode("eclectic", {
+                node: 'eclectic',
                 label: 'Eclectic',
                 img: 'electric.jpg',
                 render: '/wezglowia/wezglowie_eclectic_95_novel13.png',
                 colors: 'eclectic_colors_7'
             });
             g.setNode("ladylike", {
+                node: 'ladylike',
                 label: 'Ladylike',
                 img: 'ladylike.jpg',
                 render: '/wezglowia/wezglowie_ladylike_115_novel13.png',
                 colors: 'ladylike_colors_7'
             });
             g.setNode("preppy", {
+                node: 'preppy',
                 label: 'Preppy',
                 img: 'preppy.jpg',
                 render: '/wezglowia/wezglowie_preppy_95_novel13.png',
                 colors: 'preppy_colors_7'
             });
             g.setNode("momiko", {
+                node: 'momiko',
                 label: 'Momiko',
                 img: 'momiko.jpg',
                 render: '/wezglowia/wezglowie_momiko_95_novel13.png',
                 colors: 'momiko_colors_7'
             });
             g.setNode("urban", {
+                node: 'urban',
                 label: 'Urban',
                 img: 'urban.jpg',
                 render: '/wezglowia/wezglowie_urban_95_novel13.png',
@@ -2050,110 +2135,131 @@ $(document)
             });
 
             g.setNode("materac_tango", {
+                node: 'materac_tango',
                 label: 'Tango',
                 img: 'tango.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_velvet_tencel'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_velvet_tencel'
             });
             g.setNode("materac_step", {
+                node: 'materac_step',
                 label: 'Step',
                 img: 'step.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_step'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_fresh'
             });
             g.setNode("materac_salsa", {
+                node: 'materac_salsa',
                 label: 'Salsa',
                 img: 'salsa.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_medicover'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_medicover'
             });
             g.setNode("materac_chacha", {
+                node: 'materac_chacha',
                 label: 'Cha-Cha',
                 img: 'cha-cha.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_velvet'
             });
-
             g.setNode("materac_pasodoble", {
+                node: 'materac_pasodoble',
                 label: 'Pasodoble',
                 img: 'pasadoble.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_velvet_tencel'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_velvet_tencel'
             });
             g.setNode("materac_flamenco", {
+                node: 'materac_flamenco',
                 label: 'Flamenco',
                 img: 'flamenco.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_velvet_tencel'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_velvet_tencel'
             });
             g.setNode("materac_makarena", {
+                node: 'materac_makarena',
                 label: 'Makarena',
                 img: 'makarena.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_merced_elips'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_merced_elips'
             });
             g.setNode("materac_rockroll", {
+                node: 'materac_rockroll',
                 label: 'Rock & Roll',
                 img: 'cha-cha.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_velvet_tencel'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_velvet_tencel'
             });
             g.setNode("materac_foxtrot", {
+                node: 'materac_foxtrot',
                 label: 'Foxtrot',
                 img: 'foxtrot.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_velvet_tencel'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_velvet'
             });
             g.setNode("materac_mambo", {
+                node: 'materac_mambo',
                 label: 'Mambo',
                 img: 'mambo.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_merced_elips'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_merced_elips'
             });
             g.setNode("materac_rumba", {
+                node: 'materac_rumba',
                 label: 'Rumba',
                 img: 'rumba.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_elips_medicott'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_elips_medicott'
             });
             g.setNode("materac_latino", {
+                node: 'materac_latino',
                 label: 'Latino',
                 img: 'latino.jpg',
-                render: 'materace/materac_salsa.png',
-                cover: 'cover_merced_elips'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_merced_elips'
             });
             g.setNode("materac_fandango", {
+                node: 'materac_fandango',
                 label: 'Fandango',
                 img: 'salsa.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_medicover'
             });
             g.setNode("materac_zorba", {
+                node: 'materac_zorba',
                 label: 'Zorba',
                 img: 'zorba.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_medicover'
             });
             g.setNode("materac_breakdance", {
+                node: 'materac_breakdance',
                 label: 'Breakdance',
                 img: 'breakdance.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa_h31.png',
+                cover: 'covers_teenage'
             });
 
 
             g.setNode("materac_foxtrot_tapicerowany", {
+                node: 'materac_foxtrot_tapicerowany',
                 label: 'Foxtrot',
                 img: 'foxtrot.jpg',
-                render: 'materace/materac_salsa.png',
+                render: 'materace/materac_tapicerowany_h31_novel13.png',
                 colors: 'm_tap_colors_7'
             });
             g.setNode("materac_chacha_tapicerowany", {
+                node: 'materac_chacha_tapicerowany',
                 label: 'Cha-Cha',
                 img: 'cha-cha.jpg',
-                render: 'materace/materac_salsa.png',
+                render: 'materace/materac_tapicerowany_h31_novel13.png',
                 colors: 'm_tap_colors_7'
             });
             g.setNode("materac_flamenco_tapicerowany", {
+                node: 'materac_flamenco_tapicerowany',
                 label: 'Flamenco',
                 img: 'flamenco.jpg',
-                render: 'materace/materac_salsa.png',
+                render: 'materace/materac_tapicerowany_h31_novel13.png',
                 colors: 'm_tap_colors_7'
             });
 
@@ -2621,28 +2727,36 @@ $(document)
             });
 
             g.setNode("materac_select_plus", {
+                node: 'materac_select_plus',
                 label: 'Select Plus Softex',
                 img: 'jive.jpg',
-                render: 'top_blues.png'
+                render: 'materace/top_blues_h31.png',
+                cover: 'covers_sensity_top'
             });
 
             g.setNode("materac_blues", {
+                node: 'materac_blues',
                 label: 'Blues',
                 img: 'blues.jpg',
-                render: 'top_blues.png'
+                render: 'materace/top_blues_h31.png',
+                cover: 'covers_elips_tencel_top'
             });
 
 
             g.setNode("materac_jive", {
+                node: 'materac_jive',
                 label: 'Jive',
                 img: 'jive.jpg',
-                render: 'top_blues.png'
+                render: 'materace/top_blues_h31.png',
+                cover: 'covers_elips_tencel_top'
             });
 
             g.setNode("materac_select_top", {
+                node: 'materac_select_top',
                 label: 'Select TOP',
                 img: 'jive.jpg',
-                render: 'top_blues.png'
+                render: 'materace/top_blues_h31.png',
+                cover: 'covers_sensity_top'
             });
 
             g.setNode("materac_blues_140_200", {
@@ -2907,9 +3021,6 @@ $(document)
             g.setEdge("m_tap_colors_7", "m_tap_eren");
             g.setEdge("m_tap_colors_7", "m_tap_ontario");
             g.setEdge("m_tap_colors_7", "m_tap_riviera");
-
-            g.setEdge("cover_velvet_tencel","cover_velvet");
-            g.setEdge("cover_velvet_tencel","cover_tencel");
 
             g.setEdge("step_2", "urban");
             g.setEdge("step_2", "preppy");
@@ -3190,13 +3301,22 @@ $(document)
             g.setEdge("materac_select_plus", "materac_select_plus_180_200");
             g.setEdge("materac_select_plus", "materac_select_plus_200_200");
 
+            g.setEdge("covers_velvet_tencel","cover_velvet");
+            g.setEdge("covers_velvet_tencel","cover_tencel");
 
-            g.setEdge("cover_elips_medicott","cover_medicott");
-            g.setEdge("cover_elips_medicott","cover_elips");
+            g.setEdge("covers_velvet","cover_velvet");
 
-            g.setEdge("cover_fresh","cover_fresh_0");
-            g.setEdge("cover_medicover","cover_medicover_0");
+            g.setEdge("covers_elips_medicott","cover_medicott");
+            g.setEdge("covers_elips_medicott","cover_elips_1");
 
+            g.setEdge("covers_fresh","cover_fresh");
+            g.setEdge("covers_medicover","cover_medicover");
+            g.setEdge("covers_teenage","cover_teenage");
+            g.setEdge("covers_merced_elips","cover_merced_1");
+            g.setEdge("covers_merced_elips","cover_elips_2");
+            g.setEdge("covers_elips_tencel_top","cover_elips_top");
+            g.setEdge("covers_elips_tencel_top","cover_tencel_top");
+            g.setEdge("covers_sensity_top","cover_sensity_top");
 
             g.setEdge("step_6", "otomana");
 
@@ -3205,12 +3325,8 @@ $(document)
             g.setEdge("otomana", "otomana_180");
 
 
-            var serialized = graphlib.json.write(g);
-            console.log(serialized)
+            // var serialized = graphlib.json.write(g);
 
-            var otomana = new Step(4, "otomanę", false, 'materac_tapicerowany_roko08.png');
-            var materac = new Step(3, "materac", false, 'wezglowie_urban_95_roko08.png');
-            var nohead = new Step(2, "wezgłowie", true, 'baza kontynetalna_roko08.png');
             var base = new Step(1, "bazę", false, 'baza kontynetalna_roko08.png');
             configurator = new Configurator(base, g);
         }
