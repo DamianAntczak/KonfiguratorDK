@@ -1367,14 +1367,14 @@ $(document)
                 name: 'elips',
                 node: 'cover_elips',
                 url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("cover_medicott", {
                 g: 2,
                 name: 'medicott velur',
                 node: 'cover_medicott',
                 url: 'https://hilding.pl/png/product/medicott_velur_1501507379.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
 
 
@@ -1384,7 +1384,7 @@ $(document)
                 name: 'fresh',
                 node: 'cover_fresh',
                 url: 'https://hilding.pl/png/product/fresh_1501574622.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
 
             g.setNode("cover_medicover", {});
@@ -2052,96 +2052,96 @@ $(document)
             g.setNode("materac_tango", {
                 label: 'Tango',
                 img: 'tango.jpg',
-                render: 'materac_salsa.png',
+                render: 'materace/materac_salsa.png',
                 cover: 'cover_velvet_tencel'
             });
             g.setNode("materac_step", {
                 label: 'Step',
                 img: 'step.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_salsa", {
                 label: 'Salsa',
                 img: 'salsa.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_chacha", {
                 label: 'Cha-Cha',
                 img: 'cha-cha.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
 
             g.setNode("materac_pasodoble", {
                 label: 'Pasodoble',
                 img: 'pasadoble.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_flamenco", {
                 label: 'Flamenco',
                 img: 'flamenco.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_makarena", {
                 label: 'Makarena',
                 img: 'makarena.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_rockroll", {
                 label: 'Rock & Roll',
                 img: 'cha-cha.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_foxtrot", {
                 label: 'Foxtrot',
                 img: 'foxtrot.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_mambo", {
                 label: 'Mambo',
                 img: 'mambo.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_rumba", {
                 label: 'Rumba',
                 img: 'rumba.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_latino", {
                 label: 'Latino',
                 img: 'latino.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_fandango", {
                 label: 'Fandango',
                 img: 'salsa.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_zorba", {
                 label: 'Zorba',
                 img: 'zorba.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_breakdance", {
                 label: 'Breakdance',
                 img: 'breakdance.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
 
 
             g.setNode("materac_foxtrot_tapicerowany", {
                 label: 'Foxtrot',
                 img: 'foxtrot.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_chacha_tapicerowany", {
                 label: 'Cha-Cha',
                 img: 'cha-cha.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
             g.setNode("materac_flamenco_tapicerowany", {
                 label: 'Flamenco',
                 img: 'flamenco.jpg',
-                render: 'materac_salsa.png'
+                render: 'materace/materac_salsa.png'
             });
 
 
