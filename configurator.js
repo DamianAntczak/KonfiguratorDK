@@ -193,6 +193,21 @@ class Configurator {
                 }
                 if (price > 0) {
                     $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
+                    if(configurator.step.selectedNodes[0].number === 2){
+                        console.log('wezglowie');
+                        var find = $('img#render-' + configurator.step.selectedNodes[0].node);
+                        var src = $('#render-' + configurator.step.selectedNodes[0].node).prop('src');
+                        console.log(src);
+                        if(src !== undefined) {
+                            if(src.includes('95')) {
+                                $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('95', '115'));
+                            }
+                            else{
+                                $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('115', '95'));
+                            }
+                            console.log(configurator.step.selectedNodes[0].node);
+                        }
+                    }
                 }
                 else {
                     $owl.find('#node-price-' + node_name).parent().hide();
