@@ -394,8 +394,8 @@ class Configurator {
 
         html += '<div class="col-sm-12">';
         // html += '<div class="center-block">';
-        addImageToDom(g1Colors, 'I', 'text-align: right;');
-        addImageToDom(g2Colors, 'II','text-align: left;');
+        addImageToDom(g1Colors, g1Colors[0].name, 'text-align: right;font-size: 9px;');
+        addImageToDom(g2Colors, g2Colors[0].name,'text-align: left;font-size: 9px;');
         // html += '</div>';
         html += '</div>';
 
@@ -414,7 +414,7 @@ class Configurator {
             });
             html += '</div>';
             // html += '<div class="row">';
-            html += '<h6 class="bold" style="' + style + '">grupa ' + group + '</h6>';
+            html += '<h6 class="bold text-uppercase" style="' + style + '">' + group + '</h6>';
             html += '</div>';
         }
 
@@ -1347,14 +1347,14 @@ $(document)
             g.setNode("cover_velvet_tencel", {});
             g.setNode("cover_velvet", {
                 g: 1,
-                name: 'novel',
+                name: 'velvet',
                 node: 'cover_velvet',
                 url: 'https://hilding.pl/png/product/velvet_1501504449.jpg',
                 render: 'materac_salsa.png'
             });
             g.setNode("cover_tencel", {
                 g: 2,
-                name: 'roko',
+                name: 'tencel',
                 node: 'cover_tencel',
                 url: 'https://hilding.pl/png/product/tencel_1501504432.jpg',
                 render: 'materac_salsa.png'
