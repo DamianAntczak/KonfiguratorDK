@@ -1402,49 +1402,49 @@ $(document)
                 name: 'novel',
                 node: 'momiko_novel',
                 url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
-                render: '/materace/materac_tapicerowany_h34_novel13.png'
+                render: '/materace/materac_tapicerowany_h31_novel13.png'
             });
             g.setNode("m_tap_roko", {
                 g: 1,
                 name: 'roko',
                 node: 'momiko_roko',
                 url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
-                render: '/materace/materac_tapicerowany_h34_roko08.png'
+                render: '/materace/materac_tapicerowany_h31_roko08.png'
             });
             g.setNode("m_tap_aspen", {
                 g: 1,
                 name: 'aspen',
                 node: 'momiko_aspen',
                 url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
-                render: '/materace/materac_tapicerowany_h34_aspen04.png'
+                render: '/materace/materac_tapicerowany_h31_aspen04.png'
             });
             g.setNode("m_tap_river", {
                 g: 2,
                 name: 'river',
                 node: 'momiko_river',
                 url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
-                render: '/materace/materac_tapicerowany_h34_river02.png'
+                render: '/materace/materac_tapicerowany_h31_river02.png'
             });
             g.setNode("m_tap_eren", {
                 g: 2,
                 name: 'eren',
                 node: 'momiko_eren',
                 url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
-                render: '/materac/materac_tapicerowany_h34_eren07.png'
+                render: '/materace/materac_tapicerowany_h31_eren07.png'
             });
             g.setNode("m_tap_ontario", {
                 g: 2,
                 name: 'ontario',
                 node: 'momiko_ontario',
                 url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
-                render: '/materace/materac_tapicerowany_h34_ontario90.png'
+                render: '/materace/materac_tapicerowany_h31_ontario90.png'
             });
             g.setNode("m_tap_riviera", {
                 g: 2,
                 name: 'riviera',
                 node: 'momiko_riviera',
                 url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
-                render: '/materace/materac_tapicerowany_h34_riviera38.png'
+                render: '/materace/materac_tapicerowany_h31_riviera38.png'
             });
 
             g.setNode("step_2", {
