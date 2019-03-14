@@ -1658,25 +1658,25 @@ $(document)
             g.setNode("vintage_140_115", {
                 label: '140/115',
                 width: 140,
-                price: {g1: 1029, g2: 1129},
+                price: {g1: 1169, g2: 1269},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("vintage_160_115", {
                 label: '160/115',
                 width: 160,
-                price: {g1: 1059, g2: 1159},
+                price: {g1: 1199, g2: 1299},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("vintage_180_115", {
                 label: '180/115',
                 width: 180,
-                price: {g1: 1159, g2: 1259},
+                price: {g1: 1299, g2: 1399},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("vintage_200_115", {
                 label: '200/115',
                 width: 200,
-                price: {g1: 1259, g2: 1359},
+                price: {g1: 1499, g2: 1599},
                 nextStep: 'step_typ_materaca'
             });
 
@@ -1685,38 +1685,38 @@ $(document)
             g.setNode("momiko_180_95", {label: '180/95', width: 180, price: {g1: 999, g2: 1099}, nextStep: 'step_typ_materaca'});
             g.setNode("momiko_200_95", {label: '200/95', width: 200, price: {g1: 1099, g2: 1199}, nextStep: 'step_typ_materaca'});
 
-            g.setNode("momiko_140_115", {label: '140/115', width: 140, price: {g1: 869, g2: 969}, nextStep: 'step_typ_materaca'});
-            g.setNode("momiko_160_115", {label: '160/115', width: 160, price: {g1: 899, g2: 999}, nextStep: 'step_typ_materaca'});
-            g.setNode("momiko_180_115", {label: '180/115', width: 180, price: {g1: 999, g2: 1099}, nextStep: 'step_typ_materaca'});
+            g.setNode("momiko_140_115", {label: '140/115', width: 140, price: {g1: 969, g2: 1069}, nextStep: 'step_typ_materaca'});
+            g.setNode("momiko_160_115", {label: '160/115', width: 160, price: {g1: 999, g2: 1099}, nextStep: 'step_typ_materaca'});
+            g.setNode("momiko_180_115", {label: '180/115', width: 180, price: {g1: 1099, g2: 1199}, nextStep: 'step_typ_materaca'});
             g.setNode("momiko_200_115", {
                 label: '200/115',
                 width: 200,
-                price: {g1: 1099, g2: 1199},
+                price: {g1: 1259, g2: 1359},
                 nextStep: 'step_typ_materaca'
             });
 
             g.setNode("eclectic_140_95", {
                 label: '140/95',
                 width: 140,
-                price: {g1: 1069, g2: 1169},
+                price: {g1: 969, g2: 1069},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("eclectic_160_95", {
                 label: '160/95',
                 width: 160,
-                price: {g1: 1099, g2: 1199},
+                price: {g1: 999, g2: 1099},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("eclectic_180_95", {
                 label: '180/95',
                 width: 180,
-                price: {g1: 1199, g2: 1299},
+                price: {g1: 1099, g2: 1199},
                 nextStep: 'step_typ_materaca'
             });
             g.setNode("eclectic_200_95", {
                 label: '200/95',
                 width: 200,
-                price: {g1: 1399, g2: 1499},
+                price: {g1: 1259, g2: 1359},
                 nextStep: 'step_typ_materaca'
             });
 
