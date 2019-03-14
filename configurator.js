@@ -1360,6 +1360,42 @@ $(document)
                 render: 'materac_salsa.png'
             });
 
+            g.setNode("cover_elips_medicott", {});
+            g.setNode("cover_merced", {
+                g: 1,
+                name: 'elips',
+                node: 'cover_elips',
+                url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+                render: 'materac_salsa.png'
+            });
+            g.setNode("cover_medicott", {
+                g: 2,
+                name: 'medicott velur',
+                node: 'cover_medicott',
+                url: 'https://hilding.pl/png/product/medicott_velur_1501507379.jpg',
+                render: 'materac_salsa.png'
+            });
+
+
+            g.setNode("cover_fresh", {});
+            g.setNode("cover_fresh", {
+                g: 1,
+                name: 'fresh',
+                node: 'cover_fresh',
+                url: 'https://hilding.pl/png/product/fresh_1501574622.jpg',
+                render: 'materac_salsa.png'
+            });
+
+            g.setNode("cover_medicover", {});
+            g.setNode("cover_medicover", {
+                g: 1,
+                name: 'Medi-cover',
+                node: 'cover_medicover',
+                url: 'https://hilding.pl/png/product/medicott_1501579581.jpg',
+                render: 'materac_salsa.png'
+            });
+
+
             g.setNode("step_2", {
                 node: 'step_2',
                 title: 'wezgłowie',
