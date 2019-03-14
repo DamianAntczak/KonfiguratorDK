@@ -263,6 +263,10 @@ class Configurator {
                 $('#step-content').after(this.addColor(baseNode.colors));
                 $('.img_tkan:first').addClass('color-selected');
             }
+            else if(baseNode.cover !== undefined){
+                $('#step-content').after(this.addCover(baseNode.cover));
+                $('.img_tkan:first').addClass('color-selected');
+            }
 
             $('#next-step').show();
             console.log('Node ');
@@ -336,9 +340,6 @@ class Configurator {
             return color.g == 2;
         });
 
-        g1Colors.forEach(color => {
-            console.log(color.name);
-        });
 
         var html = '<div id="item-color" class="col-sm-12">' +
             '<h5 class="text-center">Wybierz tkaninę</h5>' +
@@ -369,6 +370,55 @@ class Configurator {
             html += '<h6 class="bold" style="' + style + '">grupa ' + group + '</h6>';
             html += '</div>';
         }
+    }
+
+    addCover(coverNode) {
+        var allColorsNodeNames = this.graph.successors(coverNode);
+        var allColors = [];
+
+        allColorsNodeNames.forEach(node => {
+            allColors.push(this.graph.node(node));
+        });
+
+        var g1Colors = allColors.filter(function (color) {
+            return color.g == 1;
+        });
+
+        var g2Colors = allColors.filter(function (color) {
+            return color.g == 2;
+        });
+
+        var html = '<div id="item-color" class="col-sm-12">' +
+            '<h5 class="text-center">Wybierz pokrowiec</h5>' +
+            '<div class="row">';
+
+        html += '<div class="col-sm-12">';
+        // html += '<div class="center-block">';
+        addImageToDom(g1Colors, 'I', 'text-align: right;');
+        addImageToDom(g2Colors, 'II','text-align: left;');
+        // html += '</div>';
+        html += '</div>';
+
+        html += '</div>';
+        return html + '</div></div>';
+
+        function addImageToDom(colors, group, style) {
+            // html += '<div class="row">';
+            var counter = 0;
+            html += '<div class="col-sm-6">';
+            html += '<div class="center-block" style="' + style + '">';
+            colors.forEach(color => {
+                // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
+                html += '<div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
+                // html += '</div>';
+            });
+            html += '</div>';
+            // html += '<div class="row">';
+            html += '<h6 class="bold" style="' + style + '">grupa ' + group + '</h6>';
+            html += '</div>';
+        }
+
+        return html + '</div></div>';
     }
 
     onColorSelect(selectedColor) {
@@ -1294,6 +1344,22 @@ $(document)
                 render: '/wezglowia/wezglowie_momiko_95_riviera38.png'
             });
 
+            g.setNode("cover_velvet_tencel", {});
+            g.setNode("cover_velvet", {
+                g: 1,
+                name: 'novel',
+                node: 'cover_velvet',
+                url: 'https://hilding.pl/png/product/velvet_1501504449.jpg',
+                render: 'materac_salsa.png'
+            });
+            g.setNode("cover_tencel", {
+                g: 2,
+                name: 'roko',
+                node: 'cover_tencel',
+                url: 'https://hilding.pl/png/product/tencel_1501504432.jpg',
+                render: 'materac_salsa.png'
+            });
+
             g.setNode("step_2", {
                 node: 'step_2',
                 title: 'wezgłowie',
@@ -1899,7 +1965,8 @@ $(document)
             g.setNode("materac_tango", {
                 label: 'Tango',
                 img: 'tango.jpg',
-                render: 'materac_salsa.png'
+                render: 'materac_salsa.png',
+                cover: 'cover_velvet_tencel'
             });
             g.setNode("materac_step", {
                 label: 'Step',
@@ -2732,6 +2799,9 @@ $(document)
             g.setEdge("momiko_colors_7", "momiko_eren");
             g.setEdge("momiko_colors_7", "momiko_ontario");
             g.setEdge("momiko_colors_7", "momiko_riviera");
+
+            g.setEdge("cover_velvet_tencel","cover_velvet");
+            g.setEdge("cover_velvet_tencel","cover_tencel");
 
             g.setEdge("step_2", "urban");
             g.setEdge("step_2", "preppy");
