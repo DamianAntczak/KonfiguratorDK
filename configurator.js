@@ -1379,16 +1379,16 @@ $(document)
 
 
             g.setNode("cover_fresh", {});
-            g.setNode("cover_fresh", {
+            g.setNode("cover_fresh_0", {
                 g: 1,
                 name: 'fresh',
-                node: 'cover_fresh',
+                node: 'cover_fresh_0',
                 url: 'https://hilding.pl/png/product/fresh_1501574622.jpg',
                 render: 'materace/materac_salsa.png'
             });
 
             g.setNode("cover_medicover", {});
-            g.setNode("cover_medicover", {
+            g.setNode("cover_medicover_0", {
                 g: 1,
                 name: 'Medi-cover',
                 node: 'cover_medicover',
@@ -1397,52 +1397,52 @@ $(document)
             });
 
             g.setNode("m_tap_colors_7", {});
-            g.setNode("momiko_novel", {
+            g.setNode("m_tap_novel", {
                 g: 1,
                 name: 'novel',
-                node: 'momiko_novel',
+                node: 'm_tap_novel',
                 url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
                 render: '/materace/materac_tapicerowany_h31_novel13.png'
             });
             g.setNode("m_tap_roko", {
                 g: 1,
                 name: 'roko',
-                node: 'momiko_roko',
+                node: 'm_tap_roko',
                 url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
                 render: '/materace/materac_tapicerowany_h31_roko08.png'
             });
             g.setNode("m_tap_aspen", {
                 g: 1,
                 name: 'aspen',
-                node: 'momiko_aspen',
+                node: 'm_tap_aspen',
                 url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
                 render: '/materace/materac_tapicerowany_h31_aspen04.png'
             });
             g.setNode("m_tap_river", {
                 g: 2,
                 name: 'river',
-                node: 'momiko_river',
+                node: 'm_tap_river',
                 url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
                 render: '/materace/materac_tapicerowany_h31_river02.png'
             });
             g.setNode("m_tap_eren", {
                 g: 2,
                 name: 'eren',
-                node: 'momiko_eren',
+                node: 'm_tap_eren',
                 url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
                 render: '/materace/materac_tapicerowany_h31_eren07.png'
             });
             g.setNode("m_tap_ontario", {
                 g: 2,
                 name: 'ontario',
-                node: 'momiko_ontario',
+                node: 'm_tap_ontario',
                 url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
                 render: '/materace/materac_tapicerowany_h31_ontario90.png'
             });
             g.setNode("m_tap_riviera", {
                 g: 2,
                 name: 'riviera',
-                node: 'momiko_riviera',
+                node: 'm_tap_riviera',
                 url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
                 render: '/materace/materac_tapicerowany_h31_riviera38.png'
             });
@@ -2058,12 +2058,14 @@ $(document)
             g.setNode("materac_step", {
                 label: 'Step',
                 img: 'step.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_step'
             });
             g.setNode("materac_salsa", {
                 label: 'Salsa',
                 img: 'salsa.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_medicover'
             });
             g.setNode("materac_chacha", {
                 label: 'Cha-Cha',
@@ -2074,42 +2076,50 @@ $(document)
             g.setNode("materac_pasodoble", {
                 label: 'Pasodoble',
                 img: 'pasadoble.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_velvet_tencel'
             });
             g.setNode("materac_flamenco", {
                 label: 'Flamenco',
                 img: 'flamenco.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_velvet_tencel'
             });
             g.setNode("materac_makarena", {
                 label: 'Makarena',
                 img: 'makarena.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_merced_elips'
             });
             g.setNode("materac_rockroll", {
                 label: 'Rock & Roll',
                 img: 'cha-cha.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_velvet_tencel'
             });
             g.setNode("materac_foxtrot", {
                 label: 'Foxtrot',
                 img: 'foxtrot.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_velvet_tencel'
             });
             g.setNode("materac_mambo", {
                 label: 'Mambo',
                 img: 'mambo.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_merced_elips'
             });
             g.setNode("materac_rumba", {
                 label: 'Rumba',
                 img: 'rumba.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_elips_medicott'
             });
             g.setNode("materac_latino", {
                 label: 'Latino',
                 img: 'latino.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                cover: 'cover_merced_elips'
             });
             g.setNode("materac_fandango", {
                 label: 'Fandango',
@@ -2131,17 +2141,20 @@ $(document)
             g.setNode("materac_foxtrot_tapicerowany", {
                 label: 'Foxtrot',
                 img: 'foxtrot.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                colors: 'm_tap_colors_7'
             });
             g.setNode("materac_chacha_tapicerowany", {
                 label: 'Cha-Cha',
                 img: 'cha-cha.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                colors: 'm_tap_colors_7'
             });
             g.setNode("materac_flamenco_tapicerowany", {
                 label: 'Flamenco',
                 img: 'flamenco.jpg',
-                render: 'materace/materac_salsa.png'
+                render: 'materace/materac_salsa.png',
+                colors: 'm_tap_colors_7'
             });
 
 
@@ -2887,6 +2900,14 @@ $(document)
             g.setEdge("momiko_colors_7", "momiko_ontario");
             g.setEdge("momiko_colors_7", "momiko_riviera");
 
+            g.setEdge("m_tap_colors_7", "m_tap_novel");
+            g.setEdge("m_tap_colors_7", "m_tap_roko");
+            g.setEdge("m_tap_colors_7", "m_tap_aspen");
+            g.setEdge("m_tap_colors_7", "m_tap_river");
+            g.setEdge("m_tap_colors_7", "m_tap_eren");
+            g.setEdge("m_tap_colors_7", "m_tap_ontario");
+            g.setEdge("m_tap_colors_7", "m_tap_riviera");
+
             g.setEdge("cover_velvet_tencel","cover_velvet");
             g.setEdge("cover_velvet_tencel","cover_tencel");
 
@@ -3034,9 +3055,9 @@ $(document)
             g.setEdge("step_4", "materac_foxtrot");
             g.setEdge("step_4", "materac_flamenco");
 
-            g.setEdge("step_tapicerowany", "materac_foxtrot");
-            g.setEdge("step_tapicerowany", "materac_chacha");
-            g.setEdge("step_tapicerowany", "materac_flamenco");
+            g.setEdge("step_tapicerowany", "materac_foxtrot_tapicerowany");
+            g.setEdge("step_tapicerowany", "materac_chacha_tapicerowany");
+            g.setEdge("step_tapicerowany", "materac_flamenco_tapicerowany");
 
             g.setEdge("step_pokrowiec", "materac_tango");
             g.setEdge("step_pokrowiec", "materac_step");
@@ -3168,6 +3189,13 @@ $(document)
             g.setEdge("materac_select_plus", "materac_select_plus_160_200");
             g.setEdge("materac_select_plus", "materac_select_plus_180_200");
             g.setEdge("materac_select_plus", "materac_select_plus_200_200");
+
+
+            g.setEdge("cover_elips_medicott","cover_medicott");
+            g.setEdge("cover_elips_medicott","cover_elips");
+
+            g.setEdge("cover_fresh","cover_fresh_0");
+            g.setEdge("cover_medicover","cover_medicover_0");
 
 
             g.setEdge("step_6", "otomana");
