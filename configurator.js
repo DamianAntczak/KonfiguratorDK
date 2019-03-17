@@ -19,6 +19,7 @@ class Configurator {
         this.allSteps = [];
         this.stepIndex = 0;
         this.width = 0;
+        this.selectedColor = undefined;
     }
 
     numberWithSpaces(x) {
@@ -276,7 +277,16 @@ class Configurator {
             $('#item-color').remove();
             if (baseNode.colors !== undefined) {
                 $('#step-content').after(this.addColor(baseNode.colors));
-                $('.tiles:first').addClass('color-selected');
+                if(configurator.selectedColor !== undefined) {
+                    var selectedColor = configurator.selectedColor;
+                    console.log('selectedColor');
+                    console.log(selectedColor);
+                    $('.tiles[name="'+selectedColor+'"]').click();
+                }
+                else {
+                    $('.tiles:first').click();
+                }
+
             }
             else if(baseNode.cover !== undefined){
                 $('#step-content').after(this.addCover(baseNode.cover));
@@ -377,7 +387,7 @@ class Configurator {
             html += '<div class="center-block" style="' + style + '">';
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
-                html += '<div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_tkan tiles" style="background-image: url(\'' + color.url + '\')" ></div>';
+                html += '<div color="' + color.node + '" name="'+color.name+'" onclick="configurator.onColorSelect($(this))" class="img_tkan tiles" style="background-image: url(\'' + color.url + '\')" ></div>';
                 // html += '</div>';
             });
             html += '</div>';
@@ -445,6 +455,7 @@ class Configurator {
         console.log('selectedColor');
         console.log(selectedColor);
         console.log($this.attr('color'));
+        this.selectedColor = $this.attr('name');
 
         let colorNode = configurator.graph.node($this.attr('color'));
         configurator.step.selectedNodes[3] = colorNode;
@@ -516,11 +527,10 @@ class Configurator {
         };
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
-            console.log('393');
             console.log(priceNode);
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 str += '<div class="row summary-price-row"">';
-                str += '<div class="col-sm-7 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label.replace(/<br[^>]*>/gi, ' ') + ' ' + fabricName(step) + '</div>';
+                str += '<div class="col-sm-7 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label.replace(/<br[^>]*>/gi, ' ') + ' ' + fabricName(step) + '</div>';
                 str += '<div class="col-sm-5 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
                 priceSum += priceNode.price.g1;
