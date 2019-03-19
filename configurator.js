@@ -55,10 +55,15 @@ class Configurator {
         this.allSteps.pop();
         console.log('this.allSteps');
         console.log(this.allSteps);
+
         this.stepIndex = this.stepIndex - 1;
+        if(this.allSteps[this.stepIndex].selectedNodes[0] !== undefined && this.allSteps[this.stepIndex].selectedNodes[0].overlay !== undefined){
+            $('#render-overlay').remove();
+        }
         var previousStepName = this.allSteps[this.stepIndex].selectedNodes[0].node;
         this.allSteps[this.stepIndex].selectedNodes = [];
         this.showPrice();
+
         this.loadLevel(previousStepName);
     }
 
@@ -70,6 +75,7 @@ class Configurator {
             this.loadSummary();
         } else {
             this.loadLevel(selectedNode.skipToNode);
+
         }
     }
 
@@ -202,9 +208,17 @@ class Configurator {
                         if (src !== undefined) {
                             if (src.includes('95')) {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('95', '115'));
+                                var $render = $('#render-overlay');
+                                if($render.length){
+                                    $render.replace('95', '115');
+                                }
                             }
                             else {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('115', '95'));
+                                var $render = $('#render-overlay');
+                                if($render.length){
+                                    $render.replace('115', '95');
+                                }
                             }
                             console.log(configurator.step.selectedNodes[0].node);
                         }
@@ -235,6 +249,7 @@ class Configurator {
         } else {
             $("#previous-step").hide();
         }
+
     }
 
     showStepInfo() {
@@ -474,9 +489,19 @@ class Configurator {
             $(find).attr('src', 'renders/' + colorNode.render);
         }
 
-        if(colorNode.overlay !== undefined){
-            $('#configurator-preview').append('<img id="render-overlay" style="z-index: 150" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
+        if(mainNode.overlay !== undefined) {
+            if (colorNode.overlay !== undefined) {
+                var find = $('#configurator-preview').find('#render-overlay');
+                if (find.length === 0) {
+                    $('#base-img').after('<img id="render-overlay" style="z-index: 150" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
+                } else {
+                    $(find).attr('src', 'renders/' + colorNode.overlay);
+                }
+            }else {
+                $('#render-overlay').remove();
+            }
         }
+
 
         $('.tiles').removeClass('color-selected');
         // this.graph

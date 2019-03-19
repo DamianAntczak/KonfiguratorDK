@@ -641,49 +641,56 @@ g.setNode("vintage_novel", {
     name: 'novel',
     node: 'vintage_novel',
     url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
-    render: '/wezglowia/wezglowie_vintage_95_novel13.png'
+    render: '/wezglowia/wezglowie_vintage_95_novel13.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_novel13_add.png'
 });
 g.setNode("vintage_roko", {
     g: 1,
     name: 'roko',
     node: 'vintage_roko',
     url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
-    render: '/wezglowia/wezglowie_vintage_95_roko08.png'
+    render: '/wezglowia/wezglowie_vintage_95_roko08.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_roko08_add.png'
 });
 g.setNode("vintage_aspen", {
     g: 1,
     name: 'aspen',
     node: 'vintage_aspen',
     url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
-    render: '/wezglowia/wezglowie_vintage_95_aspen04.png'
+    render: '/wezglowia/wezglowie_vintage_95_aspen04.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_aspen04_add.png'
 });
 g.setNode("vintage_river", {
     g: 2,
     name: 'river',
     node: 'vintage_river',
     url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
-    render: '/wezglowia/wezglowie_vintage_95_river02.png'
+    render: '/wezglowia/wezglowie_vintage_95_river02.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_river02_add.png'
 });
 g.setNode("vintage_eren", {
     g: 2,
     name: 'eren',
     node: 'vintage_eren',
     url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
-    render: '/wezglowia/wezglowie_vintage_95_eren07.png'
+    render: '/wezglowia/wezglowie_vintage_95_eren07.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_eren07_add.png'
 });
 g.setNode("vintage_ontario", {
     g: 2,
     name: 'ontario',
     node: 'vintage_ontario',
     url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
-    render: '/wezglowia/wezglowie_vintage_95_ontario90.png'
+    render: '/wezglowia/wezglowie_vintage_95_ontario90.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_ontario90_add.png'
 });
 g.setNode("vintage_riviera", {
     g: 2,
     name: 'riviera',
     node: 'vintage_riviera',
     url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
-    render: '/wezglowia/wezglowie_vintage_95_riviera38.png'
+    render: '/wezglowia/wezglowie_vintage_95_riviera38.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_riviera38_add.png'
 });
 
 g.setNode("eclectic_colors_7", {});
@@ -1006,7 +1013,8 @@ g.setNode("step_2", {
     number: 2,
     zIndex: 5,
     colors: 'colors_7',
-    optionsFilter: true
+    optionsFilter: true,
+    overlay: true
 });
 
 g.setNode("glamour", {
