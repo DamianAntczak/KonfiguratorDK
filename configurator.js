@@ -125,9 +125,9 @@ class Configurator {
         stepElement.html('');
         var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel owl-theme"));
         var items = 3;
-        var center  = false;
+        var center = false;
         if (successors.length < 3) {
-            if(successors.length === 2) {
+            if (successors.length === 2) {
                 items = 2;
             }
             else {
@@ -194,16 +194,16 @@ class Configurator {
                 }
                 if (price > 0) {
                     $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
-                    if(configurator.step.selectedNodes[0].number === 2){
+                    if (configurator.step.selectedNodes[0].number === 2) {
                         console.log('wezglowie');
                         var find = $('img#render-' + configurator.step.selectedNodes[0].node);
                         var src = $('#render-' + configurator.step.selectedNodes[0].node).prop('src');
                         console.log(src);
-                        if(src !== undefined) {
-                            if(src.includes('95')) {
+                        if (src !== undefined) {
+                            if (src.includes('95')) {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('95', '115'));
                             }
-                            else{
+                            else {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('115', '95'));
                             }
                             console.log(configurator.step.selectedNodes[0].node);
@@ -219,10 +219,10 @@ class Configurator {
             });
 
             $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
+            //            $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
         });
 
         carousel.trigger('refresh.owl.carousel');
-
 
 
         this.refresh(this.graph.node(step));
@@ -277,18 +277,18 @@ class Configurator {
             $('#item-color').remove();
             if (baseNode.colors !== undefined) {
                 $('#step-content').after(this.addColor(baseNode.colors));
-                if(configurator.selectedColor !== undefined) {
+                if (configurator.selectedColor !== undefined) {
                     var selectedColor = configurator.selectedColor;
                     console.log('selectedColor');
                     console.log(selectedColor);
-                    $('.tiles[name="'+selectedColor+'"]').click();
+                    $('.tiles[name="' + selectedColor + '"]').click();
                 }
                 else {
                     $('.tiles:first').click();
                 }
 
             }
-            else if(baseNode.cover !== undefined){
+            else if (baseNode.cover !== undefined) {
                 $('#step-content').after(this.addCover(baseNode.cover));
                 $('.tiles:first').addClass('color-selected');
             }
@@ -314,7 +314,7 @@ class Configurator {
                 }
             }
             else {
-                if(step.selectedNodes[2] != undefined) {
+                if (step.selectedNodes[2] != undefined) {
                     price += step.selectedNodes[2].price.g1;
                 }
             }
@@ -342,7 +342,7 @@ class Configurator {
                 });
             }
             optionNode.forEach(node => {
-                sb += '<option value="' + node[0] + '">' + node[1].label + '</option>';
+                sb += '<option value="' + node[0] + '" width="' + node[1].width + '">' + node[1].label + '</option>';
             });
             return sb + '</select></div>';
         }
@@ -373,7 +373,7 @@ class Configurator {
         html += '<div class="col-sm-12">';
         // html += '<div class="center-block">';
         addImageToDom(g1Colors, 'I', 'text-align: right;');
-        addImageToDom(g2Colors, 'II','text-align: left;');
+        addImageToDom(g2Colors, 'II', 'text-align: left;');
         // html += '</div>';
         html += '</div>';
 
@@ -385,14 +385,19 @@ class Configurator {
             var counter = 0;
             html += '<div class="col-sm-6">';
             html += '<div class="center-block" style="' + style + '">';
-            colors.forEach(color => {
-                // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
-                html += '<div color="' + color.node + '" name="'+color.name+'" onclick="configurator.onColorSelect($(this))" class="img_tkan tiles" style="background-image: url(\'' + color.url + '\')" ></div>';
-                // html += '</div>';
-            });
+            var i;
+            for (i = 0; i < colors.length; i++) {
+                const color = colors[i];
+                html += '<div style="display: inline-block;background-clip: content-box;text-align: center;">';
+                if(i === 0){
+                    html += '<span class="bold text-uppercase" style="font-size: 11px;">' + group + ' grupa</span>';
+                }
+                html += '<div color="' + color.node + '" name="' + color.name + '" onclick="configurator.onColorSelect($(this))" class="tiles img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
+                html += '<span class="bold text-uppercase" style="font-size: 8px;">' + color.name + '</span>'
+                html += '</div>';
+            }
             html += '</div>';
             // html += '<div class="row">';
-            html += '<h6 class="bold" style="' + style + '">grupa ' + group + '</h6>';
             html += '</div>';
         }
     }
@@ -420,10 +425,10 @@ class Configurator {
         html += '<div class="col-sm-12">';
         // html += '<div class="center-block">';
         html += '<div class="center-block" style="text-align: center;font-size: 9px;">';
-        if(g1Colors.length > 0) {
+        if (g1Colors.length > 0) {
             addImageToDom(g1Colors, g1Colors[0].name);
         }
-        if(g2Colors.length > 0) {
+        if (g2Colors.length > 0) {
             addImageToDom(g2Colors, g2Colors[0].name);
         }
         html += '</div>';
@@ -574,6 +579,7 @@ $(document)
                 img: 'baza_base_box.jpg',
                 render: '/bazy/baza_base_box_h31_novel13.png',
                 colors: 'base_box_colors_7',
+                nextStep: 'bb_wezglowie'
             });
             g.setNode("baza_kontynentalna", {
                 node: 'baza_kontynentalna',
@@ -1087,7 +1093,7 @@ $(document)
             g.setNode("preppy_colors_7", {});
             g.setNode("preppy_novel", {
                 g: 1,
-                name: 'novel',
+                name: 'novel 13',
                 node: 'preppy_novel',
                 url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
                 render: '/wezglowia/wezglowie_preppy_95_novel13.png'
@@ -1342,49 +1348,49 @@ $(document)
             g.setNode("momiko_colors_7", {});
             g.setNode("momiko_novel", {
                 g: 1,
-                name: 'novel',
+                name: 'novel 13',
                 node: 'momiko_novel',
                 url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
                 render: '/wezglowia/wezglowie_momiko_95_novel13.png'
             });
             g.setNode("momiko_roko", {
                 g: 1,
-                name: 'roko',
+                name: 'roko 08',
                 node: 'momiko_roko',
                 url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
                 render: '/wezglowia/wezglowie_momiko_95_roko08.png'
             });
             g.setNode("momiko_aspen", {
                 g: 1,
-                name: 'aspen',
+                name: 'aspen 04',
                 node: 'momiko_aspen',
                 url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
                 render: '/wezglowia/wezglowie_momiko_95_aspen04.png'
             });
             g.setNode("momiko_river", {
                 g: 2,
-                name: 'river',
+                name: 'river 02',
                 node: 'momiko_river',
                 url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
                 render: '/wezglowia/wezglowie_momiko_95_river02.png'
             });
             g.setNode("momiko_eren", {
                 g: 2,
-                name: 'eren',
+                name: 'eren 07',
                 node: 'momiko_eren',
                 url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
                 render: '/wezglowia/wezglowie_momiko_95_eren07.png'
             });
             g.setNode("momiko_ontario", {
                 g: 2,
-                name: 'ontario',
+                name: 'ontario 90',
                 node: 'momiko_ontario',
                 url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
                 render: '/wezglowia/wezglowie_momiko_95_ontario90.png'
             });
             g.setNode("momiko_riviera", {
                 g: 2,
-                name: 'riviera',
+                name: 'riviera 38',
                 node: 'momiko_riviera',
                 url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
                 render: '/wezglowia/wezglowie_momiko_95_riviera38.png'
@@ -1565,65 +1571,199 @@ $(document)
                 label: 'Glamour',
                 img: 'glamour.jpg',
                 render: '/wezglowia/wezglowie_glamour_115_novel13.png',
-                colors: 'glamour_colors_7'
+                colors: 'glamour_colors_7',
+                nextStep: 'step_typ_materaca'
             });
             g.setNode("vintage", {
                 node: 'vintage',
                 label: 'Vintage',
                 img: 'vintage.jpg',
                 render: '/wezglowia/wezglowie_vintage_95_novel13.png',
-                colors: 'vintage_colors_7'
+                colors: 'vintage_colors_7',
+                nextStep: 'step_typ_materaca'
             });
             g.setNode("eclectic", {
                 node: 'eclectic',
                 label: 'Eclectic',
                 img: 'electric.jpg',
                 render: '/wezglowia/wezglowie_eclectic_95_novel13.png',
-                colors: 'eclectic_colors_7'
+                colors: 'eclectic_colors_7',
+                nextStep: 'step_typ_materaca'
             });
             g.setNode("ladylike", {
                 node: 'ladylike',
                 label: 'Ladylike',
                 img: 'ladylike.jpg',
                 render: '/wezglowia/wezglowie_ladylike_115_novel13.png',
-                colors: 'ladylike_colors_7'
+                colors: 'ladylike_colors_7',
+                nextStep: 'step_typ_materaca'
             });
             g.setNode("preppy", {
                 node: 'preppy',
                 label: 'Preppy',
                 img: 'preppy.jpg',
                 render: '/wezglowia/wezglowie_preppy_95_novel13.png',
-                colors: 'preppy_colors_7'
+                colors: 'preppy_colors_7',
+                nextStep: 'step_typ_materaca'
             });
             g.setNode("momiko", {
                 node: 'momiko',
                 label: 'Momiko',
                 img: 'momiko.jpg',
                 render: '/wezglowia/wezglowie_momiko_95_novel13.png',
-                colors: 'momiko_colors_7'
+                colors: 'momiko_colors_7',
+                nextStep: 'step_typ_materaca'
             });
             g.setNode("urban", {
                 node: 'urban',
                 label: 'Urban',
                 img: 'urban.jpg',
                 render: '/wezglowia/wezglowie_urban_95_novel13.png',
-                colors: 'urban_colors_7'
+                colors: 'urban_colors_7',
+                nextStep: 'step_typ_materaca'
             });
 
-            g.setNode("urban_140_95", {label: '140/95', width: 140, price: {g1: 749, g2: 849}, nextStep: 'step_typ_materaca'});
-            g.setNode("urban_160_95", {label: '160/95', width: 160, price: {g1: 799, g2: 899}, nextStep: 'step_typ_materaca'});
-            g.setNode("urban_180_95", {label: '180/95', width: 180, price: {g1: 899, g2: 999}, nextStep: 'step_typ_materaca'});
-            g.setNode("urban_200_95", {label: '200/95', width: 200, price: {g1: 999, g2: 1099}, nextStep: 'step_typ_materaca'});
+            g.setNode("bb_wezglowie", {
+                node: 'bb_wezglowie',
+                title: 'wezgłowie',
+                label: 'wybierz wezgłowie',
+                number: 2,
+                zIndex: 5,
+                colors: 'colors_7',
+                optionsFilter: true
+            });
 
-            g.setNode("urban_140_115", {label: '140/115', width: 140, price: {g1: 799, g2: 899}, nextStep: 'step_typ_materaca'});
-            g.setNode("urban_160_115", {label: '160/115', width: 160, price: {g1: 849, g2: 949}, nextStep: 'step_typ_materaca'});
-            g.setNode("urban_180_115", {label: '180/115', width: 180, price: {g1: 949, g2: 1049}, nextStep: 'step_typ_materaca'});
-            g.setNode("urban_200_115", {label: '200/115', width: 200, price: {g1: 1049, g2: 1149}, nextStep: 'step_typ_materaca'});
+            g.setNode("bb_wezglowie_glamour", {
+                node: 'bb_wezglowie_glamour',
+                label: 'Glamour',
+                img: 'glamour.jpg',
+                render: '/wezglowia/wezglowie_glamour_115_novel13.png',
+                colors: 'glamour_colors_7',
+                nextStep: 'legs'
+            });
+            g.setNode("bb_wezglowie_vintage", {
+                node: 'bb_wezglowie_vintage',
+                label: 'Vintage',
+                img: 'vintage.jpg',
+                render: '/wezglowia/wezglowie_vintage_95_novel13.png',
+                colors: 'vintage_colors_7',
+                nextStep: 'legs'
+            });
+            g.setNode("bb_wezglowie_eclectic", {
+                node: 'bb_wezglowie_eclectic',
+                label: 'Eclectic',
+                img: 'electric.jpg',
+                render: '/wezglowia/wezglowie_eclectic_95_novel13.png',
+                colors: 'eclectic_colors_7',
+                nextStep: 'legs'
+            });
+            g.setNode("bb_wezglowie_ladylike", {
+                node: 'bb_wezglowie_ladylike',
+                label: 'Ladylike',
+                img: 'ladylike.jpg',
+                render: '/wezglowia/wezglowie_ladylike_115_novel13.png',
+                colors: 'ladylike_colors_7',
+                nextStep: 'legs'
+            });
+            g.setNode("bb_wezglowie_preppy", {
+                node: 'bb_wezglowie_preppy',
+                label: 'Preppy',
+                img: 'preppy.jpg',
+                render: '/wezglowia/wezglowie_preppy_95_novel13.png',
+                colors: 'preppy_colors_7',
+                nextStep: 'legs'
+            });
+            g.setNode("bb_wezglowie_momiko", {
+                node: 'bb_wezglowie_momiko',
+                label: 'Momiko',
+                img: 'momiko.jpg',
+                render: '/wezglowia/wezglowie_momiko_95_novel13.png',
+                colors: 'momiko_colors_7',
+                nextStep: 'legs'
+            });
+            g.setNode("bb_wezglowie_urban", {
+                node: 'bb_wezglowie_urban',
+                label: 'Urban',
+                img: 'urban.jpg',
+                render: '/wezglowia/wezglowie_urban_95_novel13.png',
+                colors: 'urban_colors_7',
+                nextStep: 'legs'
+            });
 
-            g.setNode("preppy_140_95", {label: '140/95', width: 140, price: {g1: 1169, g2: 1269}, nextStep: 'step_typ_materaca'});
-            g.setNode("preppy_160_95", {label: '160/95', width: 160, price: {g1: 1199, g2: 1299}, nextStep: 'step_typ_materaca'});
-            g.setNode("preppy_180_95", {label: '180/95', width: 180, price: {g1: 1299, g2: 1399}, nextStep: 'step_typ_materaca'});
-            g.setNode("preppy_200_95", {label: '200/95', width: 200, price: {g1: 1399, g2: 1499}, nextStep: 'step_typ_materaca'});
+            g.setNode("urban_140_95", {
+                label: '140/95',
+                width: 140,
+                price: {g1: 749, g2: 849},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("urban_160_95", {
+                label: '160/95',
+                width: 160,
+                price: {g1: 799, g2: 899},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("urban_180_95", {
+                label: '180/95',
+                width: 180,
+                price: {g1: 899, g2: 999},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("urban_200_95", {
+                label: '200/95',
+                width: 200,
+                price: {g1: 999, g2: 1099},
+                nextStep: 'step_typ_materaca'
+            });
+
+            g.setNode("urban_140_115", {
+                label: '140/115',
+                width: 140,
+                price: {g1: 799, g2: 899},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("urban_160_115", {
+                label: '160/115',
+                width: 160,
+                price: {g1: 849, g2: 949},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("urban_180_115", {
+                label: '180/115',
+                width: 180,
+                price: {g1: 949, g2: 1049},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("urban_200_115", {
+                label: '200/115',
+                width: 200,
+                price: {g1: 1049, g2: 1149},
+                nextStep: 'step_typ_materaca'
+            });
+
+            g.setNode("preppy_140_95", {
+                label: '140/95',
+                width: 140,
+                price: {g1: 1169, g2: 1269},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("preppy_160_95", {
+                label: '160/95',
+                width: 160,
+                price: {g1: 1199, g2: 1299},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("preppy_180_95", {
+                label: '180/95',
+                width: 180,
+                price: {g1: 1299, g2: 1399},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("preppy_200_95", {
+                label: '200/95',
+                width: 200,
+                price: {g1: 1399, g2: 1499},
+                nextStep: 'step_typ_materaca'
+            });
 
             g.setNode("preppy_140_115", {
                 label: '140/115',
@@ -1675,10 +1815,30 @@ $(document)
                 nextStep: 'step_typ_materaca'
             });
 
-            g.setNode("vintage_140_95", {label: '140/95', width: 140, price: {g1: 1029, g2: 1129}, nextStep: 'step_typ_materaca'});
-            g.setNode("vintage_160_95", {label: '160/95', width: 160, price: {g1: 1059, g2: 1159}, nextStep: 'step_typ_materaca'});
-            g.setNode("vintage_180_95", {label: '180/95', width: 180, price: {g1: 1159, g2: 1259}, nextStep: 'step_typ_materaca'});
-            g.setNode("vintage_200_95", {label: '200/95', width: 200, price: {g1: 1259, g2: 1359}, nextStep: 'step_typ_materaca'});
+            g.setNode("vintage_140_95", {
+                label: '140/95',
+                width: 140,
+                price: {g1: 1029, g2: 1129},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("vintage_160_95", {
+                label: '160/95',
+                width: 160,
+                price: {g1: 1059, g2: 1159},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("vintage_180_95", {
+                label: '180/95',
+                width: 180,
+                price: {g1: 1159, g2: 1259},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("vintage_200_95", {
+                label: '200/95',
+                width: 200,
+                price: {g1: 1259, g2: 1359},
+                nextStep: 'step_typ_materaca'
+            });
 
             g.setNode("vintage_140_115", {
                 label: '140/115',
@@ -1705,14 +1865,49 @@ $(document)
                 nextStep: 'step_typ_materaca'
             });
 
-            g.setNode("momiko_140_95", {label: '140/95', width: 140, price: {g1: 869, g2: 969}, nextStep: 'step_typ_materaca'});
-            g.setNode("momiko_160_95", {label: '160/95', width: 160, price: {g1: 899, g2: 999}, nextStep: 'step_typ_materaca'});
-            g.setNode("momiko_180_95", {label: '180/95', width: 180, price: {g1: 999, g2: 1099}, nextStep: 'step_typ_materaca'});
-            g.setNode("momiko_200_95", {label: '200/95', width: 200, price: {g1: 1099, g2: 1199}, nextStep: 'step_typ_materaca'});
+            g.setNode("momiko_140_95", {
+                label: '140/95',
+                width: 140,
+                price: {g1: 869, g2: 969},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("momiko_160_95", {
+                label: '160/95',
+                width: 160,
+                price: {g1: 899, g2: 999},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("momiko_180_95", {
+                label: '180/95',
+                width: 180,
+                price: {g1: 999, g2: 1099},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("momiko_200_95", {
+                label: '200/95',
+                width: 200,
+                price: {g1: 1099, g2: 1199},
+                nextStep: 'step_typ_materaca'
+            });
 
-            g.setNode("momiko_140_115", {label: '140/115', width: 140, price: {g1: 969, g2: 1069}, nextStep: 'step_typ_materaca'});
-            g.setNode("momiko_160_115", {label: '160/115', width: 160, price: {g1: 999, g2: 1099}, nextStep: 'step_typ_materaca'});
-            g.setNode("momiko_180_115", {label: '180/115', width: 180, price: {g1: 1099, g2: 1199}, nextStep: 'step_typ_materaca'});
+            g.setNode("momiko_140_115", {
+                label: '140/115',
+                width: 140,
+                price: {g1: 969, g2: 1069},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("momiko_160_115", {
+                label: '160/115',
+                width: 160,
+                price: {g1: 999, g2: 1099},
+                nextStep: 'step_typ_materaca'
+            });
+            g.setNode("momiko_180_115", {
+                label: '180/115',
+                width: 180,
+                price: {g1: 1099, g2: 1199},
+                nextStep: 'step_typ_materaca'
+            });
             g.setNode("momiko_200_115", {
                 label: '200/115',
                 width: 200,
@@ -1795,8 +1990,8 @@ $(document)
                 nextStep: 'step_typ_materaca'
             });
 
-            g.setNode("step_3", {
-                node: 'step_3',
+            g.setNode("legs", {
+                node: 'legs',
                 title: 'nóżki',
                 label: 'wybierz nożki',
                 number: 3,
@@ -3055,6 +3250,15 @@ $(document)
             g.setEdge("step_2", "ladylike");
             g.setEdge("step_2", "momiko");
 
+            g.setEdge("bb_wezglowie", "bb_wezglowie_urban");
+            g.setEdge("bb_wezglowie", "bb_wezglowie_preppy");
+            g.setEdge("bb_wezglowie", "bb_wezglowie_glamour");
+            g.setEdge("bb_wezglowie", "bb_wezglowie_vintage");
+            g.setEdge("bb_wezglowie", "bb_wezglowie_eclectic");
+            g.setEdge("bb_wezglowie", "bb_wezglowie_ladylike");
+            g.setEdge("bb_wezglowie", "bb_wezglowie_momiko");
+
+            //
             g.setEdge("urban", "urban_140_95");
             g.setEdge("urban", "urban_160_95");
             g.setEdge("urban", "urban_180_95");
@@ -3326,22 +3530,22 @@ $(document)
             g.setEdge("materac_select_plus", "materac_select_plus_180_200");
             g.setEdge("materac_select_plus", "materac_select_plus_200_200");
 
-            g.setEdge("covers_velvet_tencel","cover_velvet");
-            g.setEdge("covers_velvet_tencel","cover_tencel");
+            g.setEdge("covers_velvet_tencel", "cover_velvet");
+            g.setEdge("covers_velvet_tencel", "cover_tencel");
 
-            g.setEdge("covers_velvet","cover_velvet");
+            g.setEdge("covers_velvet", "cover_velvet");
 
-            g.setEdge("covers_elips_medicott","cover_medicott");
-            g.setEdge("covers_elips_medicott","cover_elips_1");
+            g.setEdge("covers_elips_medicott", "cover_medicott");
+            g.setEdge("covers_elips_medicott", "cover_elips_1");
 
-            g.setEdge("covers_fresh","cover_fresh");
-            g.setEdge("covers_medicover","cover_medicover");
-            g.setEdge("covers_teenage","cover_teenage");
-            g.setEdge("covers_merced_elips","cover_merced_1");
-            g.setEdge("covers_merced_elips","cover_elips_2");
-            g.setEdge("covers_elips_tencel_top","cover_elips_top");
-            g.setEdge("covers_elips_tencel_top","cover_tencel_top");
-            g.setEdge("covers_sensity_top","cover_sensity_top");
+            g.setEdge("covers_fresh", "cover_fresh");
+            g.setEdge("covers_medicover", "cover_medicover");
+            g.setEdge("covers_teenage", "cover_teenage");
+            g.setEdge("covers_merced_elips", "cover_merced_1");
+            g.setEdge("covers_merced_elips", "cover_elips_2");
+            g.setEdge("covers_elips_tencel_top", "cover_elips_top");
+            g.setEdge("covers_elips_tencel_top", "cover_tencel_top");
+            g.setEdge("covers_sensity_top", "cover_sensity_top");
 
             g.setEdge("step_6", "otomana");
 

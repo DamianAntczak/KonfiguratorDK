@@ -100,8 +100,7 @@ div.summary-price-row div{
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 3px;
-    display: inline-block;
+    margin: 3px 3px 3px 0;
     background-clip: content-box;
     text-align: center;
 }
