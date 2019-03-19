@@ -469,9 +469,13 @@ class Configurator {
         var mainNode = this.step.selectedNodes[0];
         var find = $('#configurator-preview').find('#render-' + mainNode.node);
         if (find.length === 0) {
-            $('#configurator-preview').append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
+            $('#configurator-preview').append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + colorNode.render + '" />');
         } else {
             $(find).attr('src', 'renders/' + colorNode.render);
+        }
+
+        if(colorNode.overlay !== undefined){
+            $('#configurator-preview').append('<img id="render-overlay" style="z-index: 150" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
         }
 
         $('.tiles').removeClass('color-selected');
@@ -520,6 +524,10 @@ class Configurator {
         $('#item-color').hide();
         $('#next-step').hide();
         $('#skip-step').hide();
+
+        this.step = new Step(100, "Podsumowanie", false, 'baza kontynetalna_roko08.png', null);
+        this.step.selectedNodes[0] = this.graph.node("summary");
+        this.allSteps[this.stepIndex] = this.step;
 
         var stepElement = $('#step-content');
         stepElement.html('');

@@ -582,49 +582,57 @@ g.setNode("glamour_novel", {
     name: 'novel',
     node: 'glamour_novel',
     url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
-    render: '/wezglowia/wezglowie_glamour_115_novel13.png'
+    render: '/wezglowia/wezglowie_glamour_115_novel13.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_novel13_add.png'
 });
 g.setNode("glamour_roko", {
     g: 1,
     name: 'roko',
     node: 'glamour_roko',
     url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
-    render: '/wezglowia/wezglowie_glamour_115_roko08.png'
+    render: '/wezglowia/wezglowie_glamour_115_roko08.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_roko08_add.png'
 });
 g.setNode("glamour_aspen", {
     g: 1,
     name: 'aspen',
     node: 'glamour_aspen',
     url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
-    render: '/wezglowia/wezglowie_glamour_115_aspen04.png'
+    render: '/wezglowia/wezglowie_glamour_115_aspen04.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_aspen04_add.png'
 });
 g.setNode("glamour_river", {
     g: 2,
     name: 'river',
     node: 'glamour_river',
     url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
-    render: '/wezglowia/wezglowie_glamour_115_river02.png'
+    render: '/wezglowia/wezglowie_glamour_115_river02.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_river02_add.png'
 });
 g.setNode("glamour_eren", {
     g: 2,
     name: 'eren',
     node: 'glamour_eren',
     url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
-    render: '/wezglowia/wezglowie_glamour_115_eren07.png'
+    render: '/wezglowia/wezglowie_glamour_115_eren07.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_eren07_add.png',
 });
 g.setNode("glamour_ontario", {
     g: 2,
     name: 'ontario',
     node: 'glamour_ontario',
     url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
-    render: '/wezglowia/wezglowie_glamour_115_ontario90.png'
+    render: '/wezglowia/wezglowie_glamour_115_ontario90.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_ontario90_add.png'
 });
 g.setNode("glamour_riviera", {
     g: 2,
     name: 'riviera',
     node: 'glamour_riviera',
     url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
-    render: '/wezglowia/wezglowie_glamour_115_riviera38.png'
+    render: '/wezglowia/wezglowie_glamour_115_riviera38.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_riviera38_add.png'
+
 });
 
 g.setNode("vintage_colors_7", {});
