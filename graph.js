@@ -2044,11 +2044,70 @@ g.setNode("naroznik_srebro_16", {
     price: {g1: 114, g2: 114},
     nextStep: 'bb_step_typ_materaca'
 });
-g.setNode("ploza_buk_16", {
-    label: '200/95',
-    price: {g1: 132, g2: 132},
+
+g.setNode("ploza_buk_140", {
+    label: '140',
+    price: {g1: 218.4, g2: 218.4},
     nextStep: 'bb_step_typ_materaca'
 });
+g.setNode("ploza_buk_160", {
+    label: '160',
+    price: {g1: 237.6, g2: 237.6},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_buk_180", {
+    label: '180',
+    price: {g1: 259.2, g2: 259.2},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_buk_200", {
+    label: '200',
+    price: {g1: 283.2, g2: 283.2},
+    nextStep: 'bb_step_typ_materaca'
+});
+
+g.setNode("ploza_wenge_140", {
+    label: '140',
+    price: {g1: 218.4, g2: 218.4},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_wenge_160", {
+    label: '160',
+    price: {g1: 237.6, g2: 237.6},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_wenge_180", {
+    label: '180',
+    price: {g1: 259.2, g2: 259.2},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_wenge_200", {
+    label: '200',
+    price: {g1: 283.2, g2: 283.2},
+    nextStep: 'bb_step_typ_materaca'
+});
+
+g.setNode("ploza_dab_140", {
+    label: '140',
+    price: {g1: 468, g2: 468},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_dab_160", {
+    label: '160',
+    price: {g1: 516, g2: 516},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_dab_180", {
+    label: '180',
+    price: {g1: 564, g2: 564},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("ploza_dab_200", {
+    label: '200',
+    price: {g1: 612, g2: 612},
+    nextStep: 'bb_step_typ_materaca'
+});
+
 g.setNode("ploza_dab_16", {
     label: '200/95',
     price: {g1: 132, g2: 132},
@@ -3949,9 +4008,22 @@ g.setEdge("kielich_srebro", "kielich_srebro_16");
 g.setEdge("naroznik_czern", "naroznik_czern_16");
 g.setEdge("naroznik_miedz", "naroznik_miedz_16");
 g.setEdge("naroznik_srebro", "naroznik_srebro_16");
-g.setEdge("ploza_dab", "ploza_dab_16");
-g.setEdge("ploza_buk", "ploza_buk_16");
-g.setEdge("ploza_wenge", "ploza_wenge_16");
+
+g.setEdge("ploza_dab", "ploza_dab_140");
+g.setEdge("ploza_dab", "ploza_dab_160");
+g.setEdge("ploza_dab", "ploza_dab_180");
+g.setEdge("ploza_dab", "ploza_dab_200");
+
+g.setEdge("ploza_buk", "ploza_buk_140");
+g.setEdge("ploza_buk", "ploza_buk_160");
+g.setEdge("ploza_buk", "ploza_buk_180");
+g.setEdge("ploza_buk", "ploza_buk_200");
+
+
+g.setEdge("ploza_wenge", "ploza_wenge_140");
+g.setEdge("ploza_wenge", "ploza_wenge_160");
+g.setEdge("ploza_wenge", "ploza_wenge_180");
+g.setEdge("ploza_wenge", "ploza_wenge_200");
 
 //*************8
 
