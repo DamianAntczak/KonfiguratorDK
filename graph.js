@@ -1081,7 +1081,8 @@ g.setNode("bb_wezglowie", {
     number: 2,
     zIndex: 5,
     colors: 'colors_7',
-    optionsFilter: true
+    optionsFilter: true,
+    overlay: true
 });
 
 g.setNode("bb_wezglowie_glamour", {
