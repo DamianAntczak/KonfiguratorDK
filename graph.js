@@ -167,21 +167,21 @@ g.setNode("kontynent_novel", {
     g: 1,
     name: 'novel',
     node: 'kontynent_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_kontynentalna_h31_novel13.png'
 });
 g.setNode("kontynent_roko", {
     g: 1,
     name: 'roko',
     node: 'kontynent_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_kontynentalna_h31_roko08.png'
 });
 g.setNode("kontynent_aspen", {
     g: 1,
     name: 'aspen',
     node: 'kontynent_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/bazy/baza_kontynentalna_h31_aspen04.png'
 });
 
@@ -189,28 +189,28 @@ g.setNode("kontynent_river", {
     g: 2,
     name: 'river',
     node: 'kontynent_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/bazy/baza_kontynentalna_h31_river02.png'
 });
 g.setNode("kontynent_eren", {
     g: 2,
     name: 'eren',
     node: 'kontynent_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_kontynentalna_h31_eren07.png'
 });
 g.setNode("kontynent_ontario", {
     g: 2,
     name: 'ontario',
     node: 'kontynent_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_kontynentalna_h31_ontario90.png'
 });
 g.setNode("kontynent_riviera", {
     g: 2,
     name: 'riviera',
     node: 'kontynent_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/bazy/baza_kontynentalna_h31_riviera38.png'
 });
 
@@ -219,21 +219,21 @@ g.setNode("kontynent_novel", {
     g: 1,
     name: 'novel',
     node: 'kontynent_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_kontynentalna_h31_novel13.png'
 });
 g.setNode("kontynent_roko", {
     g: 1,
     name: 'roko',
     node: 'kontynent_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_kontynentalna_h31_roko08.png'
 });
 g.setNode("kontynent_aspen", {
     g: 1,
     name: 'aspen',
     node: 'kontynent_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/bazy/baza_kontynentalna_h31_aspen04.png'
 });
 
@@ -241,28 +241,28 @@ g.setNode("kontynent_river", {
     g: 2,
     name: 'river',
     node: 'kontynent_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/bazy/baza_kontynentalna_h31_river02.png'
 });
 g.setNode("kontynent_eren", {
     g: 2,
     name: 'eren',
     node: 'kontynent_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_kontynentalna_h31_eren07.png'
 });
 g.setNode("kontynent_ontario", {
     g: 2,
     name: 'ontario',
     node: 'kontynent_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_kontynentalna_h31_ontario90.png'
 });
 g.setNode("kontynent_riviera", {
     g: 2,
     name: 'riviera',
     node: 'kontynent_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/bazy/baza_kontynentalna_h31_riviera38.png'
 });
 
@@ -271,21 +271,21 @@ g.setNode("kontynent_szuflada_novel", {
     g: 1,
     name: 'novel',
     node: 'kontynent_szuflada_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png'
 });
 g.setNode("kontynent_szuflada_roko", {
     g: 1,
     name: 'roko',
     node: 'kontynent_szuflada_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_roko08.png'
 });
 g.setNode("kontynent_szuflada_aspen", {
     g: 1,
     name: 'aspen',
     node: 'kontynent_szuflada_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_aspen04.png'
 });
 
@@ -293,28 +293,28 @@ g.setNode("kontynent_szuflada_river", {
     g: 2,
     name: 'river',
     node: 'kontynent_szuflada_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_river02.png'
 });
 g.setNode("kontynent_szuflada_eren", {
     g: 2,
     name: 'eren',
     node: 'kontynent_szuflada_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_eren07.png'
 });
 g.setNode("kontynent_szuflada_ontario", {
     g: 2,
     name: 'ontario',
     node: 'kontynent_szuflada_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_ontario90.png'
 });
 g.setNode("kontynent_szuflada_riviera", {
     g: 2,
     name: 'riviera',
     node: 'kontynent_szuflada_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_riviera38.png'
 });
 
@@ -323,21 +323,21 @@ g.setNode("base_box_novel", {
     g: 1,
     name: 'novel',
     node: 'base_box_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_base_box_h31_novel13.png'
 });
 g.setNode("base_box_roko", {
     g: 1,
     name: 'roko',
     node: 'base_box_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_base_box_h31_roko08.png'
 });
 g.setNode("base_box_aspen", {
     g: 1,
     name: 'aspen',
     node: 'base_box_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/bazy/baza_base_box_h31_aspen04.png'
 });
 
@@ -345,28 +345,28 @@ g.setNode("base_box_river", {
     g: 2,
     name: 'river',
     node: 'base_box_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/bazy/baza_base_box_h31_river02.png'
 });
 g.setNode("base_box_eren", {
     g: 2,
     name: 'eren',
     node: 'base_box_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_base_box_h31_eren07.png'
 });
 g.setNode("base_box_ontario", {
     g: 2,
     name: 'ontario',
     node: 'base_box_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_base_box_h31_ontario90.png'
 });
 g.setNode("base_box_riviera", {
     g: 2,
     name: 'riviera',
     node: 'base_box_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/bazy/baza_base_box_h31_riviera38.png'
 });
 
@@ -376,21 +376,21 @@ g.setNode("base_podnoszony_novel", {
     g: 1,
     name: 'novel',
     node: 'base_podnoszony_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_box_podnoszony_h39_novel13.png'
 });
 g.setNode("base_podnoszony_roko", {
     g: 1,
     name: 'roko',
     node: 'base_podnoszony_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_box_podnoszony_h39_roko08.png'
 });
 g.setNode("base_podnoszony_aspen", {
     g: 1,
     name: 'aspen',
     node: 'base_podnoszony_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/bazy/baza_box_podnoszony_h39_aspen04.png'
 });
 
@@ -398,28 +398,28 @@ g.setNode("base_podnoszony_river", {
     g: 2,
     name: 'river',
     node: 'base_podnoszony_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/bazy/baza_box_podnoszony_h39_river02.png'
 });
 g.setNode("base_podnoszony_eren", {
     g: 2,
     name: 'eren',
     node: 'base_podnoszony_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_box_podnoszony_h39_eren07.png'
 });
 g.setNode("base_podnoszony_ontario", {
     g: 2,
     name: 'ontario',
     node: 'base_podnoszony_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_box_podnoszony_h39_ontario90.png'
 });
 g.setNode("base_podnoszony_riviera", {
     g: 2,
     name: 'riviera',
     node: 'base_podnoszony_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/bazy/baza_box_podnoszony_h39_riviera38.png'
 });
 
@@ -428,49 +428,49 @@ g.setNode("tapicerowana_novel", {
     g: 1,
     name: 'novel',
     node: 'tapicerowana_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_tapicerowana_h34_novel13.png'
 });
 g.setNode("tapicerowana_roko", {
     g: 1,
     name: 'roko',
     node: 'tapicerowana_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_tapicerowana_h34_roko08.png'
 });
 g.setNode("tapicerowana_aspen", {
     g: 1,
     name: 'aspen',
     node: 'tapicerowana_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/bazy/baza_tapicerowana_h34_aspen04.png'
 });
 g.setNode("tapicerowana_river", {
     g: 2,
     name: 'river',
     node: 'tapicerowana_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/bazy/baza_tapicerowana_h34_river02.png'
 });
 g.setNode("tapicerowana_eren", {
     g: 2,
     name: 'eren',
     node: 'tapicerowana_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_tapicerowana_h34_eren07.png'
 });
 g.setNode("tapicerowana_ontario", {
     g: 2,
     name: 'ontario',
     node: 'tapicerowana_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_tapicerowana_h34_ontario90.png'
 });
 g.setNode("tapicerowana_riviera", {
     g: 2,
     name: 'riviera',
     node: 'tapicerowana_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/bazy/baza_tapicerowana_h34_riviera38.png'
 });
 
@@ -479,49 +479,49 @@ g.setNode("urban_novel", {
     g: 1,
     name: 'novel',
     node: 'urban_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/wezglowia/wezglowie_urban_95_novel13.png'
 });
 g.setNode("urban_roko", {
     g: 1,
     name: 'roko',
     node: 'urban_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/wezglowia/wezglowie_urban_95_roko08.png'
 });
 g.setNode("urban_aspen", {
     g: 1,
     name: 'aspen',
     node: 'urban_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/wezglowia/wezglowie_urban_95_aspen04.png'
 });
 g.setNode("urban_river", {
     g: 2,
     name: 'river',
     node: 'urban_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/wezglowia/wezglowie_urban_95_river02.png'
 });
 g.setNode("urban_eren", {
     g: 2,
     name: 'eren',
     node: 'urban_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/wezglowia/wezglowie_urban_95_eren07.png'
 });
 g.setNode("urban_ontario", {
     g: 2,
     name: 'ontario',
     node: 'urban_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/wezglowia/wezglowie_urban_95_ontario90.png'
 });
 g.setNode("urban_riviera", {
     g: 2,
     name: 'riviera',
     node: 'urban_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/wezglowia/wezglowie_urban_95_riviera38.png'
 });
 
@@ -530,49 +530,49 @@ g.setNode("preppy_novel", {
     g: 1,
     name: 'novel 13',
     node: 'preppy_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/wezglowia/wezglowie_preppy_95_novel13.png'
 });
 g.setNode("preppy_roko", {
     g: 1,
     name: 'roko',
     node: 'preppy_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/wezglowia/wezglowie_preppy_95_roko08.png'
 });
 g.setNode("preppy_aspen", {
     g: 1,
     name: 'aspen',
     node: 'preppy_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/wezglowia/wezglowie_preppy_95_aspen04.png'
 });
 g.setNode("preppy_river", {
     g: 2,
     name: 'river',
     node: 'preppy_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/wezglowia/wezglowie_preppy_95_river02.png'
 });
 g.setNode("preppy_eren", {
     g: 2,
     name: 'eren',
     node: 'preppy_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/wezglowia/wezglowie_preppy_95_eren07.png'
 });
 g.setNode("preppy_ontario", {
     g: 2,
     name: 'ontario',
     node: 'preppy_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/wezglowia/wezglowie_preppy_95_ontario90.png'
 });
 g.setNode("preppy_riviera", {
     g: 2,
     name: 'riviera',
     node: 'preppy_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/wezglowia/wezglowie_preppy_95_riviera38.png'
 });
 
@@ -581,7 +581,7 @@ g.setNode("glamour_novel", {
     g: 1,
     name: 'novel',
     node: 'glamour_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/wezglowia/wezglowie_glamour_115_novel13.png',
     overlay: '/wezglowia/wezglowie_glamour_115_novel13_add.png'
 });
@@ -589,7 +589,7 @@ g.setNode("glamour_roko", {
     g: 1,
     name: 'roko',
     node: 'glamour_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/wezglowia/wezglowie_glamour_115_roko08.png',
     overlay: '/wezglowia/wezglowie_glamour_115_roko08_add.png'
 });
@@ -597,7 +597,7 @@ g.setNode("glamour_aspen", {
     g: 1,
     name: 'aspen',
     node: 'glamour_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/wezglowia/wezglowie_glamour_115_aspen04.png',
     overlay: '/wezglowia/wezglowie_glamour_115_aspen04_add.png'
 });
@@ -605,7 +605,7 @@ g.setNode("glamour_river", {
     g: 2,
     name: 'river',
     node: 'glamour_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/wezglowia/wezglowie_glamour_115_river02.png',
     overlay: '/wezglowia/wezglowie_glamour_115_river02_add.png'
 });
@@ -613,7 +613,7 @@ g.setNode("glamour_eren", {
     g: 2,
     name: 'eren',
     node: 'glamour_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/wezglowia/wezglowie_glamour_115_eren07.png',
     overlay: '/wezglowia/wezglowie_glamour_115_eren07_add.png',
 });
@@ -621,7 +621,7 @@ g.setNode("glamour_ontario", {
     g: 2,
     name: 'ontario',
     node: 'glamour_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/wezglowia/wezglowie_glamour_115_ontario90.png',
     overlay: '/wezglowia/wezglowie_glamour_115_ontario90_add.png'
 });
@@ -629,7 +629,7 @@ g.setNode("glamour_riviera", {
     g: 2,
     name: 'riviera',
     node: 'glamour_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/wezglowia/wezglowie_glamour_115_riviera38.png',
     overlay: '/wezglowia/wezglowie_glamour_115_riviera38_add.png'
 
@@ -640,7 +640,7 @@ g.setNode("vintage_novel", {
     g: 1,
     name: 'novel',
     node: 'vintage_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/wezglowia/wezglowie_vintage_95_novel13.png',
     overlay: '/wezglowia/wezglowie_vintage_95_novel13_add.png'
 });
@@ -648,7 +648,7 @@ g.setNode("vintage_roko", {
     g: 1,
     name: 'roko',
     node: 'vintage_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/wezglowia/wezglowie_vintage_95_roko08.png',
     overlay: '/wezglowia/wezglowie_vintage_95_roko08_add.png'
 });
@@ -656,7 +656,7 @@ g.setNode("vintage_aspen", {
     g: 1,
     name: 'aspen',
     node: 'vintage_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/wezglowia/wezglowie_vintage_95_aspen04.png',
     overlay: '/wezglowia/wezglowie_vintage_95_aspen04_add.png'
 });
@@ -664,7 +664,7 @@ g.setNode("vintage_river", {
     g: 2,
     name: 'river',
     node: 'vintage_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/wezglowia/wezglowie_vintage_95_river02.png',
     overlay: '/wezglowia/wezglowie_vintage_95_river02_add.png'
 });
@@ -672,7 +672,7 @@ g.setNode("vintage_eren", {
     g: 2,
     name: 'eren',
     node: 'vintage_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/wezglowia/wezglowie_vintage_95_eren07.png',
     overlay: '/wezglowia/wezglowie_vintage_95_eren07_add.png'
 });
@@ -680,7 +680,7 @@ g.setNode("vintage_ontario", {
     g: 2,
     name: 'ontario',
     node: 'vintage_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/wezglowia/wezglowie_vintage_95_ontario90.png',
     overlay: '/wezglowia/wezglowie_vintage_95_ontario90_add.png'
 });
@@ -688,7 +688,7 @@ g.setNode("vintage_riviera", {
     g: 2,
     name: 'riviera',
     node: 'vintage_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/wezglowia/wezglowie_vintage_95_riviera38.png',
     overlay: '/wezglowia/wezglowie_vintage_95_riviera38_add.png'
 });
@@ -698,49 +698,49 @@ g.setNode("eclectic_novel", {
     g: 1,
     name: 'novel',
     node: 'eclectic_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_novel13.png'
 });
 g.setNode("eclectic_roko", {
     g: 1,
     name: 'roko',
     node: 'eclectic_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_roko08.png'
 });
 g.setNode("eclectic_aspen", {
     g: 1,
     name: 'aspen',
     node: 'eclectic_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_aspen04.png'
 });
 g.setNode("eclectic_river", {
     g: 2,
     name: 'river',
     node: 'eclectic_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_river02.png'
 });
 g.setNode("eclectic_eren", {
     g: 2,
     name: 'eren',
     node: 'eclectic_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_eren07.png'
 });
 g.setNode("eclectic_ontario", {
     g: 2,
     name: 'ontario',
     node: 'eclectic_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_ontario90.png'
 });
 g.setNode("eclectic_riviera", {
     g: 2,
     name: 'riviera',
     node: 'eclectic_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_riviera38.png'
 });
 
@@ -749,49 +749,49 @@ g.setNode("ladylike_novel", {
     g: 1,
     name: 'novel',
     node: 'ladylike_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_novel13.png'
 });
 g.setNode("ladylike_roko", {
     g: 1,
     name: 'roko',
     node: 'ladylike_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_roko08.png'
 });
 g.setNode("ladylike_aspen", {
     g: 1,
     name: 'aspen',
     node: 'ladylike_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_aspen04.png'
 });
 g.setNode("ladylike_river", {
     g: 2,
     name: 'river',
     node: 'ladylike_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_river02.png'
 });
 g.setNode("ladylike_eren", {
     g: 2,
     name: 'eren',
     node: 'ladylike_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_eren07.png'
 });
 g.setNode("ladylike_ontario", {
     g: 2,
     name: 'ontario',
     node: 'ladylike_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_ontario90.png'
 });
 g.setNode("ladylike_riviera", {
     g: 2,
     name: 'riviera',
     node: 'ladylike_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_riviera38.png'
 });
 
@@ -800,49 +800,49 @@ g.setNode("momiko_novel", {
     g: 1,
     name: 'novel 13',
     node: 'momiko_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/wezglowia/wezglowie_momiko_95_novel13.png'
 });
 g.setNode("momiko_roko", {
     g: 1,
     name: 'roko 08',
     node: 'momiko_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/wezglowia/wezglowie_momiko_95_roko08.png'
 });
 g.setNode("momiko_aspen", {
     g: 1,
     name: 'aspen 04',
     node: 'momiko_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/wezglowia/wezglowie_momiko_95_aspen04.png'
 });
 g.setNode("momiko_river", {
     g: 2,
     name: 'river 02',
     node: 'momiko_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/wezglowia/wezglowie_momiko_95_river02.png'
 });
 g.setNode("momiko_eren", {
     g: 2,
     name: 'eren 07',
     node: 'momiko_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/wezglowia/wezglowie_momiko_95_eren07.png'
 });
 g.setNode("momiko_ontario", {
     g: 2,
     name: 'ontario 90',
     node: 'momiko_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/wezglowia/wezglowie_momiko_95_ontario90.png'
 });
 g.setNode("momiko_riviera", {
     g: 2,
     name: 'riviera 38',
     node: 'momiko_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/wezglowia/wezglowie_momiko_95_riviera38.png'
 });
 
@@ -960,49 +960,49 @@ g.setNode("m_tap_novel", {
     g: 1,
     name: 'novel',
     node: 'm_tap_novel',
-    url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/materace/materac_tapicerowany_h31_novel13.png'
 });
 g.setNode("m_tap_roko", {
     g: 1,
     name: 'roko',
     node: 'm_tap_roko',
-    url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png',
+    url: './img/tkaniny/Roko088_blue.jpg',
     render: '/materace/materac_tapicerowany_h31_roko08.png'
 });
 g.setNode("m_tap_aspen", {
     g: 1,
     name: 'aspen',
     node: 'm_tap_aspen',
-    url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png',
+    url: './img/tkaniny/aspen_04_light.jpg',
     render: '/materace/materac_tapicerowany_h31_aspen04.png'
 });
 g.setNode("m_tap_river", {
     g: 2,
     name: 'river',
     node: 'm_tap_river',
-    url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png',
+    url: './img/tkaniny/river_02_silver.jpg',
     render: '/materace/materac_tapicerowany_h31_river02.png'
 });
 g.setNode("m_tap_eren", {
     g: 2,
     name: 'eren',
     node: 'm_tap_eren',
-    url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png',
+    url: './img/tkaniny/eren_07.jpg',
     render: '/materace/materac_tapicerowany_h31_eren07.png'
 });
 g.setNode("m_tap_ontario", {
     g: 2,
     name: 'ontario',
     node: 'm_tap_ontario',
-    url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png',
+    url: './img/tkaniny/ontario_90.jpg',
     render: '/materace/materac_tapicerowany_h31_ontario90.png'
 });
 g.setNode("m_tap_riviera", {
     g: 2,
     name: 'riviera',
     node: 'm_tap_riviera',
-    url: 'https://hilding.pl/png/product/riviera__38_1524205099.png',
+    url: './img/tkaniny/riviera_38.jpg',
     render: '/materace/materac_tapicerowany_h31_riviera38.png'
 });
 

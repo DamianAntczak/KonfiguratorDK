@@ -601,43 +601,43 @@ $(document).ready(function () {
         g: 1,
         name: 'novel',
         node: 'color_novel',
-        url: 'https://hilding.pl/png/product/Novel_04_stone_1524204873.png'
+        url: './img/tkaniny/novel_13_anthracite.jpg'
     });
     g.setNode("color_roko", {
         g: 1,
         name: 'roko',
         node: 'color_roko',
-        url: 'https://hilding.pl/png/product/Roko_08Blue_1524205213.png'
+        url: './img/tkaniny/Roko088_blue.jpg'
     });
     g.setNode("color_aspen", {
         g: 1,
         name: 'aspen',
         node: 'color_aspen',
-        url: 'https://hilding.pl/png/product/Aspen_04_light_grey_1524138655.png'
+        url: './img/tkaniny/aspen_04_light.jpg'
     });
     g.setNode("color_river", {
         g: 2,
         name: 'river',
         node: 'color_river',
-        url: 'https://hilding.pl/png/product/River_02_Silver_1524205043.png'
+        url: './img/tkaniny/river_02_silver.jpg'
     });
     g.setNode("color_eren", {
         g: 2,
         name: 'eren',
         node: 'color_eren',
-        url: 'https://hilding.pl/png/product/EREN07pink_1524204319.png'
+        url: './img/tkaniny/eren_07.jpg'
     });
     g.setNode("color_ontario", {
         g: 2,
         name: 'ontario',
         node: 'color_ontario',
-        url: 'https://hilding.pl/png/product/Ontario-90_1524204971.png'
+        url: './img/tkaniny/ontario_90.jpg'
     });
     g.setNode("color_riviera", {
         g: 2,
         name: 'riviera',
         node: 'color_riviera',
-        url: 'https://hilding.pl/png/product/riviera__38_1524205099.png'
+        url: './img/tkaniny/riviera_38.jpg'
     });
     g.setNode("step_2", {
         node: 'step_2',
