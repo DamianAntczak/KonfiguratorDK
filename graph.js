@@ -2204,7 +2204,7 @@ g.setNode("materac_chacha", {
 g.setNode("materac_pasodoble", {
     node: 'materac_pasodoble',
     label: 'Pasodoble',
-    img: './img/materace/pasodoble.jpg',
+    img: '/materace/pasodoble.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_velvet_tencel'
 });
@@ -2232,7 +2232,7 @@ g.setNode("materac_rockroll", {
 g.setNode("materac_foxtrot", {
     node: 'materac_foxtrot',
     label: 'Foxtrot',
-    img: './img/materace/foxtrot.jpg',
+    img: '/materace/foxtrot.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_velvet'
 });
@@ -2246,7 +2246,7 @@ g.setNode("materac_mambo", {
 g.setNode("materac_rumba", {
     node: 'materac_rumba',
     label: 'Rumba',
-    img: 'rumba.jpg',
+    img: '/materace/rumba.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_elips_medicott'
 });
@@ -2260,21 +2260,21 @@ g.setNode("materac_latino", {
 g.setNode("materac_fandango", {
     node: 'materac_fandango',
     label: 'Fandango',
-    img: './img/materace/fandango.jpg',
+    img: '/materace/fandango.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_medicover'
 });
 g.setNode("materac_zorba", {
     node: 'materac_zorba',
     label: 'Zorba',
-    img: 'zorba.jpg',
+    img: '/materace/zorba.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_medicover'
 });
 g.setNode("materac_breakdance", {
     node: 'materac_breakdance',
     label: 'Breakdance',
-    img: 'breakdance.jpg',
+    img: '/materace/breakdance.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_teenage'
 });
@@ -2283,21 +2283,21 @@ g.setNode("materac_breakdance", {
 g.setNode("materac_foxtrot_tapicerowany", {
     node: 'materac_foxtrot_tapicerowany',
     label: 'Foxtrot',
-    img: 'foxtrot.jpg',
+    img: '/materace/foxtrot.jpg',
     render: 'materace/materac_tapicerowany_h31_novel13.png',
     colors: 'm_tap_colors_7'
 });
 g.setNode("materac_chacha_tapicerowany", {
     node: 'materac_chacha_tapicerowany',
     label: 'Cha-Cha',
-    img: 'cha-cha.jpg',
+    img: '/materace/cha_cha.jpg',
     render: 'materace/materac_tapicerowany_h31_novel13.png',
     colors: 'm_tap_colors_7'
 });
 g.setNode("materac_flamenco_tapicerowany", {
     node: 'materac_flamenco_tapicerowany',
     label: 'Flamenco',
-    img: 'flamenco.jpg',
+    img: '/materace/flamenco.jpg',
     render: 'materace/materac_tapicerowany_h31_novel13.png',
     colors: 'm_tap_colors_7'
 });
@@ -3379,14 +3379,14 @@ g.setNode("materac_select_plus", {
     node: 'materac_select_plus',
     label: 'Select Plus Softex',
     img: 'jive.jpg',
-    render: 'materace/top_blues_h31.png',
+    render: '/materace/top_blues_h31.png',
     cover: 'covers_sensity_top'
 });
 
 g.setNode("materac_blues", {
     node: 'materac_blues',
     label: 'Blues',
-    img: './img/materace/blues.jpg',
+    img: '/materace/blues.jpg',
     render: 'materace/top_blues_h31.png',
     cover: 'covers_elips_tencel_top'
 });
@@ -3395,7 +3395,7 @@ g.setNode("materac_blues", {
 g.setNode("materac_jive", {
     node: 'materac_jive',
     label: 'Jive',
-    img: './img/materace/jive.jpg',
+    img: '/materace/jive.jpg',
     render: 'materace/top_blues_h31.png',
     cover: 'covers_elips_tencel_top'
 });
@@ -3404,7 +3404,7 @@ g.setNode("materac_select_top", {
     node: 'materac_select_top',
     label: 'Select TOP',
     img: 'jive.jpg',
-    render: 'materace/top_blues_h31.png',
+    render: '/materace/top_blues_h31.png',
     cover: 'covers_sensity_top'
 });
 
