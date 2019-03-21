@@ -851,7 +851,7 @@ g.setNode("cover_velvet", {
     g: 1,
     name: 'velvet',
     node: 'cover_velvet',
-    url: 'https://hilding.pl/png/product/velvet_1501504449.jpg',
+    url: './img/pokrowce/velvet.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -860,7 +860,7 @@ g.setNode("cover_tencel", {
     g: 2,
     name: 'tencel',
     node: 'cover_tencel',
-    url: 'https://hilding.pl/png/product/tencel_1501504432.jpg',
+    url: './img/pokrowce/tencel.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -869,14 +869,14 @@ g.setNode("cover_merced_1", {
     g: 1,
     name: 'merced',
     node: 'cover_merced_1',
-    url: 'https://hilding.pl/png/product/merced_1501505133.jpg',
+    url: './img/pokrowce/medicot.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_merced_2", {
     g: 2,
     name: 'merced',
     node: 'cover_merced_2',
-    url: 'https://hilding.pl/png/product/merced_1501505133.jpg',
+    url: './img/pokrowce/medicot2.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_elips_medicott", {});
@@ -898,7 +898,7 @@ g.setNode("cover_medicott", {
     g: 2,
     name: 'medicott velur',
     node: 'cover_medicott',
-    url: 'https://hilding.pl/png/product/medicott_velur_1501507379.jpg',
+    url: './img/pokrowce/medicott_silver.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -914,7 +914,7 @@ g.setNode("cover_tencel_top", {
     g: 2,
     name: 'tencel',
     node: 'cover_tencel_top',
-    url: 'https://hilding.pl/png/product/tencel_1501504432.jpg',
+    url: './img/pokrowce/tencel.jpg',
     render: 'materace/top_blues_h31.png'
 });
 
@@ -923,7 +923,7 @@ g.setNode("cover_fresh", {
     g: 1,
     name: 'fresh',
     node: 'cover_fresh',
-    url: 'https://hilding.pl/png/product/fresh_1501574622.jpg',
+    url: './img/pokrowce/sensity.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -941,7 +941,7 @@ g.setNode("cover_teenage", {
     g: 1,
     name: 'Teenage',
     node: 'cover_teenage',
-    url: 'https://hilding.pl/png/product/teenage_1501584003.jpg',
+    url: './img/pokrowce/teenage.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -950,7 +950,7 @@ g.setNode("cover_sensity_top", {
     g: 1,
     name: 'sensity',
     node: 'cover_sensity_top',
-    url: 'https://hilding.pl/png/product/fresh_1501574622.jpg',
+    url: './img/pokrowce/sensity.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
