@@ -120,21 +120,25 @@ g.setNode("baza_kontynentalna_z_szuflada_140_200", {
     nextStep: 'step_2'
 });
 
+g.setNode("baza_tapicerowana_90_200", {
+    label: '90/200',
+    width: 90, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie_90'
+});
 g.setNode("baza_tapicerowana_140_200", {
     label: '140/200',
-    width: 140, price: {g1: 0, g2: 0}, nextStep: 'step_2'
+    width: 140, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
 });
 g.setNode("baza_tapicerowana_160_200", {
     label: '180/200',
-    width: 160, price: {g1: 0, g2: 0}, nextStep: 'step_2'
+    width: 160, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
 });
 g.setNode("baza_tapicerowana_180_200", {
-    label: '90/200',
-    width: 180, price: {g1: 0, g2: 0}, nextStep: 'step_2'
+    label: '180/200',
+    width: 180, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
 });
 g.setNode("baza_tapicerowana_200_200", {
     label: '200/200',
-    width: 200, price: {g1: 0, g2: 0}, nextStep: 'step_2'
+    width: 200, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
 });
 
 
@@ -846,6 +850,379 @@ g.setNode("momiko_riviera", {
     render: '/wezglowia/wezglowie_momiko_95_riviera38.png'
 });
 
+//**************************************************
+g.setNode("urban_colors_7_170", {});
+g.setNode("urban_novel_170", {
+    g: 1,
+    name: 'novel',
+    node: 'urban_novel_170',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_novel13.png'
+});
+g.setNode("urban_roko_170", {
+    g: 1,
+    name: 'roko',
+    node: 'urban_roko_170',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_roko08.png'
+});
+g.setNode("urban_aspen_170", {
+    g: 1,
+    name: 'aspen',
+    node: 'urban_aspen_170',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_aspen04.png'
+});
+g.setNode("urban_river_170", {
+    g: 2,
+    name: 'river',
+    node: 'urban_river_170',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_river02.png'
+});
+g.setNode("urban_eren_170", {
+    g: 2,
+    name: 'eren',
+    node: 'urban_eren_170',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_eren07.png'
+});
+g.setNode("urban_ontario_170", {
+    g: 2,
+    name: 'ontario',
+    node: 'urban_ontario_170',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_ontario90.png'
+});
+g.setNode("urban_riviera_170", {
+    g: 2,
+    name: 'riviera',
+    node: 'urban_riviera_170',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_riviera38.png'
+});
+
+g.setNode("preppy_colors_7_170", {});
+g.setNode("preppy_novel_170", {
+    g: 1,
+    name: 'novel 13',
+    node: 'preppy_novel_170',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_novel13.png'
+});
+g.setNode("preppy_roko_170", {
+    g: 1,
+    name: 'roko',
+    node: 'preppy_roko_170',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_roko08.png'
+});
+g.setNode("preppy_aspen_170", {
+    g: 1,
+    name: 'aspen',
+    node: 'preppy_aspen_170',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_aspen04.png'
+});
+g.setNode("preppy_river_170", {
+    g: 2,
+    name: 'river',
+    node: 'preppy_river_170',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_river02.png'
+});
+g.setNode("preppy_eren_170", {
+    g: 2,
+    name: 'eren',
+    node: 'preppy_eren_170',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_eren07.png'
+});
+g.setNode("preppy_ontario_170", {
+    g: 2,
+    name: 'ontario',
+    node: 'preppy_ontario_170',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_ontario90.png'
+});
+g.setNode("preppy_riviera_170", {
+    g: 2,
+    name: 'riviera',
+    node: 'preppy_riviera_170',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_riviera38.png'
+});
+g.setNode("glamour_colors_7_170", {});
+g.setNode("glamour_novel_170", {
+    g: 1,
+    name: 'novel',
+    node: 'glamour_novel_170',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_novel13.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_170_novel13_add.png'
+});
+g.setNode("glamour_roko_170", {
+    g: 1,
+    name: 'roko',
+    node: 'glamour_roko_170',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_roko08.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_170_roko08_add.png'
+});
+g.setNode("glamour_aspen_170", {
+    g: 1,
+    name: 'aspen',
+    node: 'glamour_aspen_170',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_aspen04.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_170_aspen04_add.png'
+});
+g.setNode("glamour_river_170", {
+    g: 2,
+    name: 'river',
+    node: 'glamour_river_170',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_river02.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_170_river02_add.png'
+});
+g.setNode("glamour_eren_170", {
+    g: 2,
+    name: 'eren',
+    node: 'glamour_eren_170',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_eren07.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_170_eren07_add.png',
+});
+g.setNode("glamour_ontario_170", {
+    g: 2,
+    name: 'ontario',
+    node: 'glamour_ontario_170',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_ontario90.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_170_ontario90_add.png'
+});
+g.setNode("glamour_riviera_170", {
+    g: 2,
+    name: 'riviera',
+    node: 'glamour_riviera_170',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_riviera38.png',
+    overlay: '/wezglowia/wezglowie_glamour_115_170_riviera38_add.png'
+
+});
+
+g.setNode("vintage_colors_7_170", {});
+g.setNode("vintage_novel_170", {
+    g: 1,
+    name: 'novel',
+    node: 'vintage_novel_170',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_novel13.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_170_novel13_add.png'
+});
+g.setNode("vintage_roko_170", {
+    g: 1,
+    name: 'roko',
+    node: 'vintage_roko_170',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_roko08.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_170_roko08_add.png'
+});
+g.setNode("vintage_aspen_170", {
+    g: 1,
+    name: 'aspen',
+    node: 'vintage_aspen_170',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_aspen04.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_170_aspen04_add.png'
+});
+g.setNode("vintage_river_170", {
+    g: 2,
+    name: 'river',
+    node: 'vintage_river_170',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_river02.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_170_river02_add.png'
+});
+g.setNode("vintage_eren_170", {
+    g: 2,
+    name: 'eren',
+    node: 'vintage_eren',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_eren07.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_170_eren07_add.png'
+});
+g.setNode("vintage_ontario_170", {
+    g: 2,
+    name: 'ontario',
+    node: 'vintage_ontario_170',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_ontario90.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_170_ontario90_add.png'
+});
+g.setNode("vintage_riviera_170", {
+    g: 2,
+    name: 'riviera',
+    node: 'vintage_riviera_170',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_riviera38.png',
+    overlay: '/wezglowia/wezglowie_vintage_95_170_riviera38_add.png'
+});
+
+g.setNode("eclectic_colors_7_170", {});
+g.setNode("eclectic_novel_170", {
+    g: 1,
+    name: 'novel',
+    node: 'eclectic_novel_170',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_novel13.png'
+});
+g.setNode("eclectic_roko_170", {
+    g: 1,
+    name: 'roko',
+    node: 'eclectic_roko_170',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_roko08.png'
+});
+g.setNode("eclectic_aspen_170", {
+    g: 1,
+    name: 'aspen',
+    node: 'eclectic_aspen_170',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_aspen04.png'
+});
+g.setNode("eclectic_river_170", {
+    g: 2,
+    name: 'river',
+    node: 'eclectic_river_170',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_river02.png'
+});
+g.setNode("eclectic_eren_170", {
+    g: 2,
+    name: 'eren',
+    node: 'eclectic_eren_170',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_eren07.png'
+});
+g.setNode("eclectic_ontario_170", {
+    g: 2,
+    name: 'ontario',
+    node: 'eclectic_ontario_170',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_ontario90.png'
+});
+g.setNode("eclectic_riviera_170", {
+    g: 2,
+    name: 'riviera',
+    node: 'eclectic_riviera_170',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_riviera38.png'
+});
+
+g.setNode("ladylike_colors_7_170", {});
+g.setNode("ladylike_novel_170", {
+    g: 1,
+    name: 'novel',
+    node: 'ladylike_novel_170',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_novel13.png'
+});
+g.setNode("ladylike_roko_170", {
+    g: 1,
+    name: 'roko',
+    node: 'ladylike_roko_170',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_roko08.png'
+});
+g.setNode("ladylike_aspen_170", {
+    g: 1,
+    name: 'aspen',
+    node: 'ladylike_aspen_170',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_aspen04.png'
+});
+g.setNode("ladylike_river_170", {
+    g: 2,
+    name: 'river',
+    node: 'ladylike_river_170',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_river02.png'
+});
+g.setNode("ladylike_eren_170", {
+    g: 2,
+    name: 'eren',
+    node: 'ladylike_eren_170',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_eren07.png'
+});
+g.setNode("ladylike_ontario_170", {
+    g: 2,
+    name: 'ontario',
+    node: 'ladylike_ontario_170',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_ontario90.png'
+});
+g.setNode("ladylike_riviera_170", {
+    g: 2,
+    name: 'riviera',
+    node: 'ladylike_riviera_170',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_riviera38.png'
+});
+
+g.setNode("momiko_colors_7_170", {});
+g.setNode("momiko_novel_170", {
+    g: 1,
+    name: 'novel 13',
+    node: 'momiko_novel_170',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_novel13.png'
+});
+g.setNode("momiko_roko_170", {
+    g: 1,
+    name: 'roko 08',
+    node: 'momiko_roko_170',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_roko08.png'
+});
+g.setNode("momiko_aspen_170", {
+    g: 1,
+    name: 'aspen 04',
+    node: 'momiko_aspen_170',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_aspen04.png'
+});
+g.setNode("momiko_river_170", {
+    g: 2,
+    name: 'river 02',
+    node: 'momiko_river_170',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_river02.png'
+});
+g.setNode("momiko_eren_170", {
+    g: 2,
+    name: 'eren 07',
+    node: 'momiko_eren_170',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_eren07.png'
+});
+g.setNode("momiko_ontario_170", {
+    g: 2,
+    name: 'ontario 90',
+    node: 'momiko_ontario_170',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_ontario90.png'
+});
+g.setNode("momiko_riviera_170", {
+    g: 2,
+    name: 'riviera 38',
+    node: 'momiko_riviera_170',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_riviera38.png'
+});
+
+
 g.setNode("covers_velvet", {});
 g.setNode("cover_velvet", {
     g: 1,
@@ -1141,6 +1518,87 @@ g.setNode("bb_wezglowie_urban", {
     colors: 'urban_colors_7',
     nextStep: 'legs'
 });
+
+g.setNode("t_wezglowie", {
+    node: 't_wezglowie',
+    title: 'wezgłowie',
+    label: 'wybierz wezgłowie',
+    number: 2,
+    zIndex: 5,
+    colors: 'colors_7',
+    optionsFilter: true,
+    overlay: true
+});
+
+g.setNode("t_wezglowie_glamour", {
+    node: 't_wezglowie_glamour',
+    label: 'Glamour',
+    img: 'glamour.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_170_novel13.png',
+    colors: 'glamour_colors_7_170',
+    nextStep: 'legs'
+});
+g.setNode("t_wezglowie_vintage", {
+    node: 't_wezglowie_vintage',
+    label: 'Vintage',
+    img: 'vintage.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_170_novel13.png',
+    colors: 'vintage_colors_7_170',
+    nextStep: 'legs'
+});
+g.setNode("t_wezglowie_eclectic", {
+    node: 't_wezglowie_eclectic',
+    label: 'Eclectic',
+    img: 'electric.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_170_novel13.png',
+    colors: 'eclectic_colors_7_170',
+    nextStep: 'legs'
+});
+g.setNode("t_wezglowie_ladylike", {
+    node: 't_wezglowie_ladylike',
+    label: 'Ladylike',
+    img: 'ladylike.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_170_novel13.png',
+    colors: 'ladylike_colors_7_170',
+    nextStep: 'legs'
+});
+g.setNode("t_wezglowie_preppy", {
+    node: 't_wezglowie_preppy',
+    label: 'Preppy',
+    img: 'preppy.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_170_novel13.png',
+    colors: 'preppy_colors_7_170',
+    nextStep: 'legs'
+});
+g.setNode("t_wezglowie_momiko", {
+    node: 't_wezglowie_momiko',
+    label: 'Momiko',
+    img: 'momiko.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_170_novel13.png',
+    colors: 'momiko_colors_7_170',
+    nextStep: 'legs'
+});
+
+g.setNode("t_wezglowie_90", {
+    node: 't_wezglowie_90',
+    title: 'wezgłowie',
+    label: 'wybierz wezgłowie',
+    number: 2,
+    zIndex: 5,
+    colors: 'colors_7',
+    optionsFilter: true,
+    overlay: true
+});
+g.setNode("t_wezglowie_urban", {
+    node: 't_wezglowie_urban',
+    label: 'Urban',
+    img: 'urban.jpg',
+    render: '/wezglowia/wezglowie_urban_95_170_novel13.png',
+    colors: 'urban_colors_7_170',
+    nextStep: 'legs'
+});
+
+//*******************************************88
 
 g.setNode("urban_140_95", {
     label: '140/95',
@@ -1442,10 +1900,7 @@ g.setNode("ladylike_200_115", {
     nextStep: 'step_typ_materaca'
 });
 
-/*
-//////////
- */
-
+//*********************************************
 
 g.setNode("bb_urban_140_95", {
     label: '140/95',
@@ -1741,6 +2196,315 @@ g.setNode("bb_ladylike_180_115", {
     nextStep: 'legs'
 });
 g.setNode("bb_ladylike_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'legs'
+});
+
+//***************************
+
+
+g.setNode("t_urban_90_95", {
+    label: '90/95',
+    width: 90,
+    price: {g1: 749, g2: 849},
+    nextStep: 'legs'
+});
+g.setNode("t_urban_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 749, g2: 849},
+    nextStep: 'legs'
+});
+g.setNode("t_urban_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 799, g2: 899},
+    nextStep: 'legs'
+});
+g.setNode("t_urban_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 899, g2: 999},
+    nextStep: 'legs'
+});
+g.setNode("t_urban_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'legs'
+});
+
+g.setNode("t_urban_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 799, g2: 899},
+    nextStep: 'legs'
+});
+g.setNode("t_urban_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 849, g2: 949},
+    nextStep: 'legs'
+});
+g.setNode("t_urban_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 949, g2: 1049},
+    nextStep: 'legs'
+});
+g.setNode("t_urban_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1049, g2: 1149},
+    nextStep: 'legs'
+});
+
+g.setNode("t_preppy_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 1169, g2: 1269},
+    nextStep: 'legs'
+});
+g.setNode("t_preppy_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 1199, g2: 1299},
+    nextStep: 'legs'
+});
+g.setNode("t_preppy_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 1299, g2: 1399},
+    nextStep: 'legs'
+});
+g.setNode("t_preppy_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'legs'
+});
+
+g.setNode("t_preppy_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1269, g2: 1369},
+    nextStep: 'legs'
+});
+g.setNode("t_preppy_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1299, g2: 1399},
+    nextStep: 'legs'
+});
+g.setNode("t_preppy_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'legs'
+});
+g.setNode("t_preppy_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1599, g2: 1699},
+    nextStep: 'legs'
+});
+
+g.setNode("t_glamour_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1369, g2: 1469},
+    nextStep: 'legs'
+});
+g.setNode("t_glamour_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'legs'
+});
+g.setNode("t_glamour_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1559, g2: 1659},
+    nextStep: 'legs'
+});
+g.setNode("t_glamour_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1699, g2: 1799},
+    nextStep: 'legs'
+});
+
+g.setNode("t_vintage_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 1029, g2: 1129},
+    nextStep: 'legs'
+});
+g.setNode("t_vintage_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 1059, g2: 1159},
+    nextStep: 'legs'
+});
+g.setNode("t_vintage_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 1159, g2: 1259},
+    nextStep: 'legs'
+});
+g.setNode("t_vintage_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'legs'
+});
+
+g.setNode("t_vintage_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1169, g2: 1269},
+    nextStep: 'legs'
+});
+g.setNode("t_vintage_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1199, g2: 1299},
+    nextStep: 'legs'
+});
+g.setNode("t_vintage_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1299, g2: 1399},
+    nextStep: 'legs'
+});
+g.setNode("t_vintage_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1499, g2: 1599},
+    nextStep: 'legs'
+});
+
+g.setNode("t_momiko_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 869, g2: 969},
+    nextStep: 'legs'
+});
+g.setNode("t_momiko_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 899, g2: 999},
+    nextStep: 'legs'
+});
+g.setNode("t_momiko_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'legs'
+});
+g.setNode("t_momiko_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'legs'
+});
+
+g.setNode("t_momiko_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 969, g2: 1069},
+    nextStep: 'legs'
+});
+g.setNode("t_momiko_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'legs'
+});
+g.setNode("t_momiko_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'legs'
+});
+g.setNode("t_momiko_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'legs'
+});
+
+g.setNode("t_eclectic_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 969, g2: 1069},
+    nextStep: 'legs'
+});
+g.setNode("t_eclectic_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'legs'
+});
+g.setNode("t_eclectic_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'legs'
+});
+g.setNode("t_eclectic_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'legs'
+});
+
+g.setNode("t_eclectic_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1069, g2: 1169},
+    nextStep: 'legs'
+});
+g.setNode("t_eclectic_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'legs'
+});
+g.setNode("t_eclectic_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1199, g2: 1299},
+    nextStep: 'legs'
+});
+g.setNode("t_eclectic_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'legs'
+});
+
+g.setNode("t_ladylike_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 969, g2: 1069},
+    nextStep: 'legs'
+});
+g.setNode("t_ladylike_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'legs'
+});
+g.setNode("t_ladylike_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'legs'
+});
+g.setNode("t_ladylike_200_115", {
     label: '200/115',
     width: 200,
     price: {g1: 1259, g2: 1359},
@@ -3702,6 +4466,7 @@ g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_160_20
 g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_180_200");
 g.setEdge("baza_kontynentalna_z_szuflada", "baza_kontynentalna_z_szuflada_200_200");
 
+g.setEdge("baza_tapicerowana", "baza_tapicerowana_90_200");
 g.setEdge("baza_tapicerowana", "baza_tapicerowana_140_200");
 g.setEdge("baza_tapicerowana", "baza_tapicerowana_160_200");
 g.setEdge("baza_tapicerowana", "baza_tapicerowana_180_200");
@@ -3809,6 +4574,68 @@ g.setEdge("momiko_colors_7", "momiko_eren");
 g.setEdge("momiko_colors_7", "momiko_ontario");
 g.setEdge("momiko_colors_7", "momiko_riviera");
 
+//********************************
+
+g.setEdge("urban_colors_7_170", "urban_novel_170");
+g.setEdge("urban_colors_7_170", "urban_roko_170");
+g.setEdge("urban_colors_7_170", "urban_aspen_170");
+g.setEdge("urban_colors_7_170", "urban_river_170");
+g.setEdge("urban_colors_7_170", "urban_eren_170");
+g.setEdge("urban_colors_7_170", "urban_ontario_170");
+g.setEdge("urban_colors_7_170", "urban_riviera_170");
+
+g.setEdge("preppy_colors_7_170", "preppy_novel_170");
+g.setEdge("preppy_colors_7_170", "preppy_roko_170");
+g.setEdge("preppy_colors_7_170", "preppy_aspen_170");
+g.setEdge("preppy_colors_7_170", "preppy_river_170");
+g.setEdge("preppy_colors_7_170", "preppy_eren_170");
+g.setEdge("preppy_colors_7_170", "preppy_ontario_170");
+g.setEdge("preppy_colors_7_170", "preppy_riviera_170");
+
+g.setEdge("glamour_colors_7_170", "glamour_novel_170");
+g.setEdge("glamour_colors_7_170", "glamour_roko_170");
+g.setEdge("glamour_colors_7_170", "glamour_aspen_170");
+g.setEdge("glamour_colors_7_170", "glamour_river_170");
+g.setEdge("glamour_colors_7_170", "glamour_eren_170");
+g.setEdge("glamour_colors_7_170", "glamour_ontario_170");
+g.setEdge("glamour_colors_7_170", "glamour_riviera_170");
+
+g.setEdge("vintage_colors_7_170", "vintage_novel_170");
+g.setEdge("vintage_colors_7_170", "vintage_roko_170");
+g.setEdge("vintage_colors_7_170", "vintage_aspen_170");
+g.setEdge("vintage_colors_7_170", "vintage_river_170");
+g.setEdge("vintage_colors_7_170", "vintage_eren_170");
+g.setEdge("vintage_colors_7_170", "vintage_ontario_170");
+g.setEdge("vintage_colors_7_170", "vintage_riviera_170");
+
+g.setEdge("eclectic_colors_7_170", "eclectic_novel_170");
+g.setEdge("eclectic_colors_7_170", "eclectic_roko_170");
+g.setEdge("eclectic_colors_7_170", "eclectic_aspen_170");
+g.setEdge("eclectic_colors_7_170", "eclectic_river_170");
+g.setEdge("eclectic_colors_7_170", "eclectic_eren_170");
+g.setEdge("eclectic_colors_7_170", "eclectic_ontario_170");
+g.setEdge("eclectic_colors_7_170", "eclectic_riviera_170");
+
+g.setEdge("ladylike_colors_7_170", "ladylike_novel_170");
+g.setEdge("ladylike_colors_7_170", "ladylike_roko_170");
+g.setEdge("ladylike_colors_7_170", "ladylike_aspen_170");
+g.setEdge("ladylike_colors_7_170", "ladylike_river_170");
+g.setEdge("ladylike_colors_7_170", "ladylike_eren_170");
+g.setEdge("ladylike_colors_7_170", "ladylike_ontario_170");
+g.setEdge("ladylike_colors_7_170", "ladylike_riviera_170");
+
+g.setEdge("momiko_colors_7_170", "momiko_novel_170");
+g.setEdge("momiko_colors_7_170", "momiko_roko_170");
+g.setEdge("momiko_colors_7_170", "momiko_aspen_170");
+g.setEdge("momiko_colors_7_170", "momiko_river_170");
+g.setEdge("momiko_colors_7_170", "momiko_eren_170");
+g.setEdge("momiko_colors_7_170", "momiko_ontario_170");
+g.setEdge("momiko_colors_7_170", "momiko_riviera_170");
+
+
+
+//*********************************
+
 g.setEdge("m_tap_colors_7", "m_tap_novel");
 g.setEdge("m_tap_colors_7", "m_tap_roko");
 g.setEdge("m_tap_colors_7", "m_tap_aspen");
@@ -3833,7 +4660,18 @@ g.setEdge("bb_wezglowie", "bb_wezglowie_eclectic");
 g.setEdge("bb_wezglowie", "bb_wezglowie_ladylike");
 g.setEdge("bb_wezglowie", "bb_wezglowie_momiko");
 
-//
+//**************************************
+
+g.setEdge("t_wezglowie_90", "t_wezglowie_urban");
+g.setEdge("t_wezglowie", "t_wezglowie_preppy");
+g.setEdge("t_wezglowie", "t_wezglowie_glamour");
+g.setEdge("t_wezglowie", "t_wezglowie_vintage");
+g.setEdge("t_wezglowie", "t_wezglowie_eclectic");
+g.setEdge("t_wezglowie", "t_wezglowie_ladylike");
+g.setEdge("t_wezglowie", "t_wezglowie_momiko");
+
+//**************************************
+
 g.setEdge("urban", "urban_140_95");
 g.setEdge("urban", "urban_160_95");
 g.setEdge("urban", "urban_180_95");
@@ -3894,7 +4732,7 @@ g.setEdge("ladylike", "ladylike_160_115");
 g.setEdge("ladylike", "ladylike_180_115");
 g.setEdge("ladylike", "ladylike_200_115");
 
-//
+//**************************************************
 
 g.setEdge("bb_wezglowie_urban", "bb_urban_140_95");
 g.setEdge("bb_wezglowie_urban", "bb_urban_160_95");
@@ -3955,6 +4793,71 @@ g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_140_115");
 g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_160_115");
 g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_180_115");
 g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_200_115");
+
+//*****************************************************8
+
+g.setEdge("t_wezglowie_urban", "t_urban_90_95");
+g.setEdge("t_wezglowie_urban", "t_urban_140_95");
+g.setEdge("t_wezglowie_urban", "t_urban_160_95");
+g.setEdge("t_wezglowie_urban", "t_urban_180_95");
+g.setEdge("t_wezglowie_urban", "t_urban_200_95");
+
+g.setEdge("t_wezglowie_urban", "t_urban_140_115");
+g.setEdge("t_wezglowie_urban", "t_urban_160_115");
+g.setEdge("t_wezglowie_urban", "t_urban_180_115");
+g.setEdge("t_wezglowie_urban", "t_urban_200_115");
+
+g.setEdge("t_wezglowie_preppy", "t_preppy_140_95");
+g.setEdge("t_wezglowie_preppy", "t_preppy_160_95");
+g.setEdge("t_wezglowie_preppy", "t_preppy_180_95");
+g.setEdge("t_wezglowie_preppy", "t_preppy_200_95");
+
+g.setEdge("t_wezglowie_preppy", "t_preppy_140_115");
+g.setEdge("t_wezglowie_preppy", "t_preppy_160_115");
+g.setEdge("t_wezglowie_preppy", "t_preppy_180_115");
+g.setEdge("t_wezglowie_preppy", "t_preppy_200_115");
+
+g.setEdge("t_wezglowie_glamour", "t_glamour_140_115");
+g.setEdge("t_wezglowie_glamour", "t_glamour_160_115");
+g.setEdge("t_wezglowie_glamour", "t_glamour_180_115");
+g.setEdge("t_wezglowie_glamour", "t_glamour_200_115");
+
+g.setEdge("t_wezglowie_vintage", "t_vintage_140_95");
+g.setEdge("t_wezglowie_vintage", "t_vintage_160_95");
+g.setEdge("t_wezglowie_vintage", "t_vintage_180_95");
+g.setEdge("t_wezglowie_vintage", "t_vintage_200_95");
+
+g.setEdge("t_wezglowie_vintage", "t_vintage_140_115");
+g.setEdge("t_wezglowie_vintage", "t_vintage_160_115");
+g.setEdge("t_wezglowie_vintage", "t_vintage_180_115");
+g.setEdge("t_wezglowie_vintage", "t_vintage_200_115");
+
+g.setEdge("t_wezglowie_momiko", "t_momiko_140_95");
+g.setEdge("t_wezglowie_momiko", "t_momiko_160_95");
+g.setEdge("t_wezglowie_momiko", "t_momiko_180_95");
+g.setEdge("t_wezglowie_momiko", "t_momiko_200_95");
+
+g.setEdge("t_wezglowie_momiko", "t_momiko_140_115");
+g.setEdge("t_wezglowie_momiko", "t_momiko_160_115");
+g.setEdge("t_wezglowie_momiko", "t_momiko_180_115");
+g.setEdge("t_wezglowie_momiko", "t_momiko_200_115");
+
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_140_95");
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_160_95");
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_180_95");
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_200_95");
+
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_140_115");
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_160_115");
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_180_115");
+g.setEdge("t_wezglowie_eclectic", "t_eclectic_200_115");
+
+g.setEdge("t_wezglowie_ladylike", "t_ladylike_140_115");
+g.setEdge("t_wezglowie_ladylike", "t_ladylike_160_115");
+g.setEdge("t_wezglowie_ladylike", "t_ladylike_180_115");
+g.setEdge("t_wezglowie_ladylike", "t_ladylike_200_115");
+
+//****************************
 
 g.setEdge("legs", "stozek_owal_buk");
 g.setEdge("legs", "stozek_owal_dab");
