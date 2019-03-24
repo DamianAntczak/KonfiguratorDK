@@ -2208,56 +2208,56 @@ g.setNode("bb_ladylike_200_115", {
 g.setNode("t_urban_90_95", {
     label: '90/95',
     width: 90,
-    price: {g1: 749, g2: 849},
+    price: {g1: 1459, g2: 1659},
     nextStep: 'legs'
 });
 g.setNode("t_urban_140_95", {
     label: '140/95',
     width: 140,
-    price: {g1: 749, g2: 849},
+    price: {g1: 1519, g2: 1719},
     nextStep: 'legs'
 });
 g.setNode("t_urban_160_95", {
     label: '160/95',
     width: 160,
-    price: {g1: 799, g2: 899},
+    price: {g1: 1599, g2: 1799},
     nextStep: 'legs'
 });
 g.setNode("t_urban_180_95", {
     label: '180/95',
     width: 180,
-    price: {g1: 899, g2: 999},
+    price: {g1: 1799, g2: 1999},
     nextStep: 'legs'
 });
 g.setNode("t_urban_200_95", {
     label: '200/95',
     width: 200,
-    price: {g1: 999, g2: 1099},
+    price: {g1: 2059, g2: 2259},
     nextStep: 'legs'
 });
 
 g.setNode("t_urban_140_115", {
     label: '140/115',
     width: 140,
-    price: {g1: 799, g2: 899},
+    price: {g1: 1599, g2: 1799},
     nextStep: 'legs'
 });
 g.setNode("t_urban_160_115", {
     label: '160/115',
     width: 160,
-    price: {g1: 849, g2: 949},
+    price: {g1: 1699, g2: 1899},
     nextStep: 'legs'
 });
 g.setNode("t_urban_180_115", {
     label: '180/115',
     width: 180,
-    price: {g1: 949, g2: 1049},
+    price: {g1: 1899, g2: 2099)
     nextStep: 'legs'
 });
 g.setNode("t_urban_200_115", {
     label: '200/115',
     width: 200,
-    price: {g1: 1049, g2: 1149},
+    price: {g1: 2159: 2359)
     nextStep: 'legs'
 });
 
