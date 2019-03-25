@@ -196,7 +196,9 @@ class Configurator {
                     price = node.price.g2;
                 }
                 else {
-                    price = node.price.g1;
+                    if(node !== undefined) {
+                        price = node.price.g1;
+                    }
                 }
                 if (price > 0) {
                     $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
