@@ -25,7 +25,7 @@ g.setNode("baza_kontynentalna", {
 });
 g.setNode("baza_kontynentalna_z_szuflada", {
     node: 'baza_kontynentalna_z_szuflada',
-    label: 'Kontynent</br>z szufladą',
+    label: 'Kontynent z szufladą',
     img: 'kontynent_z_szuflada.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png',
     colors: 'kontynent_szuflada_colors_7',

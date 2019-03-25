@@ -186,6 +186,7 @@ class Configurator {
 
             if (counter === 1) {
                 $('#select-' + node_name).parent().hide();
+                $('.dimension-price').text('Cena');
             }
 
             $(document.body).on('change', '#select-' + node_name, function () {
@@ -568,10 +569,9 @@ class Configurator {
         };
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
-            console.log(priceNode);
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 str += '<div class="row summary-price-row"">';
-                str += '<div class="col-sm-7 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label.replace(/<br[^>]*>/gi, ' ') + ' ' + fabricName(step) + '</div>';
+                str += '<div class="col-sm-7 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + ' ' + fabricName(step) + '</div>';
                 str += '<div class="col-sm-5 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
                 priceSum += priceNode.price.g1;
@@ -585,9 +585,33 @@ class Configurator {
         str += '</div>';
         str += '<div class="row summary-btn-row">';
         str += '<div class="col-sm-6 text-center"><button class="btn text-uppercase btn-summary" onclick="location.href=\'https://hilding.pl/index/whereBuy\'" >Znajdź salon</button></div>';
-        str += '<div class="col-sm-6 text-center"><button class="btn text-uppercase btn-summary">Wydrukuj</button></div>';
+        str += '<div class="col-sm-6 text-center"><button class="btn text-uppercase btn-summary" onclick="configurator.printSummary()">Wydrukuj</button></div>';
         str += '</div>';
         stepElement.html(str);
+    }
+
+    printSummary() {
+        var bodyData = [];
+
+        this.allSteps.forEach(step => {
+            var priceNode = step.selectedNodes[2];
+            if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
+                bodyData.push([step.selectedNodes[0].title, step.selectedNodes[1].label, this.numberWithSpaces(priceNode.price.g1)]);
+            }
+        });
+
+        var docDefinition = {
+            content: [
+                {
+                    table: {
+                        body: bodyData
+                    }
+                }
+            ]
+        };
+
+        pdfMake.createPdf(docDefinition).download();
+
     }
 }
 
