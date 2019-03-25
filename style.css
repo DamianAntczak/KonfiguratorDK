@@ -30,6 +30,7 @@ div.example-visualization-info{
 .item-label{
     font-weight: 600;
     min-height: 26.4px;
+    max-width: 167.5px;
 }
 
 .dimension-price{
