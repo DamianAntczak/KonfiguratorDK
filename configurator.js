@@ -345,7 +345,7 @@ class Configurator {
         console.log(this.width);
         if (successors.length > 0) {
             var sb = '<div class="form-group">';
-            sb += '<label class="label-small" for="select-' + node_name + '">Rozmiar</label>';
+            sb += '<label class="label-small" for="select-' + node_name + '">Wymiar</label>';
             sb += '<select disabled class="configurator-select form-control input-sm" name="base-size" id="select-' + node_name + '">';
             var optionNode = [];
             successors.forEach(s => {
