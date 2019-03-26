@@ -4854,7 +4854,7 @@ g.setNode("step_5", {
 g.setNode("materac_select_plus", {
     node: 'materac_select_plus',
     label: 'Select Plus Softex',
-    img: 'jive.jpg',
+    img: '/materace/select_plus_top.jpg',
     render: '/materace/top_blues_h31.png',
     cover: 'covers_sensity_top'
 });
@@ -4879,7 +4879,7 @@ g.setNode("materac_jive", {
 g.setNode("materac_select_top", {
     node: 'materac_select_top',
     label: 'Select TOP',
-    img: 'jive.jpg',
+    img: '/materace/select_top.jpg',
     render: '/materace/top_blues_h31.png',
     cover: 'covers_sensity_top'
 });
@@ -4999,7 +4999,7 @@ g.setNode("bb_nawierzchniowy", {
 g.setNode("bb_materac_select_plus", {
     node: 'bb_materac_select_plus',
     label: 'Select Plus Softex',
-    img: 'jive.jpg',
+    img: '/materace/select_plus_top.jpg',
     render: 'materace/top_blues_h31.png',
     cover: 'covers_sensity_top'
 });
@@ -5007,7 +5007,7 @@ g.setNode("bb_materac_select_plus", {
 g.setNode("bb_materac_blues", {
     node: 'bb_materac_blues',
     label: 'Blues',
-    img: 'blues.jpg',
+    img: '/materace/blues.jpg',
     render: 'materace/top_blues_h31.png',
     cover: 'covers_elips_tencel_top'
 });
@@ -5016,7 +5016,7 @@ g.setNode("bb_materac_blues", {
 g.setNode("bb_materac_jive", {
     node: 'bb_materac_jive',
     label: 'Jive',
-    img: 'jive.jpg',
+    img: '/materace/jive.jpg',
     render: 'materace/top_blues_h31.png',
     cover: 'covers_elips_tencel_top'
 });
@@ -5024,7 +5024,7 @@ g.setNode("bb_materac_jive", {
 g.setNode("bb_materac_select_top", {
     node: 'bb_materac_select_top',
     label: 'Select TOP',
-    img: 'jive.jpg',
+    img: '/materace/select_top.jpg',
     render: 'materace/top_blues_h31.png',
     cover: 'covers_sensity_top'
 });

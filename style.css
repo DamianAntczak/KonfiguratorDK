@@ -210,3 +210,7 @@ select.configurator-select{
     display: block;
 }
 
+.configurator{
+    min-width: 900px;
+}
+
