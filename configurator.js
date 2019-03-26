@@ -326,6 +326,12 @@ class Configurator {
     }
 
     showPrice() {
+        let price = this.getPrice();
+        $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
+        $('#price-vat').removeAttr('hidden');
+    }
+
+    getPrice() {
         let price = 0.0;
         configurator.allSteps.forEach(step => {
             if (step.selectedNodes[3] !== undefined) {
@@ -341,8 +347,7 @@ class Configurator {
                 }
             }
         });
-        $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
-        $('#price-vat').removeAttr('hidden');
+        return price;
     }
 
     addOption(node_name, successors) {
@@ -356,7 +361,6 @@ class Configurator {
             successors.forEach(s => {
                 var node = this.graph.node(s);
                 optionNode.push([s, node]);
-                // sb += '<option value="' + s + '">' + node.label + '</option>';
             });
             if (this.step.optionsFilter && this.width > 0) {
                 optionNode = optionNode.filter(function (elem) {
@@ -566,7 +570,6 @@ class Configurator {
         // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Podsumowanie')));
         let str = '<div class="col-sm-12">';
         str += '<h2 class="text-center text-uppercase">podsumowanie</h2>';
-        let priceSum = 0.0;
         let fabricName = function (step) {
             return step.selectedNodes[3] !== undefined ? step.selectedNodes[3].name : '';
         };
@@ -577,13 +580,12 @@ class Configurator {
                 str += '<div class="col-sm-7 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + ' ' + fabricName(step) + '</div>';
                 str += '<div class="col-sm-5 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
-                priceSum += priceNode.price.g1;
             }
         });
         str += '</div>';
         str += '<div class="col-sm-6 col-sm-offset-6 margin-top-25 margin-bottom-25">';
         str += '<h5>Wymiar i cena prezentowanego<br> zestawu:</h5>';
-        str += '<h3 class="blue-text">' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
+        str += '<h3 class="blue-text">' + this.numberWithSpaces(this.getPrice()) + ' PLN</h3>';
         str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
         str += '</div>';
         str += '<div class="row summary-btn-row">';
@@ -599,22 +601,46 @@ class Configurator {
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
-                bodyData.push([step.selectedNodes[0].title, step.selectedNodes[1].label, this.numberWithSpaces(priceNode.price.g1)]);
+                bodyData.push([
+                    step.selectedNodes[0].title,
+                    step.selectedNodes[1].label,
+                    step.selectedNodes[2].label + ' cm',
+                    // step.selectedNodes[3] !== undefined ? step.selectedNodes[3].title : '',
+                    this.numberWithSpaces(priceNode.price.g1)]);
             }
         });
+        bodyData.push([
+            '',
+            '',
+            '',
+            // '',
+            this.numberWithSpaces(this.getPrice())]);
 
         var docDefinition = {
+            title: 'Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label,
             content: [
+                'Konfigurator',
+                // {
+                //     image: './img/hilding-logo-300x99.jpg',
+                //     width: 500
+                // },
+                {text:'Łóżko ' + this.allSteps[1].selectedNodes[1].label, fontColor: 'blue', fontSize: 25, bold: true},
+                'Sugerowana cena detaliczna: '+ this.numberWithSpaces(this.getPrice()) +' zł',
+                'Cena zawiera podatek VAT 23%;',
+                'w przypadku materacy medycznych cena zawiera podatek VAT 8%.',
+                'Twój wybór',
                 {
                     table: {
                         body: bodyData
                     }
-                }
+                },
+                'Nie bierzemy odpowiedzialności za różnice między cenami z konfiguratora a cenami rzeczywistymi.',
+                'Sprawdź lokalizację najbliższego sklepu: hilding.pl/index/whereBuy'
             ]
         };
 
-        pdfMake.createPdf(docDefinition).download();
-
+        pdfMake.createPdf(docDefinition).download('Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label);
+        // pdfMake.createPdf(docDefinition).open();
     }
 }
 
