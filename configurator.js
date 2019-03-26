@@ -273,6 +273,7 @@ class Configurator {
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
             $('#select-' + nodeName).prop("disabled", "disabled");
+            $('#render-overlay').remove();
         } else {
             $this.addClass('clicked');
             $this.removeClass('carousel-box').addClass('carousel-box-selected');
