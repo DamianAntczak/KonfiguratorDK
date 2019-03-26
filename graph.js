@@ -6,7 +6,8 @@ g.setNode("step_1", {
     label: 'wybierz bazę',
     number: 1,
     zIndex: 10,
-    optionsFilter: false
+    optionsFilter: false,
+    overlay: true
 });
 g.setNode("base_box", {
     node: 'base_box',
@@ -433,50 +434,59 @@ g.setNode("tapicerowana_novel", {
     name: 'novel',
     node: 'tapicerowana_novel',
     url: './img/tkaniny/novel_13_anthracite.jpg',
-    render: '/bazy/baza_tapicerowana_h34_novel13.png'
+    render: '/bazy/baza_tapicerowana_h34_novel13.png',
+    overlay: '/bazy/baza_tapicerowana_h34_novel13_add.png'
 });
 g.setNode("tapicerowana_roko", {
     g: 1,
     name: 'roko',
     node: 'tapicerowana_roko',
     url: './img/tkaniny/Roko088_blue.jpg',
-    render: '/bazy/baza_tapicerowana_h34_roko08.png'
+    render: '/bazy/baza_tapicerowana_h34_roko08.png',
+    overlay: '/bazy/baza_tapicerowana_h34_roko08_add.png'
 });
 g.setNode("tapicerowana_aspen", {
     g: 1,
     name: 'aspen',
     node: 'tapicerowana_aspen',
     url: './img/tkaniny/aspen_04_light.jpg',
-    render: '/bazy/baza_tapicerowana_h34_aspen04.png'
+    render: '/bazy/baza_tapicerowana_h34_aspen04.png',
+    overlay: '/bazy/baza_tapicerowana_h34_aspen04_add.png'
 });
 g.setNode("tapicerowana_river", {
     g: 2,
     name: 'river',
     node: 'tapicerowana_river',
     url: './img/tkaniny/river_02_silver.jpg',
-    render: '/bazy/baza_tapicerowana_h34_river02.png'
+    render: '/bazy/baza_tapicerowana_h34_river02.png',
+    overlay: '/bazy/baza_tapicerowana_h34_river02_add.png'
 });
 g.setNode("tapicerowana_eren", {
     g: 2,
     name: 'eren',
     node: 'tapicerowana_eren',
     url: './img/tkaniny/eren_07.jpg',
-    render: '/bazy/baza_tapicerowana_h34_eren07.png'
+    render: '/bazy/baza_tapicerowana_h34_eren07.png',
+    overlay: '/bazy/baza_tapicerowana_h34_eren07_add.png'
 });
 g.setNode("tapicerowana_ontario", {
     g: 2,
     name: 'ontario',
     node: 'tapicerowana_ontario',
     url: './img/tkaniny/ontario_90.jpg',
-    render: '/bazy/baza_tapicerowana_h34_ontario90.png'
+    render: '/bazy/baza_tapicerowana_h34_ontario90.png',
+    overlay: '/bazy/baza_tapicerowana_h34_ontario90_add.png'
 });
 g.setNode("tapicerowana_riviera", {
     g: 2,
     name: 'riviera',
     node: 'tapicerowana_riviera',
     url: './img/tkaniny/riviera_38.jpg',
-    render: '/bazy/baza_tapicerowana_h34_riviera38.png'
+    render: '/bazy/baza_tapicerowana_h34_riviera38.png',
+    overlay: '/bazy/baza_tapicerowana_h34_riviera38_add.png'
 });
+
+//***********************************************
 
 g.setNode("urban_colors_7", {});
 g.setNode("urban_novel", {
@@ -1676,7 +1686,7 @@ g.setNode("t_wezglowie_preppy", {
     img: 'preppy.jpg',
     render: '/wezglowia/wezglowie_preppy_95_170_novel13.png',
     colors: 'preppy_colors_7_170',
-    nextStep: 'legs'
+    nextStep: 'legs',
 });
 g.setNode("t_wezglowie_momiko", {
     node: 't_wezglowie_momiko',
