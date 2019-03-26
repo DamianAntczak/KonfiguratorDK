@@ -4857,10 +4857,9 @@ g.setNode("step_5", {
     label: 'wybierz materac nawierzchniowy',
     number: 4,
     zIndex: 30,
-    skipToNode: 'step_6',
+    skipToNode: 'summary',
     optionsFilter: true
 });
-
 g.setNode("materac_select_plus", {
     node: 'materac_select_plus',
     label: 'Select Plus Softex',
@@ -4868,7 +4867,6 @@ g.setNode("materac_select_plus", {
     render: '/materace/top_blues_h31.png',
     cover: 'covers_sensity_top'
 });
-
 g.setNode("materac_blues", {
     node: 'materac_blues',
     label: 'Blues',
@@ -4876,8 +4874,6 @@ g.setNode("materac_blues", {
     render: 'materace/top_blues_h31.png',
     cover: 'covers_elips_tencel_top'
 });
-
-
 g.setNode("materac_jive", {
     node: 'materac_jive',
     label: 'Jive',
@@ -4885,7 +4881,6 @@ g.setNode("materac_jive", {
     render: 'materace/top_blues_h31.png',
     cover: 'covers_elips_tencel_top'
 });
-
 g.setNode("materac_select_top", {
     node: 'materac_select_top',
     label: 'Select TOP',
@@ -4898,100 +4893,98 @@ g.setNode("materac_blues_140_200", {
     label: '140/200',
     width: 140,
     price: {g1: 719, g2: 719},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_blues_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 799, g2: 799},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_blues_180_200", {
     label: '180/200',
     width: 180,
     price: {g1: 879, g2: 879},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_blues_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 1079, g2: 1079},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 
 g.setNode("materac_jive_140_200", {
     label: '140/200',
     width: 140,
     price: {g1: 449, g2: 449},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_jive_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 499, g2: 499},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_jive_180_200", {
     label: '180/200',
     width: 180,
     price: {g1: 579, g2: 579},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_jive_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 749, g2: 749},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
-
 g.setNode("materac_select_plus_140_200", {
     label: '140/200',
     width: 140,
     price: {g1: 679, g2: 679},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_select_plus_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 749, g2: 749},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_select_plus_180_200", {
     label: '180/200',
     width: 180,
     price: {g1: 819, g2: 819},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_select_plus_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 1039, g2: 1039},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
-
 g.setNode("materac_select_top_140_200", {
     label: '140/200',
     width: 140,
     price: {g1: 819, g2: 819},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_select_top_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 899, g2: 899},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_select_top_180_200", {
     label: '180/200',
     width: 180,
     price: {g1: 999, g2: 999},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 g.setNode("materac_select_top_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 1229, g2: 1229},
-    nextStep: 'step_6'
+    nextStep: 'summary'
 });
 
 //***************************************************************
