@@ -234,8 +234,12 @@ class Configurator {
                 configurator.showPrice();
             });
 
-            $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
-            //            $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
+            if(configurator.width === 0) {
+                $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
+            }
+            else {
+                $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
+            }
         });
 
         carousel.trigger('refresh.owl.carousel');
