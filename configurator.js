@@ -212,16 +212,14 @@ class Configurator {
                         if (src !== undefined) {
                             if (src.includes('95')) {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('95', '115'));
-                                var $render = $('#render-overlay');
-                                if($render.length){
-                                    $render.replace('95', '115');
+                                if($('#render-overlay').length){
+                                    $('#render-overlay').prop('src', $('#render-overlay').prop('src').replace('95', '115'));
                                 }
                             }
                             else {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('115', '95'));
-                                var $render = $('#render-overlay');
-                                if($render.length){
-                                    $render.replace('115', '95');
+                                if($('#render-overlay').length){
+                                    $('#render-overlay').prop('src', $('#render-overlay').prop('src').replace('115', '95'));
                                 }
                             }
                             console.log(configurator.step.selectedNodes[0].node);
