@@ -97,6 +97,14 @@ class Configurator {
             $("#previous-step").show();
             $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
         }
+
+        if (this.step.skipEnable !== undefined) {
+            $('#next-step').show();
+            $('#next-step').text('pomiń ten krok >>');
+            $('#next-step').attr("onclick","configurator.skipStep()").attr("style","color:red");
+        } else{
+            $('#next-step').hide();
+        }
         // if (this.step.nextStep !== null) {
         //     $('#next-step').hide();
         // } else {
@@ -108,11 +116,11 @@ class Configurator {
         // console.log(node);
         // $('#next-step').text('następny krok: ' + this.step.title + ' >>');
 
-        if (this.step.skipEnable !== undefined) {
-            $('#skip-step').show();
-        } else {
-            $('#skip-step').hide();
-        }
+        // if (this.step.skipEnable !== undefined) {
+        //     $('#skip-step').show();
+        // } else {
+        //     $('#skip-step').hide();
+        // }
     }
 
     loadLevel(step) {
@@ -316,11 +324,8 @@ class Configurator {
             }
 
             $('#next-step').show();
-            console.log('Node ');
-            console.log(baseNode);
+            $('#next-step').attr("onclick","configurator.nextStep()").removeAttr("style");
             let nextStep = configurator.graph.node(node.nextStep);
-            console.log('nextStep');
-            console.log(nextStep);
             $('#next-step').text('następny krok: ' + nextStep.title + ' >>');
         }
     }
@@ -559,7 +564,7 @@ class Configurator {
         $('#step-title').hide();
         $('#item-color').hide();
         $('#next-step').hide();
-        $('#skip-step').hide();
+        // $('#skip-step').hide();
 
         this.step = new Step(100, "Podsumowanie", false, 'baza kontynetalna_roko08.png', null);
         this.step.selectedNodes[0] = this.graph.node("summary");
