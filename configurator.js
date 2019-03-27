@@ -57,7 +57,7 @@ class Configurator {
         console.log(this.allSteps);
 
         this.stepIndex = this.stepIndex - 1;
-        if(this.allSteps[this.stepIndex].selectedNodes[0] !== undefined && this.allSteps[this.stepIndex].selectedNodes[0].overlay !== undefined){
+        if (this.allSteps[this.stepIndex].selectedNodes[0] !== undefined && this.allSteps[this.stepIndex].selectedNodes[0].overlay !== undefined) {
             $('#render-overlay').remove();
         }
         var previousStepName = this.allSteps[this.stepIndex].selectedNodes[0].node;
@@ -101,8 +101,8 @@ class Configurator {
         if (this.step.skipEnable !== undefined) {
             $('#next-step').show();
             $('#next-step').text('pomiń ten krok >>');
-            $('#next-step').attr("onclick","configurator.skipStep()").attr("style","color:red");
-        } else{
+            $('#next-step').attr("onclick", "configurator.skipStep()").attr("style", "color:red");
+        } else {
             $('#next-step').hide();
         }
         // if (this.step.nextStep !== null) {
@@ -147,7 +147,8 @@ class Configurator {
             else {
                 center = true;
             }
-        };
+        }
+        ;
         var carousel = $('.configurator-base-carousel').owlCarousel({
             loop: false,
             items: items,
@@ -206,7 +207,7 @@ class Configurator {
                     price = node.price.g2;
                 }
                 else {
-                    if(node !== undefined) {
+                    if (node !== undefined) {
                         price = node.price.g1;
                     }
                 }
@@ -220,13 +221,13 @@ class Configurator {
                         if (src !== undefined) {
                             if (src.includes('95')) {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('95', '115'));
-                                if($('#render-overlay').length){
+                                if ($('#render-overlay').length) {
                                     $('#render-overlay').prop('src', $('#render-overlay').prop('src').replace('95', '115'));
                                 }
                             }
                             else {
                                 $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('115', '95'));
-                                if($('#render-overlay').length){
+                                if ($('#render-overlay').length) {
                                     $('#render-overlay').prop('src', $('#render-overlay').prop('src').replace('115', '95'));
                                 }
                             }
@@ -242,7 +243,7 @@ class Configurator {
                 configurator.showPrice();
             });
 
-            if(configurator.width === 0) {
+            if (configurator.width === 0) {
                 $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
             }
             else {
@@ -324,7 +325,7 @@ class Configurator {
             }
 
             $('#next-step').show();
-            $('#next-step').attr("onclick","configurator.nextStep()").removeAttr("style");
+            $('#next-step').attr("onclick", "configurator.nextStep()").removeAttr("style");
             let nextStep = configurator.graph.node(node.nextStep);
             $('#next-step').text('następny krok: ' + nextStep.title + ' >>');
         }
@@ -420,7 +421,7 @@ class Configurator {
             for (i = 0; i < colors.length; i++) {
                 const color = colors[i];
                 html += '<div style="display: inline-block;background-clip: content-box;text-align: center;">';
-                if(i === 0){
+                if (i === 0) {
                     html += '<span class="bold text-uppercase" style="font-size: 11px;">' + group + ' grupa</span>';
                 }
                 html += '<div color="' + color.node + '" name="' + color.name + '" onclick="configurator.onColorSelect($(this))" class="tiles img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
@@ -505,7 +506,7 @@ class Configurator {
             $(find).attr('src', 'renders/' + colorNode.render);
         }
 
-        if(mainNode.overlay !== undefined) {
+        if (mainNode.overlay !== undefined) {
             if (colorNode.overlay !== undefined) {
                 var find = $('#configurator-preview').find('#render-overlay');
                 if (find.length === 0) {
@@ -513,7 +514,7 @@ class Configurator {
                 } else {
                     $(find).attr('src', 'renders/' + colorNode.overlay);
                 }
-            }else {
+            } else {
                 $('#render-overlay').remove();
             }
         }
@@ -607,8 +608,8 @@ class Configurator {
             var priceNode = step.selectedNodes[2];
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 bodyData.push([
-                    step.selectedNodes[0].title,
-                    step.selectedNodes[1].label,
+                    this.capitalize(step.selectedNodes[0].title),
+                    this.capitalize(step.selectedNodes[1].label),
                     step.selectedNodes[2].label + ' cm',
                     // step.selectedNodes[3] !== undefined ? step.selectedNodes[3].title : '',
                     this.numberWithSpaces(priceNode.price.g1)]);
@@ -621,34 +622,45 @@ class Configurator {
             // '',
             this.numberWithSpaces(this.getPrice())]);
 
+        var today = new Date();
         var docDefinition = {
             title: 'Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label,
             content: [
-                'Konfigurator',
+                {
+                    columns: [
+                        {
+                            text: 'Konfigurator'
+                        },
+                        {
+                            alignment: 'right',
+                            text: today.getDate() + '.' + (today.getMonth() + 1) + '.' + today.getYear() + ', ' + today.getHours() + ':' + today.getMinutes()
+                        }
+                    ]
+                },
                 // {
                 //     image: './img/hilding-logo-300x99.jpg',
                 //     width: 500
                 // },
                 {
-                    text:'Łóżko ' + this.allSteps[1].selectedNodes[1].label,
+                    text: 'Łóżko ' + this.allSteps[1].selectedNodes[1].label,
                     style: {color: '#307bbf', fontSize: 25, bold: true}
-                    },
-                'Sugerowana cena detaliczna: '+ this.numberWithSpaces(this.getPrice()) +' zł',
+                },
+                'Sugerowana cena detaliczna: ' + this.numberWithSpaces(this.getPrice()) + ' zł',
                 'Cena zawiera podatek VAT 23%;',
                 'w przypadku materacy medycznych cena zawiera podatek VAT 8%.',
                 'Twój wybór',
                 {
                     style: 'tableExample',
                     table: {
-                        widths: ['auto', 'auto', 'auto','*'],
+                        widths: ['auto', 'auto', 'auto', '*'],
                         body: bodyData
                     },
                     layout: {
                         hLineWidth: function (i, node) {
-                            return 2;
+                            return 0.5;
                         },
                         vLineWidth: function (i, node) {
-                            return  0;
+                            return 0;
                         },
                         hLineColor: function (i, node) {
                             return (i === 0) ? 'white' : '#97999b';
@@ -657,8 +669,12 @@ class Configurator {
                         // vLineStyle: function (i, node) { return {dash: { length: 10, space: 4 }}; },
                         // paddingLeft: function(i, node) { return 4; },
                         // paddingRight: function(i, node) { return 4; },
-                        paddingTop: function(i, node) { return 10; },
-                        paddingBottom: function(i, node) { return 10; },
+                        paddingTop: function (i, node) {
+                            return 10;
+                        },
+                        paddingBottom: function (i, node) {
+                            return 10;
+                        },
                         // fillColor: function (rowIndex, node, columnIndex) { return null; }
                     }
                 },
@@ -692,6 +708,10 @@ class Configurator {
         pdfMake.createPdf(docDefinition).download('Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label);
         // pdfMake.createPdf(docDefinition).open();
     }
+
+    capitalize(title) {
+        return title.charAt(0).toUpperCase() + title.substr(1);
+    }
 }
 
 
@@ -703,11 +723,11 @@ $(document)
             g = new Graph();
 
             $.when(
-                $.getScript("graph.js" ),
-                $.Deferred(function( deferred ){
-                    $( deferred.resolve );
+                $.getScript("graph.js"),
+                $.Deferred(function (deferred) {
+                    $(deferred.resolve);
                 })
-            ).done(function() {
+            ).done(function () {
                 //Stuff to do after someScript has loaded
 
                 var base = new Step(1, "bazę", false, 'baza kontynetalna_roko08.png');
