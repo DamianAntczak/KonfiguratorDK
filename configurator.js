@@ -624,19 +624,64 @@ class Configurator {
                 //     image: './img/hilding-logo-300x99.jpg',
                 //     width: 500
                 // },
-                {text:'Łóżko ' + this.allSteps[1].selectedNodes[1].label, fontColor: 'blue', fontSize: 25, bold: true},
+                {
+                    text:'Łóżko ' + this.allSteps[1].selectedNodes[1].label,
+                    style: {color: '#307bbf', fontSize: 25, bold: true}
+                    },
                 'Sugerowana cena detaliczna: '+ this.numberWithSpaces(this.getPrice()) +' zł',
                 'Cena zawiera podatek VAT 23%;',
                 'w przypadku materacy medycznych cena zawiera podatek VAT 8%.',
                 'Twój wybór',
                 {
+                    style: 'tableExample',
                     table: {
+                        widths: ['auto', 'auto', 'auto','*'],
                         body: bodyData
+                    },
+                    layout: {
+                        hLineWidth: function (i, node) {
+                            return 2;
+                        },
+                        vLineWidth: function (i, node) {
+                            return  0;
+                        },
+                        hLineColor: function (i, node) {
+                            return (i === 0) ? 'white' : '#97999b';
+                        },
+                        // hLineStyle: function (i, node) { return {dash: { length: 10, space: 4 }}; },
+                        // vLineStyle: function (i, node) { return {dash: { length: 10, space: 4 }}; },
+                        // paddingLeft: function(i, node) { return 4; },
+                        // paddingRight: function(i, node) { return 4; },
+                        paddingTop: function(i, node) { return 10; },
+                        paddingBottom: function(i, node) { return 10; },
+                        // fillColor: function (rowIndex, node, columnIndex) { return null; }
                     }
                 },
                 'Nie bierzemy odpowiedzialności za różnice między cenami z konfiguratora a cenami rzeczywistymi.',
                 'Sprawdź lokalizację najbliższego sklepu: hilding.pl/index/whereBuy'
-            ]
+            ],
+            styles: {
+                header: {
+                    fontSize: 18,
+                    bold: true,
+                    margin: [0, 0, 0, 10]
+                },
+                subheader: {
+                    fontSize: 16,
+                    bold: true,
+                    margin: [0, 10, 0, 5]
+                },
+                tableExample: {
+                    color: '#307bbf',
+                    border: [false, false, false, false],
+                    margin: [0, 5, 0, 15]
+                },
+                tableHeader: {
+                    bold: true,
+                    fontSize: 13,
+                    color: 'black'
+                }
+            },
         };
 
         pdfMake.createPdf(docDefinition).download('Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label);
