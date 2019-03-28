@@ -3110,7 +3110,7 @@ g.setNode("step_typ_materaca", {
     label: 'wybierz typ materaca',
     number: 3,
     zIndex: 25,
-    skipToNode: 'step_5'
+    skipToNode: 'summary'
 });
 
 g.setNode("materac_pokrowiec", {
@@ -3134,7 +3134,7 @@ g.setNode("step_pokrowiec", {
     label: 'wybierz materac w pokrowcu',
     number: 3,
     zIndex: 25,
-    skipToNode: 'step_5',
+    skipToNode: 'summary',
     optionsFilter: true
 });
 g.setNode("step_tapicerowany", {
@@ -3143,7 +3143,7 @@ g.setNode("step_tapicerowany", {
     label: 'wybierz materac tapicerowany',
     number: 3,
     zIndex: 25,
-    skipToNode: 'step_5',
+    skipToNode: 'summary',
     optionsFilter: true
 });
 
@@ -3745,7 +3745,7 @@ g.setNode("bb_step_typ_materaca", {
     label: 'wybierz typ materaca',
     number: 3,
     zIndex: 25,
-    skipToNode: 'bb_nawierzchniowy'
+    skipToNode: 'summary'
 });
 
 g.setNode("bb_materac_pokrowiec", {
