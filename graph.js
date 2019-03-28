@@ -5659,6 +5659,7 @@ g.setEdge("bb_wezglowie", "bb_wezglowie_momiko");
 //**************************************
 
 g.setEdge("t_wezglowie_90", "t_wezglowie_urban");
+g.setEdge("t_wezglowie", "t_wezglowie_urban");
 g.setEdge("t_wezglowie", "t_wezglowie_preppy");
 g.setEdge("t_wezglowie", "t_wezglowie_glamour");
 g.setEdge("t_wezglowie", "t_wezglowie_vintage");
