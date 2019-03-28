@@ -2655,6 +2655,24 @@ g.setNode("stozek_owal_wenge", {
     render: '/nogi/noga_stozek_owal_wenge.png'
 });
 
+g.setNode("stozek_kwadrat_buk", {
+    label: 'Stożek kwadrat buk',
+    img: 'stozek_kwadrat_buk.jpg',
+    render: '/nogi/noga_stozek_kwadrat_buk.png'
+});
+
+g.setNode("stozek_kwadrat_dab", {
+    label: 'Stożek kwadrat dąb',
+    img: 'stozek_kwadrat_dab.jpg',
+    render: '/nogi/noga_stozek_kwadrat_dab.png'
+});
+
+g.setNode("stozek_kwadrat_wenge", {
+    label: 'Stożek kwadrat wenge',
+    img: 'stozek_kwadrat_wenge.jpg',
+    render: '/nogi/noga_stozek_kwadrat_wenge.png'
+});
+
 g.setNode("stozek_skos_buk", {
     label: 'Stożek skos buk',
     img: 'stozek_skos_buk.jpg',
@@ -2816,6 +2834,21 @@ g.setNode("stozek_owal_wenge_16", {
 g.setNode("stozek_owal_dab_16", {
     label: '200/95',
     price: {g1: 132.0, g2: 132.0},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("stozek_kwadrat_buk_16", {
+    label: '200/95',
+    price: {g1: 108.0, g2: 108.0},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("stozek_kwadrat_wenge_16", {
+    label: '200/95',
+    price: {g1: 108.0, g2: 108.0},
+    nextStep: 'bb_step_typ_materaca'
+});
+g.setNode("stozek_kwadrat_dab_16", {
+    label: '200/95',
+    price: {g1: 139.0, g2: 139.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_skos_buk_16", {
@@ -5859,6 +5892,9 @@ g.setEdge("t_wezglowie_ladylike", "t_ladylike_200_115");
 g.setEdge("legs", "stozek_owal_buk");
 g.setEdge("legs", "stozek_owal_dab");
 g.setEdge("legs", "stozek_owal_wenge");
+g.setEdge("legs", "stozek_kwadrat_buk");
+g.setEdge("legs", "stozek_kwadrat_dab");
+g.setEdge("legs", "stozek_kwadrat_wenge");
 g.setEdge("legs", "stozek_skos_buk");
 g.setEdge("legs", "stozek_skos_dab");
 g.setEdge("legs", "stozek_skos_wenge");
@@ -5888,6 +5924,9 @@ g.setEdge("legs", "ploza_wenge");
 g.setEdge("stozek_owal_buk", "stozek_owal_buk_16");
 g.setEdge("stozek_owal_wenge", "stozek_owal_wenge_16");
 g.setEdge("stozek_owal_dab", "stozek_owal_dab_16");
+g.setEdge("stozek_kwadrat_buk", "stozek_kwadrat_buk_16");
+g.setEdge("stozek_kwadrat_wenge", "stozek_kwadrat_wenge_16");
+g.setEdge("stozek_kwadrat_dab", "stozek_kwadrat_dab_16");
 g.setEdge("stozek_skos_buk", "stozek_skos_buk_16");
 g.setEdge("stozek_skos_dab", "stozek_skos_dab_16");
 g.setEdge("stozek_skos_wenge", "stozek_skos_wenge_16");
