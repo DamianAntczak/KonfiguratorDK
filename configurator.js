@@ -602,8 +602,27 @@ class Configurator {
     }
 
     printSummary() {
+        function getBase64Image(img) {
+            var canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+            var dataURL = canvas.toDataURL("image/png");
+            return dataURL;
+        }
+
         var bodyData = [];
 
+        var img = document.getElementById('base-img')
+        var canvas = document.createElement("canvas");
+        canvas.width = 1500;
+        console.log(canvas.width);
+        canvas.height = 1140;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+
+        var images = [];
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
@@ -613,8 +632,20 @@ class Configurator {
                     step.selectedNodes[2].label + ' cm',
                     // step.selectedNodes[3] !== undefined ? step.selectedNodes[3].title : '',
                     this.numberWithSpaces(priceNode.price.g1)]);
+
+                var stepImg = document.getElementById('render-' + step.selectedNodes[0].node);
+                images.push(stepImg)
             }
         });
+        images.sort(function(a, b){
+           return a.style.zIndex - b.style.zIndex;
+        });
+
+        images.forEach(img => {
+            ctx.drawImage(img, 0, 0);
+            console.log(img.style.zIndex);
+        });
+
         bodyData.push([
             '',
             '',
@@ -623,6 +654,8 @@ class Configurator {
             this.numberWithSpaces(this.getPrice())]);
 
         var today = new Date();
+        let imageUrl = canvas.toDataURL("image/png");
+        console.log(imageUrl);
         var docDefinition = {
             title: 'Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label,
             content: [
@@ -649,6 +682,11 @@ class Configurator {
                 'Cena zawiera podatek VAT 23%;',
                 'w przypadku materacy medycznych cena zawiera podatek VAT 8%.',
                 'Twój wybór',
+                {
+                    image: imageUrl,
+                    width: 300,
+                    alignment: 'center'
+                },
                 {
                     style: 'tableExample',
                     table: {
