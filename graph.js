@@ -145,25 +145,25 @@ g.setNode("baza_tapicerowana_200_200", {
 
 g.setNode("box_podnoszony_140_200", {
     label: '140/200',
-    width: 140, price: {g1: 3659, g2: 3859}, nextStep: 'step_2'
+    width: 140, price: {g1: 3659, g2: 3859}, nextStep: 'bp_wezglowie'
 });
 g.setNode("box_podnoszony_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 4498, g2: 4798},
-    nextStep: 'step_2'
+    nextStep: 'bp_wezglowie'
 });
 g.setNode("box_podnoszony_180_200", {
     label: '180/200',
     width: 180,
     price: {g1: 4798, g2: 5098},
-    nextStep: 'step_2'
+    nextStep: 'bp_wezglowie'
 });
 g.setNode("box_podnoszony_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 5318, g2: 5718},
-    nextStep: 'step_2'
+    nextStep: 'bp_wezglowie'
 });
 
 g.setNode("kontynent_colors_7", {});
@@ -1344,6 +1344,116 @@ g.setNode("cover_sensity_top", {
 
 //*******************************************
 
+g.setNode("bp_covers_velvet", {});
+g.setNode("bp_cover_velvet", {
+    g: 1,
+    name: 'velvet',
+    node: 'bp_cover_velvet',
+    url: './img/pokrowce/velvet.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+g.setNode("bp_covers_velvet_tencel", {});
+g.setNode("bp_cover_tencel", {
+    g: 2,
+    name: 'tencel',
+    node: 'bp_cover_tencel',
+    url: './img/pokrowce/tencel.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+g.setNode("bp_covers_merced_elips", {});
+g.setNode("bp_cover_merced_1", {
+    g: 1,
+    name: 'merced',
+    node: 'bp_cover_merced_1',
+    url: './img/pokrowce/medicot.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+g.setNode("bp_cover_merced_2", {
+    g: 2,
+    name: 'merced',
+    node: 'bp_cover_merced_2',
+    url: './img/pokrowce/medicot2.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+g.setNode("bp_covers_elips_medicott", {});
+g.setNode("bp_cover_elips_1", {
+    g: 1,
+    name: 'elips',
+    node: 'bp_cover_elips_1',
+    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+g.setNode("bp_cover_elips_2", {
+    g: 2,
+    name: 'elips',
+    node: 'bp_cover_elips_2',
+    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+g.setNode("bp_cover_medicott", {
+    g: 2,
+    name: 'medicott velur',
+    node: 'bp_cover_medicott',
+    url: './img/pokrowce/medicott_silver.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+g.setNode("bp_covers_elips_tencel_top", {});
+g.setNode("bp_cover_elips_top", {
+    g: 1,
+    name: 'elips',
+    node: 'bp_cover_elips_top',
+    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    render: 'materace/top_blues_h39.png'
+});
+g.setNode("bp_cover_tencel_top", {
+    g: 2,
+    name: 'tencel',
+    node: 'bp_cover_tencel_top',
+    url: './img/pokrowce/tencel.jpg',
+    render: 'materace/top_blues_h39.png'
+});
+
+g.setNode("bp_covers_fresh", {});
+g.setNode("bp_cover_fresh", {
+    g: 1,
+    name: 'fresh',
+    node: 'bp_cover_fresh',
+    url: './img/pokrowce/sensity.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+g.setNode("bp_covers_medicover", {});
+g.setNode("bp_cover_medicover", {
+    g: 1,
+    name: 'Medi-cover',
+    node: 'bp_cover_medicover',
+    url: 'https://hilding.pl/png/product/medicott_1501579581.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+g.setNode("bp_covers_teenage", {});
+g.setNode("bp_cover_teenage", {
+    g: 1,
+    name: 'Teenage',
+    node: 'bp_cover_teenage',
+    url: './img/pokrowce/teenage.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+g.setNode("bp_covers_sensity_top", {});
+g.setNode("bp_cover_sensity_top", {
+    g: 1,
+    name: 'sensity',
+    node: 'bp_cover_sensity_top',
+    url: './img/pokrowce/sensity.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+//*******************************************
+
 g.setNode("covers_velvet_t", {});
 g.setNode("cover_velvet_t", {
     g: 1,
@@ -1635,6 +1745,74 @@ g.setNode("bb_wezglowie_urban", {
     render: '/wezglowia/wezglowie_urban_95_novel13.png',
     colors: 'urban_colors_7',
     nextStep: 'legs'
+});
+
+g.setNode("bp_wezglowie", {
+    node: 'bp_wezglowie',
+    title: 'wezgłowie',
+    label: 'wybierz wezgłowie',
+    number: 2,
+    zIndex: 5,
+    colors: 'colors_7',
+    optionsFilter: true,
+    overlay: true
+});
+
+g.setNode("bp_wezglowie_glamour", {
+    node: 'bp_wezglowie_glamour',
+    label: 'Glamour',
+    img: 'glamour.jpg',
+    render: '/wezglowia/wezglowie_glamour_115_novel13.png',
+    colors: 'glamour_colors_7',
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_wezglowie_vintage", {
+    node: 'bp_wezglowie_vintage',
+    label: 'Vintage',
+    img: 'vintage.jpg',
+    render: '/wezglowia/wezglowie_vintage_95_novel13.png',
+    colors: 'vintage_colors_7',
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_wezglowie_eclectic", {
+    node: 'bp_wezglowie_eclectic',
+    label: 'Eclectic',
+    img: 'electric.jpg',
+    render: '/wezglowia/wezglowie_eclectic_95_novel13.png',
+    colors: 'eclectic_colors_7',
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_wezglowie_ladylike", {
+    node: 'bp_wezglowie_ladylike',
+    label: 'Ladylike',
+    img: 'ladylike.jpg',
+    render: '/wezglowia/wezglowie_ladylike_115_novel13.png',
+    colors: 'ladylike_colors_7',
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_wezglowie_preppy", {
+    node: 'bp_wezglowie_preppy',
+    label: 'Preppy',
+    img: 'preppy.jpg',
+    render: '/wezglowia/wezglowie_preppy_95_novel13.png',
+    colors: 'preppy_colors_7',
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_wezglowie_momiko", {
+    node: 'bp_wezglowie_momiko',
+    label: 'Momiko',
+    img: 'momiko.jpg',
+    render: '/wezglowia/wezglowie_momiko_95_novel13.png',
+    colors: 'momiko_colors_7',
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_wezglowie_urban", {
+    node: 'bp_wezglowie_urban',
+    label: 'Urban',
+    img: 'urban.jpg',
+    render: '/wezglowia/wezglowie_urban_95_novel13.png',
+    colors: 'urban_colors_7',
+    nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("t_wezglowie", {
@@ -2320,8 +2498,309 @@ g.setNode("bb_ladylike_200_115", {
     nextStep: 'legs'
 });
 
-//***************************
+//****************************
 
+g.setNode("bp_urban_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 749, g2: 849},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_urban_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 799, g2: 899},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_urban_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 899, g2: 999},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_urban_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_urban_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 799, g2: 899},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_urban_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 849, g2: 949},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_urban_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 949, g2: 1049},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_urban_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1049, g2: 1149},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_preppy_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 1169, g2: 1269},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_preppy_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 1199, g2: 1299},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_preppy_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 1299, g2: 1399},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_preppy_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_preppy_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1269, g2: 1369},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_preppy_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1299, g2: 1399},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_preppy_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_preppy_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1599, g2: 1699},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_glamour_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1369, g2: 1469},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_glamour_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_glamour_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1559, g2: 1659},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_glamour_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1699, g2: 1799},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_vintage_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 1029, g2: 1129},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_vintage_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 1059, g2: 1159},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_vintage_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 1159, g2: 1259},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_vintage_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_vintage_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1169, g2: 1269},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_vintage_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1199, g2: 1299},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_vintage_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1299, g2: 1399},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_vintage_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1499, g2: 1599},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_momiko_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 869, g2: 969},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_momiko_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 899, g2: 999},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_momiko_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_momiko_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_momiko_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 969, g2: 1069},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_momiko_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_momiko_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_momiko_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_eclectic_140_95", {
+    label: '140/95',
+    width: 140,
+    price: {g1: 969, g2: 1069},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_eclectic_160_95", {
+    label: '160/95',
+    width: 160,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_eclectic_180_95", {
+    label: '180/95',
+    width: 180,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_eclectic_200_95", {
+    label: '200/95',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_eclectic_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 1069, g2: 1169},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_eclectic_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_eclectic_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1199, g2: 1299},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_eclectic_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1399, g2: 1499},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+g.setNode("bp_ladylike_140_115", {
+    label: '140/115',
+    width: 140,
+    price: {g1: 969, g2: 1069},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_ladylike_160_115", {
+    label: '160/115',
+    width: 160,
+    price: {g1: 999, g2: 1099},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_ladylike_180_115", {
+    label: '180/115',
+    width: 180,
+    price: {g1: 1099, g2: 1199},
+    nextStep: 'bp_step_typ_materaca'
+});
+g.setNode("bp_ladylike_200_115", {
+    label: '200/115',
+    width: 200,
+    price: {g1: 1259, g2: 1359},
+    nextStep: 'bp_step_typ_materaca'
+});
+
+//****************************
 
 g.setNode("t_urban_90_95", {
     label: '90/95',
@@ -3782,7 +4261,51 @@ g.setNode("bb_step_tapicerowany", {
     optionsFilter: true
 });
 
+//*******************************************88
+g.setNode("bp_step_typ_materaca", {
+    node: 'bp_step_typ_materaca',
+    title: 'typ materac',
+    label: 'wybierz typ materaca',
+    number: 3,
+    zIndex: 25,
+    skipToNode: 'summary'
+});
 
+g.setNode("bp_materac_pokrowiec", {
+    label: 'W pokrowcu',
+    img: 'pokrowce/materac_w_pokrowcu_cover.jpg',
+    render: 'transparent.png'
+});
+
+g.setNode("bp_materac_tapicerowany", {
+    label: 'Tapicerowany',
+    img: 'pokrowce/materac_tapicerowany_cover.jpg',
+    render: 'transparent.png'
+});
+
+g.setNode("bp_materac_pokrowiec_1", {label: '', price: {g1: 0, g2: 0}, nextStep: 'bp_step_pokrowiec'});
+g.setNode("bp_materac_tapicerowany_1", {label: '', price: {g1: 0, g2: 0}, nextStep: 'bp_step_tapicerowany'});
+
+g.setNode("bp_step_pokrowiec", {
+    node: 'bp_step_pokrowiec',
+    title: 'materac w pokrowcu',
+    label: 'wybierz materac w pokrowcu',
+    number: 3,
+    zIndex: 25,
+    skipToNode: 'summary',
+    optionsFilter: true
+});
+g.setNode("bp_step_tapicerowany", {
+    node: 'bp_step_tapicerowany',
+    title: 'materac tapicerowany',
+    label: 'wybierz materac tapicerowany',
+    number: 3,
+    zIndex: 25,
+    skipToNode: 'summary',
+    optionsFilter: true
+});
+
+//********************************************
 
 g.setNode("bb_materac_tango", {
     node: 'bb_materac_tango',
@@ -4345,9 +4868,550 @@ g.setNode("bb_materac_flamenco_tap_200_200", {
     nextStep: 'bb_nawierzchniowy'
 });
 
-
-
 //**********************************************
+
+g.setNode("bp_materac_tango", {
+    node: 'bp_materac_tango',
+    label: 'Tango',
+    img: '/materace/tango.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_velvet_tencel'
+});
+g.setNode("bp_materac_step", {
+    node: 'bp_materac_step',
+    label: 'Step',
+    img: '/materace/step.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_fresh'
+});
+g.setNode("bp_materac_salsa", {
+    node: 'bp_materac_salsa',
+    label: 'Salsa',
+    img: '/materace/salsa.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_medicover'
+});
+g.setNode("bp_materac_chacha", {
+    node: 'bp_materac_chacha',
+    label: 'Cha-Cha',
+    img: '/materace/cha_cha.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_velvet'
+});
+g.setNode("bp_materac_pasodoble", {
+    node: 'bp_materac_pasodoble',
+    label: 'Pasodoble',
+    img: '/materace/pasodoble.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_velvet_tencel'
+});
+g.setNode("bp_materac_flamenco", {
+    node: 'bp_materac_flamenco',
+    label: 'Flamenco',
+    img: '/materace/flamenco.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_velvet_tencel'
+});
+g.setNode("bp_materac_makarena", {
+    node: 'bp_materac_makarena',
+    label: 'Makarena',
+    img: '/materace/makarena.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_merced_elips'
+});
+g.setNode("bp_materac_rockroll", {
+    node: 'bp_materac_rockroll',
+    label: 'Rock & Roll',
+    img: '/materace/rock_roll.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_velvet_tencel'
+});
+g.setNode("bp_materac_foxtrot", {
+    node: 'bp_materac_foxtrot',
+    label: 'Foxtrot',
+    img: '/materace/foxtrot.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_velvet'
+});
+g.setNode("bp_materac_mambo", {
+    node: 'bp_materac_mambo',
+    label: 'Mambo',
+    img: '/materace/mambo.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_merced_elips'
+});
+g.setNode("bp_materac_rumba", {
+    node: 'bp_materac_rumba',
+    label: 'Rumba',
+    img: '/materace/rumba.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_elips_medicott'
+});
+g.setNode("bp_materac_latino", {
+    node: 'bp_materac_latino',
+    label: 'Latino',
+    img: '/materace/latino.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_merced_elips'
+});
+g.setNode("bp_materac_fandango", {
+    node: 'bp_materac_fandango',
+    label: 'Fandango',
+    img: '/materace/fandango.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_medicover'
+});
+g.setNode("bp_materac_zorba", {
+    node: 'bp_materac_zorba',
+    label: 'Zorba',
+    img: '/materace/zorba.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_medicover'
+});
+g.setNode("bp_materac_breakdance", {
+    node: 'bp_materac_breakdance',
+    label: 'Breakdance',
+    img: '/materace/breakdance.jpg',
+    render: 'materace/materac_salsa_h39.png',
+    cover: 'bp_covers_teenage'
+});
+
+g.setNode("bp_materac_foxtrot_tapicerowany", {
+    node: 'bp_materac_foxtrot_tapicerowany',
+    label: 'Foxtrot',
+    img: '/materace/foxtrot.jpg',
+    render: 'materace/materac_tapicerowany_h39_novel13.png',
+    colors: 'm_tap_colors_7'
+});
+g.setNode("bp_materac_chacha_tapicerowany", {
+    node: 'bp_materac_chacha_tapicerowany',
+    label: 'Cha-Cha',
+    img: '/materace/cha_cha.jpg',
+    render: 'materace/materac_tapicerowany_h39_novel13.png',
+    colors: 'm_tap_colors_7'
+});
+g.setNode("bp_materac_flamenco_tapicerowany", {
+    node: 'bp_materac_flamenco_tapicerowany',
+    label: 'Flamenco',
+    img: '/materace/flamenco.jpg',
+    render: 'materace/materac_tapicerowany_h39_novel13.png',
+    colors: 'm_tap_colors_7'
+});
+
+g.setNode("bp_materac_tango_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1599, g2: 1599},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_tango_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1749, g2: 1749},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_tango_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 1899, g2: 1899},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_tango_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 2198, g2: 1299},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_step_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 679, g2: 679},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_step_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 749, g2: 749},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_step_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 839, g2: 839},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_step_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 1138, g2: 1138},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_salsa_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1699, g2: 1699},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_salsa_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1899, g2: 1899},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_salsa_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 2069, g2: 2069},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_salsa_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 2718, g2: 2718},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1329, g2: 1329},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1459, g2: 1459},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 1639, g2: 1639},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 2198, g2: 2198},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_pasodoble_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1659, g2: 1659},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_pasodoble_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1829, g2: 1829},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_pasodoble_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 1999, g2: 1999},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_pasodoble_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 2658, g2: 2658},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1849, g2: 1849},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 2059, g2: 2059},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 2299, g2: 2299},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 3458, g2: 3458},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_makarena_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 3059, g2: 3059},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_makarena_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 3399, g2: 3399},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_makarena_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 3749, g2: 3749},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_makarena_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 5118, g2: 5118},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rockroll_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1539, g2: 1539},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rockroll_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1699, g2: 1699},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rockroll_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 1849, g2: 1849},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rockroll_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 2438, g2: 2438},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_foxtrot_140_200", {label: '140/200', width: 140, price: {g1: 1639, g2: 1639}, nextStep: 'bp_nawierzchniowy'});
+g.setNode("bp_materac_foxtrot_160_200", {label: '160/200', width: 160, price: {g1: 1799, g2: 1799}, nextStep: 'bp_nawierzchniowy'});
+g.setNode("bp_materac_foxtrot_180_200", {label: '180/200', width: 180, price: {g1: 1959, g2: 1959}, nextStep: 'bp_nawierzchniowy'});
+g.setNode("bp_materac_foxtrot_200_200", {label: '200/200', width: 200, price: {g1: 2678, g2: 2678}, nextStep: 'bp_nawierzchniowy'});
+g.setNode("bp_materac_mambo_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 2429, g2: 2429},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_mambo_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 2699, g2: 2699},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_mambo_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 2929, g2: 2929},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_mambo_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 3898, g2: 3898},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rumba_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 2699, g2: 2999},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rumba_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 2999, g2: 3359},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rumba_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 3349, g2: 3699},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_rumba_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 4598, g2: 4958},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_latino_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 2699, g2: 2699},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_latino_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 2999, g2: 2999},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_latino_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 3279, g2: 3279},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_latino_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 4518, g2: 4518},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_fandango_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 929, g2: 929},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_fandango_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1049, g2: 1049},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_fandango_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 1159, g2: 1159},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_fandango_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 1518, g2: 1518},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_zorba_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 999, g2: 999},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_zorba_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1099, g2: 1099},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_zorba_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 1219, g2: 1219},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_zorba_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 1598, g2: 1598},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_breakdance_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1079, g2: 1079},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_breakdance_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 1199, g2: 1199},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_breakdance_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 1438, g2: 1438},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_breakdance_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 1918, g2: 1918},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_foxtrot_tap_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 2229, g2: 2429},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_foxtrot_tap_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 2399, g2: 2599},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_foxtrot_tap_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 2629, g2: 2829},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_foxtrot_tap_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 4198, g2: 4458},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_tap_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 1929, g2: 2129},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_tap_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 2099, g2: 2299},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_tap_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 2299, g2: 2499},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_chacha_tap_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 3458, g2: 3858},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_tap_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 2109, g2: 2309},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_tap_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 2299, g2: 2499},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_tap_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 2499, g2: 2699},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_flamenco_tap_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 3798, g2: 4198},
+    nextStep: 'bp_nawierzchniowy'
+});
+
+//*******************************8
 
 g.setNode("t_materac", {
     node: 't_materac',
@@ -5165,6 +6229,151 @@ g.setNode("bb_materac_select_top_200_200", {
     nextStep: 'summary'
 });
 
+//******************************************************
+
+g.setNode("bp_nawierzchniowy", {
+    node: 'bp_nawierzchniowy',
+    title: 'materac nawierzchniowy',
+    label: 'wybierz materac nawierzchniowy',
+    number: 4,
+    zIndex: 30,
+    skipToNode: 'summary',
+    optionsFilter: true
+});
+
+g.setNode("bp_materac_select_plus", {
+    node: 'bp_materac_select_plus',
+    label: 'Select Plus Softex',
+    img: '/materace/select_plus_top.jpg',
+    render: 'materace/top_blues_h39.png',
+    cover: 'bp_covers_sensity_top'
+});
+
+g.setNode("bp_materac_blues", {
+    node: 'bp_materac_blues',
+    label: 'Blues',
+    img: '/materace/blues.jpg',
+    render: 'materace/top_blues_h39.png',
+    cover: 'bp_covers_elips_tencel_top'
+});
+
+
+g.setNode("bp_materac_jive", {
+    node: 'bp_materac_jive',
+    label: 'Jive',
+    img: '/materace/jive.jpg',
+    render: 'materace/top_blues_h39.png',
+    cover: 'bp_covers_elips_tencel_top'
+});
+
+g.setNode("bp_materac_select_top", {
+    node: 'bp_materac_select_top',
+    label: 'Select TOP',
+    img: '/materace/select_top.jpg',
+    render: 'materace/top_blues_h39.png',
+    cover: 'bp_covers_sensity_top'
+});
+
+g.setNode("bp_materac_blues_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 719, g2: 719},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_blues_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 799, g2: 799},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_blues_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 879, g2: 879},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_blues_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 1079, g2: 1079},
+    nextStep: 'summary'
+});
+
+g.setNode("bp_materac_jive_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 449, g2: 449},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_jive_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 499, g2: 499},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_jive_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 579, g2: 579},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_jive_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 749, g2: 749},
+    nextStep: 'summary'
+});
+
+g.setNode("bp_materac_select_plus_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 679, g2: 679},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_select_plus_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 749, g2: 749},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_select_plus_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 819, g2: 819},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_select_plus_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 1039, g2: 1039},
+    nextStep: 'summary'
+});
+
+g.setNode("bp_materac_select_top_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 819, g2: 819},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_select_top_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 899, g2: 899},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_select_top_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 999, g2: 999},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_select_top_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 1229, g2: 1229},
+    nextStep: 'summary'
+});
+
 
 g.setNode("step_6", {
     node: 'step_6',
@@ -5691,6 +6900,16 @@ g.setEdge("bb_wezglowie", "bb_wezglowie_momiko");
 
 //**************************************
 
+g.setEdge("bp_wezglowie", "bp_wezglowie_urban");
+g.setEdge("bp_wezglowie", "bp_wezglowie_preppy");
+g.setEdge("bp_wezglowie", "bp_wezglowie_glamour");
+g.setEdge("bp_wezglowie", "bp_wezglowie_vintage");
+g.setEdge("bp_wezglowie", "bp_wezglowie_eclectic");
+g.setEdge("bp_wezglowie", "bp_wezglowie_ladylike");
+g.setEdge("bp_wezglowie", "bp_wezglowie_momiko");
+
+//**************************************
+
 g.setEdge("t_wezglowie_90", "t_wezglowie_urban");
 g.setEdge("t_wezglowie", "t_wezglowie_urban");
 g.setEdge("t_wezglowie", "t_wezglowie_preppy");
@@ -5824,7 +7043,69 @@ g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_160_115");
 g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_180_115");
 g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_200_115");
 
-//*****************************************************8
+//*****************************************************
+
+g.setEdge("bp_wezglowie_urban", "bp_urban_140_95");
+g.setEdge("bp_wezglowie_urban", "bp_urban_160_95");
+g.setEdge("bp_wezglowie_urban", "bp_urban_180_95");
+g.setEdge("bp_wezglowie_urban", "bp_urban_200_95");
+
+g.setEdge("bp_wezglowie_urban", "bp_urban_140_115");
+g.setEdge("bp_wezglowie_urban", "bp_urban_160_115");
+g.setEdge("bp_wezglowie_urban", "bp_urban_180_115");
+g.setEdge("bp_wezglowie_urban", "bp_urban_200_115");
+
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_140_95");
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_160_95");
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_180_95");
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_200_95");
+
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_140_115");
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_160_115");
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_180_115");
+g.setEdge("bp_wezglowie_preppy", "bp_preppy_200_115");
+
+g.setEdge("bp_wezglowie_glamour", "bp_glamour_140_115");
+g.setEdge("bp_wezglowie_glamour", "bp_glamour_160_115");
+g.setEdge("bp_wezglowie_glamour", "bp_glamour_180_115");
+g.setEdge("bp_wezglowie_glamour", "bp_glamour_200_115");
+
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_140_95");
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_160_95");
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_180_95");
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_200_95");
+
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_140_115");
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_160_115");
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_180_115");
+g.setEdge("bp_wezglowie_vintage", "bp_vintage_200_115");
+
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_140_95");
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_160_95");
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_180_95");
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_200_95");
+
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_140_115");
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_160_115");
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_180_115");
+g.setEdge("bp_wezglowie_momiko", "bp_momiko_200_115");
+
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_140_95");
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_160_95");
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_180_95");
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_200_95");
+
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_140_115");
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_160_115");
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_180_115");
+g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_200_115");
+
+g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_140_115");
+g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_160_115");
+g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_180_115");
+g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_200_115");
+
+//*****************************************************
 
 g.setEdge("t_wezglowie_urban", "t_urban_90_95");
 g.setEdge("t_wezglowie_urban", "t_urban_140_95");
@@ -6215,6 +7496,123 @@ g.setEdge("bb_materac_flamenco_tapicerowany", "bb_materac_flamenco_tap_180_200")
 g.setEdge("bb_materac_flamenco_tapicerowany", "bb_materac_flamenco_tap_200_200");
 
 //***************************************************
+g.setEdge("bp_step_typ_materaca", "bp_materac_pokrowiec");
+g.setEdge("bp_step_typ_materaca", "bp_materac_tapicerowany");
+
+g.setEdge("bp_materac_pokrowiec", "bp_materac_pokrowiec_1");
+g.setEdge("bp_materac_tapicerowany", "bp_materac_tapicerowany_1");
+
+g.setEdge("bp_step_tapicerowany", "bp_materac_foxtrot_tapicerowany");
+g.setEdge("bp_step_tapicerowany", "bp_materac_chacha_tapicerowany");
+g.setEdge("bp_step_tapicerowany", "bp_materac_flamenco_tapicerowany");
+
+g.setEdge("bp_step_pokrowiec", "bp_materac_tango");
+g.setEdge("bp_step_pokrowiec", "bp_materac_step");
+g.setEdge("bp_step_pokrowiec", "bp_materac_pasodoble");
+g.setEdge("bp_step_pokrowiec", "bp_materac_makarena");
+g.setEdge("bp_step_pokrowiec", "bp_materac_rockroll");
+g.setEdge("bp_step_pokrowiec", "bp_materac_mambo");
+g.setEdge("bp_step_pokrowiec", "bp_materac_rumba");
+g.setEdge("bp_step_pokrowiec", "bp_materac_latino");
+g.setEdge("bp_step_pokrowiec", "bp_materac_foxtrot");
+g.setEdge("bp_step_pokrowiec", "bp_materac_chacha");
+g.setEdge("bp_step_pokrowiec", "bp_materac_flamenco");
+g.setEdge("bp_step_pokrowiec", "bp_materac_fandango");
+g.setEdge("bp_step_pokrowiec", "bp_materac_zorba");
+g.setEdge("bp_step_pokrowiec", "bp_materac_breakdance");
+
+g.setEdge("bp_materac_tango", "bp_materac_tango_140_200");
+g.setEdge("bp_materac_tango", "bp_materac_tango_160_200");
+g.setEdge("bp_materac_tango", "bp_materac_tango_180_200");
+g.setEdge("bp_materac_tango", "bp_materac_tango_200_200");
+
+g.setEdge("bp_materac_step", "bp_materac_step_140_200");
+g.setEdge("bp_materac_step", "bp_materac_step_160_200");
+g.setEdge("bp_materac_step", "bp_materac_step_180_200");
+g.setEdge("bp_materac_step", "bp_materac_step_200_200");
+
+g.setEdge("bp_materac_salsa", "bp_materac_salsa_140_200");
+g.setEdge("bp_materac_salsa", "bp_materac_salsa_160_200");
+g.setEdge("bp_materac_salsa", "bp_materac_salsa_180_200");
+g.setEdge("bp_materac_salsa", "bp_materac_salsa_200_200");
+
+g.setEdge("bp_materac_chacha", "bp_materac_chacha_140_200");
+g.setEdge("bp_materac_chacha", "bp_materac_chacha_160_200");
+g.setEdge("bp_materac_chacha", "bp_materac_chacha_180_200");
+g.setEdge("bp_materac_chacha", "bp_materac_chacha_200_200");
+
+g.setEdge("bp_materac_pasodoble", "bp_materac_pasodoble_140_200");
+g.setEdge("bp_materac_pasodoble", "bp_materac_pasodoble_160_200");
+g.setEdge("bp_materac_pasodoble", "bp_materac_pasodoble_180_200");
+g.setEdge("bp_materac_pasodoble", "bp_materac_pasodoble_200_200");
+
+g.setEdge("bp_materac_flamenco", "bp_materac_flamenco_140_200");
+g.setEdge("bp_materac_flamenco", "bp_materac_flamenco_160_200");
+g.setEdge("bp_materac_flamenco", "bp_materac_flamenco_180_200");
+g.setEdge("bp_materac_flamenco", "bp_materac_flamenco_200_200");
+
+g.setEdge("bp_materac_makarena", "bp_materac_makarena_140_200");
+g.setEdge("bp_materac_makarena", "bp_materac_makarena_160_200");
+g.setEdge("bp_materac_makarena", "bp_materac_makarena_180_200");
+g.setEdge("bp_materac_makarena", "bp_materac_makarena_200_200");
+
+g.setEdge("bp_materac_rockroll", "bp_materac_rockroll_140_200");
+g.setEdge("bp_materac_rockroll", "bp_materac_rockroll_160_200");
+g.setEdge("bp_materac_rockroll", "bp_materac_rockroll_180_200");
+g.setEdge("bp_materac_rockroll", "bp_materac_rockroll_200_200");
+
+g.setEdge("bp_materac_foxtrot", "bp_materac_foxtrot_140_200");
+g.setEdge("bp_materac_foxtrot", "bp_materac_foxtrot_160_200");
+g.setEdge("bp_materac_foxtrot", "bp_materac_foxtrot_180_200");
+g.setEdge("bp_materac_foxtrot", "bp_materac_foxtrot_200_200");
+
+g.setEdge("bp_materac_mambo", "bp_materac_mambo_140_200");
+g.setEdge("bp_materac_mambo", "bp_materac_mambo_160_200");
+g.setEdge("bp_materac_mambo", "bp_materac_mambo_180_200");
+g.setEdge("bp_materac_mambo", "bp_materac_mambo_200_200");
+
+g.setEdge("bp_materac_rumba", "bp_materac_rumba_140_200");
+g.setEdge("bp_materac_rumba", "bp_materac_rumba_160_200");
+g.setEdge("bp_materac_rumba", "bp_materac_rumba_180_200");
+g.setEdge("bp_materac_rumba", "bp_materac_rumba_200_200");
+
+g.setEdge("bp_materac_latino", "bp_materac_latino_140_200");
+g.setEdge("bp_materac_latino", "bp_materac_latino_160_200");
+g.setEdge("bp_materac_latino", "bp_materac_latino_180_200");
+g.setEdge("bp_materac_latino", "bp_materac_latino_200_200");
+
+g.setEdge("bp_materac_fandango", "bp_materac_fandango_140_200");
+g.setEdge("bp_materac_fandango", "bp_materac_fandango_160_200");
+g.setEdge("bp_materac_fandango", "bp_materac_fandango_180_200");
+g.setEdge("bp_materac_fandango", "bp_materac_fandango_200_200");
+
+g.setEdge("bp_materac_zorba", "bp_materac_zorba_140_200");
+g.setEdge("bp_materac_zorba", "bp_materac_zorba_160_200");
+g.setEdge("bp_materac_zorba", "bp_materac_zorba_180_200");
+g.setEdge("bp_materac_zorba", "bp_materac_zorba_200_200");
+
+g.setEdge("bp_materac_breakdance", "bp_materac_breakdance_140_200");
+g.setEdge("bp_materac_breakdance", "bp_materac_breakdance_160_200");
+g.setEdge("bp_materac_breakdance", "bp_materac_breakdance_180_200");
+g.setEdge("bp_materac_breakdance", "bp_materac_breakdance_200_200");
+
+g.setEdge("bp_materac_foxtrot_tapicerowany", "bp_materac_foxtrot_tap_140_200");
+g.setEdge("bp_materac_foxtrot_tapicerowany", "bp_materac_foxtrot_tap_160_200");
+g.setEdge("bp_materac_foxtrot_tapicerowany", "bp_materac_foxtrot_tap_180_200");
+g.setEdge("bp_materac_foxtrot_tapicerowany", "bp_materac_foxtrot_tap_200_200");
+
+
+g.setEdge("bp_materac_chacha_tapicerowany", "bp_materac_chacha_tap_140_200");
+g.setEdge("bp_materac_chacha_tapicerowany", "bp_materac_chacha_tap_160_200");
+g.setEdge("bp_materac_chacha_tapicerowany", "bp_materac_chacha_tap_180_200");
+g.setEdge("bp_materac_chacha_tapicerowany", "bp_materac_chacha_tap_200_200");
+
+g.setEdge("bp_materac_flamenco_tapicerowany", "bp_materac_flamenco_tap_140_200");
+g.setEdge("bp_materac_flamenco_tapicerowany", "bp_materac_flamenco_tap_160_200");
+g.setEdge("bp_materac_flamenco_tapicerowany", "bp_materac_flamenco_tap_180_200");
+g.setEdge("bp_materac_flamenco_tapicerowany", "bp_materac_flamenco_tap_200_200");
+
+//******************************************************************************
 
 g.setEdge("t_materac", "t_materac_tango");
 g.setEdge("t_materac", "t_materac_step");
@@ -6362,8 +7760,32 @@ g.setEdge("bb_materac_select_plus", "bb_materac_select_plus_160_200");
 g.setEdge("bb_materac_select_plus", "bb_materac_select_plus_180_200");
 g.setEdge("bb_materac_select_plus", "bb_materac_select_plus_200_200");
 
+//*****************************************
 
+g.setEdge("bp_nawierzchniowy", "bp_materac_select_plus");
+g.setEdge("bp_nawierzchniowy", "bp_materac_blues");
+g.setEdge("bp_nawierzchniowy", "bp_materac_jive");
+g.setEdge("bp_nawierzchniowy", "bp_materac_select_top");
 
+g.setEdge("bp_materac_blues", "bp_materac_blues_140_200");
+g.setEdge("bp_materac_blues", "bp_materac_blues_160_200");
+g.setEdge("bp_materac_blues", "bp_materac_blues_180_200");
+g.setEdge("bp_materac_blues", "bp_materac_blues_200_200");
+
+g.setEdge("bp_materac_jive", "bp_materac_jive_140_200");
+g.setEdge("bp_materac_jive", "bp_materac_jive_160_200");
+g.setEdge("bp_materac_jive", "bp_materac_jive_180_200");
+g.setEdge("bp_materac_jive", "bp_materac_jive_200_200");
+
+g.setEdge("bp_materac_select_top", "bp_materac_select_top_140_200");
+g.setEdge("bp_materac_select_top", "bp_materac_select_top_160_200");
+g.setEdge("bp_materac_select_top", "bp_materac_select_top_180_200");
+g.setEdge("bp_materac_select_top", "bp_materac_select_top_200_200");
+
+g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_140_200");
+g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_160_200");
+g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_180_200");
+g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_200_200");
 
 //*****************************************
 
@@ -6383,6 +7805,25 @@ g.setEdge("covers_merced_elips", "cover_elips_2");
 g.setEdge("covers_elips_tencel_top", "cover_elips_top");
 g.setEdge("covers_elips_tencel_top", "cover_tencel_top");
 g.setEdge("covers_sensity_top", "cover_sensity_top");
+
+//************************************************
+
+g.setEdge("bp_covers_velvet_tencel", "bp_cover_velvet");
+g.setEdge("bp_covers_velvet_tencel", "bp_cover_tencel");
+
+g.setEdge("bp_covers_velvet", "bp_cover_velvet");
+
+g.setEdge("bp_covers_elips_medicott", "bp_cover_medicott");
+g.setEdge("bp_covers_elips_medicott", "bp_cover_elips_1");
+
+g.setEdge("bp_covers_fresh", "bp_cover_fresh");
+g.setEdge("bp_covers_medicover", "bp_cover_medicover");
+g.setEdge("bp_covers_teenage", "bp_cover_teenage");
+g.setEdge("bp_covers_merced_elips", "bp_cover_merced_1");
+g.setEdge("bp_covers_merced_elips", "bp_cover_elips_2");
+g.setEdge("bp_covers_elips_tencel_top", "bp_cover_elips_top");
+g.setEdge("bp_covers_elips_tencel_top", "bp_cover_tencel_top");
+g.setEdge("bp_covers_sensity_top", "bp_cover_sensity_top");
 
 //************************************************
 
