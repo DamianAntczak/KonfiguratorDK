@@ -1611,6 +1611,61 @@ g.setNode("m_tap_riviera", {
     render: '/materace/materac_tapicerowany_h31_riviera38.png'
 });
 
+//**********************************************************
+
+g.setNode("bp_tap_colors_7", {});
+g.setNode("bp_tap_novel", {
+    g: 1,
+    name: 'novel',
+    node: 'bp_tap_novel',
+    url: './img/tkaniny/novel_13_anthracite.jpg',
+    render: '/materace/materac_tapicerowany_h39_novel13.png'
+});
+g.setNode("bp_tap_roko", {
+    g: 1,
+    name: 'roko',
+    node: 'bp_tap_roko',
+    url: './img/tkaniny/Roko088_blue.jpg',
+    render: '/materace/materac_tapicerowany_h39_roko08.png'
+});
+g.setNode("bp_tap_aspen", {
+    g: 1,
+    name: 'aspen',
+    node: 'bp_tap_aspen',
+    url: './img/tkaniny/aspen_04_light.jpg',
+    render: '/materace/materac_tapicerowany_h39_aspen04.png'
+});
+g.setNode("bp_tap_river", {
+    g: 2,
+    name: 'river',
+    node: 'bp_tap_river',
+    url: './img/tkaniny/river_02_silver.jpg',
+    render: '/materace/materac_tapicerowany_h39_river02.png'
+});
+g.setNode("bp_tap_eren", {
+    g: 2,
+    name: 'eren',
+    node: 'bp_tap_eren',
+    url: './img/tkaniny/eren_07.jpg',
+    render: '/materace/materac_tapicerowany_h39_eren07.png'
+});
+g.setNode("bp_tap_ontario", {
+    g: 2,
+    name: 'ontario',
+    node: 'bp_tap_ontario',
+    url: './img/tkaniny/ontario_90.jpg',
+    render: '/materace/materac_tapicerowany_h39_ontario90.png'
+});
+g.setNode("bp_tap_riviera", {
+    g: 2,
+    name: 'riviera',
+    node: 'bp_tap_riviera',
+    url: './img/tkaniny/riviera_38.jpg',
+    render: '/materace/materac_tapicerowany_h39_riviera38.png'
+});
+
+//***********************************************************************
+
 g.setNode("step_2", {
     node: 'step_2',
     title: 'wezgłowie',
@@ -4981,21 +5036,21 @@ g.setNode("bp_materac_foxtrot_tapicerowany", {
     label: 'Foxtrot',
     img: '/materace/foxtrot.jpg',
     render: 'materace/materac_tapicerowany_h39_novel13.png',
-    colors: 'm_tap_colors_7'
+    colors: 'bp_tap_colors_7'
 });
 g.setNode("bp_materac_chacha_tapicerowany", {
     node: 'bp_materac_chacha_tapicerowany',
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_tapicerowany_h39_novel13.png',
-    colors: 'm_tap_colors_7'
+    colors: 'bp_tap_colors_7'
 });
 g.setNode("bp_materac_flamenco_tapicerowany", {
     node: 'bp_materac_flamenco_tapicerowany',
     label: 'Flamenco',
     img: '/materace/flamenco.jpg',
     render: 'materace/materac_tapicerowany_h39_novel13.png',
-    colors: 'm_tap_colors_7'
+    colors: 'bp_tap_colors_7'
 });
 
 g.setNode("bp_materac_tango_140_200", {
@@ -6881,6 +6936,18 @@ g.setEdge("m_tap_colors_7", "m_tap_river");
 g.setEdge("m_tap_colors_7", "m_tap_eren");
 g.setEdge("m_tap_colors_7", "m_tap_ontario");
 g.setEdge("m_tap_colors_7", "m_tap_riviera");
+
+//***********************************
+
+g.setEdge("bp_tap_colors_7", "bp_tap_novel");
+g.setEdge("bp_tap_colors_7", "bp_tap_roko");
+g.setEdge("bp_tap_colors_7", "bp_tap_aspen");
+g.setEdge("bp_tap_colors_7", "bp_tap_river");
+g.setEdge("bp_tap_colors_7", "bp_tap_eren");
+g.setEdge("bp_tap_colors_7", "bp_tap_ontario");
+g.setEdge("bp_tap_colors_7", "bp_tap_riviera");
+
+//***********************************
 
 g.setEdge("step_2", "urban");
 g.setEdge("step_2", "preppy");

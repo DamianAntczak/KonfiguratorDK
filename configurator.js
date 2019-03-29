@@ -743,6 +743,7 @@ class Configurator {
             },
         };
 
+
         pdfMake.createPdf(docDefinition).download('Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label);
         // pdfMake.createPdf(docDefinition).open();
     }
