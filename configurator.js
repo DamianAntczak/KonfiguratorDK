@@ -674,9 +674,7 @@ class Configurator {
                 },
                 {
                     columns: [
-                        {
-
-                        },
+                        {},
                         {
                             image: 'data:image/jpeg;base64,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',
                             width: 150
@@ -690,11 +688,15 @@ class Configurator {
                 'Sugerowana cena detaliczna: ' + this.numberWithSpaces(this.getPrice()) + ' zł',
                 'Cena zawiera podatek VAT 23%;',
                 'w przypadku materacy medycznych cena zawiera podatek VAT 8%.',
-                'Twój wybór',
+
                 {
                     image: imageUrl,
                     width: 300,
                     alignment: 'center'
+                },
+                {
+                    text: 'Twój wybór',
+                    style: {color: '#737477', fontSize: 16, bold: false}
                 },
                 {
                     style: 'tableExample',
@@ -724,9 +726,7 @@ class Configurator {
                         },
                         // fillColor: function (rowIndex, node, columnIndex) { return null; }
                     }
-                },
-                'Nie bierzemy odpowiedzialności za różnice między cenami z konfiguratora a cenami rzeczywistymi.',
-                'Sprawdź lokalizację najbliższego sklepu: hilding.pl/index/whereBuy'
+                }
             ],
             styles: {
                 header: {
@@ -748,6 +748,35 @@ class Configurator {
                     bold: true,
                     fontSize: 13,
                     color: 'black'
+                }
+            },
+            footer: function (currentPage, pageCount) {
+                return {
+
+                    table: {
+                        widths: [450, '*'],
+                        body: [
+                            [
+                                {
+                                    text: 'Nie bierzemy odpowiedzialności za różnice między cenami z konfiguratora a cenami rzeczywistymi.',
+                                    style: {color: '#737477', fontSize: 10, bold: false}
+                                },
+                                ''
+                            ],
+                            [
+                                {
+                                    text: 'Sprawdź lokalizację najbliższego sklepu: hilding.pl/index/whereBuy',
+                                    style: {color: '#737477', fontSize: 10, bold: false}
+                                },
+                                {
+                                    text: 'Strona ' + currentPage + '/' + pageCount, alignment: 'right',
+                                    style: {color: '#737477', fontSize: 10, bold: false}
+                                }
+                            ]
+                        ]
+                    },
+                    layout: 'noBorders',
+                    margin: [30, 0]
                 }
             },
         };
