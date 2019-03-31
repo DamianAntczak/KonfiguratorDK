@@ -627,12 +627,18 @@ class Configurator {
             var priceNode = step.selectedNodes[2];
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 bodyData.push([
-                    this.capitalize(step.selectedNodes[0].title),
-                    this.capitalize(step.selectedNodes[1].label),
-                    step.selectedNodes[2].label + ' cm',
+                    step.selectedNodes[0].title.toUpperCase(),
+                    {
+                        text: this.capitalize(step.selectedNodes[1].label),
+                        style: {color: '#737477', bold: true}
+                    },
+                    {
+                        text: step.selectedNodes[2].label + ' cm',
+                        style: {color: '#737477'}
+                    },
                     // step.selectedNodes[3] !== undefined ? step.selectedNodes[3].title : '',
                     {
-                        text:this.numberWithSpaces(priceNode.price.g1) + ' PLN',
+                        text: this.numberWithSpaces(priceNode.price.g1) + ' PLN',
                         style: {alignment: 'right'}
                     }]);
 
@@ -656,7 +662,7 @@ class Configurator {
             // '',
             {
                 text: this.numberWithSpaces(this.getPrice()) + ' PLN',
-                style: {alignment: 'right'}
+                style: {color: '#737477', alignment: 'right', bold: 'true'}
             }]);
 
         var today = new Date();
@@ -681,7 +687,7 @@ class Configurator {
                     ]
                 },
                 {
-                    margin: [0, 50],
+                    margin: [0, 30],
                     columns: [
                         [
                             {
@@ -689,7 +695,7 @@ class Configurator {
                                 style: {color: '#307bbf', fontSize: 25, bold: true}
                             },
                             {
-                                text: 'Sugerowana cena detaliczna: ' +this.numberWithSpaces(this.getPrice()) + ' zł',
+                                text: 'Sugerowana cena detaliczna: ' + this.numberWithSpaces(this.getPrice()) + ' zł',
                                 style: {color: '#737477', fontSize: 16, bold: false}
                             },
                             {
@@ -697,7 +703,7 @@ class Configurator {
                                 style: {color: '#737477', fontSize: 8, bold: false}
                             },
                             {
-                                text: '\'w przypadku materacy medycznych cena zawiera podatek VAT 8 %.',
+                                text: 'w przypadku materacy medycznych cena zawiera podatek VAT 8%.',
                                 style: {color: '#737477', fontSize: 8, bold: false}
                             }
                         ],
@@ -759,6 +765,7 @@ class Configurator {
                     margin: [0, 10, 0, 5]
                 },
                 tableExample: {
+                    fontSize: 10,
                     color: '#307bbf',
                     border: [false, false, false, false],
                     margin: [0, 5, 0, 15]
