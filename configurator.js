@@ -636,10 +636,13 @@ class Configurator {
                         text: step.selectedNodes[2].label + ' cm',
                         style: {color: '#737477'}
                     },
-                    // step.selectedNodes[3] !== undefined ? step.selectedNodes[3].title : '',
+                    {
+                        text: step.selectedNodes[3] !== undefined ? this.capitalize(step.selectedNodes[3].name) : '',
+                        style: {color: '#737477'}
+                    },
                     {
                         text: this.numberWithSpaces(priceNode.price.g1) + ' PLN',
-                        style: {alignment: 'right'}
+                        style: {color: '#737477', alignment: 'right'}
                     }]);
 
                 var stepImg = document.getElementById('render-' + step.selectedNodes[0].node);
@@ -659,7 +662,7 @@ class Configurator {
             '',
             '',
             '',
-            // '',
+            '',
             {
                 text: this.numberWithSpaces(this.getPrice()) + ' PLN',
                 style: {color: '#737477', alignment: 'right', bold: 'true'}
@@ -726,7 +729,7 @@ class Configurator {
                 {
                     style: 'tableExample',
                     table: {
-                        widths: ['auto', 'auto', 'auto', '*'],
+                        widths: [150, 100, 'auto','auto', '*'],
                         body: bodyData
                     },
                     layout: {
