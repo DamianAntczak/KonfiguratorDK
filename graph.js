@@ -3356,77 +3356,77 @@ g.setNode("ploza_wenge", {
 });
 
 g.setNode("stozek_owal_buk_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 101.0, g2: 101.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_owal_wenge_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 101.0, g2: 101.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_owal_dab_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 132.0, g2: 132.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_kwadrat_buk_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 108.0, g2: 108.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_kwadrat_wenge_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 108.0, g2: 108.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_kwadrat_dab_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 139.0, g2: 139.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_skos_buk_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 36.0, g2: 36.0},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_skos_dab_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 50, g2: 50},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_skos_wenge_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 36, g2: 36},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_ze_stopka_czern_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 173, g2: 173},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_ze_stopka_miedz_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 211, g2: 211},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("stozek_ze_stopka_srebro_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 163, g2: 163},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("trojkat_prosty_czern_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 108, g2: 108},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("trojkat_prosty_miedz_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 175, g2: 175},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("trojkat_prosty_srebro_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 115, g2: 115},
     nextStep: 'bb_step_typ_materaca'
 });
@@ -3436,57 +3436,57 @@ g.setNode("trojkat_skosny_czern_16", {
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("trojkat_skosny_miedz_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 208, g2: 208},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("trojkat_skosny_srebro_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 145, g2: 145},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("walek_czern_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 55, g2: 55},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("walek_miedz_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 88, g2: 88},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("walek_srebro_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 61, g2: 61},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("kielich_czern_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 173, g2: 173},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("kielich_miedz_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 211, g2: 211},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("kielich_srebro_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 173, g2: 173},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("naroznik_czern_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 92, g2: 92},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("naroznik_miedz_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 138, g2: 138},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("naroznik_srebro_16", {
-    label: '200/95',
+    label: '16',
     price: {g1: 114, g2: 114},
     nextStep: 'bb_step_typ_materaca'
 });
