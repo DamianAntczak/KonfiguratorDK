@@ -287,6 +287,13 @@ class Configurator {
             $('#price-vat').attr("hidden", true);
             $('#select-' + nodeName).prop("disabled", "disabled");
             $('#render-overlay').remove();
+            if(mainNode.skipToNode !== undefined) {
+                $('#next-step').show();
+                $('#next-step').text('pomiń ten krok >>');
+                $('#next-step').attr("onclick", "configurator.skipStep()").attr("style", "color:red");
+            } else {
+                $('#next-step').hide();
+            }
         } else {
             $this.addClass('clicked');
             $this.removeClass('carousel-box').addClass('carousel-box-selected');
