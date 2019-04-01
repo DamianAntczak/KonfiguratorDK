@@ -3168,7 +3168,7 @@ g.setNode("legs", {
     label: 'wybierz nożki',
     number: 3,
     zIndex: 7,
-    optionsFilter: false
+    optionsFilter: true
 });
 
 g.setNode("stozek_owal_buk", {
@@ -3493,63 +3493,75 @@ g.setNode("naroznik_srebro_16", {
 
 g.setNode("ploza_buk_140", {
     label: '140',
+    width: 140,
     price: {g1: 218.4, g2: 218.4},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_buk_160", {
     label: '160',
+    width: 160,
     price: {g1: 237.6, g2: 237.6},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_buk_180", {
     label: '180',
+    width: 180,
     price: {g1: 259.2, g2: 259.2},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_buk_200", {
     label: '200',
+    width: 200,
     price: {g1: 283.2, g2: 283.2},
     nextStep: 'bb_step_typ_materaca'
 });
 
 g.setNode("ploza_wenge_140", {
     label: '140',
+    width: 140,
     price: {g1: 218.4, g2: 218.4},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_wenge_160", {
     label: '160',
+    width: 160,
     price: {g1: 237.6, g2: 237.6},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_wenge_180", {
     label: '180',
+    width: 180,
     price: {g1: 259.2, g2: 259.2},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_wenge_200", {
     label: '200',
+    width: 200,
     price: {g1: 283.2, g2: 283.2},
     nextStep: 'bb_step_typ_materaca'
 });
 
 g.setNode("ploza_dab_140", {
     label: '140',
+    width: 140,
     price: {g1: 468, g2: 468},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_dab_160", {
     label: '160',
+    width: 160,
     price: {g1: 516, g2: 516},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_dab_180", {
     label: '180',
+    width: 180,
     price: {g1: 564, g2: 564},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_dab_200", {
     label: '200',
+    width: 200,
     price: {g1: 612, g2: 612},
     nextStep: 'bb_step_typ_materaca'
 });
@@ -3571,7 +3583,7 @@ g.setNode("t_legs", {
     label: 'wybierz nożki',
     number: 3,
     zIndex: 7,
-    optionsFilter: false
+    optionsFilter: true
 });
 g.setNode("t_metal_trojkat_srebro", {
     label: 'Noga metalowa trójkąt srebro',

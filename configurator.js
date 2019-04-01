@@ -143,8 +143,6 @@ class Configurator {
         if (successors.length < 3) {
             if (successors.length === 2) {
                 items = 2;
-            }
-            else {
                 center = true;
             }
         }
@@ -377,7 +375,7 @@ class Configurator {
             });
             if (this.step.optionsFilter && this.width > 0) {
                 optionNode = optionNode.filter(function (elem) {
-                    return elem[1].width == configurator.width;
+                    return elem[1].width == configurator.width || elem[1].width === undefined;
                 });
             }
             optionNode.forEach(node => {
