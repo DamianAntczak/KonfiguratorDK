@@ -6471,97 +6471,86 @@ g.setNode("otomana_180", {label: '180/200', price: {g1: 1899, g2: 2169}, nextSte
 
 g.setNode("skrzynia_posciel_big", {
     node: 'skrzynia_posciel_big',
-    title: 'Skrzynia na pościel',
-    label: 'skrzynia na pościel',
+    title: 'Pojemnik na pościel',
+    label: 'pojemnik na pościel',
     number: 5,
     zIndex: 35,
     skipToNode: 'summary',
     optionsFilter: true
 });
 
-g.setNode("skrzynia_posciel_big_yes", {
-    label: 'Tak',
-    img: 'otomany.png',
+g.setNode("skrzynia_posciel_big_price", {
+    label: 'Pojemnik na pościel',
+    img: 'empty.png',
     render: 'transparent.png'
 });
 
-g.setNode("skrzynia_posciel_big_no", {
-    label: 'Nie',
-    img: 'otomany.png',
-    render: 'transparent.png'
-});
 
-g.setNode("skrzynia_posciel_big_yes_140", {label: '140/200',width: 140, price: {g1: 199, g2: 199}, nextStep: 'frame_with_box'});
-g.setNode("skrzynia_posciel_big_yes_160", {label: '160/200',width: 160, price: {g1: 219, g2: 219}, nextStep: 'frame_with_box'});
-g.setNode("skrzynia_posciel_big_yes_180", {label: '140/200',width: 180, price: {g1: 269, g2: 269}, nextStep: 'frame_with_box'});
-g.setNode("skrzynia_posciel_big_yes_200", {label: '140/200',width: 200, price: {g1: 289, g2: 289}, nextStep: 'frame_with_box'});
+g.setNode("skrzynia_posciel_big_140_yes", {label: 'TAK',width: 140, price: {g1: 199, g2: 199}, nextStep: 'frame_with_box'});
+g.setNode("skrzynia_posciel_big_160_yes", {label: 'TAK',width: 160, price: {g1: 219, g2: 219}, nextStep: 'frame_with_box'});
+g.setNode("skrzynia_posciel_big_180_yes", {label: 'TAK',width: 180, price: {g1: 269, g2: 269}, nextStep: 'frame_with_box'});
+g.setNode("skrzynia_posciel_big_200_yes", {label: 'TAK',width: 200, price: {g1: 289, g2: 289}, nextStep: 'frame_with_box'});
 
-g.setNode("skrzynia_posciel_big_no_140", {label: '140/200',width: 140, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
-g.setNode("skrzynia_posciel_big_no_160", {label: '160/200',width: 160, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
-g.setNode("skrzynia_posciel_big_no_180", {label: '180/200',width: 180, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
-g.setNode("skrzynia_posciel_big_no_200", {label: '200/200',width: 200, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
+g.setNode("skrzynia_posciel_big_140_no", {label: 'NIE',width: 140, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
+g.setNode("skrzynia_posciel_big_160_no", {label: 'NIE',width: 160, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
+g.setNode("skrzynia_posciel_big_180_no", {label: 'NIE',width: 180, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
+g.setNode("skrzynia_posciel_big_200_no", {label: 'NIE',width: 200, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_big'});
 
 g.setNode("skrzynia_posciel_small", {
     node: 'skrzynia_posciel_small',
-    title: 'Skrzynia na pościel',
-    label: 'skrzynia na pościel',
+    title: 'Pojemnik na pościel',
+    label: 'pojemnik na pościel',
     number: 5,
     zIndex: 35,
     skipToNode: 'summary',
     optionsFilter: true
 });
 
-g.setNode("skrzynia_posciel_small_yes", {
-    label: 'Tak',
-    img: 'otomany.png',
+g.setNode("skrzynia_posciel_small_price", {
+    label: 'Pojemnik na pościel',
+    img: 'empty.png',
     render: 'transparent.png'
 });
 
-g.setNode("skrzynia_posciel_small_no", {
-    label: 'Nie',
-    img: 'otomany.png',
-    render: 'transparent.png'
-});
-g.setNode("skrzynia_posciel_small_yes_140", {label: '140/200',width: 140, price: {g1: 199, g2: 199}, nextStep: 'frame_with_box'});
-g.setNode("skrzynia_posciel_small_yes_160", {label: '160/200',width: 160, price: {g1: 219, g2: 219}, nextStep: 'frame_with_box'});
-g.setNode("skrzynia_posciel_small_yes_180", {label: '140/200',width: 180, price: {g1: 269, g2: 269}, nextStep: 'frame_with_box'});
-g.setNode("skrzynia_posciel_small_yes_200", {label: '140/200',width: 200, price: {g1: 289, g2: 289}, nextStep: 'frame_with_box'});
 
-g.setNode("skrzynia_posciel_small_no_140", {label: '140/200',width: 140, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
-g.setNode("skrzynia_posciel_small_no_160", {label: '160/200',width: 160, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
-g.setNode("skrzynia_posciel_small_no_180", {label: '180/200',width: 180, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
-g.setNode("skrzynia_posciel_small_no_200", {label: '200/200',width: 200, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
+g.setNode("skrzynia_posciel_small_140_yes", {label: 'TAK',width: 140, price: {g1: 199, g2: 199}, nextStep: 'frame_with_box'});
+g.setNode("skrzynia_posciel_small_160_yes", {label: 'TAK',width: 160, price: {g1: 219, g2: 219}, nextStep: 'frame_with_box'});
+g.setNode("skrzynia_posciel_small_180_yes", {label: 'TAK',width: 180, price: {g1: 269, g2: 269}, nextStep: 'frame_with_box'});
+g.setNode("skrzynia_posciel_small_200_yes", {label: 'TAK',width: 200, price: {g1: 289, g2: 289}, nextStep: 'frame_with_box'});
 
-g.setEdge("skrzynia_posciel_big", "skrzynia_posciel_big_yes");
-g.setEdge("skrzynia_posciel_big", "skrzynia_posciel_big_no");
+g.setNode("skrzynia_posciel_small_140_no", {label: 'NIE',width: 140, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
+g.setNode("skrzynia_posciel_small_160_no", {label: 'NIE',width: 160, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
+g.setNode("skrzynia_posciel_small_180_no", {label: 'NIE',width: 180, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
+g.setNode("skrzynia_posciel_small_200_no", {label: 'NIE',width: 200, price: {g1: 0, g2: 0}, nextStep: 'frame_no_box_small'});
 
-g.setEdge("skrzynia_posciel_big_yes", "skrzynia_posciel_big_yes_140");
-g.setEdge("skrzynia_posciel_big_yes", "skrzynia_posciel_big_yes_160");
-g.setEdge("skrzynia_posciel_big_yes", "skrzynia_posciel_big_yes_180");
-g.setEdge("skrzynia_posciel_big_yes", "skrzynia_posciel_big_yes_200");
+g.setEdge("skrzynia_posciel_big", "skrzynia_posciel_big_price");
 
-g.setEdge("skrzynia_posciel_big_no", "skrzynia_posciel_big_no_140");
-g.setEdge("skrzynia_posciel_big_no", "skrzynia_posciel_big_no_160");
-g.setEdge("skrzynia_posciel_big_no", "skrzynia_posciel_big_no_180");
-g.setEdge("skrzynia_posciel_big_no", "skrzynia_posciel_big_no_200");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_140_yes");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_160_yes");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_180_yes");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_200_yes");
 
-g.setEdge("skrzynia_posciel_small", "skrzynia_posciel_small_yes");
-g.setEdge("skrzynia_posciel_small", "skrzynia_posciel_small_no");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_140_no");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_160_no");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_180_no");
+g.setEdge("skrzynia_posciel_big_price", "skrzynia_posciel_big_200_no");
 
-g.setEdge("skrzynia_posciel_small_yes", "skrzynia_posciel_small_yes_140");
-g.setEdge("skrzynia_posciel_small_yes", "skrzynia_posciel_small_yes_160");
-g.setEdge("skrzynia_posciel_small_yes", "skrzynia_posciel_small_yes_180");
-g.setEdge("skrzynia_posciel_small_yes", "skrzynia_posciel_small_yes_200");
+g.setEdge("skrzynia_posciel_small", "skrzynia_posciel_small_price");
 
-g.setEdge("skrzynia_posciel_small_no", "skrzynia_posciel_small_no_140");
-g.setEdge("skrzynia_posciel_small_no", "skrzynia_posciel_small_no_160");
-g.setEdge("skrzynia_posciel_small_no", "skrzynia_posciel_small_no_180");
-g.setEdge("skrzynia_posciel_small_no", "skrzynia_posciel_small_no_200");
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_140_yes");
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_160_yes");
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_180_yes");
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_200_yes");
+
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_140_no");
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_160_no");
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_180_no");
+g.setEdge("skrzynia_posciel_small_price", "skrzynia_posciel_small_200_no");
 
 g.setNode("skrzynia_posciel_urban", {
     node: 'skrzynia_posciel_big',
-    title: 'Skrzynia na pościel',
-    label: 'skrzynia na pościel',
+    title: 'Pojemnik na pościel',
+    label: 'pojemnik na pościel',
     number: 5,
     zIndex: 35,
     skipToNode: 'summary',
@@ -6569,16 +6558,12 @@ g.setNode("skrzynia_posciel_urban", {
 });
 
 g.setNode("skrzynia_posciel_urban", {
-    label: 'Tak',
-    img: 'otomany.png',
+    label: 'Pojemnik na pościel',
+    img: 'empty.png',
     render: 'transparent.png'
 });
 
-g.setNode("skrzynia_posciel_urban", {
-    label: 'Nie',
-    img: 'otomany.png',
-    render: 'transparent.png'
-});
+
 
 g.setNode("frame_with_box", {
     node: 'frame_with_box',

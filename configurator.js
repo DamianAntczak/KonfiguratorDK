@@ -147,12 +147,9 @@ class Configurator {
         var items = 3;
         var center = false;
         if (successors.length < 3) {
-            if (successors.length === 2) {
-                items = 2;
-                center = true;
-            }
-        }
-        ;
+            items = successors.length;
+            center = true;
+        };
         var carousel = $('.configurator-base-carousel').owlCarousel({
             loop: false,
             items: items,
@@ -289,8 +286,8 @@ class Configurator {
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
             $('#select-' + nodeName).prop("disabled", "disabled");
-            $('#render-overlay-'+ mainNode.node).remove();
-            if(mainNode.skipToNode !== undefined) {
+            $('#render-overlay-' + mainNode.node).remove();
+            if (mainNode.skipToNode !== undefined) {
                 $('#next-step').show();
                 $('#next-step').text('pomiń ten krok >>');
                 $('#next-step').attr("onclick", "configurator.skipStep()").attr("style", "color:red");
@@ -364,11 +361,15 @@ class Configurator {
     }
 
     addOption(node_name, successors) {
-        console.log('this.width');
-        console.log(this.width);
+        var mainNode = this.graph.node(node_name);
+
+        var labelText = "Wymiar";
+        if(mainNode.img === 'empty.png'){
+            labelText = "Wybierz";
+        }
         if (successors.length > 0) {
             var sb = '<div class="form-group">';
-            sb += '<label class="label-small" for="select-' + node_name + '">Wymiar</label>';
+            sb += '<label class="label-small" for="select-' + node_name + '">'+labelText+'</label>';
             sb += '<select disabled class="configurator-select form-control input-sm" name="base-size" id="select-' + node_name + '">';
             var optionNode = [];
             successors.forEach(s => {
