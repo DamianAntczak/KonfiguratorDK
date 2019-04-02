@@ -7,7 +7,8 @@ g.setNode("step_1", {
     number: 1,
     zIndex: 10,
     optionsFilter: false,
-    overlay: true
+    overlay: true,
+    overlay_z: 150
 });
 g.setNode("base_box", {
     node: 'base_box',
@@ -1674,7 +1675,8 @@ g.setNode("step_2", {
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
-    overlay: true
+    overlay: true,
+    overlay_z: 200
 });
 
 g.setNode("glamour", {
@@ -1742,7 +1744,8 @@ g.setNode("bb_wezglowie", {
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
-    overlay: true
+    overlay: true,
+    overlay_z: 200
 });
 
 g.setNode("bb_wezglowie_glamour", {
@@ -1810,7 +1813,8 @@ g.setNode("bp_wezglowie", {
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
-    overlay: true
+    overlay: true,
+    overlay_z: 200
 });
 
 g.setNode("bp_wezglowie_glamour", {
@@ -1878,7 +1882,8 @@ g.setNode("t_wezglowie", {
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
-    overlay: true
+    overlay: true,
+    overlay_z: 200
 });
 
 g.setNode("t_wezglowie_glamour", {
@@ -1938,7 +1943,7 @@ g.setNode("t_wezglowie_90", {
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
-    overlay: true
+    overlay: true,
 });
 g.setNode("t_wezglowie_urban", {
     node: 't_wezglowie_urban',

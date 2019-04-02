@@ -50,21 +50,27 @@ class Configurator {
     }
 
     previousStep() {
-        $('#configurator-preview img').last().remove();
-        console.log(this.allSteps[this.stepIndex - 1].selectedNodes[0]);
-        this.allSteps.pop();
-        console.log('this.allSteps');
-        console.log(this.allSteps);
-
-        this.stepIndex = this.stepIndex - 1;
-        if (this.allSteps[this.stepIndex].selectedNodes[0] !== undefined && this.allSteps[this.stepIndex].selectedNodes[0].overlay !== undefined) {
-            $('#render-overlay').remove();
+        var currentMainNode = this.allSteps[this.stepIndex].selectedNodes[0];
+        if (currentMainNode !== undefined) {
+            if(currentMainNode.overlay !== undefined) {
+                $('#render-overlay-' + currentMainNode.node).remove();
+            }
+            $('#render-' + currentMainNode.node).remove();
         }
-        var previousStepName = this.allSteps[this.stepIndex].selectedNodes[0].node;
+
+        this.allSteps.pop();
+        this.stepIndex = this.stepIndex - 1;
+        var previousStepNode = this.allSteps[this.stepIndex].selectedNodes[0];
+        if (previousStepNode !== undefined) {
+            if(previousStepNode.overlay !== undefined) {
+                $('#render-overlay-' + previousStepNode.node).remove();
+            }
+            $('#render-' + previousStepNode.node).remove();
+        }
+
         this.allSteps[this.stepIndex].selectedNodes = [];
         this.showPrice();
-
-        this.loadLevel(previousStepName);
+        this.loadLevel(previousStepNode.node);
     }
 
     skipStep() {
@@ -513,14 +519,14 @@ class Configurator {
 
         if (mainNode.overlay !== undefined) {
             if (colorNode.overlay !== undefined) {
-                var find = $('#configurator-preview').find('#render-overlay');
+                var find = $('#configurator-preview').find('#render-overlay-' + mainNode.node);
                 if (find.length === 0) {
-                    $('#base-img').after('<img id="render-overlay" style="z-index: 150" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
+                    $('#base-img').after('<img id="render-overlay-' + mainNode.node + '" style="z-index: '+mainNode.overlay_z+'" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
                 } else {
                     $(find).attr('src', 'renders/' + colorNode.overlay);
                 }
             } else {
-                $('#render-overlay').remove();
+                $('#render-overlay-' + mainNode.node).remove();
             }
         }
 
