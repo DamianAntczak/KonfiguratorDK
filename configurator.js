@@ -52,7 +52,7 @@ class Configurator {
     previousStep() {
         var currentMainNode = this.allSteps[this.stepIndex].selectedNodes[0];
         if (currentMainNode !== undefined) {
-            if(currentMainNode.overlay !== undefined) {
+            if (currentMainNode.overlay !== undefined) {
                 $('#render-overlay-' + currentMainNode.node).remove();
             }
             $('#render-' + currentMainNode.node).remove();
@@ -62,7 +62,7 @@ class Configurator {
         this.stepIndex = this.stepIndex - 1;
         var previousStepNode = this.allSteps[this.stepIndex].selectedNodes[0];
         if (previousStepNode !== undefined) {
-            if(previousStepNode.overlay !== undefined) {
+            if (previousStepNode.overlay !== undefined) {
                 $('#render-overlay-' + previousStepNode.node).remove();
             }
             $('#render-' + previousStepNode.node).remove();
@@ -218,24 +218,23 @@ class Configurator {
                 if (price > 0) {
                     $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
                     if (configurator.step.selectedNodes[0].number === 2) {
-                        console.log('wezglowie');
-                        var find = $('img#render-' + configurator.step.selectedNodes[0].node);
-                        var src = $('#render-' + configurator.step.selectedNodes[0].node).prop('src');
+                        var mainNode = configurator.step.selectedNodes[0].node;
+                        var find = $('img#render-' + mainNode);
+                        var src = $('#render-' + mainNode).prop('src');
                         console.log(src);
                         if (src !== undefined) {
                             if (src.includes('95')) {
-                                $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('95', '115'));
-                                if ($('#render-overlay').length) {
-                                    $('#render-overlay').prop('src', $('#render-overlay').prop('src').replace('95', '115'));
+                                $('#render-' + mainNode).prop('src', src.replace('95', '115'));
+                                if ($('#render-overlay-' + mainNode).length) {
+                                    $('#render-overlay-' + mainNode).prop('src', $('#render-overlay-' + mainNode).prop('src').replace('95', '115'));
                                 }
                             }
                             else {
-                                $('#render-' + configurator.step.selectedNodes[0].node).prop('src', src.replace('115', '95'));
-                                if ($('#render-overlay').length) {
-                                    $('#render-overlay').prop('src', $('#render-overlay').prop('src').replace('115', '95'));
+                                $('#render-' + mainNode).prop('src', src.replace('115', '95'));
+                                if ($('#render-overlay-' + mainNode).length) {
+                                    $('#render-overlay-' + mainNode).prop('src', $('#render-overlay-' + mainNode).prop('src').replace('115', '95'));
                                 }
                             }
-                            console.log(configurator.step.selectedNodes[0].node);
                         }
                     }
                 }
@@ -290,7 +289,7 @@ class Configurator {
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
             $('#select-' + nodeName).prop("disabled", "disabled");
-            $('#render-overlay').remove();
+            $('#render-overlay-'+ mainNode.node).remove();
             if(mainNode.skipToNode !== undefined) {
                 $('#next-step').show();
                 $('#next-step').text('pomiń ten krok >>');
@@ -321,14 +320,11 @@ class Configurator {
                 $('#step-content').after(this.addColor(baseNode.colors));
                 if (configurator.selectedColor !== undefined) {
                     var selectedColor = configurator.selectedColor;
-                    console.log('selectedColor');
-                    console.log(selectedColor);
                     $('.tiles[name="' + selectedColor + '"]').click();
                 }
                 else {
                     $('.tiles:first').click();
                 }
-
             }
             else if (baseNode.cover !== undefined) {
                 $('#step-content').after(this.addCover(baseNode.cover));
@@ -521,7 +517,7 @@ class Configurator {
             if (colorNode.overlay !== undefined) {
                 var find = $('#configurator-preview').find('#render-overlay-' + mainNode.node);
                 if (find.length === 0) {
-                    $('#base-img').after('<img id="render-overlay-' + mainNode.node + '" style="z-index: '+mainNode.overlay_z+'" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
+                    $('#base-img').after('<img id="render-overlay-' + mainNode.node + '" style="z-index: ' + mainNode.overlay_z + '" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
                 } else {
                     $(find).attr('src', 'renders/' + colorNode.overlay);
                 }
@@ -740,7 +736,7 @@ class Configurator {
                 {
                     style: 'tableExample',
                     table: {
-                        widths: [150, 100, 'auto','auto', '*'],
+                        widths: [150, 100, 'auto', 'auto', '*'],
                         body: bodyData
                     },
                     layout: {
