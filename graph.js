@@ -8,7 +8,8 @@ g.setNode("step_1", {
     zIndex: 10,
     optionsFilter: false,
     overlay: true,
-    overlay_z: 150
+    overlay_z: 150,
+    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 g.setNode("base_box", {
     node: 'base_box',
@@ -1676,7 +1677,8 @@ g.setNode("step_2", {
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
-    overlay_z: 200
+    overlay_z: 200,
+    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
 g.setNode("glamour", {
@@ -1745,7 +1747,8 @@ g.setNode("bb_wezglowie", {
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
-    overlay_z: 200
+    overlay_z: 200,
+    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
 g.setNode("bb_wezglowie_glamour", {
@@ -1814,7 +1817,8 @@ g.setNode("bp_wezglowie", {
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
-    overlay_z: 200
+    overlay_z: 200,
+    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
 g.setNode("bp_wezglowie_glamour", {
@@ -1883,7 +1887,8 @@ g.setNode("t_wezglowie", {
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
-    overlay_z: 200
+    overlay_z: 200,
+    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
 g.setNode("t_wezglowie_glamour", {
@@ -1944,6 +1949,7 @@ g.setNode("t_wezglowie_90", {
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
+    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 g.setNode("t_wezglowie_urban", {
     node: 't_wezglowie_urban',
@@ -3686,7 +3692,8 @@ g.setNode("step_pokrowiec", {
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
 });
 g.setNode("step_tapicerowany", {
     node: 'step_tapicerowany',
@@ -3695,7 +3702,8 @@ g.setNode("step_tapicerowany", {
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
 });
 
 g.setNode("step_4", {
@@ -3705,7 +3713,8 @@ g.setNode("step_4", {
     number: 3,
     zIndex: 25,
     skipToNode: 'step_5',
-    optionsFilter: true
+    optionsFilter: true,
+    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
 });
 
 g.setNode("materac_tango", {
@@ -4321,7 +4330,8 @@ g.setNode("bb_step_pokrowiec", {
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
 });
 g.setNode("bb_step_tapicerowany", {
     node: 'bb_step_tapicerowany',
@@ -4330,7 +4340,8 @@ g.setNode("bb_step_tapicerowany", {
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
 });
 
 //*******************************************88
@@ -4365,7 +4376,8 @@ g.setNode("bp_step_pokrowiec", {
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 g.setNode("bp_step_tapicerowany", {
     node: 'bp_step_tapicerowany',
@@ -4374,7 +4386,8 @@ g.setNode("bp_step_tapicerowany", {
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
 //********************************************
@@ -5492,7 +5505,8 @@ g.setNode("t_materac", {
     number: 4,
     zIndex: 25,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
 });
 
 g.setNode("t_materac_tango", {
@@ -6165,7 +6179,8 @@ g.setNode("bb_nawierzchniowy", {
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
 g.setNode("bb_materac_select_plus", {
@@ -6310,7 +6325,8 @@ g.setNode("bp_nawierzchniowy", {
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
-    optionsFilter: true
+    optionsFilter: true,
+    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
 g.setNode("bp_materac_select_plus", {

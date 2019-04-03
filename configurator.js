@@ -134,9 +134,9 @@ class Configurator {
         this.showStepInfo();
         $('#next-step').hide();
         $('#item-color').remove();
+        $('#example-visualization-info').html('');
 
         var starNode = this.graph.node(step);
-        console.log(starNode);
         this.step = new Step(starNode.number, starNode.title, starNode.skipToNode, 'baza kontynetalna_roko08.png', starNode.optionsFilter);
         this.step.selectedNodes[0] = starNode;
         // this.graph
@@ -217,17 +217,21 @@ class Configurator {
                     if (configurator.step.selectedNodes[0].number === 2) {
                         var mainNode = configurator.step.selectedNodes[0].node;
                         var find = $('img#render-' + mainNode);
-                        var src = $('#render-' + mainNode).prop('src');
+                        var src = $('#render-' + mainNode).attr('src');
                         console.log(src);
                         if (src !== undefined) {
                             if (src.includes('95')) {
-                                $('#render-' + mainNode).prop('src', src.replace('95', '115'));
+                                $('#render-' + mainNode).attr('src',function(i,e){
+                                    return e.replace("95","115");
+                                });
                                 if ($('#render-overlay-' + mainNode).length) {
                                     $('#render-overlay-' + mainNode).prop('src', $('#render-overlay-' + mainNode).prop('src').replace('95', '115'));
                                 }
                             }
                             else {
-                                $('#render-' + mainNode).prop('src', src.replace('115', '95'));
+                                $('#render-' + mainNode).attr('src',function(i,e){
+                                    return e.replace("115","95");
+                                });
                                 if ($('#render-overlay-' + mainNode).length) {
                                     $('#render-overlay-' + mainNode).prop('src', $('#render-overlay-' + mainNode).prop('src').replace('115', '95'));
                                 }
@@ -311,6 +315,12 @@ class Configurator {
             configurator.step.selectedNodes[1] = baseNode;
             configurator.step.selectedNodes[2] = node;
             this.showPrice();
+
+            if(mainNode.info !== undefined) {
+                $('#example-visualization-info').html(mainNode.info);
+            }else {
+                $('#example-visualization-info').html('');
+            }
 
             $('#item-color').remove();
             if (baseNode.colors !== undefined) {
@@ -574,6 +584,7 @@ class Configurator {
         $('#item-color').hide();
         $('#next-step').hide();
         // $('#skip-step').hide();
+        $('#example-visualization-info').html('');
 
         this.step = new Step(100, "Podsumowanie", false, 'baza kontynetalna_roko08.png', null);
         this.step.selectedNodes[0] = this.graph.node("summary");
