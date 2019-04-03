@@ -217,23 +217,28 @@ class Configurator {
                     if (configurator.step.selectedNodes[0].number === 2) {
                         var mainNode = configurator.step.selectedNodes[0].node;
                         var find = $('img#render-' + mainNode);
-                        var src = $('#render-' + mainNode).attr('src');
-                        console.log(src);
-                        if (src !== undefined) {
-                            if (src.includes('95')) {
-                                $('#render-' + mainNode).attr('src',function(i,e){
-                                    return e.replace("95","115");
-                                });
+                        var render = configurator.step.selectedNodes[3];
+                        // var src = $('#render-' + mainNode).attr('src');
+                        console.log('#render-' + mainNode);
+                        if (render !== undefined) {
+                            var src = render.render;
+                            var height = node.label.split("/")[1];
+                            console.log(height);
+                            if (parseInt(height) === 95) {
+                                $('#render-' + mainNode).attr('src', 'renders/' + src);
                                 if ($('#render-overlay-' + mainNode).length) {
-                                    $('#render-overlay-' + mainNode).prop('src', $('#render-overlay-' + mainNode).prop('src').replace('95', '115'));
+                                    var overlay = render.overlay;
+                                    $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
                                 }
                             }
                             else {
-                                $('#render-' + mainNode).attr('src',function(i,e){
-                                    return e.replace("115","95");
-                                });
+                                var replace = src.replace("95", "115");
+                                console.log('replace');
+                                console.log(replace);
+                                $('#render-' + mainNode).attr('src', 'renders/' + replace);
                                 if ($('#render-overlay-' + mainNode).length) {
-                                    $('#render-overlay-' + mainNode).prop('src', $('#render-overlay-' + mainNode).prop('src').replace('115', '95'));
+                                    var overlay = render.overlay.replace("95", "115");
+                                    $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
                                 }
                             }
                         }
@@ -316,9 +321,9 @@ class Configurator {
             configurator.step.selectedNodes[2] = node;
             this.showPrice();
 
-            if(mainNode.info !== undefined) {
+            if (mainNode.info !== undefined) {
                 $('#example-visualization-info').html(mainNode.info);
-            }else {
+            } else {
                 $('#example-visualization-info').html('');
             }
 
@@ -374,12 +379,12 @@ class Configurator {
         var mainNode = this.graph.node(node_name);
 
         var labelText = "Wymiar";
-        if(mainNode.img === 'empty.png'){
+        if (mainNode.img === 'empty.png') {
             labelText = "Wybierz";
         }
         if (successors.length > 0) {
             var sb = '<div class="form-group">';
-            sb += '<label class="label-small" for="select-' + node_name + '">'+labelText+'</label>';
+            sb += '<label class="label-small" for="select-' + node_name + '">' + labelText + '</label>';
             sb += '<select disabled class="configurator-select form-control input-sm" name="base-size" id="select-' + node_name + '">';
             var optionNode = [];
             successors.forEach(s => {
