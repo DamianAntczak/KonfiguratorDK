@@ -252,7 +252,7 @@ class Configurator {
                 configurator.showPrice();
             });
 
-            if (configurator.width === 0) {
+            if (configurator.step.number === 1) {
                 $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
             }
             else {
