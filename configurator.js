@@ -214,35 +214,7 @@ class Configurator {
                 }
                 if (price > 0) {
                     $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
-                    if (configurator.step.selectedNodes[0].number === 2) {
-                        var mainNode = configurator.step.selectedNodes[0].node;
-                        var find = $('img#render-' + mainNode);
-                        var render = configurator.step.selectedNodes[3];
-                        // var src = $('#render-' + mainNode).attr('src');
-                        console.log('#render-' + mainNode);
-                        if (render !== undefined) {
-                            var src = render.render;
-                            var height = node.label.split("/")[1];
-                            console.log(height);
-                            if (parseInt(height) === 95) {
-                                $('#render-' + mainNode).attr('src', 'renders/' + src);
-                                if ($('#render-overlay-' + mainNode).length) {
-                                    var overlay = render.overlay;
-                                    $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
-                                }
-                            }
-                            else {
-                                var replace = src.replace("95", "115");
-                                console.log('replace');
-                                console.log(replace);
-                                $('#render-' + mainNode).attr('src', 'renders/' + replace);
-                                if ($('#render-overlay-' + mainNode).length) {
-                                    var overlay = render.overlay.replace("95", "115");
-                                    $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
-                                }
-                            }
-                        }
-                    }
+                    configurator.changeHeight(node);
                 }
                 else {
                     $owl.find('#node-price-' + node_name).parent().hide();
@@ -274,6 +246,37 @@ class Configurator {
             $("#previous-step").hide();
         }
 
+    }
+
+    changeHeight(node) {
+        if (configurator.step.selectedNodes[0].number === 2) {
+            var mainNode = configurator.step.selectedNodes[0].node;
+            var find = $('img#render-' + mainNode);
+            var render = configurator.step.selectedNodes[3];
+            // var src = $('#render-' + mainNode).attr('src');
+            if (render !== undefined) {
+                var src = render.render;
+                var height = node.label.split("/")[1];
+                console.log(height);
+                if (parseInt(height) === 95) {
+                    $('#render-' + mainNode).attr('src', 'renders/' + src);
+                    if ($('#render-overlay-' + mainNode).length) {
+                        var overlay = render.overlay;
+                        $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                    }
+                }
+                else {
+                    var replace = src.replace("95", "115");
+                    console.log('replace');
+                    console.log(replace);
+                    $('#render-' + mainNode).attr('src', 'renders/' + replace);
+                    if ($('#render-overlay-' + mainNode).length) {
+                        var overlay = render.overlay.replace("95", "115");
+                        $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                    }
+                }
+            }
+        }
     }
 
     showStepInfo() {
@@ -577,6 +580,7 @@ class Configurator {
                 $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
             }
         }
+        configurator.changeHeight(node);
 
         configurator.showPrice();
         $this.toggleClass('color-selected');
