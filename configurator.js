@@ -146,13 +146,13 @@ class Configurator {
         var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel owl-theme"));
         var items = 3;
         var center = false;
-        if (successors.length < 3) {
-            items = successors.length;
+        if (successors.length < 4) {
+            items = 3;
             center = true;
         };
         var carousel = $('.configurator-base-carousel').owlCarousel({
             loop: false,
-            items: items,
+            // items: items,
             center: center,
             nav: true,
             mouseDrag: false,
@@ -171,7 +171,6 @@ class Configurator {
             //         items: 3,
             //     }
             // },
-
         });
         let nodePrice = function (node_name) {
             return '<div><h6 class="dimension-price">Wymiar i cena</h6>' +
@@ -182,53 +181,56 @@ class Configurator {
             var node = this.graph.node(node_name);
             var successors = this.graph.successors(node_name);
             var counter = successors.length;
-            carousel.trigger('add.owl.carousel',
-                ['<div class="owl-item">' +
-                '<div class="col-sm-12">' +
-                '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
-                '<div class="square" style="background-image: url(\'img/' + node.img + '\')" />' +
-                '</div>' +
-                '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
-                nodePrice(node_name) +
-                this.addOption(node_name, successors) +
-                '</div>' +
-                '</div>']);
+            var options = this.addOption(node_name, successors);
+            if(options !== '') {
+                carousel.trigger('add.owl.carousel',
+                    ['<div class="owl-item">' +
+                    '<div class="col-sm-12">' +
+                    '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
+                    '<div class="square" style="background-image: url(\'img/' + node.img + '\')" />' +
+                    '</div>' +
+                    '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
+                    nodePrice(node_name) +
+                    options +
+                    '</div>' +
+                    '</div>']);
 
-            if (counter === 1) {
-                $('#select-' + node_name).parent().hide();
-                $('.dimension-price').text('Cena');
-            }
-
-            $(document.body).on('change', '#select-' + node_name, function () {
-                var nodeName = $(this).val();
-                var node = configurator.graph.node(nodeName);
-                var $owl = $('.configurator-base-carousel');
-                var price = 0.0;
-                if (configurator.step.selectedNodes[3] !== undefined && configurator.step.selectedNodes[3].g === 2) {
-                    price = node.price.g2;
+                if (counter === 1) {
+                    $('#select-' + node_name).parent().hide();
+                    $('.dimension-price').text('Cena');
                 }
-                else {
-                    if (node !== undefined) {
-                        price = node.price.g1;
+
+                $(document.body).on('change', '#select-' + node_name, function () {
+                    var nodeName = $(this).val();
+                    var node = configurator.graph.node(nodeName);
+                    var $owl = $('.configurator-base-carousel');
+                    var price = 0.0;
+                    if (configurator.step.selectedNodes[3] !== undefined && configurator.step.selectedNodes[3].g === 2) {
+                        price = node.price.g2;
                     }
-                }
-                if (price > 0) {
-                    $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
-                    configurator.changeHeight(node);
+                    else {
+                        if (node !== undefined) {
+                            price = node.price.g1;
+                        }
+                    }
+                    if (price > 0) {
+                        $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
+                        configurator.changeHeight(node);
+                    }
+                    else {
+                        $owl.find('#node-price-' + node_name).parent().hide();
+                    }
+                    $owl.trigger('refresh.owl.carousel');
+                    configurator.step.selectedNodes[2] = node;
+                    configurator.showPrice();
+                });
+
+                if (configurator.step.number === 1) {
+                    $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
                 }
                 else {
-                    $owl.find('#node-price-' + node_name).parent().hide();
+                    $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
                 }
-                $owl.trigger('refresh.owl.carousel');
-                configurator.step.selectedNodes[2] = node;
-                configurator.showPrice();
-            });
-
-            if (configurator.step.number === 1) {
-                $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
-            }
-            else {
-                $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
             }
         });
 
@@ -398,6 +400,9 @@ class Configurator {
                 optionNode = optionNode.filter(function (elem) {
                     return elem[1].width == configurator.width || elem[1].width === undefined;
                 });
+            }
+            if(optionNode.length === 0){
+                return '';
             }
             optionNode.forEach(node => {
                 sb += '<option value="' + node[0] + '" width="' + node[1].width + '">' + node[1].label + '</option>';

@@ -6758,7 +6758,7 @@ g.setNode("frame_no_box_big", {
     title: 'Stelaż',
     label: 'wybierz stelaż',
     number: 6,
-    zIndex: 35,
+    zIndex: 22,
     skipToNode: 'summary',
     optionsFilter: true
 });
@@ -6768,7 +6768,7 @@ g.setNode("frame_no_box", {
     title: 'Stelaż',
     label: 'wybierz stelaż',
     number: 6,
-    zIndex: 35,
+    zIndex: 22,
     skipToNode: 'summary',
     optionsFilter: true
 });
@@ -6778,7 +6778,7 @@ g.setNode("frame_no_box_90", {
     title: 'Stelaż',
     label: 'wybierz stelaż',
     number: 6,
-    zIndex: 35,
+    zIndex: 22,
     skipToNode: 'summary',
     optionsFilter: true
 });

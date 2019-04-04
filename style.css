@@ -97,6 +97,11 @@ div.summary-price-row div{
     width: 100%;
     padding-bottom: 100%;
     -webkit-background-size: contain;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
     background-size: cover;
     background-position: center;
     min-width: 120px;
