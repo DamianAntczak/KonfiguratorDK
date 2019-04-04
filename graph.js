@@ -5504,7 +5504,7 @@ g.setNode("t_materac", {
     label: 'wybierz materac',
     number: 4,
     zIndex: 25,
-    skipToNode: 'summary',
+    skipToNode: 'skrzynia_posciel_big',
     optionsFilter: true,
     info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
 });
@@ -6594,13 +6594,13 @@ g.setNode("frame_with_box", {
 g.setNode("frame_family_lift", {
     label: 'Family lift',
     img: '/stelaze/family_lift.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 
 g.setNode("frame_double_lift", {
     label: 'Double lift',
     img: '/stelaze/double_lift.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 
 g.setNode("frame_family_lift_140", {label: '140/200',width: 140, price: {g1: 838, g2: 838}, nextStep: 'summary'});
@@ -6635,47 +6635,47 @@ g.setNode("frame_no_box_big", {
 g.setNode("frame_family_expert", {
     label: 'Family lift',
     img: '/stelaze/family_expert.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_family_moto", {
     label: 'Family moto',
     img: '/stelaze/family_moto.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_select_expert", {
     label: 'Select expert',
     img: '/stelaze/select_expert.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_select_moto", {
     label: 'Select moto',
     img: '/stelaze/select_moto.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_family_classic", {
     label: 'Family classic',
     img: '/stelaze/family_classic.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_select_classic", {
     label: 'Select classic',
     img: '/stelaze/select_classic.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_sam", {
     label: 'Stelaż sam',
     img: '/stelaze/stelaz_sam.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_family_lift", {
     label: 'Family lift',
     img: '/stelaze/family_lift.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 g.setNode("frame_double_lift", {
     label: 'Double lift',
     img: '/stelaze/double_lift.jpg',
-    render: 'transparent.png'
+    render: 'ramiak.png'
 });
 
 g.setNode("frame_family_expert_140", {label: '140/200',width: 140, price: {g1: 499, g2: 499}, nextStep: 'summary'});
