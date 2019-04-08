@@ -125,23 +125,23 @@ g.setNode("baza_kontynentalna_z_szuflada_140_200", {
 
 g.setNode("baza_tapicerowana_90_200", {
     label: '90/200',
-    width: 90, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie_90'
+    width: 90, price: {g1: -1, g2: -1}, nextStep: 't_wezglowie_90'
 });
 g.setNode("baza_tapicerowana_140_200", {
     label: '140/200',
-    width: 140, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
+    width: 140, price: {g1: -1, g2: -1}, nextStep: 't_wezglowie'
 });
 g.setNode("baza_tapicerowana_160_200", {
     label: '160/200',
-    width: 160, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
+    width: 160, price: {g1: -1, g2: -1}, nextStep: 't_wezglowie'
 });
 g.setNode("baza_tapicerowana_180_200", {
     label: '180/200',
-    width: 180, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
+    width: 180, price: {g1: -1, g2: -1}, nextStep: 't_wezglowie'
 });
 g.setNode("baza_tapicerowana_200_200", {
     label: '200/200',
-    width: 200, price: {g1: 0, g2: 0}, nextStep: 't_wezglowie'
+    width: 200, price: {g1: -1, g2: -1}, nextStep: 't_wezglowie'
 });
 
 

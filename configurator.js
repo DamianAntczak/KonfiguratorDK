@@ -650,7 +650,6 @@ class Configurator {
         var img = document.getElementById('base-img')
         var canvas = document.createElement("canvas");
         canvas.width = 1500;
-        console.log(canvas.width);
         canvas.height = 1140;
         var ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0);
@@ -658,7 +657,7 @@ class Configurator {
         var images = [];
         this.allSteps.forEach(step => {
             var priceNode = step.selectedNodes[2];
-            if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
+            if (step.selectedNodes[1] !== undefined && priceNode.price.g1 !== 0) {
                 bodyData.push([
                     step.selectedNodes[0].title.toUpperCase(),
                     {
@@ -674,7 +673,7 @@ class Configurator {
                         style: {color: '#737477'}
                     },
                     {
-                        text: this.numberWithSpaces(priceNode.price.g1) + ' PLN',
+                        text: (priceNode.price.g1 === -1 ? '' : this.numberWithSpaces(priceNode.price.g1) + ' PLN'),
                         style: {color: '#737477', alignment: 'right'}
                     }]);
 
@@ -703,8 +702,6 @@ class Configurator {
 
         var today = new Date();
         let imageUrl = canvas.toDataURL("image/png");
-        console.log('today.getYear()');
-        console.log(today.getYear());
         var docDefinition = {
             title: 'Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label,
             content: [
@@ -717,7 +714,7 @@ class Configurator {
                         {
                             alignment: 'right',
                             text: today.getDate() + '.' + (today.getMonth() + 1) + '.' + (today.getYear() + 1900)
-                            + ', ' + today.getHours() + ':' + today.getMinutes(),
+                            + ', ' + today.getHours() + ':' + (today.getMinutes()<10?'0':'') + today.getMinutes(),
                             style: {color: '#737477', fontSize: 10, bold: false}
                         }
                     ]
