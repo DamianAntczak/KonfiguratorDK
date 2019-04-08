@@ -3629,27 +3629,27 @@ g.setNode("t_noga_drewniana_long_wenge", {
 });
 
 g.setNode("t_metal_trojkat_srebro_2", {
-    label: '200/95',
+    label: '16',
     price: {g1: 45, g2: 45},
     nextStep: 't_materac'
 });
 g.setNode("t_metal_trojkat_miedz_2", {
-    label: '200/95',
+    label: '16',
     price: {g1: 63, g2: 63},
     nextStep: 't_materac'
 });
 g.setNode("t_metal_trojkat_czarny_2", {
-    label: '200/95',
+    label: '16',
     price: {g1: 63, g2: 63},
     nextStep: 't_materac'
 });
 g.setNode("t_noga_drewniana_long_bug_2", {
-    label: '200/95',
+    label: '16',
     price: {g1: 39, g2: 39},
     nextStep: 't_materac'
 });
 g.setNode("t_noga_drewniana_long_wenge_2", {
-    label: '200/95',
+    label: '16',
     price: {g1: 39, g2: 39},
     nextStep: 't_materac'
 });
