@@ -1963,300 +1963,300 @@ g.setNode("t_wezglowie_urban", {
 //*******************************************88
 
 g.setNode("urban_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 749, g2: 849},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("urban_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 799, g2: 899},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("urban_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 899, g2: 999},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("urban_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 999, g2: 1099},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("urban_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 799, g2: 899},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("urban_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 849, g2: 949},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("urban_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 949, g2: 1049},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("urban_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1049, g2: 1149},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("preppy_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1169, g2: 1269},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("preppy_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1199, g2: 1299},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("preppy_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1299, g2: 1399},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("preppy_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1399, g2: 1499},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("preppy_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1269, g2: 1369},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("preppy_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1299, g2: 1399},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("preppy_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1399, g2: 1499},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("preppy_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1599, g2: 1699},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("glamour_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1369, g2: 1469},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("glamour_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1399, g2: 1499},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("glamour_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1559, g2: 1659},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("glamour_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1699, g2: 1799},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("vintage_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1029, g2: 1129},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("vintage_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1059, g2: 1159},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("vintage_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1159, g2: 1259},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("vintage_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("vintage_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1169, g2: 1269},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("vintage_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1199, g2: 1299},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("vintage_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1299, g2: 1399},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("vintage_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1499, g2: 1599},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("momiko_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 869, g2: 969},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("momiko_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 899, g2: 999},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("momiko_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 999, g2: 1099},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("momiko_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1099, g2: 1199},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("momiko_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("momiko_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("momiko_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("momiko_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("eclectic_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("eclectic_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("eclectic_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("eclectic_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("eclectic_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1069, g2: 1169},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("eclectic_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1099, g2: 1199},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("eclectic_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1199, g2: 1299},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("eclectic_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1399, g2: 1499},
     nextStep: 'step_typ_materaca'
 });
 
 g.setNode("ladylike_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("ladylike_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("ladylike_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'step_typ_materaca'
 });
 g.setNode("ladylike_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'step_typ_materaca'
@@ -2265,300 +2265,300 @@ g.setNode("ladylike_200_115", {
 //*********************************************
 
 g.setNode("bb_urban_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 749, g2: 849},
     nextStep: 'legs'
 });
 g.setNode("bb_urban_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 799, g2: 899},
     nextStep: 'legs'
 });
 g.setNode("bb_urban_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 899, g2: 999},
     nextStep: 'legs'
 });
 g.setNode("bb_urban_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 999, g2: 1099},
     nextStep: 'legs'
 });
 
 g.setNode("bb_urban_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 799, g2: 899},
     nextStep: 'legs'
 });
 g.setNode("bb_urban_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 849, g2: 949},
     nextStep: 'legs'
 });
 g.setNode("bb_urban_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 949, g2: 1049},
     nextStep: 'legs'
 });
 g.setNode("bb_urban_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1049, g2: 1149},
     nextStep: 'legs'
 });
 
 g.setNode("bb_preppy_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1169, g2: 1269},
     nextStep: 'legs'
 });
 g.setNode("bb_preppy_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1199, g2: 1299},
     nextStep: 'legs'
 });
 g.setNode("bb_preppy_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1299, g2: 1399},
     nextStep: 'legs'
 });
 g.setNode("bb_preppy_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1399, g2: 1499},
     nextStep: 'legs'
 });
 
 g.setNode("bb_preppy_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1269, g2: 1369},
     nextStep: 'legs'
 });
 g.setNode("bb_preppy_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1299, g2: 1399},
     nextStep: 'legs'
 });
 g.setNode("bb_preppy_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1399, g2: 1499},
     nextStep: 'legs'
 });
 g.setNode("bb_preppy_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1599, g2: 1699},
     nextStep: 'legs'
 });
 
 g.setNode("bb_glamour_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1369, g2: 1469},
     nextStep: 'legs'
 });
 g.setNode("bb_glamour_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1399, g2: 1499},
     nextStep: 'legs'
 });
 g.setNode("bb_glamour_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1559, g2: 1659},
     nextStep: 'legs'
 });
 g.setNode("bb_glamour_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1699, g2: 1799},
     nextStep: 'legs'
 });
 
 g.setNode("bb_vintage_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1029, g2: 1129},
     nextStep: 'legs'
 });
 g.setNode("bb_vintage_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1059, g2: 1159},
     nextStep: 'legs'
 });
 g.setNode("bb_vintage_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1159, g2: 1259},
     nextStep: 'legs'
 });
 g.setNode("bb_vintage_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'legs'
 });
 
 g.setNode("bb_vintage_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1169, g2: 1269},
     nextStep: 'legs'
 });
 g.setNode("bb_vintage_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1199, g2: 1299},
     nextStep: 'legs'
 });
 g.setNode("bb_vintage_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1299, g2: 1399},
     nextStep: 'legs'
 });
 g.setNode("bb_vintage_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1499, g2: 1599},
     nextStep: 'legs'
 });
 
 g.setNode("bb_momiko_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 869, g2: 969},
     nextStep: 'legs'
 });
 g.setNode("bb_momiko_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 899, g2: 999},
     nextStep: 'legs'
 });
 g.setNode("bb_momiko_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 999, g2: 1099},
     nextStep: 'legs'
 });
 g.setNode("bb_momiko_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1099, g2: 1199},
     nextStep: 'legs'
 });
 
 g.setNode("bb_momiko_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'legs'
 });
 g.setNode("bb_momiko_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'legs'
 });
 g.setNode("bb_momiko_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'legs'
 });
 g.setNode("bb_momiko_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'legs'
 });
 
 g.setNode("bb_eclectic_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'legs'
 });
 g.setNode("bb_eclectic_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'legs'
 });
 g.setNode("bb_eclectic_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'legs'
 });
 g.setNode("bb_eclectic_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'legs'
 });
 
 g.setNode("bb_eclectic_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1069, g2: 1169},
     nextStep: 'legs'
 });
 g.setNode("bb_eclectic_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1099, g2: 1199},
     nextStep: 'legs'
 });
 g.setNode("bb_eclectic_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1199, g2: 1299},
     nextStep: 'legs'
 });
 g.setNode("bb_eclectic_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1399, g2: 1499},
     nextStep: 'legs'
 });
 
 g.setNode("bb_ladylike_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'legs'
 });
 g.setNode("bb_ladylike_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'legs'
 });
 g.setNode("bb_ladylike_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'legs'
 });
 g.setNode("bb_ladylike_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'legs'
@@ -2567,300 +2567,300 @@ g.setNode("bb_ladylike_200_115", {
 //****************************
 
 g.setNode("bp_urban_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 749, g2: 849},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_urban_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 799, g2: 899},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_urban_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 899, g2: 999},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_urban_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 999, g2: 1099},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_urban_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 799, g2: 899},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_urban_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 849, g2: 949},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_urban_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 949, g2: 1049},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_urban_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1049, g2: 1149},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_preppy_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1169, g2: 1269},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_preppy_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1199, g2: 1299},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_preppy_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1299, g2: 1399},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_preppy_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1399, g2: 1499},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_preppy_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1269, g2: 1369},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_preppy_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1299, g2: 1399},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_preppy_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1399, g2: 1499},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_preppy_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1599, g2: 1699},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_glamour_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1369, g2: 1469},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_glamour_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1399, g2: 1499},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_glamour_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1559, g2: 1659},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_glamour_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1699, g2: 1799},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_vintage_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1029, g2: 1129},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_vintage_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1059, g2: 1159},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_vintage_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1159, g2: 1259},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_vintage_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_vintage_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1169, g2: 1269},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_vintage_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1199, g2: 1299},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_vintage_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1299, g2: 1399},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_vintage_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1499, g2: 1599},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_momiko_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 869, g2: 969},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_momiko_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 899, g2: 999},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_momiko_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 999, g2: 1099},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_momiko_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1099, g2: 1199},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_momiko_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_momiko_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_momiko_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_momiko_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_eclectic_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_eclectic_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_eclectic_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_eclectic_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_eclectic_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1069, g2: 1169},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_eclectic_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1099, g2: 1199},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_eclectic_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1199, g2: 1299},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_eclectic_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1399, g2: 1499},
     nextStep: 'bp_step_typ_materaca'
 });
 
 g.setNode("bp_ladylike_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 969, g2: 1069},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_ladylike_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 999, g2: 1099},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_ladylike_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1099, g2: 1199},
     nextStep: 'bp_step_typ_materaca'
 });
 g.setNode("bp_ladylike_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 1259, g2: 1359},
     nextStep: 'bp_step_typ_materaca'
@@ -2875,302 +2875,302 @@ g.setNode("t_urban_90_95", {
     nextStep: 't_legs'
 });
 g.setNode("t_urban_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1519, g2: 1719},
     nextStep: 't_legs'
 });
 g.setNode("t_urban_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1599, g2: 1799},
     nextStep: 't_legs'
 });
 g.setNode("t_urban_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 1799, g2: 1999},
     nextStep: 't_legs'
 });
 g.setNode("t_urban_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 2059, g2: 2259},
     nextStep: 't_legs'
 });
 
 g.setNode("t_urban_90_115", {
-    label: '90/115',
+    label: '115',
     width: 90,
     price: {g1: 1539, g2: 1739},
     nextStep: 't_legs'
 });
 g.setNode("t_urban_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1599, g2: 1799},
     nextStep: 't_legs'
 });
 g.setNode("t_urban_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1699, g2: 1899},
     nextStep: 't_legs'
 });
 g.setNode("t_urban_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 1899, g2: 2099},
     nextStep: 't_legs'
 });
 g.setNode("t_urban_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 2159, g2: 2359},
     nextStep: 't_legs'
 });
 
 g.setNode("t_preppy_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 2099, g2: 2299},
     nextStep: 't_legs'
 });
 g.setNode("t_preppy_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 2199, g2: 2399},
     nextStep: 't_legs'
 });
 g.setNode("t_preppy_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 2399, g2: 2599},
     nextStep: 't_legs'
 });
 g.setNode("t_preppy_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 2699, g2: 2899},
     nextStep: 't_legs'
 });
 
 g.setNode("t_preppy_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 2199, g2: 2399},
     nextStep: 't_legs'
 });
 g.setNode("t_preppy_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 2299, g2: 2499},
     nextStep: 't_legs'
 });
 g.setNode("t_preppy_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 2499, g2: 2699},
     nextStep: 't_legs'
 });
 g.setNode("t_preppy_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 2899, g2: 3099},
     nextStep: 't_legs'
 });
 g.setNode("t_glamour_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 2299, g2: 2499},
     nextStep: 't_legs'
 });
 g.setNode("t_glamour_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 2399, g2: 2599},
     nextStep: 't_legs'
 });
 g.setNode("t_glamour_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 2659, g2: 2859},
     nextStep: 't_legs'
 });
 g.setNode("t_glamour_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 2999, g2: 3199},
     nextStep: 't_legs'
 });
 
 g.setNode("t_vintage_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1959, g2: 2159},
     nextStep: 't_legs'
 });
 g.setNode("t_vintage_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 2059, g2: 2259},
     nextStep: 't_legs'
 });
 g.setNode("t_vintage_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 2259, g2: 2459},
     nextStep: 't_legs'
 });
 g.setNode("t_vintage_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 2559, g2: 2759},
     nextStep: 't_legs'
 });
 g.setNode("t_vintage_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 2099, g2: 2299},
     nextStep: 't_legs'
 });
 g.setNode("t_vintage_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 2199, g2: 2399},
     nextStep: 't_legs'
 });
 g.setNode("t_vintage_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 2399, g2: 2599},
     nextStep: 't_legs'
 });
 g.setNode("t_vintage_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 2799, g2: 2999},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1799, g2: 1999},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1899, g2: 2099},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 2099, g2: 2299},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 2399, g2: 2599},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1899, g2: 2099},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1999, g2: 2199},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 2199, g2: 2399},
     nextStep: 't_legs'
 });
 g.setNode("t_momiko_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 2559, g2: 2759},
     nextStep: 't_legs'
 });
 
 g.setNode("t_eclectic_140_95", {
-    label: '140/95',
+    label: '95',
     width: 140,
     price: {g1: 1899, g2: 2099},
     nextStep: 't_legs'
 });
 g.setNode("t_eclectic_160_95", {
-    label: '160/95',
+    label: '95',
     width: 160,
     price: {g1: 1999, g2: 2199},
     nextStep: 't_legs'
 });
 g.setNode("t_eclectic_180_95", {
-    label: '180/95',
+    label: '95',
     width: 180,
     price: {g1: 2199, g2: 2399},
     nextStep: 't_legs'
 });
 g.setNode("t_eclectic_200_95", {
-    label: '200/95',
+    label: '95',
     width: 200,
     price: {g1: 2559, g2: 2759},
     nextStep: 't_legs'
 });
 
 g.setNode("t_eclectic_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1199, g2: 2199},
     nextStep: 't_legs'
 });
 g.setNode("t_eclectic_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 2099, g2: 2299},
     nextStep: 't_legs'
 });
 g.setNode("t_eclectic_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 2299, g2: 2499},
     nextStep: 't_legs'
 });
 g.setNode("t_eclectic_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 2699, g2: 2899},
     nextStep: 't_legs'
 });
 
 g.setNode("t_ladylike_140_115", {
-    label: '140/115',
+    label: '115',
     width: 140,
     price: {g1: 1899, g2: 2099},
     nextStep: 't_legs'
 });
 g.setNode("t_ladylike_160_115", {
-    label: '160/115',
+    label: '115',
     width: 160,
     price: {g1: 1999, g2: 2199},
     nextStep: 't_legs'
 });
 g.setNode("t_ladylike_180_115", {
-    label: '180/115',
+    label: '115',
     width: 180,
     price: {g1: 2199, g2: 2399},
     nextStep: 't_legs'
 });
 g.setNode("t_ladylike_200_115", {
-    label: '200/115',
+    label: '115',
     width: 200,
     price: {g1: 2559, g2: 2759},
     nextStep: 't_legs'
@@ -3448,7 +3448,7 @@ g.setNode("trojkat_prosty_srebro_16", {
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("trojkat_skosny_czern_16", {
-    label: '200/95',
+    label: '95',
     price: {g1: 136, g2: 136},
     nextStep: 'bb_step_typ_materaca'
 });
@@ -3584,12 +3584,12 @@ g.setNode("ploza_dab_200", {
 });
 
 g.setNode("ploza_dab_16", {
-    label: '200/95',
+    label: '95',
     price: {g1: 132, g2: 132},
     nextStep: 'bb_step_typ_materaca'
 });
 g.setNode("ploza_wenge_16", {
-    label: '200/95',
+    label: '95',
     price: {g1: 132, g2: 132},
     nextStep: 'bb_step_typ_materaca'
 });

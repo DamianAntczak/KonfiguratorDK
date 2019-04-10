@@ -258,7 +258,7 @@ class Configurator {
             // var src = $('#render-' + mainNode).attr('src');
             if (render !== undefined) {
                 var src = render.render;
-                var height = node.label.split("/")[1];
+                var height = node.label;
                 console.log(height);
                 if (parseInt(height) === 95) {
                     $('#render-' + mainNode).attr('src', 'renders/' + src);
