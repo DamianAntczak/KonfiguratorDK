@@ -7189,60 +7189,60 @@ g.setEdge("t_wezglowie", "t_wezglowie_momiko");
 
 //**************************************
 
-g.setEdge("urban", "urban_140_95");
-g.setEdge("urban", "urban_160_95");
-g.setEdge("urban", "urban_180_95");
-g.setEdge("urban", "urban_200_95");
-
 g.setEdge("urban", "urban_140_115");
 g.setEdge("urban", "urban_160_115");
 g.setEdge("urban", "urban_180_115");
 g.setEdge("urban", "urban_200_115");
 
-g.setEdge("preppy", "preppy_140_95");
-g.setEdge("preppy", "preppy_160_95");
-g.setEdge("preppy", "preppy_180_95");
-g.setEdge("preppy", "preppy_200_95");
+g.setEdge("urban", "urban_140_95");
+g.setEdge("urban", "urban_160_95");
+g.setEdge("urban", "urban_180_95");
+g.setEdge("urban", "urban_200_95");
 
 g.setEdge("preppy", "preppy_140_115");
 g.setEdge("preppy", "preppy_160_115");
 g.setEdge("preppy", "preppy_180_115");
 g.setEdge("preppy", "preppy_200_115");
 
+g.setEdge("preppy", "preppy_140_95");
+g.setEdge("preppy", "preppy_160_95");
+g.setEdge("preppy", "preppy_180_95");
+g.setEdge("preppy", "preppy_200_95");
+
 g.setEdge("glamour", "glamour_140_115");
 g.setEdge("glamour", "glamour_160_115");
 g.setEdge("glamour", "glamour_180_115");
 g.setEdge("glamour", "glamour_200_115");
-
-g.setEdge("vintage", "vintage_140_95");
-g.setEdge("vintage", "vintage_160_95");
-g.setEdge("vintage", "vintage_180_95");
-g.setEdge("vintage", "vintage_200_95");
 
 g.setEdge("vintage", "vintage_140_115");
 g.setEdge("vintage", "vintage_160_115");
 g.setEdge("vintage", "vintage_180_115");
 g.setEdge("vintage", "vintage_200_115");
 
-g.setEdge("momiko", "momiko_140_95");
-g.setEdge("momiko", "momiko_160_95");
-g.setEdge("momiko", "momiko_180_95");
-g.setEdge("momiko", "momiko_200_95");
+g.setEdge("vintage", "vintage_140_95");
+g.setEdge("vintage", "vintage_160_95");
+g.setEdge("vintage", "vintage_180_95");
+g.setEdge("vintage", "vintage_200_95");
 
 g.setEdge("momiko", "momiko_140_115");
 g.setEdge("momiko", "momiko_160_115");
 g.setEdge("momiko", "momiko_180_115");
 g.setEdge("momiko", "momiko_200_115");
 
-g.setEdge("eclectic", "eclectic_140_95");
-g.setEdge("eclectic", "eclectic_160_95");
-g.setEdge("eclectic", "eclectic_180_95");
-g.setEdge("eclectic", "eclectic_200_95");
+g.setEdge("momiko", "momiko_140_95");
+g.setEdge("momiko", "momiko_160_95");
+g.setEdge("momiko", "momiko_180_95");
+g.setEdge("momiko", "momiko_200_95");
 
 g.setEdge("eclectic", "eclectic_140_115");
 g.setEdge("eclectic", "eclectic_160_115");
 g.setEdge("eclectic", "eclectic_180_115");
 g.setEdge("eclectic", "eclectic_200_115");
+
+g.setEdge("eclectic", "eclectic_140_95");
+g.setEdge("eclectic", "eclectic_160_95");
+g.setEdge("eclectic", "eclectic_180_95");
+g.setEdge("eclectic", "eclectic_200_95");
 
 g.setEdge("ladylike", "ladylike_140_115");
 g.setEdge("ladylike", "ladylike_160_115");

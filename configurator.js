@@ -255,7 +255,6 @@ class Configurator {
             var mainNode = configurator.step.selectedNodes[0].node;
             var find = $('img#render-' + mainNode);
             var render = configurator.step.selectedNodes[3];
-            // var src = $('#render-' + mainNode).attr('src');
             if (render !== undefined) {
                 var src = render.render;
                 var height = node.label;
