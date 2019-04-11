@@ -171,21 +171,21 @@ g.setNode("box_podnoszony_200_200", {
 g.setNode("kontynent_colors_7", {});
 
 g.setNode("kontynent_novel", {
-    g: 1,
+    g: 2,
     name: 'novel 13',
     node: 'kontynent_novel',
     url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_kontynentalna_h31_novel13.png'
 });
 g.setNode("kontynent_roko", {
-    g: 1,
+    g: 2,
     name: 'roko 8',
     node: 'kontynent_roko',
     url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_kontynentalna_h31_roko08.png'
 });
 g.setNode("kontynent_aspen", {
-    g: 1,
+    g: 2,
     name: 'aspen 04',
     node: 'kontynent_aspen',
     url: './img/tkaniny/aspen_04_light.jpg',
@@ -200,21 +200,21 @@ g.setNode("kontynent_river", {
     render: '/bazy/baza_kontynentalna_h31_river02.png'
 });
 g.setNode("kontynent_eren", {
-    g: 2,
+    g: 1,
     name: 'eren 07',
     node: 'kontynent_eren',
     url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_kontynentalna_h31_eren07.png'
 });
 g.setNode("kontynent_ontario", {
-    g: 2,
+    g: 1,
     name: 'ontario 90',
     node: 'kontynent_ontario',
     url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_kontynentalna_h31_ontario90.png'
 });
 g.setNode("kontynent_riviera", {
-    g: 2,
+    g: 1,
     name: 'riviera 38',
     node: 'kontynent_riviera',
     url: './img/tkaniny/riviera_38.jpg',
@@ -223,21 +223,21 @@ g.setNode("kontynent_riviera", {
 
 g.setNode("kontynent_colors_7", {});
 g.setNode("kontynent_novel", {
-    g: 1,
+    g: 2,
     name: 'novel 13',
     node: 'kontynent_novel',
     url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_kontynentalna_h31_novel13.png'
 });
 g.setNode("kontynent_roko", {
-    g: 1,
+    g: 2,
     name: 'roko 8',
     node: 'kontynent_roko',
     url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_kontynentalna_h31_roko08.png'
 });
 g.setNode("kontynent_aspen", {
-    g: 1,
+    g: 2,
     name: 'aspen 04',
     node: 'kontynent_aspen',
     url: './img/tkaniny/aspen_04_light.jpg',
@@ -252,21 +252,21 @@ g.setNode("kontynent_river", {
     render: '/bazy/baza_kontynentalna_h31_river02.png'
 });
 g.setNode("kontynent_eren", {
-    g: 2,
+    g: 1,
     name: 'eren 07',
     node: 'kontynent_eren',
     url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_kontynentalna_h31_eren07.png'
 });
 g.setNode("kontynent_ontario", {
-    g: 2,
+    g: 1,
     name: 'ontario 90',
     node: 'kontynent_ontario',
     url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_kontynentalna_h31_ontario90.png'
 });
 g.setNode("kontynent_riviera", {
-    g: 2,
+    g: 1,
     name: 'riviera 38',
     node: 'kontynent_riviera',
     url: './img/tkaniny/riviera_38.jpg',
@@ -275,21 +275,21 @@ g.setNode("kontynent_riviera", {
 
 g.setNode("kontynent_szuflada_colors_7", {});
 g.setNode("kontynent_szuflada_novel", {
-    g: 1,
+    g: 2,
     name: 'novel 13',
     node: 'kontynent_szuflada_novel',
     url: './img/tkaniny/novel_13_anthracite.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png'
 });
 g.setNode("kontynent_szuflada_roko", {
-    g: 1,
+    g: 2,
     name: 'roko 8',
     node: 'kontynent_szuflada_roko',
     url: './img/tkaniny/Roko088_blue.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_roko08.png'
 });
 g.setNode("kontynent_szuflada_aspen", {
-    g: 1,
+    g: 2,
     name: 'aspen 04',
     node: 'kontynent_szuflada_aspen',
     url: './img/tkaniny/aspen_04_light.jpg',
@@ -304,21 +304,21 @@ g.setNode("kontynent_szuflada_river", {
     render: '/bazy/baza_kontynentalna_szuflady_h34_river02.png'
 });
 g.setNode("kontynent_szuflada_eren", {
-    g: 2,
+    g: 1,
     name: 'eren 07',
     node: 'kontynent_szuflada_eren',
     url: './img/tkaniny/eren_07.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_eren07.png'
 });
 g.setNode("kontynent_szuflada_ontario", {
-    g: 2,
+    g: 1,
     name: 'ontario 90',
     node: 'kontynent_szuflada_ontario',
     url: './img/tkaniny/ontario_90.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_ontario90.png'
 });
 g.setNode("kontynent_szuflada_riviera", {
-    g: 2,
+    g: 1,
     name: 'riviera 38',
     node: 'kontynent_szuflada_riviera',
     url: './img/tkaniny/riviera_38.jpg',
