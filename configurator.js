@@ -149,7 +149,8 @@ class Configurator {
         if (successors.length < 4) {
             items = 3;
             center = true;
-        };
+        }
+        ;
         var carousel = $('.configurator-base-carousel').owlCarousel({
             loop: false,
             // items: items,
@@ -182,7 +183,7 @@ class Configurator {
             var successors = this.graph.successors(node_name);
             var counter = successors.length;
             var options = this.addOption(node_name, successors);
-            if(options !== '') {
+            if (options !== '') {
                 carousel.trigger('add.owl.carousel',
                     ['<div class="owl-item">' +
                     '<div class="col-sm-12">' +
@@ -400,7 +401,7 @@ class Configurator {
                     return elem[1].width == configurator.width || elem[1].width === undefined;
                 });
             }
-            if(optionNode.length === 0){
+            if (optionNode.length === 0) {
                 return '';
             }
             optionNode.forEach(node => {
@@ -517,16 +518,95 @@ class Configurator {
     }
 
     onColorSelect(selectedColor) {
-        var $this = $(selectedColor);
+        let changeColorInAllSteps = function (colorNode) {
+            if (configurator.allSteps !== undefined) {
+                configurator.allSteps.forEach(step => {
+                    var topNode = step.selectedNodes[0];
+                    var main = step.selectedNodes[1];
+                    console.log(main);
+                    if (main !== undefined) {
+                        var colors = configurator.graph.successors(main.colors);
+                        var stepColor = null;
+                        console.log('colorNode');
+                        console.log(colorNode);
+                        if (colors !== undefined) {
+                            colors.forEach(color => {
+                                var currentColorNode = configurator.graph.node(color);
+                                console.log(colorNode);
+                                if (currentColorNode.name === colorNode.name) {
+                                    stepColor = currentColorNode;
+                                }
+                            });
 
+                            if (stepColor !== null) {
+                                var find = $('#render-' + topNode.node);
+                                var node2 = step.selectedNodes[2];
+                                if (find.length === 0) {
+                                    console.log('find.length === 0');
+                                    $('#configurator-preview').append('<img id="render-' + topNode.node + '" style="z-index: ' + topNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + stepColor.render + '" />');
+                                } else {
+                                    console.log('find.length !== 0');
+                                    $(find).attr('src', 'renders/' + stepColor.render);
+                                }
+                                if (topNode.overlay !== undefined) {
+                                    if (stepColor.overlay !== undefined) {
+                                        var find = $('#configurator-preview').find('#render-overlay-' + topNode.node);
+                                        if (find.length === 0) {
+                                            $('#base-img').after('<img id="render-overlay-' + topNode.node + '" style="z-index: ' + topNode.overlay_z + '" class="img-responsive configurator-img" src="renders/' + stepColor.overlay + '" />');
+                                        } else {
+                                            $(find).attr('src', 'renders/' + stepColor.overlay);
+                                        }
+                                    } else {
+                                        $('#render-overlay-' + topNode.node).remove();
+                                    }
+                                }
+                                step.selectedNodes[3] = stepColor;
+
+                                if (step.selectedNodes[0].number === 2) {
+                                    var mainNode = step.selectedNodes[0].node;
+                                    var find = $('img#render-' + mainNode);
+                                    var render = step.selectedNodes[3];
+                                    if (render !== undefined) {
+                                        var src = render.render;
+                                        var height = step.selectedNodes[2].label;
+                                        console.log(height);
+                                        if (parseInt(height) === 95) {
+                                            $('#render-' + mainNode).attr('src', 'renders/' + src);
+                                            if ($('#render-overlay-' + mainNode).length) {
+                                                var overlay = render.overlay;
+                                                $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                                            }
+                                        }
+                                        else {
+                                            var replace = src.replace("95", "115");
+                                            console.log('replace');
+                                            console.log(replace);
+                                            $('#render-' + mainNode).attr('src', 'renders/' + replace);
+                                            if ($('#render-overlay-' + mainNode).length) {
+                                                var overlay = render.overlay.replace("95", "115");
+                                                $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        };
+
+        var $this = $(selectedColor);
         console.log('selectedColor');
         console.log(selectedColor);
         console.log($this.attr('color'));
         this.selectedColor = $this.attr('name');
 
-        let colorNode = configurator.graph.node($this.attr('color'));
+        var colorNode = configurator.graph.node($this.attr('color'));
         configurator.step.selectedNodes[3] = colorNode;
         console.log(colorNode.render);
+        console.log('colorNode');
+        console.log(colorNode);
         // var mainNode = configurator.step.selectedNodes[1];
         var mainNode = this.step.selectedNodes[0];
         var find = $('#configurator-preview').find('#render-' + mainNode.node);
@@ -535,6 +615,7 @@ class Configurator {
         } else {
             $(find).attr('src', 'renders/' + colorNode.render);
         }
+        changeColorInAllSteps(colorNode);
 
         if (mainNode.overlay !== undefined) {
             if (colorNode.overlay !== undefined) {
@@ -549,30 +630,9 @@ class Configurator {
             }
         }
 
-
         $('.tiles').removeClass('color-selected');
-        // this.graph
 
-        // var successors = configurator.graph.successors(mainNode.node);
         var $owl = $('.configurator-base-carousel');
-
-        // successors.forEach(base_node_name => {
-        //     console.log(base_node_name);
-        //     // let baseNode = configurator.graph.node(base_node_name);
-        //
-        //     var val = $('#select-' + base_node_name).val();
-        //     console.log(val);
-        //     var node = this.step.selectedNodes[0];
-        //     var base_node_name = node.name;
-        //     console.log(node);
-        //     if (node !== undefined) {
-        //         if (colorNode.g === 1) {
-        //             $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
-        //         } else {
-        //             $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
-        //         }
-        //     }
-        // });
 
         var node = this.step.selectedNodes[2];
         var base_node_name = this.step.selectedNodes[1].node;
@@ -588,6 +648,7 @@ class Configurator {
 
         configurator.showPrice();
         $this.toggleClass('color-selected');
+
     }
 
 
@@ -632,9 +693,9 @@ class Configurator {
             'data-loading-text="<i class=\'fa fa-spinner fa-spin \'></i> Tworzenie wydruku">Wydrukuj</button></div>';
         str += '</div>';
         stepElement.html(str);
-        $('#print-btn').click(function() {
+        $('#print-btn').click(function () {
             var $btn = $(this);
-            $btn.button('loading').promise().done(function() {
+            $btn.button('loading').promise().done(function () {
                 configurator.printSummary();
             });
         });
@@ -721,7 +782,7 @@ class Configurator {
                         {
                             alignment: 'right',
                             text: today.getDate() + '.' + (today.getMonth() + 1) + '.' + (today.getYear() + 1900)
-                            + ', ' + today.getHours() + ':' + (today.getMinutes()<10?'0':'') + today.getMinutes(),
+                            + ', ' + today.getHours() + ':' + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes(),
                             style: {color: '#737477', fontSize: 10, bold: false}
                         }
                     ]
