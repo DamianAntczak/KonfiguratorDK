@@ -66,8 +66,6 @@ div#example-visualization-info{
 
 .summary-price-row{
     border: 2px solid #337abd;
-    margin-left: 10%;
-    margin-right: 10%;
     margin-top: 10px;
 }
 
@@ -222,4 +220,10 @@ select.configurator-select{
 
 .configurator-base-carousel .owl-item{
     max-width: 180px !important;
+}
+
+button#reload{
+    color: #616161;
+    font-weight: bold;
+    text-transform: uppercase;
 }

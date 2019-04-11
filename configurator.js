@@ -1,20 +1,19 @@
 class Step {
 
 
-    constructor(number, title, skipEnable, img, optionsFilter) {
+    constructor(number, title, skipEnable, optionsFilter) {
         this.number = number;
         this.title = title;
         this.previous = null;
         this.skipEnable = skipEnable;
-        this.img = img;
         this.optionsFilter = optionsFilter;
         this.selectedNodes = [];
     }
 }
 
 class Configurator {
-    constructor(startStep, graph) {
-        this.step = startStep;
+    constructor(graph) {
+        this.step = null;
         this.graph = graph;
         this.allSteps = [];
         this.stepIndex = 0;
@@ -91,6 +90,18 @@ class Configurator {
         this.loadLevel("step_1");
     }
 
+    repeat(){
+        console.log("Repeat");
+        // this.step = null;
+        this.allSteps = [];
+        this.stepIndex = 0;
+        this.width = 0;
+        this.selectedColor = undefined;
+        $("img[id^='render-']").remove();
+        $('#reload').hide();
+        this.start();
+    }
+
     refresh(node) {
         console.log($('#step-title'));
         $('#step-number').text('Krok ' + node.number);
@@ -137,7 +148,7 @@ class Configurator {
         $('#example-visualization-info').html('');
 
         var starNode = this.graph.node(step);
-        this.step = new Step(starNode.number, starNode.title, starNode.skipToNode, 'baza kontynetalna_roko08.png', starNode.optionsFilter);
+        this.step = new Step(starNode.number, starNode.title, starNode.skipToNode, starNode.optionsFilter);
         this.step.selectedNodes[0] = starNode;
         // this.graph
         var successors = this.graph.successors(step);
@@ -146,7 +157,7 @@ class Configurator {
         var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel owl-theme"));
         var items = 3;
         var center = false;
-        if (successors.length < 4) {
+        if (successors.length < 3) {
             items = 3;
             center = true;
         }
@@ -248,7 +259,12 @@ class Configurator {
         } else {
             $("#previous-step").hide();
         }
-
+        if(configurator.step.number > 1) {
+            $('#reload').show();
+        }
+        else {
+            $('#reload').hide();
+        }
     }
 
     changeHeight(node) {
@@ -517,84 +533,85 @@ class Configurator {
         return html + '</div>';
     }
 
-    onColorSelect(selectedColor) {
-        let changeColorInAllSteps = function (colorNode) {
-            if (configurator.allSteps !== undefined) {
-                configurator.allSteps.forEach(step => {
-                    var topNode = step.selectedNodes[0];
-                    var main = step.selectedNodes[1];
-                    console.log(main);
-                    if (main !== undefined) {
-                        var colors = configurator.graph.successors(main.colors);
-                        var stepColor = null;
-                        console.log('colorNode');
-                        console.log(colorNode);
-                        if (colors !== undefined) {
-                            colors.forEach(color => {
-                                var currentColorNode = configurator.graph.node(color);
-                                console.log(colorNode);
-                                if (currentColorNode.name === colorNode.name) {
-                                    stepColor = currentColorNode;
-                                }
-                            });
+    changeColorInAllSteps(colorNode) {
+        if (configurator.allSteps !== undefined) {
+            configurator.allSteps.forEach(step => {
+                var topNode = step.selectedNodes[0];
+                var main = step.selectedNodes[1];
+                console.log(main);
+                if (main !== undefined) {
+                    var colors = configurator.graph.successors(main.colors);
+                    var stepColor = null;
+                    console.log('colorNode');
+                    console.log(colorNode);
+                    if (colors !== undefined) {
+                        colors.forEach(color => {
+                            var currentColorNode = configurator.graph.node(color);
+                            console.log(colorNode);
+                            if (currentColorNode.name === colorNode.name) {
+                                stepColor = currentColorNode;
+                            }
+                        });
 
-                            if (stepColor !== null) {
-                                var find = $('#render-' + topNode.node);
-                                var node2 = step.selectedNodes[2];
-                                if (find.length === 0) {
-                                    console.log('find.length === 0');
-                                    $('#configurator-preview').append('<img id="render-' + topNode.node + '" style="z-index: ' + topNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + stepColor.render + '" />');
-                                } else {
-                                    console.log('find.length !== 0');
-                                    $(find).attr('src', 'renders/' + stepColor.render);
-                                }
-                                if (topNode.overlay !== undefined) {
-                                    if (stepColor.overlay !== undefined) {
-                                        var find = $('#configurator-preview').find('#render-overlay-' + topNode.node);
-                                        if (find.length === 0) {
-                                            $('#base-img').after('<img id="render-overlay-' + topNode.node + '" style="z-index: ' + topNode.overlay_z + '" class="img-responsive configurator-img" src="renders/' + stepColor.overlay + '" />');
-                                        } else {
-                                            $(find).attr('src', 'renders/' + stepColor.overlay);
-                                        }
+                        if (stepColor !== null) {
+                            var find = $('#render-' + topNode.node);
+                            var node2 = step.selectedNodes[2];
+                            if (find.length === 0) {
+                                console.log('find.length === 0');
+                                $('#configurator-preview').append('<img id="render-' + topNode.node + '" style="z-index: ' + topNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + stepColor.render + '" />');
+                            } else {
+                                console.log('find.length !== 0');
+                                $(find).attr('src', 'renders/' + stepColor.render);
+                            }
+                            if (topNode.overlay !== undefined) {
+                                if (stepColor.overlay !== undefined) {
+                                    var find = $('#configurator-preview').find('#render-overlay-' + topNode.node);
+                                    if (find.length === 0) {
+                                        $('#base-img').after('<img id="render-overlay-' + topNode.node + '" style="z-index: ' + topNode.overlay_z + '" class="img-responsive configurator-img" src="renders/' + stepColor.overlay + '" />');
                                     } else {
-                                        $('#render-overlay-' + topNode.node).remove();
+                                        $(find).attr('src', 'renders/' + stepColor.overlay);
                                     }
+                                } else {
+                                    $('#render-overlay-' + topNode.node).remove();
                                 }
-                                step.selectedNodes[3] = stepColor;
+                            }
+                            step.selectedNodes[3] = stepColor;
 
-                                if (step.selectedNodes[0].number === 2) {
-                                    var mainNode = step.selectedNodes[0].node;
-                                    var find = $('img#render-' + mainNode);
-                                    var render = step.selectedNodes[3];
-                                    if (render !== undefined) {
-                                        var src = render.render;
-                                        var height = step.selectedNodes[2].label;
-                                        console.log(height);
-                                        if (parseInt(height) === 95) {
-                                            $('#render-' + mainNode).attr('src', 'renders/' + src);
-                                            if ($('#render-overlay-' + mainNode).length) {
-                                                var overlay = render.overlay;
-                                                $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
-                                            }
+                            if (step.selectedNodes[0].number === 2) {
+                                var mainNode = step.selectedNodes[0].node;
+                                var find = $('img#render-' + mainNode);
+                                var render = step.selectedNodes[3];
+                                if (render !== undefined) {
+                                    var src = render.render;
+                                    var height = step.selectedNodes[2].label;
+                                    console.log(height);
+                                    if (parseInt(height) === 95) {
+                                        $('#render-' + mainNode).attr('src', 'renders/' + src);
+                                        if ($('#render-overlay-' + mainNode).length) {
+                                            var overlay = render.overlay;
+                                            $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
                                         }
-                                        else {
-                                            var replace = src.replace("95", "115");
-                                            console.log('replace');
-                                            console.log(replace);
-                                            $('#render-' + mainNode).attr('src', 'renders/' + replace);
-                                            if ($('#render-overlay-' + mainNode).length) {
-                                                var overlay = render.overlay.replace("95", "115");
-                                                $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
-                                            }
+                                    }
+                                    else {
+                                        var replace = src.replace("95", "115");
+                                        console.log('replace');
+                                        console.log(replace);
+                                        $('#render-' + mainNode).attr('src', 'renders/' + replace);
+                                        if ($('#render-overlay-' + mainNode).length) {
+                                            var overlay = render.overlay.replace("95", "115");
+                                            $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                });
-            }
-        };
+                }
+            });
+        }
+    }
+
+    onColorSelect(selectedColor) {
 
         var $this = $(selectedColor);
         console.log('selectedColor');
@@ -604,31 +621,7 @@ class Configurator {
 
         var colorNode = configurator.graph.node($this.attr('color'));
         configurator.step.selectedNodes[3] = colorNode;
-        console.log(colorNode.render);
-        console.log('colorNode');
-        console.log(colorNode);
-        // var mainNode = configurator.step.selectedNodes[1];
-        var mainNode = this.step.selectedNodes[0];
-        var find = $('#configurator-preview').find('#render-' + mainNode.node);
-        if (find.length === 0) {
-            $('#configurator-preview').append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + colorNode.render + '" />');
-        } else {
-            $(find).attr('src', 'renders/' + colorNode.render);
-        }
-        changeColorInAllSteps(colorNode);
-
-        if (mainNode.overlay !== undefined) {
-            if (colorNode.overlay !== undefined) {
-                var find = $('#configurator-preview').find('#render-overlay-' + mainNode.node);
-                if (find.length === 0) {
-                    $('#base-img').after('<img id="render-overlay-' + mainNode.node + '" style="z-index: ' + mainNode.overlay_z + '" class="img-responsive configurator-img" src="renders/' + colorNode.overlay + '" />');
-                } else {
-                    $(find).attr('src', 'renders/' + colorNode.overlay);
-                }
-            } else {
-                $('#render-overlay-' + mainNode.node).remove();
-            }
-        }
+        configurator.changeColorInAllSteps(colorNode);
 
         $('.tiles').removeClass('color-selected');
 
@@ -676,8 +669,10 @@ class Configurator {
             var priceNode = step.selectedNodes[2];
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 str += '<div class="row summary-price-row"">';
-                str += '<div class="col-sm-7 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + ' ' + fabricName(step) + '</div>';
-                str += '<div class="col-sm-5 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
+                str += '<div class="col-sm-5 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
+                str += '<div class="col-sm-2 text-left text-capitalize">' + fabricName(step) +'</div>'
+                str += '<div class="col-sm-2 text-right">' + step.selectedNodes[2].label + ' cm' +'</div>';
+                str += '<div class="col-sm-3 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
             }
         });
@@ -935,8 +930,7 @@ $(document)
             ).done(function () {
                 //Stuff to do after someScript has loaded
 
-                var base = new Step(1, "bazę", false, 'baza kontynetalna_roko08.png');
-                configurator = new Configurator(base, g);
+                configurator = new Configurator(g);
             });
         }
     )
