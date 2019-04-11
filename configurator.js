@@ -628,9 +628,16 @@ class Configurator {
         str += '</div>';
         str += '<div class="row summary-btn-row">';
         str += '<div class="col-sm-6 text-center"><button class="btn text-uppercase btn-summary" onclick="location.href=\'https://hilding.pl/index/whereBuy\'" >Znajdź salon</button></div>';
-        str += '<div class="col-sm-6 text-center"><button class="btn text-uppercase btn-summary" onclick="configurator.printSummary()">Wydrukuj</button></div>';
+        str += '<div class="col-sm-6 text-center"><button id="print-btn" class="btn text-uppercase btn-summary"' +
+            'data-loading-text="<i class=\'fa fa-spinner fa-spin \'></i> Tworzenie wydruku">Wydrukuj</button></div>';
         str += '</div>';
         stepElement.html(str);
+        $('#print-btn').click(function() {
+            var $btn = $(this);
+            $btn.button('loading').promise().done(function() {
+                configurator.printSummary();
+            });
+        });
     }
 
     printSummary() {
@@ -643,6 +650,7 @@ class Configurator {
             var dataURL = canvas.toDataURL("image/png");
             return dataURL;
         }
+
 
         var bodyData = [];
 
@@ -842,6 +850,7 @@ class Configurator {
 
         pdfMake.createPdf(docDefinition).download('Twój wybór - Łóżko ' + this.allSteps[1].selectedNodes[1].label);
         // pdfMake.createPdf(docDefinition).open();
+        $('#print-btn').button('reset');
     }
 
     capitalize(title) {
