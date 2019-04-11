@@ -671,7 +671,7 @@ class Configurator {
                 str += '<div class="row summary-price-row"">';
                 str += '<div class="col-sm-5 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
                 str += '<div class="col-sm-2 text-left text-capitalize">' + fabricName(step) +'</div>'
-                str += '<div class="col-sm-2 text-right">' + step.selectedNodes[2].label + ' cm' +'</div>';
+                str += '<div class="col-sm-2 text-right">' + this.getWidthString(step.selectedNodes[2]) +'</div>';
                 str += '<div class="col-sm-3 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
             }
@@ -694,6 +694,14 @@ class Configurator {
                 configurator.printSummary();
             });
         });
+    }
+
+    getWidthString(node) {
+        if(node.label !== 'TAK') {
+            return node.label + ' cm';
+        }else {
+            return '';
+        }
     }
 
     printSummary() {
@@ -728,7 +736,7 @@ class Configurator {
                         style: {color: '#737477', bold: true}
                     },
                     {
-                        text: step.selectedNodes[2].label + ' cm',
+                        text: this.getWidthString(step.selectedNodes[2]),
                         style: {color: '#737477'}
                     },
                     {
