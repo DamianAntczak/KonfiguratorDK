@@ -1751,40 +1751,40 @@ g.setNode("bb_wezglowie", {
     info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
-g.setNode("bb_wezglowie_glamour", {
-    node: 'bb_wezglowie_glamour',
+g.setNode("bb_glamour", {
+    node: 'bb_glamour',
     label: 'Glamour',
     img: 'glamour.jpg',
     render: '/wezglowia/wezglowie_glamour_115_novel13.png',
     colors: 'glamour_colors_7',
     nextStep: 'legs'
 });
-g.setNode("bb_wezglowie_vintage", {
-    node: 'bb_wezglowie_vintage',
+g.setNode("bb_vintage", {
+    node: 'bb_vintage',
     label: 'Vintage',
     img: 'vintage.jpg',
     render: '/wezglowia/wezglowie_vintage_95_novel13.png',
     colors: 'vintage_colors_7',
     nextStep: 'legs'
 });
-g.setNode("bb_wezglowie_eclectic", {
-    node: 'bb_wezglowie_eclectic',
+g.setNode("bb_eclectic", {
+    node: 'bb_eclectic',
     label: 'Eclectic',
     img: 'electric.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_novel13.png',
     colors: 'eclectic_colors_7',
     nextStep: 'legs'
 });
-g.setNode("bb_wezglowie_ladylike", {
-    node: 'bb_wezglowie_ladylike',
+g.setNode("bb_ladylike", {
+    node: 'bb_ladylike',
     label: 'Ladylike',
     img: 'ladylike.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_novel13.png',
     colors: 'ladylike_colors_7',
     nextStep: 'legs'
 });
-g.setNode("bb_wezglowie_preppy", {
-    node: 'bb_wezglowie_preppy',
+g.setNode("bb_preppy", {
+    node: 'bb_preppy',
     label: 'Preppy',
     img: 'preppy.jpg',
     render: '/wezglowia/wezglowie_preppy_95_novel13.png',
@@ -1799,8 +1799,8 @@ g.setNode("bb_wezglowie_momiko", {
     colors: 'momiko_colors_7',
     nextStep: 'legs'
 });
-g.setNode("bb_wezglowie_urban", {
-    node: 'bb_wezglowie_urban',
+g.setNode("bb_urban", {
+    node: 'bb_urban',
     label: 'Urban',
     img: 'urban.jpg',
     render: '/wezglowia/wezglowie_urban_95_novel13.png',
@@ -1821,56 +1821,56 @@ g.setNode("bp_wezglowie", {
     info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
-g.setNode("bp_wezglowie_glamour", {
-    node: 'bp_wezglowie_glamour',
+g.setNode("bp_glamour", {
+    node: 'bp_glamour',
     label: 'Glamour',
     img: 'glamour.jpg',
     render: '/wezglowia/wezglowie_glamour_115_novel13.png',
     colors: 'glamour_colors_7',
     nextStep: 'bp_step_typ_materaca'
 });
-g.setNode("bp_wezglowie_vintage", {
-    node: 'bp_wezglowie_vintage',
+g.setNode("bp_vintage", {
+    node: 'bp_vintage',
     label: 'Vintage',
     img: 'vintage.jpg',
     render: '/wezglowia/wezglowie_vintage_95_novel13.png',
     colors: 'vintage_colors_7',
     nextStep: 'bp_step_typ_materaca'
 });
-g.setNode("bp_wezglowie_eclectic", {
-    node: 'bp_wezglowie_eclectic',
+g.setNode("bp_eclectic", {
+    node: 'bp_eclectic',
     label: 'Eclectic',
     img: 'electric.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_novel13.png',
     colors: 'eclectic_colors_7',
     nextStep: 'bp_step_typ_materaca'
 });
-g.setNode("bp_wezglowie_ladylike", {
-    node: 'bp_wezglowie_ladylike',
+g.setNode("bp_ladylike", {
+    node: 'bp_ladylike',
     label: 'Ladylike',
     img: 'ladylike.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_novel13.png',
     colors: 'ladylike_colors_7',
     nextStep: 'bp_step_typ_materaca'
 });
-g.setNode("bp_wezglowie_preppy", {
-    node: 'bp_wezglowie_preppy',
+g.setNode("bp_preppy", {
+    node: 'bp_preppy',
     label: 'Preppy',
     img: 'preppy.jpg',
     render: '/wezglowia/wezglowie_preppy_95_novel13.png',
     colors: 'preppy_colors_7',
     nextStep: 'bp_step_typ_materaca'
 });
-g.setNode("bp_wezglowie_momiko", {
-    node: 'bp_wezglowie_momiko',
+g.setNode("bp_momiko", {
+    node: 'bp_momiko',
     label: 'Momiko',
     img: 'momiko.jpg',
     render: '/wezglowia/wezglowie_momiko_95_novel13.png',
     colors: 'momiko_colors_7',
     nextStep: 'bp_step_typ_materaca'
 });
-g.setNode("bp_wezglowie_urban", {
-    node: 'bp_wezglowie_urban',
+g.setNode("bp_urban", {
+    node: 'bp_urban',
     label: 'Urban',
     img: 'urban.jpg',
     render: '/wezglowia/wezglowie_urban_95_novel13.png',
@@ -7158,23 +7158,23 @@ g.setEdge("step_2", "eclectic");
 g.setEdge("step_2", "ladylike");
 g.setEdge("step_2", "momiko");
 
-g.setEdge("bb_wezglowie", "bb_wezglowie_urban");
-g.setEdge("bb_wezglowie", "bb_wezglowie_preppy");
-g.setEdge("bb_wezglowie", "bb_wezglowie_glamour");
-g.setEdge("bb_wezglowie", "bb_wezglowie_vintage");
-g.setEdge("bb_wezglowie", "bb_wezglowie_eclectic");
-g.setEdge("bb_wezglowie", "bb_wezglowie_ladylike");
-g.setEdge("bb_wezglowie", "bb_wezglowie_momiko");
+g.setEdge("bb_wezglowie", "bb_urban");
+g.setEdge("bb_wezglowie", "bb_preppy");
+g.setEdge("bb_wezglowie", "bb_glamour");
+g.setEdge("bb_wezglowie", "bb_vintage");
+g.setEdge("bb_wezglowie", "bb_eclectic");
+g.setEdge("bb_wezglowie", "bb_ladylike");
+g.setEdge("bb_wezglowie", "bb_momiko");
 
 //**************************************
 
-g.setEdge("bp_wezglowie", "bp_wezglowie_urban");
-g.setEdge("bp_wezglowie", "bp_wezglowie_preppy");
-g.setEdge("bp_wezglowie", "bp_wezglowie_glamour");
-g.setEdge("bp_wezglowie", "bp_wezglowie_vintage");
-g.setEdge("bp_wezglowie", "bp_wezglowie_eclectic");
-g.setEdge("bp_wezglowie", "bp_wezglowie_ladylike");
-g.setEdge("bp_wezglowie", "bp_wezglowie_momiko");
+g.setEdge("bp_wezglowie", "bp_urban");
+g.setEdge("bp_wezglowie", "bp_preppy");
+g.setEdge("bp_wezglowie", "bp_glamour");
+g.setEdge("bp_wezglowie", "bp_vintage");
+g.setEdge("bp_wezglowie", "bp_eclectic");
+g.setEdge("bp_wezglowie", "bp_ladylike");
+g.setEdge("bp_wezglowie", "bp_momiko");
 
 //**************************************
 
@@ -7251,127 +7251,127 @@ g.setEdge("ladylike", "ladylike_200_115");
 
 //**************************************************
 
-g.setEdge("bb_wezglowie_urban", "bb_urban_140_95");
-g.setEdge("bb_wezglowie_urban", "bb_urban_160_95");
-g.setEdge("bb_wezglowie_urban", "bb_urban_180_95");
-g.setEdge("bb_wezglowie_urban", "bb_urban_200_95");
+g.setEdge("bb_urban", "bb_urban_140_95");
+g.setEdge("bb_urban", "bb_urban_160_95");
+g.setEdge("bb_urban", "bb_urban_180_95");
+g.setEdge("bb_urban", "bb_urban_200_95");
 
-g.setEdge("bb_wezglowie_urban", "bb_urban_140_115");
-g.setEdge("bb_wezglowie_urban", "bb_urban_160_115");
-g.setEdge("bb_wezglowie_urban", "bb_urban_180_115");
-g.setEdge("bb_wezglowie_urban", "bb_urban_200_115");
+g.setEdge("bb_urban", "bb_urban_140_115");
+g.setEdge("bb_urban", "bb_urban_160_115");
+g.setEdge("bb_urban", "bb_urban_180_115");
+g.setEdge("bb_urban", "bb_urban_200_115");
 
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_140_95");
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_160_95");
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_180_95");
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_200_95");
+g.setEdge("bb_preppy", "bb_preppy_140_95");
+g.setEdge("bb_preppy", "bb_preppy_160_95");
+g.setEdge("bb_preppy", "bb_preppy_180_95");
+g.setEdge("bb_preppy", "bb_preppy_200_95");
 
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_140_115");
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_160_115");
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_180_115");
-g.setEdge("bb_wezglowie_preppy", "bb_preppy_200_115");
+g.setEdge("bb_preppy", "bb_preppy_140_115");
+g.setEdge("bb_preppy", "bb_preppy_160_115");
+g.setEdge("bb_preppy", "bb_preppy_180_115");
+g.setEdge("bb_preppy", "bb_preppy_200_115");
 
-g.setEdge("bb_wezglowie_glamour", "bb_glamour_140_115");
-g.setEdge("bb_wezglowie_glamour", "bb_glamour_160_115");
-g.setEdge("bb_wezglowie_glamour", "bb_glamour_180_115");
-g.setEdge("bb_wezglowie_glamour", "bb_glamour_200_115");
+g.setEdge("bb_glamour", "bb_glamour_140_115");
+g.setEdge("bb_glamour", "bb_glamour_160_115");
+g.setEdge("bb_glamour", "bb_glamour_180_115");
+g.setEdge("bb_glamour", "bb_glamour_200_115");
 
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_140_95");
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_160_95");
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_180_95");
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_200_95");
+g.setEdge("bb_vintage", "bb_vintage_140_95");
+g.setEdge("bb_vintage", "bb_vintage_160_95");
+g.setEdge("bb_vintage", "bb_vintage_180_95");
+g.setEdge("bb_vintage", "bb_vintage_200_95");
 
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_140_115");
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_160_115");
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_180_115");
-g.setEdge("bb_wezglowie_vintage", "bb_vintage_200_115");
+g.setEdge("bb_vintage", "bb_vintage_140_115");
+g.setEdge("bb_vintage", "bb_vintage_160_115");
+g.setEdge("bb_vintage", "bb_vintage_180_115");
+g.setEdge("bb_vintage", "bb_vintage_200_115");
 
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_140_95");
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_160_95");
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_180_95");
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_200_95");
+g.setEdge("bb_momiko", "bb_momiko_140_95");
+g.setEdge("bb_momiko", "bb_momiko_160_95");
+g.setEdge("bb_momiko", "bb_momiko_180_95");
+g.setEdge("bb_momiko", "bb_momiko_200_95");
 
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_140_115");
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_160_115");
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_180_115");
-g.setEdge("bb_wezglowie_momiko", "bb_momiko_200_115");
+g.setEdge("bb_momiko", "bb_momiko_140_115");
+g.setEdge("bb_momiko", "bb_momiko_160_115");
+g.setEdge("bb_momiko", "bb_momiko_180_115");
+g.setEdge("bb_momiko", "bb_momiko_200_115");
 
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_140_95");
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_160_95");
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_180_95");
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_200_95");
+g.setEdge("bb_eclectic", "bb_eclectic_140_95");
+g.setEdge("bb_eclectic", "bb_eclectic_160_95");
+g.setEdge("bb_eclectic", "bb_eclectic_180_95");
+g.setEdge("bb_eclectic", "bb_eclectic_200_95");
 
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_140_115");
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_160_115");
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_180_115");
-g.setEdge("bb_wezglowie_eclectic", "bb_eclectic_200_115");
+g.setEdge("bb_eclectic", "bb_eclectic_140_115");
+g.setEdge("bb_eclectic", "bb_eclectic_160_115");
+g.setEdge("bb_eclectic", "bb_eclectic_180_115");
+g.setEdge("bb_eclectic", "bb_eclectic_200_115");
 
-g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_140_115");
-g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_160_115");
-g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_180_115");
-g.setEdge("bb_wezglowie_ladylike", "bb_ladylike_200_115");
+g.setEdge("bb_ladylike", "bb_ladylike_140_115");
+g.setEdge("bb_ladylike", "bb_ladylike_160_115");
+g.setEdge("bb_ladylike", "bb_ladylike_180_115");
+g.setEdge("bb_ladylike", "bb_ladylike_200_115");
 
 //*****************************************************
 
-g.setEdge("bp_wezglowie_urban", "bp_urban_140_95");
-g.setEdge("bp_wezglowie_urban", "bp_urban_160_95");
-g.setEdge("bp_wezglowie_urban", "bp_urban_180_95");
-g.setEdge("bp_wezglowie_urban", "bp_urban_200_95");
+g.setEdge("bp_urban", "bp_urban_140_95");
+g.setEdge("bp_urban", "bp_urban_160_95");
+g.setEdge("bp_urban", "bp_urban_180_95");
+g.setEdge("bp_urban", "bp_urban_200_95");
 
-g.setEdge("bp_wezglowie_urban", "bp_urban_140_115");
-g.setEdge("bp_wezglowie_urban", "bp_urban_160_115");
-g.setEdge("bp_wezglowie_urban", "bp_urban_180_115");
-g.setEdge("bp_wezglowie_urban", "bp_urban_200_115");
+g.setEdge("bp_urban", "bp_urban_140_115");
+g.setEdge("bp_urban", "bp_urban_160_115");
+g.setEdge("bp_urban", "bp_urban_180_115");
+g.setEdge("bp_urban", "bp_urban_200_115");
 
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_140_95");
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_160_95");
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_180_95");
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_200_95");
+g.setEdge("bp_preppy", "bp_preppy_140_95");
+g.setEdge("bp_preppy", "bp_preppy_160_95");
+g.setEdge("bp_preppy", "bp_preppy_180_95");
+g.setEdge("bp_preppy", "bp_preppy_200_95");
 
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_140_115");
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_160_115");
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_180_115");
-g.setEdge("bp_wezglowie_preppy", "bp_preppy_200_115");
+g.setEdge("bp_preppy", "bp_preppy_140_115");
+g.setEdge("bp_preppy", "bp_preppy_160_115");
+g.setEdge("bp_preppy", "bp_preppy_180_115");
+g.setEdge("bp_preppy", "bp_preppy_200_115");
 
-g.setEdge("bp_wezglowie_glamour", "bp_glamour_140_115");
-g.setEdge("bp_wezglowie_glamour", "bp_glamour_160_115");
-g.setEdge("bp_wezglowie_glamour", "bp_glamour_180_115");
-g.setEdge("bp_wezglowie_glamour", "bp_glamour_200_115");
+g.setEdge("bp_glamour", "bp_glamour_140_115");
+g.setEdge("bp_glamour", "bp_glamour_160_115");
+g.setEdge("bp_glamour", "bp_glamour_180_115");
+g.setEdge("bp_glamour", "bp_glamour_200_115");
 
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_140_95");
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_160_95");
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_180_95");
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_200_95");
+g.setEdge("bp_vintage", "bp_vintage_140_95");
+g.setEdge("bp_vintage", "bp_vintage_160_95");
+g.setEdge("bp_vintage", "bp_vintage_180_95");
+g.setEdge("bp_vintage", "bp_vintage_200_95");
 
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_140_115");
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_160_115");
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_180_115");
-g.setEdge("bp_wezglowie_vintage", "bp_vintage_200_115");
+g.setEdge("bp_vintage", "bp_vintage_140_115");
+g.setEdge("bp_vintage", "bp_vintage_160_115");
+g.setEdge("bp_vintage", "bp_vintage_180_115");
+g.setEdge("bp_vintage", "bp_vintage_200_115");
 
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_140_95");
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_160_95");
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_180_95");
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_200_95");
+g.setEdge("bp_momiko", "bp_momiko_140_95");
+g.setEdge("bp_momiko", "bp_momiko_160_95");
+g.setEdge("bp_momiko", "bp_momiko_180_95");
+g.setEdge("bp_momiko", "bp_momiko_200_95");
 
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_140_115");
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_160_115");
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_180_115");
-g.setEdge("bp_wezglowie_momiko", "bp_momiko_200_115");
+g.setEdge("bp_momiko", "bp_momiko_140_115");
+g.setEdge("bp_momiko", "bp_momiko_160_115");
+g.setEdge("bp_momiko", "bp_momiko_180_115");
+g.setEdge("bp_momiko", "bp_momiko_200_115");
 
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_140_95");
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_160_95");
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_180_95");
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_200_95");
+g.setEdge("bp_eclectic", "bp_eclectic_140_95");
+g.setEdge("bp_eclectic", "bp_eclectic_160_95");
+g.setEdge("bp_eclectic", "bp_eclectic_180_95");
+g.setEdge("bp_eclectic", "bp_eclectic_200_95");
 
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_140_115");
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_160_115");
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_180_115");
-g.setEdge("bp_wezglowie_eclectic", "bp_eclectic_200_115");
+g.setEdge("bp_eclectic", "bp_eclectic_140_115");
+g.setEdge("bp_eclectic", "bp_eclectic_160_115");
+g.setEdge("bp_eclectic", "bp_eclectic_180_115");
+g.setEdge("bp_eclectic", "bp_eclectic_200_115");
 
-g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_140_115");
-g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_160_115");
-g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_180_115");
-g.setEdge("bp_wezglowie_ladylike", "bp_ladylike_200_115");
+g.setEdge("bp_ladylike", "bp_ladylike_140_115");
+g.setEdge("bp_ladylike", "bp_ladylike_160_115");
+g.setEdge("bp_ladylike", "bp_ladylike_180_115");
+g.setEdge("bp_ladylike", "bp_ladylike_200_115");
 
 //*****************************************************
 

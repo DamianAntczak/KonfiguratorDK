@@ -194,6 +194,9 @@ class Configurator {
             var successors = this.graph.successors(node_name);
             var counter = successors.length;
             var options = this.addOption(node_name, successors);
+            options += this.addOption2(node_name, successors);
+
+
             if (options !== '') {
                 carousel.trigger('add.owl.carousel',
                     ['<div class="owl-item">' +
@@ -209,6 +212,8 @@ class Configurator {
 
                 if (counter === 1) {
                     $('#select-' + node_name).parent().hide();
+                    $('#select_' + node_name + '_container').parent().hide();
+                    $('#select_' + node_name + '_label').hide();
                     $('.dimension-price').text('Cena');
                 }
 
@@ -236,13 +241,16 @@ class Configurator {
                     configurator.step.selectedNodes[2] = node;
                     configurator.showPrice();
                 });
-
-                if (configurator.step.number === 1) {
-                    $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
-                }
-                else {
-                    $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
-                }
+                //
+                // if (configurator.step.number === 1) {
+                //     $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
+                //     var select_node = configurator.graph.successors(node_name);
+                //     // $('#select-' + node_name).
+                //     configurator.onWidthChange(select_node);
+                // }
+                // else {
+                //     $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
+                // }
             }
         });
 
@@ -297,6 +305,36 @@ class Configurator {
         }
     }
 
+    onWidthChange(node_name){
+        console.log('NODE!!!!!!!!');
+        console.log(node_name);
+        // var nodeName = $(this).val();
+        var node = configurator.graph.node(node_name);
+        var $owl = $('.configurator-base-carousel');
+        var price = 0.0;
+        if (configurator.step.selectedNodes[3] !== undefined && configurator.step.selectedNodes[3].g === 2) {
+            price = node.price.g2;
+        }
+        else {
+            if (node !== undefined) {
+                price = node.price.g1;
+            }
+        }
+        var base_node_name = this.step.selectedNodes[1].node;
+        if (price > 0) {
+            console.log('TUUU!');
+            console.log($owl.find('#node-price-' + base_node_name));
+            $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(price) + ' PLN');
+            configurator.changeHeight(node);
+        }
+        else {
+            $owl.find('#node-price-' + base_node_name).parent().hide();
+        }
+        $owl.trigger('refresh.owl.carousel');
+        configurator.step.selectedNodes[2] = node;
+        configurator.showPrice();
+    }
+
     showStepInfo() {
         $('#step-number').show();
         $('#step-title').show();
@@ -316,6 +354,7 @@ class Configurator {
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
             $('#select-' + nodeName).prop("disabled", "disabled");
+            $('[selid=\'select_' + nodeName + '\']').prop("disabled", true);
             $('#render-overlay-' + mainNode.node).remove();
             if (mainNode.skipToNode !== undefined) {
                 $('#next-step').show();
@@ -336,11 +375,16 @@ class Configurator {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
             $('.configurator-select').prop("disabled", "disabled");
+            $('.main-select').prop("disabled", true);
             $('#select-' + nodeName).removeAttr("disabled");
+            console.log('$(#select_ + nodeName)');
+            console.log($('#select_' + nodeName));
+            $('[selid=\'select_' + nodeName + '\']').attr("disabled", false);
+
             var node = configurator.graph.node($('#select-' + nodeName).val());
             configurator.step.selectedNodes[1] = baseNode;
             configurator.step.selectedNodes[2] = node;
-            this.showPrice();
+            // this.showPrice();
 
             if (mainNode.info !== undefined) {
                 $('#example-visualization-info').html(mainNode.info);
@@ -380,16 +424,17 @@ class Configurator {
     getPrice() {
         let price = 0.0;
         configurator.allSteps.forEach(step => {
-            if (step.selectedNodes[3] !== undefined) {
-                if (step.selectedNodes[3].g === 1) {
-                    price += step.selectedNodes[2].price.g1;
-                } else {
-                    price += step.selectedNodes[2].price.g2;
+            if (step.selectedNodes[2] != undefined) {
+                price += step.selectedNodes[2].price.g1;
+                if (step.selectedNodes[3] !== undefined) {
+                    if (step.selectedNodes[3].g === 1) {
+                        price += step.selectedNodes[2].price.g1;
+                    } else {
+                        price += step.selectedNodes[2].price.g2;
+                    }
                 }
-            }
-            else {
-                if (step.selectedNodes[2] != undefined) {
-                    price += step.selectedNodes[2].price.g1;
+                else {
+
                 }
             }
         });
@@ -424,6 +469,105 @@ class Configurator {
                 sb += '<option value="' + node[0] + '" width="' + node[1].width + '">' + node[1].label + '</option>';
             });
             return sb + '</select></div>';
+        }
+        return '';
+    }
+
+    addOption2(node_name, successors) {
+        var mainNode = this.graph.node(node_name);
+
+        var labelText = "Wymiar";
+        if (mainNode.img === 'empty.png') {
+            labelText = "Wybierz";
+        }
+        if (successors.length > 0) {
+            var optionNode = [];
+            successors.forEach(s => {
+                var node = this.graph.node(s);
+                optionNode.push([s, node]);
+            });
+            if (this.step.optionsFilter && this.width > 0) {
+                optionNode = optionNode.filter(function (elem) {
+                    return elem[1].width == configurator.width || elem[1].width === undefined;
+                });
+            }
+            if (optionNode.length === 0) {
+                return '';
+            }
+
+            var options = '<h5 id="select_'+node_name+'_label" style="margin-top: 0;">Wymiar</h5>' +
+                '<ul id="select_'+node_name+'" class="select-padding">';
+
+            var first = true;
+            var firstLabel;
+            optionNode.forEach(node => {
+                if(first === true){
+                    firstLabel = node[1].label
+                    first = false;
+                }
+                // sb += '<option value="' + node[0] + '" width="' + node[1].width + '">' + node[1].label + '</option>';
+                let option = '<li dataVal="' + node[1].label + '" width="' + node[1].width + '" onclick="configurator.onWidthChange(\'' + node[0] + '\');">' + node[1].label + '</li>';
+                console.log(option);
+                options += option;
+            });
+
+            options += '</ul>'
+                + '<div class="row">'
+                + '<div id="select_'+node_name+'_container" class="select-container col-xs-12">'
+                + '<div class="main-select" selID="select_'+node_name+'" disabled="true">'
+                + '<input type="hidden" name="size" value="'+firstLabel+'">'
+                + '<span class="placeholder" >'+firstLabel+'</span>'
+                + '<div class="svg select-v" data-svgIcon="select-v"></div>'
+                + '</div>'
+                + '</div>'
+                + '</div>';
+
+            //    SELECT
+            var selectClick = false;
+
+            function toggleSelect(name) {
+                $('#' + name).detach().appendTo('body');
+                selectClick = true;
+                $('#' + name).css('top', $('#' + name + '_container').offset().top + $('#' + name + '_container').height());
+                $('#' + name).css('left', $('#' + name + '_container').offset().left);
+                $('#' + name).css('width', $('#' + name + '_container').width());
+                var show = true;
+                if ($('#' + name).is(':visible')) {
+                    show = false;
+                }
+                $('.select-padding').hide();
+                $('.select-container').find('.select-v svg').removeClass('rotate-180');
+                if (show) {
+                    $('#' + name).show();
+                    $('#' + name + '_container').find('.select-v svg').addClass('rotate-180');
+                }
+            }
+
+            $(document).on('click', '.main-select', function () {
+                var name = $(this).attr('selID');
+                console.log($(this).attr('disabled'));
+                if($(this).prop('disabled') == false) {
+                    toggleSelect(name);
+                }
+            });
+            $(document).on('click', '.select-padding li', function () {
+                $('.select-padding li').attr('clicked',false);
+                $(this).attr('clicked',true);
+                $('#' + $(this).parent().attr('id') + '_container input').val($(this).attr('dataVal'));
+                if ($('#' + $(this).parent().attr('id') + '_container input').hasClass('error')) {
+                    $('#' + $(this).parent().attr('id') + '_container').closest('form').valid();
+                }
+                $('#' + $(this).parent().attr('id') + '_container .placeholder').text($(this).text());
+            });
+            $(document).click(function () {
+                if (!selectClick) {
+                    $('.select-padding').hide();
+                    $('.select-container').find('.select-v svg').removeClass('rotate-180');
+                }
+                selectClick = false;
+            });
+//    END SELECT
+            return options;
         }
         return '';
     }
