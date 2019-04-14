@@ -44,7 +44,7 @@ g.setNode("box_podnoszony", {
     node: 'box_podnoszony',
     label: 'Box-podnoszony',
     img: 'box_podnoszony.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_novel13.png',
+    render: '/bazy/baza_box_podnoszony_h31_novel13.png',
     colors: 'base_podnoszony_colors_7',
 });
 
@@ -384,21 +384,21 @@ g.setNode("base_podnoszony_novel", {
     name: 'novel 13',
     node: 'base_podnoszony_novel',
     url: './img/tkaniny/novel_13_anthracite.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_novel13.png'
+    render: '/bazy/baza_box_podnoszony_h31_novel13.png'
 });
 g.setNode("base_podnoszony_roko", {
     g: 2,
     name: 'roko 8',
     node: 'base_podnoszony_roko',
     url: './img/tkaniny/Roko088_blue.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_roko08.png'
+    render: '/bazy/baza_box_podnoszony_h31_roko08.png'
 });
 g.setNode("base_podnoszony_aspen", {
     g: 2,
     name: 'aspen 04',
     node: 'base_podnoszony_aspen',
     url: './img/tkaniny/aspen_04_light.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_aspen04.png'
+    render: '/bazy/baza_box_podnoszony_h31_aspen04.png'
 });
 
 g.setNode("base_podnoszony_river", {
@@ -406,28 +406,28 @@ g.setNode("base_podnoszony_river", {
     name: 'river 2',
     node: 'base_podnoszony_river',
     url: './img/tkaniny/river_02_silver.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_river02.png'
+    render: '/bazy/baza_box_podnoszony_h31_river02.png'
 });
 g.setNode("base_podnoszony_eren", {
     g: 1,
     name: 'eren 07',
     node: 'base_podnoszony_eren',
     url: './img/tkaniny/eren_07.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_eren07.png'
+    render: '/bazy/baza_box_podnoszony_h31_eren07.png'
 });
 g.setNode("base_podnoszony_ontario", {
     g: 1,
     name: 'ontario 90',
     node: 'base_podnoszony_ontario',
     url: './img/tkaniny/ontario_90.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_ontario90.png'
+    render: '/bazy/baza_box_podnoszony_h31_ontario90.png'
 });
 g.setNode("base_podnoszony_riviera", {
     g: 1,
     name: 'riviera 38',
     node: 'base_podnoszony_riviera',
     url: './img/tkaniny/riviera_38.jpg',
-    render: '/bazy/baza_box_podnoszony_h39_riviera38.png'
+    render: '/bazy/baza_box_podnoszony_h31_riviera38.png'
 });
 
 g.setNode("tapicerowana_colors_7", {});
@@ -1621,49 +1621,49 @@ g.setNode("bp_tap_novel", {
     name: 'novel 13',
     node: 'bp_tap_novel',
     url: './img/tkaniny/novel_13_anthracite.jpg',
-    render: '/materace/materac_tapicerowany_h39_novel13.png'
+    render: '/materace/materac_tapicerowany_h31_novel13.png'
 });
 g.setNode("bp_tap_roko", {
     g: 2,
     name: 'roko 8',
     node: 'bp_tap_roko',
     url: './img/tkaniny/Roko088_blue.jpg',
-    render: '/materace/materac_tapicerowany_h39_roko08.png'
+    render: '/materace/materac_tapicerowany_h31_roko08.png'
 });
 g.setNode("bp_tap_aspen", {
     g: 2,
     name: 'aspen 04',
     node: 'bp_tap_aspen',
     url: './img/tkaniny/aspen_04_light.jpg',
-    render: '/materace/materac_tapicerowany_h39_aspen04.png'
+    render: '/materace/materac_tapicerowany_h31_aspen04.png'
 });
 g.setNode("bp_tap_river", {
     g: 2,
     name: 'river 2',
     node: 'bp_tap_river',
     url: './img/tkaniny/river_02_silver.jpg',
-    render: '/materace/materac_tapicerowany_h39_river02.png'
+    render: '/materace/materac_tapicerowany_h31_river02.png'
 });
 g.setNode("bp_tap_eren", {
     g: 1,
     name: 'eren 07',
     node: 'bp_tap_eren',
     url: './img/tkaniny/eren_07.jpg',
-    render: '/materace/materac_tapicerowany_h39_eren07.png'
+    render: '/materace/materac_tapicerowany_h31_eren07.png'
 });
 g.setNode("bp_tap_ontario", {
     g: 1,
     name: 'ontario 90',
     node: 'bp_tap_ontario',
     url: './img/tkaniny/ontario_90.jpg',
-    render: '/materace/materac_tapicerowany_h39_ontario90.png'
+    render: '/materace/materac_tapicerowany_h31_ontario90.png'
 });
 g.setNode("bp_tap_riviera", {
     g: 1,
     name: 'riviera 38',
     node: 'bp_tap_riviera',
     url: './img/tkaniny/riviera_38.jpg',
-    render: '/materace/materac_tapicerowany_h39_riviera38.png'
+    render: '/materace/materac_tapicerowany_h31_riviera38.png'
 });
 
 //***********************************************************************
@@ -4965,105 +4965,105 @@ g.setNode("bp_materac_tango", {
     node: 'bp_materac_tango',
     label: 'Tango',
     img: '/materace/tango.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_velvet_tencel'
 });
 g.setNode("bp_materac_step", {
     node: 'bp_materac_step',
     label: 'Step',
     img: '/materace/step.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_fresh'
 });
 g.setNode("bp_materac_salsa", {
     node: 'bp_materac_salsa',
     label: 'Salsa',
     img: '/materace/salsa.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_medicover'
 });
 g.setNode("bp_materac_chacha", {
     node: 'bp_materac_chacha',
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_velvet'
 });
 g.setNode("bp_materac_pasodoble", {
     node: 'bp_materac_pasodoble',
     label: 'Pasodoble',
     img: '/materace/pasodoble.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_velvet_tencel'
 });
 g.setNode("bp_materac_flamenco", {
     node: 'bp_materac_flamenco',
     label: 'Flamenco',
     img: '/materace/flamenco.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_velvet_tencel'
 });
 g.setNode("bp_materac_makarena", {
     node: 'bp_materac_makarena',
     label: 'Makarena',
     img: '/materace/makarena.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_merced_elips'
 });
 g.setNode("bp_materac_rockroll", {
     node: 'bp_materac_rockroll',
     label: 'Rock & Roll',
     img: '/materace/rock_roll.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_velvet_tencel'
 });
 g.setNode("bp_materac_foxtrot", {
     node: 'bp_materac_foxtrot',
     label: 'Foxtrot',
     img: '/materace/foxtrot.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_velvet'
 });
 g.setNode("bp_materac_mambo", {
     node: 'bp_materac_mambo',
     label: 'Mambo',
     img: '/materace/mambo.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_merced_elips'
 });
 g.setNode("bp_materac_rumba", {
     node: 'bp_materac_rumba',
     label: 'Rumba',
     img: '/materace/rumba.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_elips_medicott'
 });
 g.setNode("bp_materac_latino", {
     node: 'bp_materac_latino',
     label: 'Latino',
     img: '/materace/latino.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_merced_elips'
 });
 g.setNode("bp_materac_fandango", {
     node: 'bp_materac_fandango',
     label: 'Fandango',
     img: '/materace/fandango.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_medicover'
 });
 g.setNode("bp_materac_zorba", {
     node: 'bp_materac_zorba',
     label: 'Zorba',
     img: '/materace/zorba.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_medicover'
 });
 g.setNode("bp_materac_breakdance", {
     node: 'bp_materac_breakdance',
     label: 'Breakdance',
     img: '/materace/breakdance.jpg',
-    render: 'materace/materac_salsa_h39.png',
+    render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_teenage'
 });
 
@@ -5071,21 +5071,21 @@ g.setNode("bp_materac_foxtrot_tapicerowany", {
     node: 'bp_materac_foxtrot_tapicerowany',
     label: 'Foxtrot',
     img: '/materace/foxtrot.jpg',
-    render: 'materace/materac_tapicerowany_h39_novel13.png',
+    render: 'materace/materac_tapicerowany_h31_novel13.png',
     colors: 'bp_tap_colors_7'
 });
 g.setNode("bp_materac_chacha_tapicerowany", {
     node: 'bp_materac_chacha_tapicerowany',
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
-    render: 'materace/materac_tapicerowany_h39_novel13.png',
+    render: 'materace/materac_tapicerowany_h31_novel13.png',
     colors: 'bp_tap_colors_7'
 });
 g.setNode("bp_materac_flamenco_tapicerowany", {
     node: 'bp_materac_flamenco_tapicerowany',
     label: 'Flamenco',
     img: '/materace/flamenco.jpg',
-    render: 'materace/materac_tapicerowany_h39_novel13.png',
+    render: 'materace/materac_tapicerowany_h31_novel13.png',
     colors: 'bp_tap_colors_7'
 });
 
@@ -6424,7 +6424,7 @@ g.setNode("bp_materac_select_plus", {
     node: 'bp_materac_select_plus',
     label: 'Select Plus Softex',
     img: '/materace/select_plus_top.jpg',
-    render: 'materace/top_blues_h39.png',
+    render: 'materace/top_blues_h31.png',
     cover: 'bp_covers_sensity_top'
 });
 
@@ -6432,7 +6432,7 @@ g.setNode("bp_materac_blues", {
     node: 'bp_materac_blues',
     label: 'Blues',
     img: '/materace/blues.jpg',
-    render: 'materace/top_blues_h39.png',
+    render: 'materace/top_blues_h31.png',
     cover: 'bp_covers_elips_tencel_top'
 });
 
@@ -6441,7 +6441,7 @@ g.setNode("bp_materac_jive", {
     node: 'bp_materac_jive',
     label: 'Jive',
     img: '/materace/jive.jpg',
-    render: 'materace/top_blues_h39.png',
+    render: 'materace/top_blues_h31.png',
     cover: 'bp_covers_elips_tencel_top'
 });
 
@@ -6449,7 +6449,7 @@ g.setNode("bp_materac_select_top", {
     node: 'bp_materac_select_top',
     label: 'Select TOP',
     img: '/materace/select_top.jpg',
-    render: 'materace/top_blues_h39.png',
+    render: 'materace/top_blues_h31.png',
     cover: 'bp_covers_sensity_top'
 });
 
