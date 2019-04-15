@@ -6582,7 +6582,7 @@ g.setNode("skrzynia_posciel_big", {
     label: 'pojemnik na pościel',
     number: 5,
     zIndex: 35,
-    skipToNode: 'summary',
+    skipToNode: 'frame_no_box_big',
     optionsFilter: true
 });
 
@@ -6697,6 +6697,16 @@ g.setNode("skrzynia_posciel_urban", {
     render: 'transparent.png'
 });
 
+g.setNode("frame", {
+    node: 'frame',
+    title: 'Stelaż',
+    label: 'wybierz stelaż',
+    number: 6,
+    zIndex: 22,
+    skipToNode: 'summary',
+    optionsFilter: true
+});
+
 
 g.setNode("frame_with_box", {
     node: 'frame_with_box',
@@ -6709,7 +6719,7 @@ g.setNode("frame_with_box", {
 });
 
 g.setNode("frame_with_box_90", {
-    node: 'frame_with_box',
+    node: 'frame_with_box_90',
     title: 'Stelaż',
     label: 'wybierz stelaż',
     number: 6,
@@ -6868,6 +6878,17 @@ g.setEdge("frame_no_box", "frame_select_classic");
 g.setEdge("frame_no_box", "frame_sam");
 g.setEdge("frame_no_box", "frame_double_lift");
 g.setEdge("frame_no_box", "frame_family_lift");
+
+
+g.setEdge("frame", "frame_family_expert");
+g.setEdge("frame", "frame_family_moto");
+g.setEdge("frame", "frame_select_expert");
+g.setEdge("frame", "frame_select_moto");
+g.setEdge("frame", "frame_family_classic");
+g.setEdge("frame", "frame_select_classic");
+g.setEdge("frame", "frame_sam");
+g.setEdge("frame", "frame_double_lift");
+g.setEdge("frame", "frame_family_lift");
 
 g.setEdge("frame_no_box_big", "frame_family_expert");
 g.setEdge("frame_no_box_big", "frame_family_moto");
