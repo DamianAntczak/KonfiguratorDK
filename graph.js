@@ -7158,23 +7158,23 @@ g.setEdge("step_2", "eclectic");
 g.setEdge("step_2", "ladylike");
 g.setEdge("step_2", "momiko");
 
-g.setEdge("bb_wezglowie", "bb_urban");
-g.setEdge("bb_wezglowie", "bb_preppy");
-g.setEdge("bb_wezglowie", "bb_glamour");
-g.setEdge("bb_wezglowie", "bb_vintage");
-g.setEdge("bb_wezglowie", "bb_eclectic");
-g.setEdge("bb_wezglowie", "bb_ladylike");
-g.setEdge("bb_wezglowie", "bb_momiko");
+g.setEdge("bb_wezglowie", "bb_wezglowie_urban");
+g.setEdge("bb_wezglowie", "bb_wezglowie_preppy");
+g.setEdge("bb_wezglowie", "bb_wezglowie_glamour");
+g.setEdge("bb_wezglowie", "bb_wezglowie_vintage");
+g.setEdge("bb_wezglowie", "bb_wezglowie_eclectic");
+g.setEdge("bb_wezglowie", "bb_wezglowie_ladylike");
+g.setEdge("bb_wezglowie", "bb_wezglowie_momiko");
 
 //**************************************
 
-g.setEdge("bp_wezglowie", "bp_urban");
-g.setEdge("bp_wezglowie", "bp_preppy");
-g.setEdge("bp_wezglowie", "bp_glamour");
-g.setEdge("bp_wezglowie", "bp_vintage");
-g.setEdge("bp_wezglowie", "bp_eclectic");
-g.setEdge("bp_wezglowie", "bp_ladylike");
-g.setEdge("bp_wezglowie", "bp_momiko");
+g.setEdge("bp_wezglowie", "bp_wezglowie_urban");
+g.setEdge("bp_wezglowie", "bp_wezglowie_preppy");
+g.setEdge("bp_wezglowie", "bp_wezglowie_glamour");
+g.setEdge("bp_wezglowie", "bp_wezglowie_vintage");
+g.setEdge("bp_wezglowie", "bp_wezglowie_eclectic");
+g.setEdge("bp_wezglowie", "bp_wezglowie_ladylike");
+g.setEdge("bp_wezglowie", "bp_wezglowie_momiko");
 
 //**************************************
 
