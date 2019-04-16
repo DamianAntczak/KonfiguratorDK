@@ -762,6 +762,10 @@ class Configurator {
 
                 var stepImg = document.getElementById('render-' + step.selectedNodes[0].node);
                 images.push(stepImg)
+                var overlayImg = document.getElementById('render-overlay-' + step.selectedNodes[0].node);
+                if(overlayImg != null){
+                    images.push(overlayImg);
+                }
             }
         });
         images.sort(function (a, b) {
