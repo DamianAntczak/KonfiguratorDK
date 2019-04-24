@@ -29,14 +29,7 @@ class Configurator {
     }
 
     nextStep() {
-        // let actualStep = this.step;
-        // this.step = this.step.nextStep;
-        // this.step.previous = actualStep;
-        // this.refresh();
-        // $('#configurator-preview').append('<img class="img-responsive configurator-img" src="renders/' + this.step.img + '" />');
-
         var selectedNode = this.step.selectedNodes[2];
-        console.log(selectedNode);
         this.stepIndex = this.stepIndex + 1;
         if (selectedNode.nextStep == 'summary') {
             this.loadSummary();
@@ -74,7 +67,6 @@ class Configurator {
 
     skipStep() {
         var selectedNode = this.step.selectedNodes[0];
-        console.log(selectedNode);
         this.stepIndex = this.stepIndex + 1;
         if (selectedNode.skipToNode == 'summary') {
             this.loadSummary();
@@ -91,7 +83,6 @@ class Configurator {
     }
 
     repeat() {
-        console.log("Repeat");
         // this.step = null;
         this.allSteps = [];
         this.stepIndex = 0;
@@ -103,11 +94,8 @@ class Configurator {
     }
 
     refresh(node) {
-        console.log($('#step-title'));
         $('#step-number').text('Krok ' + node.number);
         $('#step-title').text(node.label);
-        console.log('Step index:' + (this.stepIndex - 1));
-        console.log(this.allSteps[this.stepIndex - 1]);
         if (this.allSteps[this.stepIndex - 1] == null) {
             $("#previous-step").hide();
         } else {
@@ -122,22 +110,6 @@ class Configurator {
         } else {
             $('#next-step').hide();
         }
-        // if (this.step.nextStep !== null) {
-        //     $('#next-step').hide();
-        // } else {
-        //     $('#next-step').show();
-        //     $('#next-step').text('następny krok: ' + this.step.nextStep.title + ' >>');
-        // }
-        // $('#next-step').show();
-        // console.log('Node ');
-        // console.log(node);
-        // $('#next-step').text('następny krok: ' + this.step.title + ' >>');
-
-        // if (this.step.skipEnable !== undefined) {
-        //     $('#skip-step').show();
-        // } else {
-        //     $('#skip-step').hide();
-        // }
     }
 
     loadLevel(step) {
@@ -285,7 +257,6 @@ class Configurator {
             if (render !== undefined) {
                 var src = render.render;
                 var height = node.label;
-                console.log(height);
                 if (parseInt(height) === 95) {
                     $('#render-' + mainNode).attr('src', 'renders/' + src);
                     if ($('#render-overlay-' + mainNode).length) {
@@ -295,8 +266,6 @@ class Configurator {
                 }
                 else {
                     var replace = src.replace("95", "115");
-                    console.log('replace');
-                    console.log(replace);
                     $('#render-' + mainNode).attr('src', 'renders/' + replace);
                     if ($('#render-overlay-' + mainNode).length) {
                         var overlay = render.overlay.replace("95", "115");
@@ -348,8 +317,6 @@ class Configurator {
             $('.configurator-select').prop("disabled", "disabled");
             $('#select-' + nodeName).removeAttr("disabled");
 
-            console.log('TU!!!!!!!!!!!');
-            console.log($('#select-' + nodeName).val());
             var node = configurator.graph.node($('#select-' + nodeName).val());
             configurator.step.selectedNodes[1] = baseNode;
             configurator.step.selectedNodes[2] = node;
@@ -402,7 +369,7 @@ class Configurator {
                 }
             }
             else {
-                if (step.selectedNodes[2] != undefined) {
+                if (step.selectedNodes[2] !== undefined) {
                     stepPrice = step.selectedNodes[2].price.g1;
                 }
             }
@@ -553,16 +520,12 @@ class Configurator {
             configurator.allSteps.forEach(step => {
                 var topNode = step.selectedNodes[0];
                 var main = step.selectedNodes[1];
-                console.log(main);
                 if (main !== undefined) {
                     var colors = configurator.graph.successors(main.colors);
                     var stepColor = null;
-                    console.log('colorNode');
-                    console.log(colorNode);
                     if (colors !== undefined) {
                         colors.forEach(color => {
                             var currentColorNode = configurator.graph.node(color);
-                            console.log(colorNode);
                             if (currentColorNode.name === colorNode.name) {
                                 stepColor = currentColorNode;
                             }
@@ -572,10 +535,8 @@ class Configurator {
                             var find = $('#render-' + topNode.node);
                             var node2 = step.selectedNodes[2];
                             if (find.length === 0) {
-                                console.log('find.length === 0');
                                 $('#configurator-preview').append('<img id="render-' + topNode.node + '" style="z-index: ' + topNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + stepColor.render + '" />');
                             } else {
-                                console.log('find.length !== 0');
                                 $(find).attr('src', 'renders/' + stepColor.render);
                             }
                             if (topNode.overlay !== undefined) {
@@ -599,7 +560,6 @@ class Configurator {
                                 if (render !== undefined) {
                                     var src = render.render;
                                     var height = step.selectedNodes[2].label;
-                                    console.log(height);
                                     if (parseInt(height) === 95) {
                                         $('#render-' + mainNode).attr('src', 'renders/' + src);
                                         if ($('#render-overlay-' + mainNode).length) {
@@ -609,8 +569,6 @@ class Configurator {
                                     }
                                     else {
                                         var replace = src.replace("95", "115");
-                                        console.log('replace');
-                                        console.log(replace);
                                         $('#render-' + mainNode).attr('src', 'renders/' + replace);
                                         if ($('#render-overlay-' + mainNode).length) {
                                             var overlay = render.overlay.replace("95", "115");
@@ -629,9 +587,6 @@ class Configurator {
     onColorSelect(selectedColor) {
 
         var $this = $(selectedColor);
-        console.log('selectedColor');
-        console.log(selectedColor);
-        console.log($this.attr('color'));
         this.selectedColor = $this.attr('name');
 
         var colorNode = configurator.graph.node($this.attr('color'));
@@ -644,7 +599,6 @@ class Configurator {
 
         var node = this.step.selectedNodes[2];
         var base_node_name = this.step.selectedNodes[1].node;
-        console.log(this.step.selectedNodes[1].node);
         if (node !== undefined) {
             if (colorNode.g === 1) {
                 $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
@@ -777,7 +731,6 @@ class Configurator {
 
         images.forEach(img => {
             ctx.drawImage(img, 0, 0);
-            console.log(img.style.zIndex);
         });
 
         bodyData.push([
