@@ -90,7 +90,7 @@ class Configurator {
         this.loadLevel("step_1");
     }
 
-    repeat(){
+    repeat() {
         console.log("Repeat");
         // this.step = null;
         this.allSteps = [];
@@ -161,10 +161,11 @@ class Configurator {
         if (successors.length === 3) {
             items = 3;
             margin = 100;
-        }else if(successors.length < 3){
+        } else if (successors.length < 3) {
             items = 3;
             center = true;
-        };
+        }
+        ;
         var carousel = $('.configurator-base-carousel').owlCarousel({
             loop: false,
             // items: items,
@@ -262,14 +263,14 @@ class Configurator {
         } else {
             $("#previous-step").hide();
         }
-        if(configurator.step.number > 1) {
+        if (configurator.step.number > 1) {
             $('#reload').show();
         }
         else {
             $('#reload').hide();
         }
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.configurator-select').select2({
                 minimumResultsForSearch: -1
             });
@@ -390,22 +391,24 @@ class Configurator {
     }
 
     getPrice() {
-        let price = 0.0;
+        let priceSum = 0.0;
         configurator.allSteps.forEach(step => {
+            let stepPrice = 0.0;
             if (step.selectedNodes[3] !== undefined) {
                 if (step.selectedNodes[3].g === 1) {
-                    price += step.selectedNodes[2].price.g1;
+                    stepPrice = step.selectedNodes[2].price.g1;
                 } else {
-                    price += step.selectedNodes[2].price.g2;
+                    stepPrice = step.selectedNodes[2].price.g2;
                 }
             }
             else {
                 if (step.selectedNodes[2] != undefined) {
-                    price += step.selectedNodes[2].price.g1;
+                    stepPrice = step.selectedNodes[2].price.g1;
                 }
             }
+            priceSum += stepPrice === -1 ? 0 : stepPrice;
         });
-        return price;
+        return priceSum;
     }
 
     addOption(node_name, successors) {
@@ -682,8 +685,8 @@ class Configurator {
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 str += '<div class="row summary-price-row"">';
                 str += '<div class="col-sm-5 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
-                str += '<div class="col-sm-2 text-left text-capitalize">' + fabricName(step) +'</div>'
-                str += '<div class="col-sm-2 text-right">' + this.getWidthString(step.selectedNodes[2]) +'</div>';
+                str += '<div class="col-sm-2 text-left text-capitalize">' + fabricName(step) + '</div>'
+                str += '<div class="col-sm-2 text-right">' + this.getWidthString(step.selectedNodes[2]) + '</div>';
                 str += '<div class="col-sm-3 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
             }
@@ -709,9 +712,9 @@ class Configurator {
     }
 
     getWidthString(node) {
-        if(node.label !== 'TAK') {
+        if (node.label !== 'TAK') {
             return node.label + ' cm';
-        }else {
+        } else {
             return '';
         }
     }
@@ -763,7 +766,7 @@ class Configurator {
                 var stepImg = document.getElementById('render-' + step.selectedNodes[0].node);
                 images.push(stepImg)
                 var overlayImg = document.getElementById('render-overlay-' + step.selectedNodes[0].node);
-                if(overlayImg != null){
+                if (overlayImg != null) {
                     images.push(overlayImg);
                 }
             }
