@@ -96,19 +96,21 @@ class Configurator {
     refresh(node) {
         $('#step-number').text('Krok ' + node.number);
         $('#step-title').text(node.label);
+        let $previousStep = $("#previous-step");
         if (this.allSteps[this.stepIndex - 1] == null) {
-            $("#previous-step").hide();
+            $previousStep.hide();
         } else {
-            $("#previous-step").show();
-            $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
+            $previousStep.show();
+            $previousStep.text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
         }
 
+        let $nextStep = $('#next-step');
         if (this.step.skipEnable !== undefined) {
-            $('#next-step').show();
-            $('#next-step').text('pomiń ten krok >>');
-            $('#next-step').attr("onclick", "configurator.skipStep()").attr("style", "color:red");
+            $nextStep.show();
+            $nextStep.text('pomiń ten krok >>');
+            $nextStep.attr("onclick", "configurator.skipStep()").attr("style", "color:red");
         } else {
-            $('#next-step').hide();
+            $nextStep.hide();
         }
     }
 
@@ -137,7 +139,6 @@ class Configurator {
             items = 3;
             center = true;
         }
-        ;
         var carousel = $('.configurator-base-carousel').owlCarousel({
             loop: false,
             // items: items,
@@ -229,11 +230,12 @@ class Configurator {
 
         this.allSteps[this.stepIndex] = this.step;
 
+        let $previousStep = $("#previous-step");
         if (this.allSteps[this.stepIndex - 1] !== undefined) {
-            $("#previous-step").show();
-            $("#previous-step").text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
+            $previousStep.show();
+            $previousStep.text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
         } else {
-            $("#previous-step").hide();
+            $previousStep.hide();
         }
         if (configurator.step.number > 1) {
             $('#reload').show();
@@ -257,19 +259,20 @@ class Configurator {
             if (render !== undefined) {
                 var src = render.render;
                 var height = node.label;
+                let $renderOverlay = $('#render-overlay-' + mainNode);
                 if (parseInt(height) === 95) {
                     $('#render-' + mainNode).attr('src', 'renders/' + src);
-                    if ($('#render-overlay-' + mainNode).length) {
+                    if ($renderOverlay.length) {
                         var overlay = render.overlay;
-                        $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                        $renderOverlay.prop('src', 'renders/' + overlay);
                     }
                 }
                 else {
                     var replace = src.replace("95", "115");
                     $('#render-' + mainNode).attr('src', 'renders/' + replace);
-                    if ($('#render-overlay-' + mainNode).length) {
+                    if ($renderOverlay.length) {
                         var overlay = render.overlay.replace("95", "115");
-                        $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                        $renderOverlay.prop('src', 'renders/' + overlay);
                     }
                 }
             }
@@ -287,30 +290,32 @@ class Configurator {
         $('.box').removeClass('carousel-box-selected').addClass('carousel-box');
         var nodeName = $this.attr("node_name");
         var mainNode = configurator.step.selectedNodes[0];
+        let $nextStep = $('#next-step');
+        let $configuratorPreview = $('#configurator-preview');
         if ($this.hasClass('clicked')) {
             $this.removeAttr('style').removeClass('clicked');
             $this.removeClass('carousel-box-selected').addClass('carousel-box');
             $this.attr("node_name");
-            $('#configurator-preview').find('#render-' + mainNode.node).remove();
+            $configuratorPreview.find('#render-' + mainNode.node).remove();
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
             $('#select-' + nodeName).prop("disabled", "disabled");
             $('#render-overlay-' + mainNode.node).remove();
             if (mainNode.skipToNode !== undefined) {
-                $('#next-step').show();
-                $('#next-step').text('pomiń ten krok >>');
-                $('#next-step').attr("onclick", "configurator.skipStep()").attr("style", "color:red");
+                $nextStep.show();
+                $nextStep.text('pomiń ten krok >>');
+                $nextStep.attr("onclick", "configurator.skipStep()").attr("style", "color:red");
             } else {
-                $('#next-step').hide();
+                $nextStep.hide();
             }
         } else {
             $this.addClass('clicked');
             $this.removeClass('carousel-box').addClass('carousel-box-selected');
 
             var baseNode = configurator.graph.node(nodeName);
-            var find = $('#configurator-preview').find('#render-' + mainNode.node);
+            var find = $configuratorPreview.find('#render-' + mainNode.node);
             if (find.length === 0) {
-                $('#configurator-preview').append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
+                $configuratorPreview.append('<img id="render-' + mainNode.node + '" style="z-index: ' + mainNode.zIndex + '" class="img-responsive configurator-img" src="renders/' + baseNode.render + '" />');
             } else {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
@@ -344,10 +349,10 @@ class Configurator {
                 $('.tiles:first').addClass('color-selected');
             }
 
-            $('#next-step').show();
-            $('#next-step').attr("onclick", "configurator.nextStep()").removeAttr("style");
+            $nextStep.show();
+            $nextStep.attr("onclick", "configurator.nextStep()").removeAttr("style");
             let nextStep = configurator.graph.node(node.nextStep);
-            $('#next-step').text('następny krok: ' + nextStep.title + ' >>');
+            $nextStep.text('następny krok: ' + nextStep.title + ' >>');
         }
     }
 
@@ -426,7 +431,6 @@ class Configurator {
             return color.g == 2;
         });
 
-
         var html = '<div id="item-color" class="col-sm-12">' +
             '<h5 class="text-center">Wybierz tkaninę</h5>' +
             '<div class="row">';
@@ -454,7 +458,7 @@ class Configurator {
                     html += '<span class="bold text-uppercase" style="font-size: 11px;">' + group + ' grupa</span>';
                 }
                 html += '<div color="' + color.node + '" name="' + color.name + '" onclick="configurator.onColorSelect($(this))" class="tiles img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
-                html += '<span class="bold text-uppercase" style="font-size: 8px;">' + color.name + '</span>'
+                html += '<span class="bold text-uppercase" style="font-size: 8px;">' + color.name + '</span>';
                 html += '</div>';
             }
             html += '</div>';
@@ -511,8 +515,6 @@ class Configurator {
             html += '<span class="bold text-uppercase">' + group + '</span>';
             html += '</div>';
         }
-
-        return html + '</div>';
     }
 
     changeColorInAllSteps(colorNode) {
@@ -560,19 +562,20 @@ class Configurator {
                                 if (render !== undefined) {
                                     var src = render.render;
                                     var height = step.selectedNodes[2].label;
+                                    let $renderOverlay = $('#render-overlay-' + mainNode);
                                     if (parseInt(height) === 95) {
                                         $('#render-' + mainNode).attr('src', 'renders/' + src);
-                                        if ($('#render-overlay-' + mainNode).length) {
+                                        if ($renderOverlay.length) {
                                             var overlay = render.overlay;
-                                            $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                                            $renderOverlay.prop('src', 'renders/' + overlay);
                                         }
                                     }
                                     else {
                                         var replace = src.replace("95", "115");
                                         $('#render-' + mainNode).attr('src', 'renders/' + replace);
-                                        if ($('#render-overlay-' + mainNode).length) {
+                                        if ($renderOverlay.length) {
                                             var overlay = render.overlay.replace("95", "115");
-                                            $('#render-overlay-' + mainNode).prop('src', 'renders/' + overlay);
+                                            $renderOverlay.prop('src', 'renders/' + overlay);
                                         }
                                     }
                                 }
@@ -639,7 +642,7 @@ class Configurator {
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 str += '<div class="row summary-price-row"">';
                 str += '<div class="col-sm-5 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
-                str += '<div class="col-sm-2 text-left text-capitalize">' + fabricName(step) + '</div>'
+                str += '<div class="col-sm-2 text-left text-capitalize">' + fabricName(step) + '</div>';
                 str += '<div class="col-sm-2 text-right">' + this.getWidthString(step.selectedNodes[2]) + '</div>';
                 str += '<div class="col-sm-3 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
@@ -680,14 +683,13 @@ class Configurator {
             canvas.height = img.height;
             var ctx = canvas.getContext("2d");
             ctx.drawImage(img, 0, 0);
-            var dataURL = canvas.toDataURL("image/png");
-            return dataURL;
+            return canvas.toDataURL("image/png");
         }
 
 
         var bodyData = [];
 
-        var img = document.getElementById('base-img')
+        var img = document.getElementById('base-img');
         var canvas = document.createElement("canvas");
         canvas.width = 1500;
         canvas.height = 1140;
@@ -718,7 +720,7 @@ class Configurator {
                     }]);
 
                 var stepImg = document.getElementById('render-' + step.selectedNodes[0].node);
-                images.push(stepImg)
+                images.push(stepImg);
                 var overlayImg = document.getElementById('render-overlay-' + step.selectedNodes[0].node);
                 if (overlayImg != null) {
                     images.push(overlayImg);
