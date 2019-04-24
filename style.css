@@ -4,6 +4,7 @@ img#base-img {
 
 .configurator-left h5 {
     font-size: 20px;
+    position:relative;
 }
 
 .configurator-price {
@@ -13,13 +14,16 @@ img#base-img {
 
 div.price-info{
     padding-left: 10%;
+    z-index: 1000;
+    position: absolute;
 }
 
 div#example-visualization-info{
-    margin-top: -30px;
+    bottom: 5%;
     margin-left: 15px;
     font-size: 10px;
     color: #737477;
+    width: 90%;
     position: absolute;
 }
 
@@ -86,9 +90,11 @@ div.summary-price-row div{
     padding-bottom: 10px;
 }
 
-.configurator-img {
+img.configurator-img {
+    top: 0px;
     position: absolute;
     width: 90%;
+    overflow:auto;
 }
 
 .square {
@@ -236,4 +242,8 @@ button#reload{
     color: #616161;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+#configurator-preview{
+    position: relative;
 }

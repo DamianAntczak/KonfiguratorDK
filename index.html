@@ -9,24 +9,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.54/pdfmake.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.54/vfs_fonts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" ></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" >
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" media="none" onload="if(media!='screen')media='screen'">
-    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/style.css?ver=0.0.1" >
-    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/lightbox.css" media="none" onload="if(media!='screen')media='screen'">
-    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/owl.theme.css" media="none" onload="if(media!='screen')media='screen'">
-    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/owl.carousel.css"  media="none" onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"
+          media="none" onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/style.css?ver=0.0.1">
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/lightbox.css" media="none"
+          onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/owl.theme.css" media="none"
+          onload="if(media!='screen')media='screen'">
+    <link rel="stylesheet" type="text/css" href="https://hilding.pl/viewHilding/css/owl.carousel.css" media="none"
+          onload="if(media!='screen')media='screen'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+          rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://dagrejs.github.io/project/graphlib/latest/graphlib.js"></script>
     <script src="configurator.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
 </head>
 <body>
 <section class="container-fluid margin-top-25 margin-bottom-75 show-section configurator">
@@ -38,21 +47,19 @@
         </div>
     </div>
     <div class="row" id="configurator" hidden>
-        <div class="col-md-6 col-sm-6 col-xs-6 configurator-left">
+        <div class="col-md-6 col-sm-12 configurator-left">
             <div id="configurator-preview" class="wrapper">
-                <img id="base-img" class="img-responsive configurator-img" src="renders/tlo001.jpg" alt="Glamour"/>
-                <!--<img id="base-img2" class="img-responsive configurator-img" style="z-index: 500" src="renders/wezglowia/łatka_riviera38 2.png" alt="Glamour"/>-->
-                <div class="configurator-img" style="z-index: 1000;">
-                    <div class="price-info">
-                        <h5>Wymiar i cena prezentowanego<br> zestawu:</h5>
-                        <span id="price" class="blue-text configurator-price"></span>
-                        <p id="price-vat" hidden>Cena zawiera podatek VAT 23 %</p>
-                    </div>
-
+                <div class="price-info">
+                    <h5>Wymiar i cena prezentowanego<br> zestawu:</h5>
+                    <span id="price" class="blue-text configurator-price"></span>
+                    <p id="price-vat" hidden>Cena zawiera podatek VAT 23 %</p>
                 </div>
+                <div id="example-visualization-info">
+                </div>
+                <img id="base-img" class="img-responsive" style="width: 90%" src="renders/tlo001.jpg" alt="Glamour"/>
             </div>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-6 ">
+        <div class="col-md-6 col-sm-12">
             <div class="row margin-bottom-25">
                 <div class="text-center">
                     <p id="step-number" class="configurator-uppercase">Krok 1</p>
@@ -67,19 +74,25 @@
             </div>
             <div class="row" style="padding-top: 25px">
                 <div class="col-sm-6">
-                    <button id="previous-step" type="button" class="btn btn-sm btn-link blue-text bold configurator-uppercase" onclick="configurator.previousStep()">wezgłowie </button>
+                    <button id="previous-step" type="button"
+                            class="btn btn-sm btn-link blue-text bold configurator-uppercase"
+                            onclick="configurator.previousStep()">wezgłowie
+                    </button>
                 </div>
                 <div class="col-sm-6" style="text-align: right;">
-                    <button id="next-step" type="button" class="btn btn-sm btn-link blue-text bold configurator-uppercase" onclick="configurator.nextStep()"></button>
+                    <button id="next-step" type="button"
+                            class="btn btn-sm btn-link blue-text bold configurator-uppercase"
+                            onclick="configurator.nextStep()"></button>
                 </div>
             </div>
             <div class="row" style="text-align: center;">
-                <button id="reload" class="btn btn-sm btn-link blue-text" onclick="configurator.repeat()"><span class="glyphicon glyphicon-repeat"></span> Zacznij ponownie</button>
+                <button id="reload" class="btn btn-sm btn-link blue-text" onclick="configurator.repeat()"><span
+                        class="glyphicon glyphicon-repeat"></span> Zacznij ponownie
+                </button>
             </div>
         </div>
     </div>
-    <div id="example-visualization-info">
-    </div>
+
     <div id="circle"></div>
 </section>
 

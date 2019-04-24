@@ -910,8 +910,6 @@ $(document)
                     $(deferred.resolve);
                 })
             ).done(function () {
-                //Stuff to do after someScript has loaded
-
                 configurator = new Configurator(g);
             });
         }
