@@ -206,6 +206,10 @@ class Configurator {
                         $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
                         configurator.changeHeight(node);
                     }
+                    else if(price === -1){
+                        $owl.find('#node-price-' + node_name).html('Cena łączna z wezgłowiem widoczna w kolejnym kroku')
+                            .removeClass('node-price').addClass('node-price-small');
+                    }
                     else {
                         $owl.find('#node-price-' + node_name).parent().hide();
                     }
@@ -603,8 +607,11 @@ class Configurator {
         var node = this.step.selectedNodes[2];
         var base_node_name = this.step.selectedNodes[1].node;
         if (node !== undefined) {
-            if (colorNode.g === 1) {
-                $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
+            if(node.price.g1 === -1 || node.price.g2 === -1){
+                $owl.find('#node-price-' + base_node_name).html('Cena łączna z wezgłowiem widoczna w kolejnym kroku');
+            }
+            else if (colorNode.g === 1) {
+                    $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
             } else {
                 $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
             }

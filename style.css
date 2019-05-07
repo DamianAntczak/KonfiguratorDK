@@ -19,7 +19,7 @@ div.price-info{
 }
 
 div#example-visualization-info{
-    bottom: 5%;
+    bottom: -8%;
     margin-left: 15px;
     font-size: 10px;
     color: #737477;
@@ -29,6 +29,10 @@ div#example-visualization-info{
 
 .node-price{
     font-size: 20px;
+    font-weight: 400;
+}
+.node-price-small{
+    font-size: 11px;
     font-weight: 400;
 }
 
