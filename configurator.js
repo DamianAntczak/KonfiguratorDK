@@ -130,17 +130,21 @@ class Configurator {
         stepElement.html('');
         var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel owl-theme"));
         var items = 3;
-        var center = false;
+        var center = true;
         var margin = 0;
+        var loop = true;
         if (successors.length === 3) {
             items = 3;
             margin = 100;
+            loop = false;
+            center = false;
         } else if (successors.length < 3) {
             items = 3;
             center = true;
+            loop = false;
         }
         var carousel = $('.configurator-base-carousel').owlCarousel({
-            loop: false,
+            loop: loop,
             // items: items,
             center: center,
             nav: true,
