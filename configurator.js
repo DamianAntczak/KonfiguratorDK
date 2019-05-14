@@ -128,42 +128,43 @@ class Configurator {
         var successors = this.graph.successors(step);
         var stepElement = $('#step-content');
         stepElement.html('');
-        var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel owl-theme"));
+        var divElement = stepElement.append($('<div>').addClass("configurator-base-carousel owl-carousel"));
         var items = 3;
-        var center = true;
+        var center = false;
         var margin = 0;
         var loop = true;
         if (successors.length === 3) {
             items = 3;
             margin = 100;
             loop = false;
-            center = false;
+            center = true;
         } else if (successors.length < 3) {
             items = 3;
             center = true;
             loop = false;
         }
         var carousel = $('.configurator-base-carousel').owlCarousel({
-            loop: loop,
-            // items: items,
             center: center,
+            loop: false,
             nav: true,
             mouseDrag: false,
-            margin: margin,
-            autoWidth: false,
             dots: false,
             navText: ['<i class="svg prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>', '<i class="svg next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>'],
-            // responsive: {
-            //     0: {
-            //         items: 1,
-            //     },
-            //     768: {
-            //         items: 2,
-            //     },
-            //     992: {
-            //         items: 3,
-            //     }
-            // },
+            responsiveBaseElement:".configurator-right",
+            responsive:{
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                }
+            }
         });
         let nodePrice = function (node_name) {
             return '<div><h6 class="dimension-price">Wymiar i cena</h6>' +
@@ -178,7 +179,7 @@ class Configurator {
             if (options !== '') {
                 carousel.trigger('add.owl.carousel',
                     ['<div class="owl-item">' +
-                    '<div class="col-sm-12">' +
+                    '<div class="col-sm-12 part-carousel-box">' +
                     '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
                     '<div class="square" style="background-image: url(\'img/' + node.img + '\')" />' +
                     '</div>' +
@@ -307,7 +308,7 @@ class Configurator {
             $configuratorPreview.find('#render-' + mainNode.node).remove();
             $('#price').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
-            $('#select-' + nodeName).prop("disabled", "disabled");
+            $('.select-' + nodeName).attr("disabled", "disabled");
             $('#render-overlay-' + mainNode.node).remove();
             if (mainNode.skipToNode !== undefined) {
                 $nextStep.show();
@@ -327,7 +328,8 @@ class Configurator {
             } else {
                 $(find).attr('src', 'renders/' + baseNode.render);
             }
-            $('.configurator-select').prop("disabled", "disabled");
+            $('.configurator-select').attr("disabled", "disabled");
+
             $('#select-' + nodeName).removeAttr("disabled");
 
             var node = configurator.graph.node($('#select-' + nodeName).val());

@@ -240,7 +240,7 @@ select.configurator-select{
     min-width: 900px !important;
 }
 
-.configurator-base-carousel .owl-item{
+.configurator-base-carousel .part-carousel-box{
     max-width: 180px !important;
 }
 
