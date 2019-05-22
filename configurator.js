@@ -77,8 +77,8 @@ class Configurator {
     }
 
     start() {
-        $('#configurator-start-view').remove();
-        $('#configurator').show();
+        $('#start-img').remove();
+        $('#configurator-section').show();
         this.loadLevel("step_1");
     }
 
@@ -153,15 +153,12 @@ class Configurator {
             responsiveBaseElement:".configurator-right",
             responsive:{
                 0: {
-                    items: 1
-                },
-                576: {
                     items: 2
                 },
-                768: {
+                500: {
                     items: 3
                 },
-                992: {
+                770:{
                     items: 4
                 }
             }
@@ -458,7 +455,7 @@ class Configurator {
         function addImageToDom(colors, group, style) {
             // html += '<div class="row">';
             var counter = 0;
-            html += '<div class="col-sm-6">';
+            html += '<div class="col-xs-6">';
             html += '<div class="center-block" style="' + style + '">';
             var i;
             for (i = 0; i < colors.length; i++) {

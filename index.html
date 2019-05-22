@@ -36,18 +36,18 @@
     <script src="https://dagrejs.github.io/project/graphlib/latest/graphlib.js"></script>
     <script src="configurator.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 <body>
-<section class="container-fluid margin-bottom-75 show-section configurator">
-    <div class="row" id="configurator-start-view">
-        <img class="img-responsive" src="img/konfigurator_start.jpg" alt="konfigurator start"/>
-        <div class="start-content">
-            <h3 class="configurator-start-text text-center">Stwórz swoje własne łóżko</h3>
-            <button class="btn btn-star center-block" onclick="configurator.start()">START KONFIGURACJI</button>
-        </div>
+<div id="start-img">
+    <div class="row text-center" id="configurator-start-view">
+        <h3 class="configurator-start-text ">Stwórz swoje własne łóżko</h3>
+        <button type="button" class="btn btn-lg btn-star" onclick="configurator.start()">START KONFIGURACJI</button>
     </div>
-    <div class="row" id="configurator" hidden>
-        <div class="col-md-6 col-sm-12 configurator-left">
+</div>
+<section id="configurator-section" class="container-fluid margin-bottom-75 show-section configurator" hidden>
+    <div class="row" id="configurator">
+        <div class="col-sm-6 col-xs-12 configurator-left">
             <div id="configurator-preview" class="wrapper">
                 <div class="price-info">
                     <h5>Wymiar i cena prezentowanego<br> zestawu:</h5>
@@ -56,10 +56,10 @@
                 </div>
                 <div id="example-visualization-info">
                 </div>
-                <img id="base-img" class="img-responsive" style="width: 90%" src="renders/tlo001.jpg" alt="Glamour"/>
+                <img id="base-img" class="img-responsive" src="renders/tlo001.jpg" alt="Glamour"/>
             </div>
         </div>
-        <div class="col-md-6 col-sm-12 configurator-right">
+        <div class="col-sm-6 col-xs-12 configurator-right">
             <div class="row margin-bottom-25">
                 <div class="text-center">
                     <p id="step-number" class="configurator-uppercase">Krok 1</p>
@@ -68,9 +68,9 @@
                 </div>
             </div>
             <div class="row owl-width">
-                    <div id="step-content" class="col-sm-12" >
+                <div id="step-content" class="col-sm-12">
 
-                    </div>
+                </div>
             </div>
             <div class="row" style="padding-top: 25px">
                 <div class="col-sm-6">

@@ -99,7 +99,7 @@ div.summary-price-row div{
 img.configurator-img {
     top: 0px;
     position: absolute;
-    width: 90%;
+    width: 100%;
     overflow:auto;
 }
 
@@ -190,16 +190,36 @@ button.btn-star{
     background-color: #b3d646;
     color: white;
     text-align: center;
-    font-size: 16px;
+    /*font-size: 16px;*/
     padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    position: relative;
+    top:90%;
+}
+
+@media (max-width: 767px) {
+    .btn-star {
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img#base-img {
+        border-right: none;
+    }
+
+    div#example-visualization-info{
+        bottom: 8px;
+    }
 }
 
 .configurator-start-text{
+    position: relative;
     color: white;
-    margin-bottom: 25px;
+    top:80%;
 }
 
 div.owl-nav{
@@ -207,7 +227,11 @@ div.owl-nav{
 }
 
 div#configurator-start-view{
-    position: relative;
+    position: absolute;
+    bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 select.configurator-select{
@@ -236,10 +260,6 @@ select.configurator-select{
     display: block;
 }
 
-.configurator{
-    min-width: 900px !important;
-}
-
 .configurator-base-carousel .part-carousel-box{
     max-width: 180px !important;
 }
@@ -252,4 +272,17 @@ button#reload{
 
 #configurator-preview{
     position: relative;
+}
+
+#start-img{
+    position: relative;
+    background-image: url("img/konfigurator_start.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
 }
