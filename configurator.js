@@ -444,8 +444,8 @@ class Configurator {
 
         html += '<div class="col-sm-12">';
         // html += '<div class="center-block">';
-        addImageToDom(g1Colors, 'I', 'text-align: right;');
-        addImageToDom(g2Colors, 'II', 'text-align: left;');
+        addImageToDom(g1Colors, 'I', 'fabric_group_1');
+        addImageToDom(g2Colors, 'II', 'fabric_group_2');
         // html += '</div>';
         html += '</div>';
 
@@ -455,8 +455,8 @@ class Configurator {
         function addImageToDom(colors, group, style) {
             // html += '<div class="row">';
             var counter = 0;
-            html += '<div class="col-xs-6">';
-            html += '<div class="center-block" style="' + style + '">';
+            html += '<div class="col-sm-6 col-xs-12">';
+            html += '<div class="center-block ' + style + '">';
             var i;
             for (i = 0; i < colors.length; i++) {
                 const color = colors[i];
@@ -651,10 +651,10 @@ class Configurator {
             var priceNode = step.selectedNodes[2];
             if (step.selectedNodes[1] !== undefined && priceNode.price.g1 > 0) {
                 str += '<div class="row summary-price-row"">';
-                str += '<div class="col-sm-5 text-capitalize">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
-                str += '<div class="col-sm-2 text-left text-capitalize">' + fabricName(step) + '</div>';
-                str += '<div class="col-sm-2 text-right">' + this.getWidthString(step.selectedNodes[2]) + '</div>';
-                str += '<div class="col-sm-3 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
+                str += '<div class="col-sm-5 col-xs-12 text-capitalize summary-element-name">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
+                str += '<div class="col-sm-2 col-xs-3 text-left text-capitalize">' + fabricName(step) + '</div>';
+                str += '<div class="col-sm-2 col-xs-4 text-right">' + this.getWidthString(step.selectedNodes[2]) + '</div>';
+                str += '<div class="col-sm-3 col-xs-5 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
                     '</div>';
             }
         });
