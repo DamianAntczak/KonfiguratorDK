@@ -153,7 +153,8 @@ class Configurator {
             responsiveBaseElement:".configurator-right",
             responsive:{
                 0: {
-                    items: 2
+                    items: 2,
+                    center: false
                 },
                 500: {
                     items: 3
@@ -665,9 +666,9 @@ class Configurator {
         str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
         str += '</div>';
         str += '<div class="row summary-btn-row">';
-        str += '<div class="col-sm-6 text-center"><button class="btn text-uppercase btn-summary" onclick="location.href=\'https://hilding.pl/index/whereBuy\'" >Znajdź salon</button></div>';
-        str += '<div class="col-sm-6 text-center"><button id="print-btn" class="btn text-uppercase btn-summary"' +
-            'data-loading-text="<i class=\'fa fa-spinner fa-spin \'></i> Tworzenie wydruku">Wydrukuj</button></div>';
+        str += '<div class="col-xs-6 text-center"><button class="btn text-uppercase btn-summary" onclick="location.href=\'https://hilding.pl/index/whereBuy\'" ><span class="fa fa-search"></span> Znajdź salon</button></div>';
+        str += '<div class="col-xs-6 text-center"><button id="print-btn" class="btn text-uppercase btn-summary"' +
+            'data-loading-text="<i class=\'fa fa-spinner fa-spin \'></i> Tworzenie wydruku"><i class="fa fa-print"></i> Wydrukuj</button></div>';
         str += '</div>';
         stepElement.html(str);
         $('#print-btn').click(function () {

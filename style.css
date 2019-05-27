@@ -249,6 +249,11 @@ button.btn-star{
     .summary-element-name{
         text-align: center;
     }
+
+    .summary-btn-row{
+         margin-left: 0;
+         margin-right: 0;
+    }
 }
 
 .configurator-start-text{
