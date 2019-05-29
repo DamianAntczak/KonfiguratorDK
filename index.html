@@ -36,7 +36,7 @@
     <script src="https://dagrejs.github.io/project/graphlib/latest/graphlib.js"></script>
     <script src="configurator.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
 </head>
 <body>
 <div id="start-img">
@@ -73,16 +73,30 @@
                 </div>
             </div>
             <div class="row" style="padding-top: 25px">
-                <div class="col-xs-6 previous-step-div">
+                <div class="col-sm-6  col-xs-12 previous-step-div  hidden-xs">
                     <button id="previous-step" type="button"
                             class="btn btn-sm btn-link blue-text bold configurator-uppercase"
-                            onclick="configurator.previousStep()">wezgłowie
+                            onclick="configurator.previousStep()">
                     </button>
                 </div>
-                <div class="col-xs-6 next-step-div">
+                <div class="col-sm-6 col-xs-12 next-step-div  hidden-xs">
                     <button id="next-step" type="button"
                             class="btn btn-sm btn-link blue-text bold configurator-uppercase"
                             onclick="configurator.nextStep()"></button>
+                </div>
+                <div class="col-xs-6 previous-step-div  visible-xs">
+                    <button id="previous-step-xs" type="button"
+                            class="btn text-uppercase btn-summary"
+                            onclick="configurator.previousStep()">
+                        << Cofnij
+                    </button>
+                </div>
+                <div class="col-xs-6 next-step-div text-right visible-xs">
+                    <button id="next-step-xs" type="button"
+                            class="btn pull-right text-uppercase btn-summary"
+                            onclick="configurator.nextStep()">
+                        Dalej >>
+                    </button>
                 </div>
             </div>
             <div class="row" style="text-align: center;">

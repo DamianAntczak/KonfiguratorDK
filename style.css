@@ -222,7 +222,7 @@ button.btn-star{
     }
 
     div#example-visualization-info{
-        bottom: 8px;
+        bottom: 4px;
     }
 
     .configurator-left {
@@ -231,11 +231,16 @@ button.btn-star{
     }
 
     .configurator-left h5 {
-        font-size: 15px;
+        font-size: 10px;
     }
     .configurator-price {
-        font-size: 25px;
+        font-size: 20px;
     }
+
+    #price-vat{
+        font-size: 7px;
+    }
+
     .fabric_group_1{
         text-align: left;
     }
@@ -243,9 +248,7 @@ button.btn-star{
         width: 65px;
         height: 65px;
     }
-    .next-step-div, .previous-step-div{
-        text-align: center;
-    }
+
     .summary-element-name{
         text-align: center;
     }

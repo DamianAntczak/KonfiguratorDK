@@ -6588,7 +6588,7 @@ g.setNode("skrzynia_posciel_big", {
 
 g.setNode("skrzynia_posciel_big_price", {
     label: 'Pojemnik na pościel',
-    img: 'empty.jpg',
+    img: 'pojemnik_na_posciel.jpg',
     render: 'transparent.png'
 });
 
@@ -6616,7 +6616,7 @@ g.setNode("skrzynia_posciel_small", {
 
 g.setNode("skrzynia_posciel_small_price", {
     label: 'Pojemnik na pościel',
-    img: 'empty.jpg',
+    img: 'pojemnik_na_posciel.jpg',
     render: 'transparent.png'
 });
 
@@ -6632,7 +6632,7 @@ g.setNode("skrzynia_posciel_90", {
 
 g.setNode("skrzynia_posciel_90_price", {
     label: 'Pojemnik na pościel',
-    img: 'empty.jpg',
+    img: 'pojemnik_na_posciel.jpg',
     render: 'transparent.png'
 });
 
@@ -6693,7 +6693,7 @@ g.setNode("skrzynia_posciel_urban", {
 
 g.setNode("skrzynia_posciel_urban", {
     label: 'Pojemnik na pościel',
-    img: 'empty.jpg',
+    img: 'pojemnik_na_posciel.jpg',
     render: 'transparent.png'
 });
 

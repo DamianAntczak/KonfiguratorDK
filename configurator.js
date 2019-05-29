@@ -97,20 +97,29 @@ class Configurator {
         $('#step-number').text('Krok ' + node.number);
         $('#step-title').text(node.label);
         let $previousStep = $("#previous-step");
+        let $previousStepXs = $("#previous-step-xs");
         if (this.allSteps[this.stepIndex - 1] == null) {
             $previousStep.hide();
+            $previousStepXs.hide();
         } else {
+            $previousStepXs.show();
             $previousStep.show();
             $previousStep.text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
         }
 
         let $nextStep = $('#next-step');
+        let $nextStepXs = $('#next-step-xs');
         if (this.step.skipEnable !== undefined) {
+            $nextStepXs.show();
             $nextStep.show();
             $nextStep.text('pomiń ten krok >>');
             $nextStep.attr("onclick", "configurator.skipStep()").attr("style", "color:red");
+            $nextStepXs.text('pomiń >>');
+            $nextStepXs.attr("onclick", "configurator.skipStep()").attr("style", "background-color:#ea4335");
+
         } else {
             $nextStep.hide();
+            $nextStepXs.hide();
         }
     }
 
@@ -118,6 +127,7 @@ class Configurator {
 
         this.showStepInfo();
         $('#next-step').hide();
+        $('#next-step-xs').hide();
         $('#item-color').remove();
         $('#example-visualization-info').html('');
 
@@ -137,7 +147,6 @@ class Configurator {
             items = 3;
             margin = 100;
             loop = false;
-            center = true;
         } else if (successors.length < 3) {
             items = 3;
             center = true;
@@ -238,11 +247,14 @@ class Configurator {
         this.allSteps[this.stepIndex] = this.step;
 
         let $previousStep = $("#previous-step");
+        let $previousStepXs = $("#previous-step-xs");
         if (this.allSteps[this.stepIndex - 1] !== undefined) {
             $previousStep.show();
             $previousStep.text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
+            $previousStepXs.show();
         } else {
             $previousStep.hide();
+            $previousStepXs.hide();
         }
         if (configurator.step.number > 1) {
             $('#reload').show();
@@ -298,6 +310,7 @@ class Configurator {
         var nodeName = $this.attr("node_name");
         var mainNode = configurator.step.selectedNodes[0];
         let $nextStep = $('#next-step');
+        let $nextStepXs = $('#next-step-xs');
         let $configuratorPreview = $('#configurator-preview');
         if ($this.hasClass('clicked')) {
             $this.removeAttr('style').removeClass('clicked');
@@ -310,10 +323,14 @@ class Configurator {
             $('#render-overlay-' + mainNode.node).remove();
             if (mainNode.skipToNode !== undefined) {
                 $nextStep.show();
+                $nextStepXs.show();
                 $nextStep.text('pomiń ten krok >>');
                 $nextStep.attr("onclick", "configurator.skipStep()").attr("style", "color:red");
+                $nextStepXs.text('pomiń >>');
+                $nextStepXs.attr("onclick", "configurator.skipStep()").attr("style", "background-color:#ea4335");
             } else {
                 $nextStep.hide();
+                $nextStepXs.hide();
             }
         } else {
             $this.addClass('clicked');
@@ -358,9 +375,12 @@ class Configurator {
             }
 
             $nextStep.show();
+            $nextStepXs.show();
             $nextStep.attr("onclick", "configurator.nextStep()").removeAttr("style");
+            $nextStepXs.attr("onclick", "configurator.nextStep()").removeAttr("style");
             let nextStep = configurator.graph.node(node.nextStep);
             $nextStep.text('następny krok: ' + nextStep.title + ' >>');
+            $nextStepXs.text('Dalej >>');
         }
     }
 
@@ -633,6 +653,7 @@ class Configurator {
         $('#step-title').hide();
         $('#item-color').hide();
         $('#next-step').hide();
+        $('#next-step-xs').hide();
         // $('#skip-step').hide();
         $('#example-visualization-info').html('');
 
