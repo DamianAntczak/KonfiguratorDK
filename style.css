@@ -216,15 +216,12 @@ button.btn-star{
         margin-left: auto;
         margin-right: auto;
     }
-
     img#base-img {
         border-right: none;
     }
-
     div#example-visualization-info{
         bottom: 4px;
     }
-
     .configurator-left {
         padding-left: 0px;
         padding-right: 0px;
@@ -248,11 +245,9 @@ button.btn-star{
         width: 65px;
         height: 65px;
     }
-
     .summary-element-name{
         text-align: center;
     }
-
     .summary-btn-row{
          margin-left: 0;
          margin-right: 0;
