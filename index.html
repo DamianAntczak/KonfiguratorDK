@@ -50,8 +50,11 @@
         <div class="col-sm-6 col-xs-12 configurator-left">
             <div id="configurator-preview" class="wrapper">
                 <div class="price-info">
-                    <h5>Wymiar i cena prezentowanego<br> zestawu:</h5>
+                    <h5>Wymiar i cena prezentowanego zestawu:</h5>
+                    <p class="discount-info">Cena regularna</p>
                     <span id="price" class="blue-text configurator-price"></span>
+                    <p class="discount-info">Cena po rabacie</p>
+                    <span id="price-discount" class="red-text configurator-price"></span>
                     <p id="price-vat" hidden>Cena zawiera podatek VAT 23 %</p>
                 </div>
                 <div id="example-visualization-info">
@@ -111,4 +114,17 @@
 </section>
 
 </body>
+<script>
+    function isIE() {
+        ua = navigator.userAgent;
+        /* MSIE used to detect old browsers and Trident used to newer ones*/
+        var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+        return is_ie;
+    }
+
+    if(isIE()){
+        alert('Twoja przeglądarka nie obsługuje konfiguratora. Prosimy skorzystać z nowszej przeglądarki.');
+        window.history.back();
+    }
+</script>
 </html>

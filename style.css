@@ -12,10 +12,16 @@ img#base-img {
     font-weight: bold;
 }
 
+.configurator-red-price{
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
 div.price-info{
     padding-left: 10%;
     z-index: 1000;
     position: absolute;
+    width: 50%;
 }
 
 div#example-visualization-info{
@@ -221,6 +227,7 @@ button.btn-star{
     }
     div#example-visualization-info{
         bottom: 4px;
+        font-size: 5px;
     }
     .configurator-left {
         padding-left: 0px;
@@ -251,6 +258,9 @@ button.btn-star{
     .summary-btn-row{
          margin-left: 0;
          margin-right: 0;
+    }
+    div.price-info{
+        width: 100%;
     }
 }
 
@@ -315,13 +325,37 @@ button#reload{
 
 #start-img{
     position: relative;
-    background-image: url("img/konfigurator_start.jpg");
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("img/konfigurator_start.jpg") no-repeat center;
     background-size: cover;
 }
 
 body, html {
     height: 100%;
+}
+
+.discount {
+    margin-bottom: 5px;
+    background-color: #E51803;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    margin-left: 5px;
+    top: 95px;
+    line-height: 45px;
+}
+
+.red-text {
+    color: #E51803;
+}
+
+.discount-info{
+    display: none;
+}
+
+.line-through {
+    text-decoration: line-through;
 }

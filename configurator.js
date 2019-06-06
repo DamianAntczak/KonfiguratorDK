@@ -189,6 +189,7 @@ class Configurator {
                     '<div class="col-sm-12 part-carousel-box">' +
                     '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
                     '<div class="square" style="background-image: url(\'img/' + node.img + '\')" />' +
+                    this.showDiscount(node)+
                     '</div>' +
                     '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
                     nodePrice(node_name) +
@@ -270,6 +271,15 @@ class Configurator {
         });
     }
 
+    showDiscount(node) {
+        if(node.discount !== undefined) {
+            return '<div class="discount">- ' + node.discount + '%</div>';
+        }
+        else{
+            return '';
+        }
+    }
+
     changeHeight(node) {
         if (configurator.step.selectedNodes[0].number === 2) {
             var mainNode = configurator.step.selectedNodes[0].node;
@@ -318,6 +328,7 @@ class Configurator {
             $this.attr("node_name");
             $configuratorPreview.find('#render-' + mainNode.node).remove();
             $('#price').attr("hidden", true);
+            $('#price-discount').attr("hidden", true);
             $('#price-vat').attr("hidden", true);
             $('.select-' + nodeName).attr("disabled", "disabled");
             $('#render-overlay-' + mainNode.node).remove();
@@ -388,27 +399,76 @@ class Configurator {
         let price = this.getPrice();
         $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
         $('#price-vat').removeAttr('hidden');
+        if(this.isDiscount()){
+            $('#price-discount').show();
+            $('#price-discount').text(configurator.numberWithSpaces(this.getPriceWithDiscount()) + ' PLN*');
+            $('#price').addClass('configurator-red-price').removeClass('configurator-price');
+            $('.discount-info').show();
+            $('.discount-info').show();
+        }else{
+            $('#price-discount').hide();
+            $('.discount-info').hide();
+            $('#price').removeClass('configurator-red-price').addClass('configurator-price');
+        }
     }
 
     getPrice() {
         let priceSum = 0.0;
         configurator.allSteps.forEach(step => {
-            let stepPrice = 0.0;
-            if (step.selectedNodes[3] !== undefined) {
-                if (step.selectedNodes[3].g === 1) {
-                    stepPrice = step.selectedNodes[2].price.g1;
-                } else {
-                    stepPrice = step.selectedNodes[2].price.g2;
+            if(step.selectedNodes[1] !== undefined) {
+                let stepPrice = 0.0;
+                if (step.selectedNodes[3] !== undefined) {
+                    if (step.selectedNodes[3].g === 1) {
+                        stepPrice = step.selectedNodes[2].price.g1;
+                    } else {
+                        stepPrice = step.selectedNodes[2].price.g2;
+                    }
                 }
-            }
-            else {
-                if (step.selectedNodes[2] !== undefined) {
-                    stepPrice = step.selectedNodes[2].price.g1;
+                else {
+                    if (step.selectedNodes[2] !== undefined) {
+                        stepPrice = step.selectedNodes[2].price.g1;
+                    }
                 }
+                priceSum += stepPrice === -1 ? 0 : stepPrice;
             }
-            priceSum += stepPrice === -1 ? 0 : stepPrice;
         });
         return priceSum;
+    }
+
+    getPriceWithDiscount() {
+        let priceSum = 0.0;
+        configurator.allSteps.forEach(step => {
+            if(step.selectedNodes[1] !== undefined) {
+                let stepPrice = 0.0;
+                if (step.selectedNodes[3] !== undefined) {
+                    if (step.selectedNodes[3].g === 1) {
+                        stepPrice = step.selectedNodes[2].price.g1;
+                    } else {
+                        stepPrice = step.selectedNodes[2].price.g2;
+                    }
+                }
+                else {
+                    if (step.selectedNodes[2] !== undefined) {
+                        stepPrice = step.selectedNodes[2].price.g1;
+                    }
+                }
+                if(step.selectedNodes[2].price.g1 > 0 && step.selectedNodes[1].discount > 0){
+                    stepPrice = stepPrice * (100 - step.selectedNodes[1].discount)/100.0;
+                }
+                priceSum += stepPrice === -1 ? 0 : stepPrice;
+            }
+        });
+        return priceSum;
+    }
+
+    isDiscount(){
+        var isDiscount = false;
+        configurator.allSteps.forEach(step => {
+            if(step.selectedNodes[1] !== undefined && step.selectedNodes[1].discount !== undefined && step.selectedNodes[2].price.g1 > 0){
+                isDiscount = true;
+            }
+        });
+        return isDiscount;
     }
 
     addOption(node_name, successors) {
@@ -682,8 +742,11 @@ class Configurator {
         });
         str += '</div>';
         str += '<div class="col-sm-6 col-sm-offset-6 margin-top-25 margin-bottom-25">';
-        str += '<h5>Wymiar i cena prezentowanego<br> zestawu:</h5>';
-        str += '<h3 class="blue-text">' + this.numberWithSpaces(this.getPrice()) + ' PLN</h3>';
+        str += '<h5>Wymiar i cena prezentowanego zestawu:</h5>';
+        str += '<h3 class="blue-text ' + (this.isDiscount() ? 'line-through' : '') + '">' + this.numberWithSpaces(this.getPrice()) + ' PLN</h3>';
+        if(this.isDiscount()) {
+            str += '<h2 class="red-text">' + this.numberWithSpaces(this.getPriceWithDiscount()) + ' PLN</h2>';
+        }
         str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
         str += '</div>';
         str += '<div class="row summary-btn-row">';

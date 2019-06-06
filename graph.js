@@ -39,6 +39,7 @@ g.setNode("baza_tapicerowana", {
     img: 'baza_tapicerowana.jpg',
     render: '/bazy/baza_tapicerowana_h34_novel13.png',
     colors: 'tapicerowana_colors_7',
+    discount: 15
 });
 g.setNode("box_podnoszony", {
     node: 'box_podnoszony',
@@ -1888,7 +1889,8 @@ g.setNode("t_wezglowie", {
     optionsFilter: true,
     overlay: true,
     overlay_z: 200,
-    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.',
+    discount: 15
 });
 
 g.setNode("t_wezglowie_glamour", {
@@ -1897,7 +1899,8 @@ g.setNode("t_wezglowie_glamour", {
     img: 'glamour.jpg',
     render: '/wezglowia/wezglowie_glamour_115_170_novel13.png',
     colors: 'glamour_colors_7_170',
-    nextStep: 'legs'
+    nextStep: 'legs',
+    discount: 15
 });
 g.setNode("t_wezglowie_vintage", {
     node: 't_wezglowie_vintage',
@@ -1905,7 +1908,8 @@ g.setNode("t_wezglowie_vintage", {
     img: 'vintage.jpg',
     render: '/wezglowia/wezglowie_vintage_95_170_novel13.png',
     colors: 'vintage_colors_7_170',
-    nextStep: 'legs'
+    nextStep: 'legs',
+    discount: 15
 });
 g.setNode("t_wezglowie_eclectic", {
     node: 't_wezglowie_eclectic',
@@ -1913,7 +1917,8 @@ g.setNode("t_wezglowie_eclectic", {
     img: 'electric.jpg',
     render: '/wezglowia/wezglowie_eclectic_95_170_novel13.png',
     colors: 'eclectic_colors_7_170',
-    nextStep: 'legs'
+    nextStep: 'legs',
+    discount: 15
 });
 g.setNode("t_wezglowie_ladylike", {
     node: 't_wezglowie_ladylike',
@@ -1921,7 +1926,8 @@ g.setNode("t_wezglowie_ladylike", {
     img: 'ladylike.jpg',
     render: '/wezglowia/wezglowie_ladylike_115_170_novel13.png',
     colors: 'ladylike_colors_7_170',
-    nextStep: 'legs'
+    nextStep: 'legs',
+    discount: 15
 });
 g.setNode("t_wezglowie_preppy", {
     node: 't_wezglowie_preppy',
@@ -1930,6 +1936,7 @@ g.setNode("t_wezglowie_preppy", {
     render: '/wezglowia/wezglowie_preppy_95_170_novel13.png',
     colors: 'preppy_colors_7_170',
     nextStep: 'legs',
+    discount: 15
 });
 g.setNode("t_wezglowie_momiko", {
     node: 't_wezglowie_momiko',
@@ -1937,7 +1944,8 @@ g.setNode("t_wezglowie_momiko", {
     img: 'momiko.jpg',
     render: '/wezglowia/wezglowie_momiko_95_170_novel13.png',
     colors: 'momiko_colors_7_170',
-    nextStep: 'legs'
+    nextStep: 'legs',
+    discount: 15
 });
 
 g.setNode("t_wezglowie_90", {
@@ -1957,7 +1965,8 @@ g.setNode("t_wezglowie_urban", {
     img: 'urban.jpg',
     render: '/wezglowia/wezglowie_urban_95_170_novel13.png',
     colors: 'urban_colors_7_170',
-    nextStep: 'legs'
+    nextStep: 'legs',
+    discount: 15
 });
 
 //*******************************************88
