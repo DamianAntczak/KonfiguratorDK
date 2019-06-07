@@ -159,8 +159,8 @@ class Configurator {
             mouseDrag: false,
             dots: false,
             navText: ['<i class="svg prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>', '<i class="svg next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-198 322.5 197.4 197.4" style="enable-background:new -198 322.5 197.4 197.4;" xml:space="preserve"> <g> <g> <g> <g> <polygon class="st0" points="-147.7,514.9 -50.1,420.1 -147.7,325.4 -152.7,330.6 -60.5,420.1 -152.7,509.7 "/> <path d="M-147.7,518.4l-8.5-8.8l92.1-89.5l-92.1-89.5l8.5-8.8l101.2,98.3L-147.7,518.4z M-149.2,509.7l1.6,1.6l93.9-91.2 l-93.9-91.2l-1.6,1.6l92.3,89.6L-149.2,509.7z"/></g></g></g></g></svg></i>'],
-            responsiveBaseElement:".configurator-right",
-            responsive:{
+            responsiveBaseElement: ".configurator-right",
+            responsive: {
                 0: {
                     items: 2,
                     center: false
@@ -168,7 +168,7 @@ class Configurator {
                 500: {
                     items: 3
                 },
-                770:{
+                770: {
                     items: 4
                 }
             }
@@ -189,7 +189,7 @@ class Configurator {
                     '<div class="col-sm-12 part-carousel-box">' +
                     '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
                     '<div class="square" style="background-image: url(\'img/' + node.img + '\')" />' +
-                    this.showDiscount(node)+
+                    this.showDiscount(node) +
                     '</div>' +
                     '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
                     nodePrice(node_name) +
@@ -209,8 +209,7 @@ class Configurator {
                     var price = 0.0;
                     if (configurator.step.selectedNodes[3] !== undefined && configurator.step.selectedNodes[3].g === 2) {
                         price = node.price.g2;
-                    }
-                    else {
+                    } else {
                         if (node !== undefined) {
                             price = node.price.g1;
                         }
@@ -218,12 +217,10 @@ class Configurator {
                     if (price > 0) {
                         $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
                         configurator.changeHeight(node);
-                    }
-                    else if(price === -1){
+                    } else if (price === -1) {
                         $owl.find('#node-price-' + node_name).html('Cena łączna z wezgłowiem widoczna w kolejnym kroku')
                             .removeClass('node-price').addClass('node-price-small');
-                    }
-                    else {
+                    } else {
                         $owl.find('#node-price-' + node_name).parent().hide();
                     }
                     $owl.trigger('refresh.owl.carousel');
@@ -233,8 +230,7 @@ class Configurator {
 
                 if (configurator.step.number === 1) {
                     $('#select-' + node_name).val($('#select-' + node_name + ' option[width="160"]').val()).change();
-                }
-                else {
+                } else {
                     $('#select-' + node_name).val($('#select-' + node_name + ' option:first').val()).change();
                 }
             }
@@ -259,8 +255,7 @@ class Configurator {
         }
         if (configurator.step.number > 1) {
             $('#reload').show();
-        }
-        else {
+        } else {
             $('#reload').hide();
         }
 
@@ -272,10 +267,9 @@ class Configurator {
     }
 
     showDiscount(node) {
-        if(node.discount !== undefined) {
+        if (node.discount !== undefined) {
             return '<div class="discount">- ' + node.discount + '%</div>';
-        }
-        else{
+        } else {
             return '';
         }
     }
@@ -295,8 +289,7 @@ class Configurator {
                         var overlay = render.overlay;
                         $renderOverlay.prop('src', 'renders/' + overlay);
                     }
-                }
-                else {
+                } else {
                     var replace = src.replace("95", "115");
                     $('#render-' + mainNode).attr('src', 'renders/' + replace);
                     if ($renderOverlay.length) {
@@ -375,12 +368,10 @@ class Configurator {
                 if (configurator.selectedColor !== undefined) {
                     var selectedColor = configurator.selectedColor;
                     $('.tiles[name="' + selectedColor + '"]').click();
-                }
-                else {
+                } else {
                     $('.tiles:first').click();
                 }
-            }
-            else if (baseNode.cover !== undefined) {
+            } else if (baseNode.cover !== undefined) {
                 $('#step-content').after(this.addCover(baseNode.cover));
                 $('.tiles:first').addClass('color-selected');
             }
@@ -399,13 +390,13 @@ class Configurator {
         let price = this.getPrice();
         $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
         $('#price-vat').removeAttr('hidden');
-        if(this.isDiscount()){
+        if (this.isDiscount()) {
             $('#price-discount').show();
             $('#price-discount').text(configurator.numberWithSpaces(this.getPriceWithDiscount()) + ' PLN*');
             $('#price').addClass('configurator-red-price').removeClass('configurator-price');
             $('.discount-info').show();
             $('.discount-info').show();
-        }else{
+        } else {
             $('#price-discount').hide();
             $('.discount-info').hide();
             $('#price').removeClass('configurator-red-price').addClass('configurator-price');
@@ -415,7 +406,7 @@ class Configurator {
     getPrice() {
         let priceSum = 0.0;
         configurator.allSteps.forEach(step => {
-            if(step.selectedNodes[1] !== undefined) {
+            if (step.selectedNodes[1] !== undefined) {
                 let stepPrice = 0.0;
                 if (step.selectedNodes[3] !== undefined) {
                     if (step.selectedNodes[3].g === 1) {
@@ -423,8 +414,7 @@ class Configurator {
                     } else {
                         stepPrice = step.selectedNodes[2].price.g2;
                     }
-                }
-                else {
+                } else {
                     if (step.selectedNodes[2] !== undefined) {
                         stepPrice = step.selectedNodes[2].price.g1;
                     }
@@ -438,7 +428,7 @@ class Configurator {
     getPriceWithDiscount() {
         let priceSum = 0.0;
         configurator.allSteps.forEach(step => {
-            if(step.selectedNodes[1] !== undefined) {
+            if (step.selectedNodes[1] !== undefined) {
                 let stepPrice = 0.0;
                 if (step.selectedNodes[3] !== undefined) {
                     if (step.selectedNodes[3].g === 1) {
@@ -446,14 +436,13 @@ class Configurator {
                     } else {
                         stepPrice = step.selectedNodes[2].price.g2;
                     }
-                }
-                else {
+                } else {
                     if (step.selectedNodes[2] !== undefined) {
                         stepPrice = step.selectedNodes[2].price.g1;
                     }
                 }
-                if(step.selectedNodes[2].price.g1 > 0 && step.selectedNodes[1].discount > 0){
-                    stepPrice = stepPrice * (100 - step.selectedNodes[1].discount)/100.0;
+                if (step.selectedNodes[2].price.g1 > 0 && step.selectedNodes[1].discount > 0) {
+                    stepPrice = stepPrice * (100 - step.selectedNodes[1].discount) / 100.0;
                 }
                 priceSum += stepPrice === -1 ? 0 : stepPrice;
             }
@@ -461,10 +450,10 @@ class Configurator {
         return priceSum;
     }
 
-    isDiscount(){
+    isDiscount() {
         var isDiscount = false;
         configurator.allSteps.forEach(step => {
-            if(step.selectedNodes[1] !== undefined && step.selectedNodes[1].discount !== undefined && step.selectedNodes[2].price.g1 > 0){
+            if (step.selectedNodes[1] !== undefined && step.selectedNodes[1].discount !== undefined && step.selectedNodes[2].price.g1 > 0) {
                 isDiscount = true;
             }
         });
@@ -657,8 +646,7 @@ class Configurator {
                                             var overlay = render.overlay;
                                             $renderOverlay.prop('src', 'renders/' + overlay);
                                         }
-                                    }
-                                    else {
+                                    } else {
                                         var replace = src.replace("95", "115");
                                         $('#render-' + mainNode).attr('src', 'renders/' + replace);
                                         if ($renderOverlay.length) {
@@ -691,11 +679,10 @@ class Configurator {
         var node = this.step.selectedNodes[2];
         var base_node_name = this.step.selectedNodes[1].node;
         if (node !== undefined) {
-            if(node.price.g1 === -1 || node.price.g2 === -1){
+            if (node.price.g1 === -1 || node.price.g2 === -1) {
                 $owl.find('#node-price-' + base_node_name).html('Cena łączna z wezgłowiem widoczna w kolejnym kroku');
-            }
-            else if (colorNode.g === 1) {
-                    $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
+            } else if (colorNode.g === 1) {
+                $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
             } else {
                 $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
             }
@@ -736,7 +723,7 @@ class Configurator {
                 str += '<div class="col-sm-5 col-xs-12 text-capitalize summary-element-name">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
                 str += '<div class="col-sm-2 col-xs-3 text-left text-capitalize">' + fabricName(step) + '</div>';
                 str += '<div class="col-sm-2 col-xs-4 text-right">' + this.getWidthString(step.selectedNodes[2]) + '</div>';
-                str += '<div class="col-sm-3 col-xs-5 text-right">' + this.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' +
+                str += this.getPriceDiv(step.selectedNodes[1], priceNode, step.selectedNodes[3]) +
                     '</div>';
             }
         });
@@ -744,7 +731,7 @@ class Configurator {
         str += '<div class="col-sm-6 col-sm-offset-6 margin-top-25 margin-bottom-25">';
         str += '<h5>Wymiar i cena prezentowanego zestawu:</h5>';
         str += '<h3 class="blue-text ' + (this.isDiscount() ? 'line-through' : '') + '">' + this.numberWithSpaces(this.getPrice()) + ' PLN</h3>';
-        if(this.isDiscount()) {
+        if (this.isDiscount()) {
             str += '<h2 class="red-text">' + this.numberWithSpaces(this.getPriceWithDiscount()) + ' PLN</h2>';
         }
         str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
@@ -761,6 +748,36 @@ class Configurator {
                 configurator.printSummary();
             });
         });
+    }
+
+    getPriceDiv(mainNode, priceNode, tNode) {
+        let stepPrice = this.getStepPrice(tNode, priceNode);
+
+        let classDiscount = '';
+        let stepPriceDiscount = '';
+        if (mainNode.discount !== undefined) {
+            classDiscount = 'before-discount-price';
+            stepPriceDiscount = ' \ ' + this.numberWithSpaces(stepPrice * (100 - mainNode.discount) / 100.0);
+        }
+
+        return '<div class="col-sm-3 col-xs-5 text-right "><span class="' + classDiscount + '">'
+            + this.numberWithSpaces(stepPrice) + '</span>' + stepPriceDiscount + ' PLN*</div>';
+    }
+
+    getStepPrice(tNode, priceNode) {
+        let stepPrice = 0.0;
+        if (tNode !== undefined) {
+            if (tNode.g === 1) {
+                stepPrice = priceNode.price.g1;
+            } else {
+                stepPrice = priceNode.price.g2;
+            }
+        } else {
+            if (priceNode !== undefined) {
+                stepPrice = priceNode.price.g1;
+            }
+        }
+        return stepPrice;
     }
 
     getWidthString(node) {
@@ -810,7 +827,7 @@ class Configurator {
                         style: {color: '#737477'}
                     },
                     {
-                        text: (priceNode.price.g1 === -1 ? '' : this.numberWithSpaces(priceNode.price.g1) + ' PLN'),
+                        text: (priceNode.price.g1 === -1 ? '' : this.numberWithSpaces(this.getStepPrice(step.selectedNodes[3], priceNode)) + ' PLN'),
                         style: {color: '#737477', alignment: 'right'}
                     }]);
 
@@ -854,7 +871,7 @@ class Configurator {
                         {
                             alignment: 'right',
                             text: today.getDate() + '.' + (today.getMonth() + 1) + '.' + (today.getYear() + 1900)
-                            + ', ' + today.getHours() + ':' + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes(),
+                                + ', ' + today.getHours() + ':' + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes(),
                             style: {color: '#737477', fontSize: 10, bold: false}
                         }
                     ]
@@ -910,7 +927,7 @@ class Configurator {
                             return 0;
                         },
                         hLineColor: function (i, node) {
-                            return (i === 0) || ( i === node.table.body.length) ? 'white' : '#97999b';
+                            return (i === 0) || (i === node.table.body.length) ? 'white' : '#97999b';
                         },
                         // hLineStyle: function (i, node) { return {dash: { length: 10, space: 4 }}; },
                         // vLineStyle: function (i, node) { return {dash: { length: 10, space: 4 }}; },

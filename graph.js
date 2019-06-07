@@ -3614,27 +3614,32 @@ g.setNode("t_legs", {
 g.setNode("t_metal_trojkat_srebro", {
     label: 'Noga metalowa trójkąt srebro',
     img: 'trojkat_srebro.jpg',
-    render: '/nogi/noga_trojkat_srebro.png'
+    render: '/nogi/noga_trojkat_srebro.png',
+    discount: 15
 });
 g.setNode("t_metal_trojkat_miedz", {
     label: 'Noga metalowa trójkąt miedź',
     img: 'trojkat_miedz.jpg',
-    render: '/nogi/noga_trojkat_miedz.png'
+    render: '/nogi/noga_trojkat_miedz.png',
+    discount: 15
 });
 g.setNode("t_metal_trojkat_czarny", {
     label: 'Noga metalowa trójkąt czarny',
     img: 'trojkat_czarny.jpg',
-    render: '/nogi/noga_trojkat_czern.png'
+    render: '/nogi/noga_trojkat_czern.png',
+    discount: 15
 });
 g.setNode("t_noga_drewniana_long_bug", {
     label: 'Noga drewnina long buk',
     img: 'prostokat_dab.jpg',
-    render: '/nogi/noga_prostokat_buk.png'
+    render: '/nogi/noga_prostokat_buk.png',
+    discount: 15
 });
 g.setNode("t_noga_drewniana_long_wenge", {
     label: 'Noga drewnina long wenge',
     img: 'prostokat_wenge.jpg',
-    render: '/nogi/noga_prostokat_wenge.png'
+    render: '/nogi/noga_prostokat_wenge.png',
+    discount: 15
 });
 
 g.setNode("t_metal_trojkat_srebro_2", {
@@ -6598,7 +6603,8 @@ g.setNode("skrzynia_posciel_big", {
 g.setNode("skrzynia_posciel_big_price", {
     label: 'Pojemnik na pościel',
     img: 'pojemnik_na_posciel.jpg',
-    render: 'transparent.png'
+    render: 'transparent.png',
+    discount: 15
 });
 
 g.setNode("skrzynia_posciel_big_90_yes", {label: 'TAK',width: 90, price: {g1: 139, g2: 139}, nextStep: 'frame_with_box_90'});
@@ -6626,7 +6632,8 @@ g.setNode("skrzynia_posciel_small", {
 g.setNode("skrzynia_posciel_small_price", {
     label: 'Pojemnik na pościel',
     img: 'pojemnik_na_posciel.jpg',
-    render: 'transparent.png'
+    render: 'transparent.png',
+    discount: 15
 });
 
 g.setNode("skrzynia_posciel_90", {
@@ -6642,7 +6649,8 @@ g.setNode("skrzynia_posciel_90", {
 g.setNode("skrzynia_posciel_90_price", {
     label: 'Pojemnik na pościel',
     img: 'pojemnik_na_posciel.jpg',
-    render: 'transparent.png'
+    render: 'transparent.png',
+    discount: 15
 });
 
 
@@ -6703,7 +6711,8 @@ g.setNode("skrzynia_posciel_urban", {
 g.setNode("skrzynia_posciel_urban", {
     label: 'Pojemnik na pościel',
     img: 'pojemnik_na_posciel.jpg',
-    render: 'transparent.png'
+    render: 'transparent.png',
+    discount: 15
 });
 
 g.setNode("frame", {
@@ -6740,13 +6749,15 @@ g.setNode("frame_with_box_90", {
 g.setNode("frame_family_lift", {
     label: 'Family lift',
     img: '/stelaze/family_lift.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 
 g.setNode("frame_double_lift", {
     label: 'Double lift',
     img: '/stelaze/double_lift.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 
 g.setNode("frame_family_lift_90", {label: '90/200',width: 90, price: {g1: 838, g2: 838}, nextStep: 'summary'});
@@ -6805,47 +6816,56 @@ g.setNode("frame_no_box_90", {
 g.setNode("frame_family_expert", {
     label: 'Family lift',
     img: '/stelaze/family_expert.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_family_moto", {
     label: 'Family moto',
     img: '/stelaze/family_moto.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_select_expert", {
     label: 'Select expert',
     img: '/stelaze/select_expert.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_select_moto", {
     label: 'Select moto',
     img: '/stelaze/select_moto.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_family_classic", {
     label: 'Family classic',
     img: '/stelaze/family_classic.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_select_classic", {
     label: 'Select classic',
     img: '/stelaze/select_classic.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_sam", {
     label: 'Stelaż sam',
     img: '/stelaze/stelaz_sam.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_family_lift", {
     label: 'Family lift',
     img: '/stelaze/family_lift.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 g.setNode("frame_double_lift", {
     label: 'Double lift',
     img: '/stelaze/double_lift.jpg',
-    render: 'ramiak.png'
+    render: 'ramiak.png',
+    discount: 15
 });
 
 g.setNode("frame_family_expert_140", {label: '140/200',width: 140, price: {g1: 499, g2: 499}, nextStep: 'summary'});
