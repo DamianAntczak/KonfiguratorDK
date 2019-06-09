@@ -131,9 +131,9 @@ class Configurator {
         $('#item-color').remove();
         $('#example-visualization-info').html('');
 
-        var starNode = this.graph.node(step);
-        this.step = new Step(starNode.number, starNode.title, starNode.skipToNode, starNode.optionsFilter);
-        this.step.selectedNodes[0] = starNode;
+        var startNode = this.graph.node(step);
+        this.step = new Step(startNode.number, startNode.title, startNode.skipToNode, startNode.optionsFilter);
+        this.step.selectedNodes[0] = startNode;
         // this.graph
         var successors = this.graph.successors(step);
         var stepElement = $('#step-content');
@@ -189,7 +189,7 @@ class Configurator {
                     '<div class="col-sm-12 part-carousel-box">' +
                     '<div class="carousel-box box" node_name="' + node_name + '" onclick="configurator.onPartClick($(this))">' +
                     '<div class="square" style="background-image: url(\'img/' + node.img + '\')" />' +
-                    this.showDiscount(node) +
+                    this.showDiscount(node,startNode) +
                     '</div>' +
                     '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
                     nodePrice(node_name) +
@@ -266,9 +266,14 @@ class Configurator {
         });
     }
 
-    showDiscount(node) {
+    showDiscount(node, startNode) {
         if (node.discount !== undefined) {
-            return '<div class="discount">- ' + node.discount + '%</div>';
+            if(startNode.node == 't_legs'){
+                return '<div class="discount-top">- ' + node.discount + '%</div>';
+            }
+            else {
+                return '<div class="discount">- ' + node.discount + '%</div>';
+            }
         } else {
             return '';
         }

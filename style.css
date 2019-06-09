@@ -349,6 +349,20 @@ body, html {
     line-height: 45px;
 }
 
+.discount-top {
+    margin-top: 5px;
+    background-color: #E51803;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    margin-left: 5px;
+    top: 5px;
+    line-height: 45px;
+}
+
 .red-text {
     color: #E51803;
 }
