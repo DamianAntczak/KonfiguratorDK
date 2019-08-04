@@ -194,6 +194,7 @@ class Configurator {
                     '<div class="row"><h6 class="item-label text-center word-wrap" style="color: #212121;">' + node.label.toUpperCase() + '</h6></div>' +
                     nodePrice(node_name) +
                     options +
+                    '<p class="extra-text" id="extra-text-'+node_name+'"></p>' +
                     '</div>' +
                     '</div>']);
 
@@ -222,6 +223,11 @@ class Configurator {
                             .removeClass('node-price').addClass('node-price-small');
                     } else {
                         $owl.find('#node-price-' + node_name).parent().hide();
+                    }
+                    if(node.extra !== undefined){
+                        $('#extra-text-'+node_name).text(node.extra);
+                    }else{
+                        $('#extra-text-'+node_name).text('');
                     }
                     $owl.trigger('refresh.owl.carousel');
                     configurator.step.selectedNodes[2] = node;
@@ -727,7 +733,7 @@ class Configurator {
                 str += '<div class="row summary-price-row"">';
                 str += '<div class="col-sm-5 col-xs-12 text-capitalize summary-element-name">' + step.selectedNodes[0].title + ' - ' + step.selectedNodes[1].label + '</div>';
                 str += '<div class="col-sm-2 col-xs-3 text-left text-capitalize">' + fabricName(step) + '</div>';
-                str += '<div class="col-sm-2 col-xs-4 text-right">' + this.getWidthString(step.selectedNodes[2]) + '</div>';
+                str += '<div class="col-sm-2 col-xs-4 text-right">' + this.getWidthString(step.selectedNodes[2]) + this.getExtraText(step.selectedNodes[2])+ '</div>';
                 str += this.getPriceDiv(step.selectedNodes[1], priceNode, step.selectedNodes[3]) +
                     '</div>';
             }
@@ -793,6 +799,13 @@ class Configurator {
         }
     }
 
+    getExtraText(node){
+        if(node.extra !== undefined){
+            return '<p class="extra-text-summary">'+node.extra+'</p>';
+        }
+        return '';
+    }
+
     printSummary() {
         function getBase64Image(img) {
             var canvas = document.createElement("canvas");
@@ -806,7 +819,7 @@ class Configurator {
 
         var bodyData = [];
 
-        var img = document.getElementById('base-img');
+        var img = document.getElementById('base-img-src');
         var canvas = document.createElement("canvas");
         canvas.width = 1500;
         canvas.height = 1140;

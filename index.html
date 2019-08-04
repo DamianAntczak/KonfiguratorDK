@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Konfigurator</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://hilding.pl/viewHilding/js/owl.carousel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.54/pdfmake.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.54/vfs_fonts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" async></script>
+    <script src="https://hilding.pl/viewHilding/js/owl.carousel.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.54/pdfmake.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.54/vfs_fonts.js" async></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" async
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js" async></script>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -32,10 +31,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
           rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script src="https://dagrejs.github.io/project/graphlib/latest/graphlib.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.min.css"/>
+    <script src="https://dagrejs.github.io/project/graphlib/latest/graphlib.min.js"></script>
     <script src="configurator.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
 </head>
 <body>
@@ -59,7 +57,10 @@
                 </div>
                 <div id="example-visualization-info">
                 </div>
-                <img id="base-img" class="img-responsive" src="renders/tlo001.jpg" alt="Glamour"/>
+                <picture id="base-img">
+                    <source type="image/webp" srcset="renders/tlo001.webp">
+                    <img id="base-img-src" class="img-responsive" src="renders/tlo001.jpg" alt="Glamour"/>
+                </picture>
             </div>
         </div>
         <div class="col-sm-6 col-xs-12 configurator-right">
@@ -109,8 +110,6 @@
             </div>
         </div>
     </div>
-
-    <div id="circle"></div>
 </section>
 
 </body>
@@ -122,7 +121,7 @@
         return is_ie;
     }
 
-    if(isIE()){
+    if (isIE()) {
         alert('Twoja przeglądarka nie obsługuje konfiguratora. Prosimy skorzystać z nowszej przeglądarki.');
         window.history.back();
     }

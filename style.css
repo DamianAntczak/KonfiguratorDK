@@ -328,6 +328,7 @@ button#reload{
     height: 100%;
     /*background: url("img/konfigurator_start.jpg") no-repeat center;*/
     background: url("img/01_BANNER_NA_KONFIGURATOR.png") no-repeat center;
+    /*background: url("img/01_BANNER_NA_KONFIGURATOR.webp") no-repeat center;*/
     background-size: cover;
 }
 
@@ -377,5 +378,13 @@ body, html {
 .before-discount-price{
     text-decoration: line-through;
     font-size: 10px;
+}
 
+.extra-text{
+    margin-top: -10px;
+    font-size: 0.8rem;
+}
+
+.extra-text-summary{
+    font-size: 0.8rem;
 }
