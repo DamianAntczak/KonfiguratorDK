@@ -1236,12 +1236,12 @@ g.setNode("momiko_riviera_170", {
 
 //********************************
 
-g.setNode("covers_velvet", {});
-g.setNode("cover_velvet", {
+g.setNode("covers_cashmere", {});
+g.setNode("cover_cashmere", {
     g: 1,
-    name: 'velvet',
-    node: 'cover_velvet',
-    url: './img/pokrowce/velvet.jpg',
+    name: 'cashmere',
+    node: 'cover_cashmere',
+    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1254,12 +1254,12 @@ g.setNode("cover_tencel", {
     render: 'materace/materac_salsa_h31.png'
 });
 
-g.setNode("covers_merced_elips", {});
-g.setNode("cover_merced_1", {
+g.setNode("covers_italiano_hybrid", {});
+g.setNode("cover_italiano_1", {
     g: 1,
-    name: 'merced',
-    node: 'cover_merced_1',
-    url: './img/pokrowce/medicot.jpg',
+    name: 'italiano',
+    node: 'cover_italiano_1',
+    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_merced_2", {
@@ -1277,11 +1277,11 @@ g.setNode("cover_elips_1", {
     url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
-g.setNode("cover_elips_2", {
+g.setNode("cover_hybrid_2", {
     g: 2,
-    name: 'elips',
-    node: 'cover_elips_2',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    name: 'hybrid',
+    node: 'cover_hybrid_2',
+    url: 'https://hilding.pl/png/product/Hybrid_1583151814.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_medicott", {
@@ -1292,12 +1292,12 @@ g.setNode("cover_medicott", {
     render: 'materace/materac_salsa_h31.png'
 });
 
-g.setNode("covers_elips_tencel_top", {});
-g.setNode("cover_elips_top", {
+g.setNode("covers_cashmere_tencel_top", {});
+g.setNode("cover_cashmere_top", {
     g: 1,
-    name: 'elips',
-    node: 'cover_elips_top',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    name: 'Cashmere',
+    node: 'cover_cashmere_top',
+    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
     render: 'materace/top_blues_h31.png'
 });
 g.setNode("cover_tencel_top", {
@@ -1335,23 +1335,16 @@ g.setNode("cover_teenage", {
     render: 'materace/materac_salsa_h31.png'
 });
 
-g.setNode("covers_sensity_top", {});
-g.setNode("cover_sensity_top", {
-    g: 1,
-    name: 'sensity',
-    node: 'cover_sensity_top',
-    url: './img/pokrowce/sensity.jpg',
-    render: 'materace/materac_salsa_h31.png'
-});
+g.setNode("covers_tencel_top", {});
 
 //*******************************************
 
-g.setNode("bp_covers_velvet", {});
-g.setNode("bp_cover_velvet", {
+g.setNode("bp_covers_cashmere", {});
+g.setNode("bp_cover_cashmere", {
     g: 1,
-    name: 'velvet',
-    node: 'bp_cover_velvet',
-    url: './img/pokrowce/velvet.jpg',
+    name: 'cashmere',
+    node: 'bp_cover_cashmere',
+    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1364,12 +1357,12 @@ g.setNode("bp_cover_tencel", {
     render: 'materace/materac_salsa_h39.png'
 });
 
-g.setNode("bp_covers_merced_elips", {});
-g.setNode("bp_cover_merced_1", {
+g.setNode("bp_covers_italiano_hybrid", {});
+g.setNode("bp_cover_italiano_1", {
     g: 1,
-    name: 'merced',
-    node: 'bp_cover_merced_1',
-    url: './img/pokrowce/medicot.jpg',
+    name: 'italiano',
+    node: 'bp_cover_italiano_1',
+    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_merced_2", {
@@ -1387,11 +1380,11 @@ g.setNode("bp_cover_elips_1", {
     url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
-g.setNode("bp_cover_elips_2", {
+g.setNode("bp_cover_hybrid_2", {
     g: 2,
-    name: 'elips',
-    node: 'bp_cover_elips_2',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    name: 'hybrid',
+    node: 'bp_cover_hybrid_2',
+    url: 'https://hilding.pl/png/product/Hybrid_1583151814.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_medicott", {
@@ -1402,12 +1395,12 @@ g.setNode("bp_cover_medicott", {
     render: 'materace/materac_salsa_h39.png'
 });
 
-g.setNode("bp_covers_elips_tencel_top", {});
-g.setNode("bp_cover_elips_top", {
+g.setNode("bp_covers_cashmere_tencel_top", {});
+g.setNode("bp_cover_cashmere_top", {
     g: 1,
-    name: 'elips',
-    node: 'bp_cover_elips_top',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    name: 'Cashmere',
+    node: 'bp_cover_cashmere_top',
+    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
     render: 'materace/top_blues_h39.png'
 });
 g.setNode("bp_cover_tencel_top", {
@@ -1445,23 +1438,16 @@ g.setNode("bp_cover_teenage", {
     render: 'materace/materac_salsa_h39.png'
 });
 
-g.setNode("bp_covers_sensity_top", {});
-g.setNode("bp_cover_sensity_top", {
-    g: 1,
-    name: 'sensity',
-    node: 'bp_cover_sensity_top',
-    url: './img/pokrowce/sensity.jpg',
-    render: 'materace/materac_salsa_h39.png'
-});
+g.setNode("bp_covers_tencel_top", {});
 
 //*******************************************
 
-g.setNode("covers_velvet_t", {});
-g.setNode("cover_velvet_t", {
+g.setNode("covers_cashmere_t", {});
+g.setNode("cover_cashmere_t", {
     g: 1,
-    name: 'velvet',
-    node: 'cover_velvet_t',
-    url: './img/pokrowce/velvet.jpg',
+    name: 'cashmere',
+    node: 'cover_cashmere_t',
+    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
     render: 'materace/materac_salsa_h34.png'
 });
 
@@ -1474,12 +1460,12 @@ g.setNode("cover_tencel_t", {
     render: 'materace/materac_salsa_h31.png'
 });
 
-g.setNode("covers_merced_elips_t", {});
-g.setNode("cover_merced_1_t", {
+g.setNode("covers_italiano_hybrid_t", {});
+g.setNode("cover_italiano_1_t", {
     g: 1,
-    name: 'merced',
-    node: 'cover_merced_1_t',
-    url: './img/pokrowce/medicot.jpg',
+    name: 'italiano',
+    node: 'cover_italiano_1_t',
+    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_merced_2_t", {
@@ -1497,11 +1483,11 @@ g.setNode("cover_elips_1_t", {
     url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
-g.setNode("cover_elips_2_t", {
+g.setNode("cover_hybrid_2_t", {
     g: 2,
-    name: 'elips',
-    node: 'cover_elips_2_t',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    name: 'hybrid',
+    node: 'cover_hybrid_2_t',
+    url: 'https://hilding.pl/png/product/Hybrid_1583151814.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_medicott_t", {
@@ -1512,12 +1498,12 @@ g.setNode("cover_medicott_t", {
     render: 'materace/materac_salsa_h31.png'
 });
 
-g.setNode("covers_elips_tencel_top_t", {});
-g.setNode("cover_elips_top_t", {
+g.setNode("covers_cashmere_tencel_top_t", {});
+g.setNode("cover_cashmere_top_t", {
     g: 1,
-    name: 'elips',
-    node: 'cover_elips_top_t',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    name: 'Cashmere',
+    node: 'cover_cashmere_top_t',
+    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
     render: 'materace/top_blues_h31.png'
 });
 g.setNode("cover_tencel_top_t", {
@@ -1551,12 +1537,12 @@ g.setNode("cover_teenage_t", {
     url: './img/pokrowce/teenage.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
-g.setNode("covers_sensity_top_t", {});
-g.setNode("cover_sensity_top_t", {
+g.setNode("covers_tencel_top_t", {});
+g.setNode("cover_tencel_top_t", {
     g: 1,
-    name: 'sensity',
-    node: 'cover_sensity_top_t',
-    url: './img/pokrowce/sensity.jpg',
+    name: 'tencel',
+    node: 'cover_tencel_top_t',
+    url: './img/pokrowce/tencel.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -3749,7 +3735,7 @@ g.setNode("materac_chacha", {
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_velvet'
+    cover: 'covers_cashmere'
 });
 g.setNode("materac_pasodoble", {
     node: 'materac_pasodoble',
@@ -3770,7 +3756,7 @@ g.setNode("materac_makarena", {
     label: 'Makarena',
     img: '/materace/makarena.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips'
+    cover: 'covers_italiano_hybrid'
 });
 g.setNode("materac_rockroll", {
     node: 'materac_rockroll',
@@ -3784,14 +3770,14 @@ g.setNode("materac_foxtrot", {
     label: 'Foxtrot',
     img: '/materace/foxtrot.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_velvet'
+    cover: 'covers_cashmere'
 });
-g.setNode("materac_mambo", {
-    node: 'materac_mambo',
-    label: 'Mambo',
-    img: '/materace/mambo.jpg',
+g.setNode("materac_melody", {
+    node: 'materac_melody',
+    label: 'Melody',
+    img: '/materace/melody.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips'
+    cover: 'covers_italiano_hybrid'
 });
 g.setNode("materac_rumba", {
     node: 'materac_rumba',
@@ -3800,12 +3786,12 @@ g.setNode("materac_rumba", {
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_elips_medicott'
 });
-g.setNode("materac_latino", {
-    node: 'materac_latino',
-    label: 'Latino',
-    img: '/materace/latino.jpg',
+g.setNode("materac_conga", {
+    node: 'materac_conga',
+    label: 'Conga',
+    img: '/materace/conga.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips'
+    cover: 'covers_cashmere'
 });
 g.setNode("materac_fandango", {
     node: 'materac_fandango',
@@ -4079,28 +4065,28 @@ g.setNode("materac_foxtrot_200_200", {
     nextStep: 'step_5'
 });
 
-g.setNode("materac_mambo_140_200", {
+g.setNode("materac_melody_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 2429, g2: 2429},
+    price: {g1: 1999, g2: 1999},
     nextStep: 'step_5'
 });
-g.setNode("materac_mambo_160_200", {
+g.setNode("materac_melody_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 2699, g2: 2699},
+    price: {g1: 2299, g2: 2299},
     nextStep: 'step_5'
 });
-g.setNode("materac_mambo_180_200", {
+g.setNode("materac_melody_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2929, g2: 2929},
+    price: {g1: 2449, g2: 2449},
     nextStep: 'step_5'
 });
-g.setNode("materac_mambo_200_200", {
+g.setNode("materac_melody_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 3898, g2: 3898},
+    price: {g1: 3398, g2: 3398},
     nextStep: 'step_5'
 });
 
@@ -4129,28 +4115,28 @@ g.setNode("materac_rumba_200_200", {
     nextStep: 'step_5'
 });
 
-g.setNode("materac_latino_140_200", {
+g.setNode("materac_conga_140_200", {
     label: '140/200',
     width: 140,
+    price: {g1: 2429, g2: 2429},
+    nextStep: 'step_5'
+});
+g.setNode("materac_conga_160_200", {
+    label: '160/200',
+    width: 160,
     price: {g1: 2699, g2: 2699},
     nextStep: 'step_5'
 });
-g.setNode("materac_latino_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 2999, g2: 2999},
-    nextStep: 'step_5'
-});
-g.setNode("materac_latino_180_200", {
+g.setNode("materac_conga_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 3279, g2: 3279},
+    price: {g1: 2929, g2: 2929},
     nextStep: 'step_5'
 });
-g.setNode("materac_latino_200_200", {
+g.setNode("materac_conga_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 4518, g2: 4518},
+    price: {g1: 3898, g2: 3898},
     nextStep: 'step_5'
 });
 
@@ -4427,7 +4413,7 @@ g.setNode("bb_materac_chacha", {
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_velvet'
+    cover: 'covers_cashmere'
 });
 g.setNode("bb_materac_pasodoble", {
     node: 'bb_materac_pasodoble',
@@ -4448,7 +4434,7 @@ g.setNode("bb_materac_makarena", {
     label: 'Makarena',
     img: '/materace/makarena.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips'
+    cover: 'covers_italiano_hybrid'
 });
 g.setNode("bb_materac_rockroll", {
     node: 'bb_materac_rockroll',
@@ -4462,14 +4448,14 @@ g.setNode("bb_materac_foxtrot", {
     label: 'Foxtrot',
     img: '/materace/foxtrot.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_velvet'
+    cover: 'covers_cashmere'
 });
-g.setNode("bb_materac_mambo", {
-    node: 'bb_materac_mambo',
-    label: 'Mambo',
-    img: '/materace/mambo.jpg',
+g.setNode("bb_materac_melody", {
+    node: 'bb_materac_melody',
+    label: 'Melody',
+    img: '/materace/melody.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips'
+    cover: 'covers_italiano_hybrid'
 });
 g.setNode("bb_materac_rumba", {
     node: 'bb_materac_rumba',
@@ -4478,12 +4464,12 @@ g.setNode("bb_materac_rumba", {
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_elips_medicott'
 });
-g.setNode("bb_materac_latino", {
-    node: 'bb_materac_latino',
-    label: 'Latino',
-    img: '/materace/latino.jpg',
+g.setNode("bb_materac_conga", {
+    node: 'bb_materac_conga',
+    label: 'Conga',
+    img: '/materace/conga.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips'
+    cover: 'covers_cashmere'
 });
 g.setNode("bb_materac_fandango", {
     node: 'bb_materac_fandango',
@@ -4746,28 +4732,28 @@ g.setNode("bb_materac_foxtrot_180_200", {label: '180/200', width: 180, price: {g
 g.setNode("bb_materac_foxtrot_200_200", {label: '200/200', width: 200, price: {g1: 2678, g2: 2678}, nextStep: 'bb_nawierzchniowy',
     extra: '*(2x 100/200)'});
 
-g.setNode("bb_materac_mambo_140_200", {
+g.setNode("bb_materac_melody_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 2429, g2: 2429},
+    price: {g1: 1999, g2: 1999},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_mambo_160_200", {
+g.setNode("bb_materac_melody_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 2699, g2: 2699},
+    price: {g1: 2299, g2: 2299},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_mambo_180_200", {
+g.setNode("bb_materac_melody_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2929, g2: 2929},
+    price: {g1: 2449, g2: 2449},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_mambo_200_200", {
+g.setNode("bb_materac_melody_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 3898, g2: 3898},
+    price: {g1: 3398, g2: 3398},
     nextStep: 'bb_nawierzchniowy',
     extra: '*(2x 100/200)'
 });
@@ -4798,28 +4784,28 @@ g.setNode("bb_materac_rumba_200_200", {
     extra: '*(2x 100/200)'
 });
 
-g.setNode("bb_materac_latino_140_200", {
+g.setNode("bb_materac_conga_140_200", {
     label: '140/200',
     width: 140,
+    price: {g1: 2429, g2: 2429},
+    nextStep: 'bb_nawierzchniowy'
+});
+g.setNode("bb_materac_conga_160_200", {
+    label: '160/200',
+    width: 160,
     price: {g1: 2699, g2: 2699},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_latino_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 2999, g2: 2999},
-    nextStep: 'bb_nawierzchniowy'
-});
-g.setNode("bb_materac_latino_180_200", {
+g.setNode("bb_materac_conga_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 3279, g2: 3279},
+    price: {g1: 2929, g2: 2929},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_latino_200_200", {
+g.setNode("bb_materac_conga_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 4518, g2: 4518},
+    price: {g1: 3898, g2: 3898},
     nextStep: 'bb_nawierzchniowy',
     extra: '*(2x 100/200)'
 });
@@ -5008,7 +4994,7 @@ g.setNode("bp_materac_chacha", {
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_velvet'
+    cover: 'bp_covers_cashmere'
 });
 g.setNode("bp_materac_pasodoble", {
     node: 'bp_materac_pasodoble',
@@ -5029,7 +5015,7 @@ g.setNode("bp_materac_makarena", {
     label: 'Makarena',
     img: '/materace/makarena.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_merced_elips'
+    cover: 'bp_covers_italiano_hybrid'
 });
 g.setNode("bp_materac_rockroll", {
     node: 'bp_materac_rockroll',
@@ -5043,14 +5029,14 @@ g.setNode("bp_materac_foxtrot", {
     label: 'Foxtrot',
     img: '/materace/foxtrot.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_velvet'
+    cover: 'bp_covers_cashmere'
 });
-g.setNode("bp_materac_mambo", {
-    node: 'bp_materac_mambo',
-    label: 'Mambo',
-    img: '/materace/mambo.jpg',
+g.setNode("bp_materac_melody", {
+    node: 'bp_materac_melody',
+    label: 'Melody',
+    img: '/materace/melody.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_merced_elips'
+    cover: 'bp_covers_italiano_hybrid'
 });
 g.setNode("bp_materac_rumba", {
     node: 'bp_materac_rumba',
@@ -5059,12 +5045,12 @@ g.setNode("bp_materac_rumba", {
     render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_elips_medicott'
 });
-g.setNode("bp_materac_latino", {
-    node: 'bp_materac_latino',
-    label: 'Latino',
-    img: '/materace/latino.jpg',
+g.setNode("bp_materac_conga", {
+    node: 'bp_materac_conga',
+    label: 'Conga',
+    img: '/materace/conga.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_merced_elips'
+    cover: 'bp_covers_cashmere'
 });
 g.setNode("bp_materac_fandango", {
     node: 'bp_materac_fandango',
@@ -5306,28 +5292,28 @@ g.setNode("bp_materac_foxtrot_140_200", {label: '140/200', width: 140, price: {g
 g.setNode("bp_materac_foxtrot_160_200", {label: '160/200', width: 160, price: {g1: 1799, g2: 1799}, nextStep: 'bp_nawierzchniowy'});
 g.setNode("bp_materac_foxtrot_180_200", {label: '180/200', width: 180, price: {g1: 1959, g2: 1959}, nextStep: 'bp_nawierzchniowy'});
 g.setNode("bp_materac_foxtrot_200_200", {label: '200/200', width: 200, price: {g1: 2678, g2: 2678}, nextStep: 'bp_nawierzchniowy'});
-g.setNode("bp_materac_mambo_140_200", {
+g.setNode("bp_materac_melody_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 2429, g2: 2429},
+    price: {g1: 1999, g2: 1999},
     nextStep: 'bp_nawierzchniowy'
 });
-g.setNode("bp_materac_mambo_160_200", {
+g.setNode("bp_materac_melody_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 2699, g2: 2699},
+    price: {g1: 2299, g2: 2299},
     nextStep: 'bp_nawierzchniowy'
 });
-g.setNode("bp_materac_mambo_180_200", {
+g.setNode("bp_materac_melody_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2929, g2: 2929},
+    price: {g1: 2449, g2: 2449},
     nextStep: 'bp_nawierzchniowy'
 });
-g.setNode("bp_materac_mambo_200_200", {
+g.setNode("bp_materac_melody_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 3898, g2: 3898},
+    price: {g1: 3398, g2: 3398},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_rumba_140_200", {
@@ -5354,28 +5340,28 @@ g.setNode("bp_materac_rumba_200_200", {
     price: {g1: 4598, g2: 4958},
     nextStep: 'bp_nawierzchniowy'
 });
-g.setNode("bp_materac_latino_140_200", {
+g.setNode("bp_materac_conga_140_200", {
     label: '140/200',
     width: 140,
+    price: {g1: 2429, g2: 2429},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_conga_160_200", {
+    label: '160/200',
+    width: 160,
     price: {g1: 2699, g2: 2699},
     nextStep: 'bp_nawierzchniowy'
 });
-g.setNode("bp_materac_latino_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 2999, g2: 2999},
-    nextStep: 'bp_nawierzchniowy'
-});
-g.setNode("bp_materac_latino_180_200", {
+g.setNode("bp_materac_conga_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 3279, g2: 3279},
+    price: {g1: 2929, g2: 2929},
     nextStep: 'bp_nawierzchniowy'
 });
-g.setNode("bp_materac_latino_200_200", {
+g.setNode("bp_materac_conga_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 4518, g2: 4518},
+    price: {g1: 3898, g2: 3898},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_fandango_140_200", {
@@ -5586,7 +5572,7 @@ g.setNode("t_materac_makarena", {
     label: 'Makarena',
     img: '/materace/makarena.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips_t'
+    cover: 'covers_italiano_hybrid_t'
 });
 g.setNode("t_materac_rockroll", {
     node: 't_materac_rockroll',
@@ -5602,12 +5588,12 @@ g.setNode("t_materac_foxtrot", {
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_velvet_t'
 });
-g.setNode("t_materac_mambo", {
-    node: 't_materac_mambo',
-    label: 'Mambo',
-    img: '/materace/mambo.jpg',
+g.setNode("t_materac_melody", {
+    node: 't_materac_melody',
+    label: 'Melody',
+    img: '/materace/melody.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips_t'
+    cover: 'covers_italiano_hybrid_t'
 });
 g.setNode("t_materac_rumba", {
     node: 't_materac_rumba',
@@ -5616,12 +5602,12 @@ g.setNode("t_materac_rumba", {
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_elips_medicott_t'
 });
-g.setNode("t_materac_latino", {
-    node: 't_materac_latino',
-    label: 'Latino',
-    img: '/materace/latino.jpg',
+g.setNode("t_materac_conga", {
+    node: 't_materac_conga',
+    label: 'Conga',
+    img: '/materace/conga.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_merced_elips_t'
+    cover: 'covers_cashmere_t'
 });
 g.setNode("t_materac_fandango", {
     node: 't_materac_fandango',
@@ -5902,34 +5888,34 @@ g.setNode("t_materac_foxtrot_160_200", {label: '160/200', width: 160, price: {g1
 g.setNode("t_materac_foxtrot_180_200", {label: '180/200', width: 180, price: {g1: 1959, g2: 1959}, nextStep: 'skrzynia_posciel_small'});
 g.setNode("t_materac_foxtrot_200_200", {label: '200/200', width: 200, price: {g1: 2678, g2: 2678}, nextStep: 'skrzynia_posciel_small',
     extra: '*(2x 100/200)'});
-g.setNode("t_materac_mambo_90_200", {
+g.setNode("t_materac_melody_90_200", {
     label: '90/200',
     width: 90,
-    price: {g1: 1579, g2: 1579},
+    price: {g1: 1349, g2: 1349},
     nextStep: 'skrzynia_posciel_90'
 });
-g.setNode("t_materac_mambo_140_200", {
+g.setNode("t_materac_melody_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 2429, g2: 2429},
+    price: {g1: 1999, g2: 1999},
     nextStep: 'skrzynia_posciel_big'
 });
-g.setNode("t_materac_mambo_160_200", {
+g.setNode("t_materac_melody_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 2699, g2: 2699},
+    price: {g1: 2299, g2: 2299},
     nextStep: 'skrzynia_posciel_big'
 });
-g.setNode("t_materac_mambo_180_200", {
+g.setNode("t_materac_melody_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2929, g2: 2929},
+    price: {g1: 2449, g2: 2449},
     nextStep: 'skrzynia_posciel_big'
 });
-g.setNode("t_materac_mambo_200_200", {
+g.setNode("t_materac_melody_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 3898, g2: 3898},
+    price: {g1: 3398, g2: 3398},
     nextStep: 'skrzynia_posciel_big',
     extra: '*(2x 100/200)'
 });
@@ -5964,34 +5950,34 @@ g.setNode("t_materac_rumba_200_200", {
     nextStep: 'skrzynia_posciel_big',
     extra: '*(2x 100/200)'
 });
-g.setNode("t_materac_latino_90_200", {
+g.setNode("t_materac_conga_90_200", {
     label: '90/200',
     width: 90,
-    price: {g1: 1799, g2: 1799},
+    price: {g1: 1579, g2: 1579},
     nextStep: 'skrzynia_posciel_90'
 });
-g.setNode("t_materac_latino_140_200", {
+g.setNode("t_materac_conga_140_200", {
     label: '140/200',
     width: 140,
+    price: {g1: 2429, g2: 2429},
+    nextStep: 'skrzynia_posciel_big'
+});
+g.setNode("t_materac_conga_160_200", {
+    label: '160/200',
+    width: 160,
     price: {g1: 2699, g2: 2699},
     nextStep: 'skrzynia_posciel_big'
 });
-g.setNode("t_materac_latino_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 2999, g2: 2999},
-    nextStep: 'skrzynia_posciel_big'
-});
-g.setNode("t_materac_latino_180_200", {
+g.setNode("t_materac_conga_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 3279, g2: 3279},
+    price: {g1: 2929, g2: 2929},
     nextStep: 'skrzynia_posciel_big'
 });
-g.setNode("t_materac_latino_200_200", {
+g.setNode("t_materac_conga_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 4518, g2: 4518},
+    price: {g1: 3898, g2: 3898},
     nextStep: 'skrzynia_posciel_big',
     extra: '*(2x 100/200)'
 });
@@ -6176,132 +6162,103 @@ g.setNode("step_5", {
     skipToNode: 'summary',
     optionsFilter: true
 });
-g.setNode("materac_select_plus", {
-    node: 'materac_select_plus',
-    label: 'Select Plus Softex',
-    img: '/materace/select_plus_top.jpg',
+g.setNode("materac_bass", {
+    node: 'materac_bass',
+    label: 'Bass',
+    img: '/materace/bass.jpg',
     render: '/materace/top_blues_h31.png',
-    cover: 'covers_sensity_top'
+    cover: 'covers_cashmere_tencel_top'
 });
-g.setNode("materac_blues", {
-    node: 'materac_blues',
-    label: 'Blues',
-    img: '/materace/blues.jpg',
+g.setNode("materac_alt", {
+    node: 'materac_alt',
+    label: 'Alt',
+    img: '/materace/alt.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'covers_elips_tencel_top'
+    cover: 'covers_cashmere_tencel_top'
 });
-g.setNode("materac_jive", {
-    node: 'materac_jive',
-    label: 'Jive',
-    img: '/materace/jive.jpg',
+g.setNode("materac_tenor", {
+    node: 'materac_tenor',
+    label: 'Tenor',
+    img: '/materace/tenor.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'covers_elips_tencel_top'
-});
-g.setNode("materac_select_top", {
-    node: 'materac_select_top',
-    label: 'Select TOP',
-    img: '/materace/select_top.jpg',
-    render: '/materace/top_blues_h31.png',
-    cover: 'covers_sensity_top'
+    cover: 'covers_tencel_top'
 });
 
-g.setNode("materac_blues_140_200", {
+
+g.setNode("materac_alt_140_200", {
     label: '140/200',
     width: 140,
+    price: {g1: 599, g2: 599},
+    nextStep: 'summary'
+});
+g.setNode("materac_alt_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 659, g2: 659},
+    nextStep: 'summary'
+});
+g.setNode("materac_alt_180_200", {
+    label: '180/200',
+    width: 180,
     price: {g1: 719, g2: 719},
     nextStep: 'summary'
 });
-g.setNode("materac_blues_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 799, g2: 799},
-    nextStep: 'summary'
-});
-g.setNode("materac_blues_180_200", {
-    label: '180/200',
-    width: 180,
-    price: {g1: 879, g2: 879},
-    nextStep: 'summary'
-});
-g.setNode("materac_blues_200_200", {
+g.setNode("materac_alt_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 1079, g2: 1079},
+    price: {g1: 1098, g2: 1098},
     nextStep: 'summary'
 });
 
-g.setNode("materac_jive_140_200", {
+g.setNode("materac_tenor_140_200", {
     label: '140/200',
     width: 140,
     price: {g1: 449, g2: 449},
     nextStep: 'summary'
 });
-g.setNode("materac_jive_160_200", {
+g.setNode("materac_tenor_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 499, g2: 499},
     nextStep: 'summary'
 });
-g.setNode("materac_jive_180_200", {
+g.setNode("materac_tenor_180_200", {
     label: '180/200',
     width: 180,
     price: {g1: 579, g2: 579},
     nextStep: 'summary'
 });
-g.setNode("materac_jive_200_200", {
+g.setNode("materac_tenor_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 749, g2: 749},
     nextStep: 'summary'
 });
-g.setNode("materac_select_plus_140_200", {
+g.setNode("materac_bass_140_200", {
     label: '140/200',
     width: 140,
     price: {g1: 679, g2: 679},
     nextStep: 'summary'
 });
-g.setNode("materac_select_plus_160_200", {
+g.setNode("materac_bass_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 749, g2: 749},
     nextStep: 'summary'
 });
-g.setNode("materac_select_plus_180_200", {
+g.setNode("materac_bass_180_200", {
     label: '180/200',
     width: 180,
     price: {g1: 819, g2: 819},
     nextStep: 'summary'
 });
-g.setNode("materac_select_plus_200_200", {
+g.setNode("materac_bass_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 1039, g2: 1039},
     nextStep: 'summary'
 });
-g.setNode("materac_select_top_140_200", {
-    label: '140/200',
-    width: 140,
-    price: {g1: 819, g2: 819},
-    nextStep: 'summary'
-});
-g.setNode("materac_select_top_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 899, g2: 899},
-    nextStep: 'summary'
-});
-g.setNode("materac_select_top_180_200", {
-    label: '180/200',
-    width: 180,
-    price: {g1: 999, g2: 999},
-    nextStep: 'summary'
-});
-g.setNode("materac_select_top_200_200", {
-    label: '200/200',
-    width: 200,
-    price: {g1: 1229, g2: 1229},
-    nextStep: 'summary'
-});
+
 
 //***************************************************************
 
@@ -6316,136 +6273,104 @@ g.setNode("bb_nawierzchniowy", {
     info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
-g.setNode("bb_materac_select_plus", {
-    node: 'bb_materac_select_plus',
-    label: 'Select Plus Softex',
-    img: '/materace/select_plus_top.jpg',
+g.setNode("bb_materac_bass", {
+    node: 'bb_materac_bass',
+    label: 'Bass',
+    img: '/materace/bass.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'covers_sensity_top'
+    cover: 'covers_cashmere_tencel_top'
 });
 
-g.setNode("bb_materac_blues", {
-    node: 'bb_materac_blues',
-    label: 'Blues',
-    img: '/materace/blues.jpg',
+g.setNode("bb_materac_alt", {
+    node: 'bb_materac_alt',
+    label: 'Alt',
+    img: '/materace/alt.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'covers_elips_tencel_top'
+    cover: 'covers_cashmere_tencel_top'
 });
 
 
-g.setNode("bb_materac_jive", {
-    node: 'bb_materac_jive',
-    label: 'Jive',
-    img: '/materace/jive.jpg',
+g.setNode("bb_materac_tenor", {
+    node: 'bb_materac_tenor',
+    label: 'Tenor',
+    img: '/materace/tenor.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'covers_elips_tencel_top'
+    cover: 'covers_tencel_top'
 });
 
-g.setNode("bb_materac_select_top", {
-    node: 'bb_materac_select_top',
-    label: 'Select TOP',
-    img: '/materace/select_top.jpg',
-    render: 'materace/top_blues_h31.png',
-    cover: 'covers_sensity_top'
-});
 
-g.setNode("bb_materac_blues_140_200", {
+g.setNode("bb_materac_alt_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 719, g2: 719},
+    price: {g1: 599, g2: 599},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_blues_160_200", {
+g.setNode("bb_materac_alt_160_200", {
     label: '160/200',
     width: 160,
     price: {g1: 799, g2: 799},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_blues_180_200", {
+g.setNode("bb_materac_alt_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 879, g2: 879},
+    price: {g1: 659, g2: 659},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_blues_200_200", {
+g.setNode("bb_materac_alt_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 1079, g2: 1079},
+    price: {g1: 1098, g2: 1098},
     nextStep: 'summary',
 });
 
-g.setNode("bb_materac_jive_140_200", {
+g.setNode("bb_materac_tenor_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 449, g2: 449},
+    price: {g1: 689, g2: 689},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_jive_160_200", {
+g.setNode("bb_materac_tenor_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 499, g2: 499},
+    price: {g1: 769, g2: 769},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_jive_180_200", {
+g.setNode("bb_materac_tenor_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 579, g2: 579},
+    price: {g1: 849, g2: 849},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_jive_200_200", {
+g.setNode("bb_materac_tenor_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 749, g2: 749},
+    price: {g1: 1278, g2: 1278},
     nextStep: 'summary',
 });
 
-g.setNode("bb_materac_select_plus_140_200", {
+g.setNode("bb_materac_bass_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 679, g2: 679},
+    price: {g1: 519, g2: 519},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_select_plus_160_200", {
+g.setNode("bb_materac_bass_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 749, g2: 749},
+    price: {g1: 569, g2: 569},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_select_plus_180_200", {
+g.setNode("bb_materac_bass_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 819, g2: 819},
+    price: {g1: 629, g2: 629},
     nextStep: 'summary'
 });
-g.setNode("bb_materac_select_plus_200_200", {
+g.setNode("bb_materac_bass_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 1039, g2: 1039},
-    nextStep: 'summary',
-});
-
-g.setNode("bb_materac_select_top_140_200", {
-    label: '140/200',
-    width: 140,
-    price: {g1: 819, g2: 819},
-    nextStep: 'summary'
-});
-g.setNode("bb_materac_select_top_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 899, g2: 899},
-    nextStep: 'summary'
-});
-g.setNode("bb_materac_select_top_180_200", {
-    label: '180/200',
-    width: 180,
-    price: {g1: 999, g2: 999},
-    nextStep: 'summary'
-});
-g.setNode("bb_materac_select_top_200_200", {
-    label: '200/200',
-    width: 200,
-    price: {g1: 1229, g2: 1229},
+    price: {g1: 918, g2: 918},
     nextStep: 'summary',
 });
 
@@ -6462,136 +6387,104 @@ g.setNode("bp_nawierzchniowy", {
     info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
 });
 
-g.setNode("bp_materac_select_plus", {
-    node: 'bp_materac_select_plus',
-    label: 'Select Plus Softex',
-    img: '/materace/select_plus_top.jpg',
+g.setNode("bp_materac_bass", {
+    node: 'bp_materac_bass',
+    label: 'Bass',
+    img: '/materace/bass.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'bp_covers_sensity_top'
+    cover: 'bp_covers_cashmere_tencel_top'
 });
 
-g.setNode("bp_materac_blues", {
-    node: 'bp_materac_blues',
-    label: 'Blues',
-    img: '/materace/blues.jpg',
+g.setNode("bp_materac_alt", {
+    node: 'bp_materac_alt',
+    label: 'Alt',
+    img: '/materace/alt.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'bp_covers_elips_tencel_top'
+    cover: 'bp_covers_cashmere_tencel_top'
 });
 
 
-g.setNode("bp_materac_jive", {
-    node: 'bp_materac_jive',
-    label: 'Jive',
-    img: '/materace/jive.jpg',
+g.setNode("bp_materac_tenor", {
+    node: 'bp_materac_tenor',
+    label: 'Tenor',
+    img: '/materace/tenor.jpg',
     render: 'materace/top_blues_h31.png',
-    cover: 'bp_covers_elips_tencel_top'
+    cover: 'bp_covers_tencel_top'
 });
 
-g.setNode("bp_materac_select_top", {
-    node: 'bp_materac_select_top',
-    label: 'Select TOP',
-    img: '/materace/select_top.jpg',
-    render: 'materace/top_blues_h31.png',
-    cover: 'bp_covers_sensity_top'
-});
 
-g.setNode("bp_materac_blues_140_200", {
+g.setNode("bp_materac_alt_140_200", {
     label: '140/200',
     width: 140,
+    price: {g1: 599, g2: 599},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_alt_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 659, g2: 659},
+    nextStep: 'summary'
+});
+g.setNode("bp_materac_alt_180_200", {
+    label: '180/200',
+    width: 180,
     price: {g1: 719, g2: 719},
     nextStep: 'summary'
 });
-g.setNode("bp_materac_blues_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 799, g2: 799},
-    nextStep: 'summary'
-});
-g.setNode("bp_materac_blues_180_200", {
-    label: '180/200',
-    width: 180,
-    price: {g1: 879, g2: 879},
-    nextStep: 'summary'
-});
-g.setNode("bp_materac_blues_200_200", {
+g.setNode("bp_materac_alt_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 1079, g2: 1079},
+    price: {g1: 1098, g2: 1098},
     nextStep: 'summary'
 });
 
-g.setNode("bp_materac_jive_140_200", {
+g.setNode("bp_materac_tenor_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 449, g2: 449},
+    price: {g1: 689, g2: 689},
     nextStep: 'summary'
 });
-g.setNode("bp_materac_jive_160_200", {
+g.setNode("bp_materac_tenor_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 499, g2: 499},
+    price: {g1: 769, g2: 769},
     nextStep: 'summary'
 });
-g.setNode("bp_materac_jive_180_200", {
+g.setNode("bp_materac_tenor_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 579, g2: 579},
+    price: {g1: 849, g2: 849},
     nextStep: 'summary'
 });
-g.setNode("bp_materac_jive_200_200", {
+g.setNode("bp_materac_tenor_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 749, g2: 749},
+    price: {g1: 1278, g2: 1278},
     nextStep: 'summary'
 });
 
-g.setNode("bp_materac_select_plus_140_200", {
+g.setNode("bp_materac_bass_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 679, g2: 679},
+    price: {g1: 519, g2: 519},
     nextStep: 'summary'
 });
-g.setNode("bp_materac_select_plus_160_200", {
+g.setNode("bp_materac_bass_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 749, g2: 749},
+    price: {g1: 569, g2: 569},
     nextStep: 'summary'
 });
-g.setNode("bp_materac_select_plus_180_200", {
+g.setNode("bp_materac_bass_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 819, g2: 819},
+    price: {g1: 629, g2: 629},
     nextStep: 'summary'
 });
-g.setNode("bp_materac_select_plus_200_200", {
+g.setNode("bp_materac_bass_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 1039, g2: 1039},
-    nextStep: 'summary'
-});
-
-g.setNode("bp_materac_select_top_140_200", {
-    label: '140/200',
-    width: 140,
-    price: {g1: 819, g2: 819},
-    nextStep: 'summary'
-});
-g.setNode("bp_materac_select_top_160_200", {
-    label: '160/200',
-    width: 160,
-    price: {g1: 899, g2: 899},
-    nextStep: 'summary'
-});
-g.setNode("bp_materac_select_top_180_200", {
-    label: '180/200',
-    width: 180,
-    price: {g1: 999, g2: 999},
-    nextStep: 'summary'
-});
-g.setNode("bp_materac_select_top_200_200", {
-    label: '200/200',
-    width: 200,
-    price: {g1: 1229, g2: 1229},
+    price: {g1: 918, g2: 918},
     nextStep: 'summary'
 });
 
@@ -7592,9 +7485,9 @@ g.setEdge("step_4", "materac_step");
 g.setEdge("step_4", "materac_pasodoble");
 g.setEdge("step_4", "materac_makarena");
 g.setEdge("step_4", "materac_rockroll");
-g.setEdge("step_4", "materac_mambo");
+g.setEdge("step_4", "materac_melody");
 g.setEdge("step_4", "materac_rumba");
-g.setEdge("step_4", "materac_latino");
+g.setEdge("step_4", "materac_conga");
 
 g.setEdge("step_4", "materac_chacha");
 g.setEdge("step_4", "materac_foxtrot");
@@ -7609,9 +7502,9 @@ g.setEdge("step_pokrowiec", "materac_step");
 g.setEdge("step_pokrowiec", "materac_pasodoble");
 g.setEdge("step_pokrowiec", "materac_makarena");
 g.setEdge("step_pokrowiec", "materac_rockroll");
-g.setEdge("step_pokrowiec", "materac_mambo");
+g.setEdge("step_pokrowiec", "materac_melody");
 g.setEdge("step_pokrowiec", "materac_rumba");
-g.setEdge("step_pokrowiec", "materac_latino");
+g.setEdge("step_pokrowiec", "materac_conga");
 g.setEdge("step_pokrowiec", "materac_foxtrot");
 g.setEdge("step_pokrowiec", "materac_chacha");
 g.setEdge("step_pokrowiec", "materac_flamenco");
@@ -7664,20 +7557,20 @@ g.setEdge("materac_foxtrot", "materac_foxtrot_160_200");
 g.setEdge("materac_foxtrot", "materac_foxtrot_180_200");
 g.setEdge("materac_foxtrot", "materac_foxtrot_200_200");
 
-g.setEdge("materac_mambo", "materac_mambo_140_200");
-g.setEdge("materac_mambo", "materac_mambo_160_200");
-g.setEdge("materac_mambo", "materac_mambo_180_200");
-g.setEdge("materac_mambo", "materac_mambo_200_200");
+g.setEdge("materac_melody", "materac_melody_140_200");
+g.setEdge("materac_melody", "materac_melody_160_200");
+g.setEdge("materac_melody", "materac_melody_180_200");
+g.setEdge("materac_melody", "materac_melody_200_200");
 
 g.setEdge("materac_rumba", "materac_rumba_140_200");
 g.setEdge("materac_rumba", "materac_rumba_160_200");
 g.setEdge("materac_rumba", "materac_rumba_180_200");
 g.setEdge("materac_rumba", "materac_rumba_200_200");
 
-g.setEdge("materac_latino", "materac_latino_140_200");
-g.setEdge("materac_latino", "materac_latino_160_200");
-g.setEdge("materac_latino", "materac_latino_180_200");
-g.setEdge("materac_latino", "materac_latino_200_200");
+g.setEdge("materac_conga", "materac_conga_140_200");
+g.setEdge("materac_conga", "materac_conga_160_200");
+g.setEdge("materac_conga", "materac_conga_180_200");
+g.setEdge("materac_conga", "materac_conga_200_200");
 
 g.setEdge("materac_fandango", "materac_fandango_140_200");
 g.setEdge("materac_fandango", "materac_fandango_160_200");
@@ -7726,9 +7619,9 @@ g.setEdge("bb_step_pokrowiec", "bb_materac_step");
 g.setEdge("bb_step_pokrowiec", "bb_materac_pasodoble");
 g.setEdge("bb_step_pokrowiec", "bb_materac_makarena");
 g.setEdge("bb_step_pokrowiec", "bb_materac_rockroll");
-g.setEdge("bb_step_pokrowiec", "bb_materac_mambo");
+g.setEdge("bb_step_pokrowiec", "bb_materac_melody");
 g.setEdge("bb_step_pokrowiec", "bb_materac_rumba");
-g.setEdge("bb_step_pokrowiec", "bb_materac_latino");
+g.setEdge("bb_step_pokrowiec", "bb_materac_conga");
 g.setEdge("bb_step_pokrowiec", "bb_materac_foxtrot");
 g.setEdge("bb_step_pokrowiec", "bb_materac_chacha");
 g.setEdge("bb_step_pokrowiec", "bb_materac_flamenco");
@@ -7781,20 +7674,20 @@ g.setEdge("bb_materac_foxtrot", "bb_materac_foxtrot_160_200");
 g.setEdge("bb_materac_foxtrot", "bb_materac_foxtrot_180_200");
 g.setEdge("bb_materac_foxtrot", "bb_materac_foxtrot_200_200");
 
-g.setEdge("bb_materac_mambo", "bb_materac_mambo_140_200");
-g.setEdge("bb_materac_mambo", "bb_materac_mambo_160_200");
-g.setEdge("bb_materac_mambo", "bb_materac_mambo_180_200");
-g.setEdge("bb_materac_mambo", "bb_materac_mambo_200_200");
+g.setEdge("bb_materac_melody", "bb_materac_melody_140_200");
+g.setEdge("bb_materac_melody", "bb_materac_melody_160_200");
+g.setEdge("bb_materac_melody", "bb_materac_melody_180_200");
+g.setEdge("bb_materac_melody", "bb_materac_melody_200_200");
 
 g.setEdge("bb_materac_rumba", "bb_materac_rumba_140_200");
 g.setEdge("bb_materac_rumba", "bb_materac_rumba_160_200");
 g.setEdge("bb_materac_rumba", "bb_materac_rumba_180_200");
 g.setEdge("bb_materac_rumba", "bb_materac_rumba_200_200");
 
-g.setEdge("bb_materac_latino", "bb_materac_latino_140_200");
-g.setEdge("bb_materac_latino", "bb_materac_latino_160_200");
-g.setEdge("bb_materac_latino", "bb_materac_latino_180_200");
-g.setEdge("bb_materac_latino", "bb_materac_latino_200_200");
+g.setEdge("bb_materac_conga", "bb_materac_conga_140_200");
+g.setEdge("bb_materac_conga", "bb_materac_conga_160_200");
+g.setEdge("bb_materac_conga", "bb_materac_conga_180_200");
+g.setEdge("bb_materac_conga", "bb_materac_conga_200_200");
 
 g.setEdge("bb_materac_fandango", "bb_materac_fandango_140_200");
 g.setEdge("bb_materac_fandango", "bb_materac_fandango_160_200");
@@ -7843,9 +7736,9 @@ g.setEdge("bp_step_pokrowiec", "bp_materac_step");
 g.setEdge("bp_step_pokrowiec", "bp_materac_pasodoble");
 g.setEdge("bp_step_pokrowiec", "bp_materac_makarena");
 g.setEdge("bp_step_pokrowiec", "bp_materac_rockroll");
-g.setEdge("bp_step_pokrowiec", "bp_materac_mambo");
+g.setEdge("bp_step_pokrowiec", "bp_materac_melody");
 g.setEdge("bp_step_pokrowiec", "bp_materac_rumba");
-g.setEdge("bp_step_pokrowiec", "bp_materac_latino");
+g.setEdge("bp_step_pokrowiec", "bp_materac_conga");
 g.setEdge("bp_step_pokrowiec", "bp_materac_foxtrot");
 g.setEdge("bp_step_pokrowiec", "bp_materac_chacha");
 g.setEdge("bp_step_pokrowiec", "bp_materac_flamenco");
@@ -7898,20 +7791,20 @@ g.setEdge("bp_materac_foxtrot", "bp_materac_foxtrot_160_200");
 g.setEdge("bp_materac_foxtrot", "bp_materac_foxtrot_180_200");
 g.setEdge("bp_materac_foxtrot", "bp_materac_foxtrot_200_200");
 
-g.setEdge("bp_materac_mambo", "bp_materac_mambo_140_200");
-g.setEdge("bp_materac_mambo", "bp_materac_mambo_160_200");
-g.setEdge("bp_materac_mambo", "bp_materac_mambo_180_200");
-g.setEdge("bp_materac_mambo", "bp_materac_mambo_200_200");
+g.setEdge("bp_materac_melody", "bp_materac_melody_140_200");
+g.setEdge("bp_materac_melody", "bp_materac_melody_160_200");
+g.setEdge("bp_materac_melody", "bp_materac_melody_180_200");
+g.setEdge("bp_materac_melody", "bp_materac_melody_200_200");
 
 g.setEdge("bp_materac_rumba", "bp_materac_rumba_140_200");
 g.setEdge("bp_materac_rumba", "bp_materac_rumba_160_200");
 g.setEdge("bp_materac_rumba", "bp_materac_rumba_180_200");
 g.setEdge("bp_materac_rumba", "bp_materac_rumba_200_200");
 
-g.setEdge("bp_materac_latino", "bp_materac_latino_140_200");
-g.setEdge("bp_materac_latino", "bp_materac_latino_160_200");
-g.setEdge("bp_materac_latino", "bp_materac_latino_180_200");
-g.setEdge("bp_materac_latino", "bp_materac_latino_200_200");
+g.setEdge("bp_materac_conga", "bp_materac_conga_140_200");
+g.setEdge("bp_materac_conga", "bp_materac_conga_160_200");
+g.setEdge("bp_materac_conga", "bp_materac_conga_180_200");
+g.setEdge("bp_materac_conga", "bp_materac_conga_200_200");
 
 g.setEdge("bp_materac_fandango", "bp_materac_fandango_140_200");
 g.setEdge("bp_materac_fandango", "bp_materac_fandango_160_200");
@@ -7951,9 +7844,9 @@ g.setEdge("t_materac", "t_materac_step");
 g.setEdge("t_materac", "t_materac_pasodoble");
 g.setEdge("t_materac", "t_materac_makarena");
 g.setEdge("t_materac", "t_materac_rockroll");
-g.setEdge("t_materac", "t_materac_mambo");
+g.setEdge("t_materac", "t_materac_melody");
 g.setEdge("t_materac", "t_materac_rumba");
-g.setEdge("t_materac", "t_materac_latino");
+g.setEdge("t_materac", "t_materac_conga");
 g.setEdge("t_materac", "t_materac_foxtrot");
 g.setEdge("t_materac", "t_materac_chacha");
 g.setEdge("t_materac", "t_materac_flamenco");
@@ -8015,11 +7908,11 @@ g.setEdge("t_materac_foxtrot", "t_materac_foxtrot_160_200");
 g.setEdge("t_materac_foxtrot", "t_materac_foxtrot_180_200");
 g.setEdge("t_materac_foxtrot", "t_materac_foxtrot_200_200");
 
-g.setEdge("t_materac_mambo", "t_materac_mambo_90_200");
-g.setEdge("t_materac_mambo", "t_materac_mambo_140_200");
-g.setEdge("t_materac_mambo", "t_materac_mambo_160_200");
-g.setEdge("t_materac_mambo", "t_materac_mambo_180_200");
-g.setEdge("t_materac_mambo", "t_materac_mambo_200_200");
+g.setEdge("t_materac_melody", "t_materac_melody_90_200");
+g.setEdge("t_materac_melody", "t_materac_melody_140_200");
+g.setEdge("t_materac_melody", "t_materac_melody_160_200");
+g.setEdge("t_materac_melody", "t_materac_melody_180_200");
+g.setEdge("t_materac_melody", "t_materac_melody_200_200");
 
 g.setEdge("t_materac_rumba", "t_materac_rumba_90_200");
 g.setEdge("t_materac_rumba", "t_materac_rumba_140_200");
@@ -8027,11 +7920,11 @@ g.setEdge("t_materac_rumba", "t_materac_rumba_160_200");
 g.setEdge("t_materac_rumba", "t_materac_rumba_180_200");
 g.setEdge("t_materac_rumba", "t_materac_rumba_200_200");
 
-g.setEdge("t_materac_latino", "t_materac_latino_90_200");
-g.setEdge("t_materac_latino", "t_materac_latino_140_200");
-g.setEdge("t_materac_latino", "t_materac_latino_160_200");
-g.setEdge("t_materac_latino", "t_materac_latino_180_200");
-g.setEdge("t_materac_latino", "t_materac_latino_200_200");
+g.setEdge("t_materac_conga", "t_materac_conga_90_200");
+g.setEdge("t_materac_conga", "t_materac_conga_140_200");
+g.setEdge("t_materac_conga", "t_materac_conga_160_200");
+g.setEdge("t_materac_conga", "t_materac_conga_180_200");
+g.setEdge("t_materac_conga", "t_materac_conga_200_200");
 
 g.setEdge("t_materac_fandango", "t_materac_fandango_90_200");
 g.setEdge("t_materac_fandango", "t_materac_fandango_140_200");
@@ -8054,92 +7947,74 @@ g.setEdge("t_materac_breakdance", "t_materac_breakdance_200_200");
 
 //*******************************************************
 
-g.setEdge("step_5", "materac_select_plus");
-g.setEdge("step_5", "materac_blues");
-g.setEdge("step_5", "materac_jive");
-g.setEdge("step_5", "materac_select_top");
+g.setEdge("step_5", "materac_bass");
+g.setEdge("step_5", "materac_alt");
+g.setEdge("step_5", "materac_tenor");
 
-g.setEdge("materac_blues", "materac_blues_140_200");
-g.setEdge("materac_blues", "materac_blues_160_200");
-g.setEdge("materac_blues", "materac_blues_180_200");
-g.setEdge("materac_blues", "materac_blues_200_200");
+g.setEdge("materac_alt", "materac_alt_140_200");
+g.setEdge("materac_alt", "materac_alt_160_200");
+g.setEdge("materac_alt", "materac_alt_180_200");
+g.setEdge("materac_alt", "materac_alt_200_200");
 
-g.setEdge("materac_jive", "materac_jive_140_200");
-g.setEdge("materac_jive", "materac_jive_160_200");
-g.setEdge("materac_jive", "materac_jive_180_200");
-g.setEdge("materac_jive", "materac_jive_200_200");
+g.setEdge("materac_tenor", "materac_tenor_140_200");
+g.setEdge("materac_tenor", "materac_tenor_160_200");
+g.setEdge("materac_tenor", "materac_tenor_180_200");
+g.setEdge("materac_tenor", "materac_tenor_200_200");
 
-g.setEdge("materac_select_top", "materac_select_top_140_200");
-g.setEdge("materac_select_top", "materac_select_top_160_200");
-g.setEdge("materac_select_top", "materac_select_top_180_200");
-g.setEdge("materac_select_top", "materac_select_top_200_200");
-
-g.setEdge("materac_select_plus", "materac_select_plus_140_200");
-g.setEdge("materac_select_plus", "materac_select_plus_160_200");
-g.setEdge("materac_select_plus", "materac_select_plus_180_200");
-g.setEdge("materac_select_plus", "materac_select_plus_200_200");
+g.setEdge("materac_bass", "materac_bass_140_200");
+g.setEdge("materac_bass", "materac_bass_160_200");
+g.setEdge("materac_bass", "materac_bass_180_200");
+g.setEdge("materac_bass", "materac_bass_200_200");
 
 
 //**********************************
 
-g.setEdge("bb_nawierzchniowy", "bb_materac_select_plus");
-g.setEdge("bb_nawierzchniowy", "bb_materac_blues");
-g.setEdge("bb_nawierzchniowy", "bb_materac_jive");
-g.setEdge("bb_nawierzchniowy", "bb_materac_select_top");
+g.setEdge("bb_nawierzchniowy", "bb_materac_bass");
+g.setEdge("bb_nawierzchniowy", "bb_materac_alt");
+g.setEdge("bb_nawierzchniowy", "bb_materac_tenor");
 
-g.setEdge("bb_materac_blues", "bb_materac_blues_140_200");
-g.setEdge("bb_materac_blues", "bb_materac_blues_160_200");
-g.setEdge("bb_materac_blues", "bb_materac_blues_180_200");
-g.setEdge("bb_materac_blues", "bb_materac_blues_200_200");
+g.setEdge("bb_materac_alt", "bb_materac_alt_140_200");
+g.setEdge("bb_materac_alt", "bb_materac_alt_160_200");
+g.setEdge("bb_materac_alt", "bb_materac_alt_180_200");
+g.setEdge("bb_materac_alt", "bb_materac_alt_200_200");
 
-g.setEdge("bb_materac_jive", "bb_materac_jive_140_200");
-g.setEdge("bb_materac_jive", "bb_materac_jive_160_200");
-g.setEdge("bb_materac_jive", "bb_materac_jive_180_200");
-g.setEdge("bb_materac_jive", "bb_materac_jive_200_200");
+g.setEdge("bb_materac_tenor", "bb_materac_tenor_140_200");
+g.setEdge("bb_materac_tenor", "bb_materac_tenor_160_200");
+g.setEdge("bb_materac_tenor", "bb_materac_tenor_180_200");
+g.setEdge("bb_materac_tenor", "bb_materac_tenor_200_200");
 
-g.setEdge("bb_materac_select_top", "bb_materac_select_top_140_200");
-g.setEdge("bb_materac_select_top", "bb_materac_select_top_160_200");
-g.setEdge("bb_materac_select_top", "bb_materac_select_top_180_200");
-g.setEdge("bb_materac_select_top", "bb_materac_select_top_200_200");
-
-g.setEdge("bb_materac_select_plus", "bb_materac_select_plus_140_200");
-g.setEdge("bb_materac_select_plus", "bb_materac_select_plus_160_200");
-g.setEdge("bb_materac_select_plus", "bb_materac_select_plus_180_200");
-g.setEdge("bb_materac_select_plus", "bb_materac_select_plus_200_200");
+g.setEdge("bb_materac_bass", "bb_materac_bass_140_200");
+g.setEdge("bb_materac_bass", "bb_materac_bass_160_200");
+g.setEdge("bb_materac_bass", "bb_materac_bass_180_200");
+g.setEdge("bb_materac_bass", "bb_materac_bass_200_200");
 
 //*****************************************
 
-g.setEdge("bp_nawierzchniowy", "bp_materac_select_plus");
-g.setEdge("bp_nawierzchniowy", "bp_materac_blues");
-g.setEdge("bp_nawierzchniowy", "bp_materac_jive");
-g.setEdge("bp_nawierzchniowy", "bp_materac_select_top");
+g.setEdge("bp_nawierzchniowy", "bp_materac_bass");
+g.setEdge("bp_nawierzchniowy", "bp_materac_alt");
+g.setEdge("bp_nawierzchniowy", "bp_materac_tenor");
 
-g.setEdge("bp_materac_blues", "bp_materac_blues_140_200");
-g.setEdge("bp_materac_blues", "bp_materac_blues_160_200");
-g.setEdge("bp_materac_blues", "bp_materac_blues_180_200");
-g.setEdge("bp_materac_blues", "bp_materac_blues_200_200");
+g.setEdge("bp_materac_alt", "bp_materac_alt_140_200");
+g.setEdge("bp_materac_alt", "bp_materac_alt_160_200");
+g.setEdge("bp_materac_alt", "bp_materac_alt_180_200");
+g.setEdge("bp_materac_alt", "bp_materac_alt_200_200");
 
-g.setEdge("bp_materac_jive", "bp_materac_jive_140_200");
-g.setEdge("bp_materac_jive", "bp_materac_jive_160_200");
-g.setEdge("bp_materac_jive", "bp_materac_jive_180_200");
-g.setEdge("bp_materac_jive", "bp_materac_jive_200_200");
+g.setEdge("bp_materac_tenor", "bp_materac_tenor_140_200");
+g.setEdge("bp_materac_tenor", "bp_materac_tenor_160_200");
+g.setEdge("bp_materac_tenor", "bp_materac_tenor_180_200");
+g.setEdge("bp_materac_tenor", "bp_materac_tenor_200_200");
 
-g.setEdge("bp_materac_select_top", "bp_materac_select_top_140_200");
-g.setEdge("bp_materac_select_top", "bp_materac_select_top_160_200");
-g.setEdge("bp_materac_select_top", "bp_materac_select_top_180_200");
-g.setEdge("bp_materac_select_top", "bp_materac_select_top_200_200");
-
-g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_140_200");
-g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_160_200");
-g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_180_200");
-g.setEdge("bp_materac_select_plus", "bp_materac_select_plus_200_200");
+g.setEdge("bp_materac_bass", "bp_materac_bass_140_200");
+g.setEdge("bp_materac_bass", "bp_materac_bass_160_200");
+g.setEdge("bp_materac_bass", "bp_materac_bass_180_200");
+g.setEdge("bp_materac_bass", "bp_materac_bass_200_200");
 
 //*****************************************
 
 g.setEdge("covers_velvet_tencel", "cover_velvet");
 g.setEdge("covers_velvet_tencel", "cover_tencel");
 
-g.setEdge("covers_velvet", "cover_velvet");
+g.setEdge("covers_cashmere", "cover_cashmere");
 
 g.setEdge("covers_elips_medicott", "cover_medicott");
 g.setEdge("covers_elips_medicott", "cover_elips_1");
@@ -8147,18 +8022,18 @@ g.setEdge("covers_elips_medicott", "cover_elips_1");
 g.setEdge("covers_fresh", "cover_fresh");
 g.setEdge("covers_medicover", "cover_medicover");
 g.setEdge("covers_teenage", "cover_teenage");
-g.setEdge("covers_merced_elips", "cover_merced_1");
-g.setEdge("covers_merced_elips", "cover_elips_2");
-g.setEdge("covers_elips_tencel_top", "cover_elips_top");
-g.setEdge("covers_elips_tencel_top", "cover_tencel_top");
-g.setEdge("covers_sensity_top", "cover_sensity_top");
+g.setEdge("covers_italiano_hybrid", "cover_italiano_1");
+g.setEdge("covers_italiano_hybrid", "cover_hybrid_2");
+g.setEdge("covers_cashmere_tencel_top", "cover_cashmere_top");
+g.setEdge("covers_cashmere_tencel_top", "cover_tencel_top");
+g.setEdge("covers_tencel_top", "cover_tencel_top");
 
 //************************************************
 
 g.setEdge("bp_covers_velvet_tencel", "bp_cover_velvet");
 g.setEdge("bp_covers_velvet_tencel", "bp_cover_tencel");
 
-g.setEdge("bp_covers_velvet", "bp_cover_velvet");
+g.setEdge("bp_covers_cashmere", "bp_cover_cashmere");
 
 g.setEdge("bp_covers_elips_medicott", "bp_cover_medicott");
 g.setEdge("bp_covers_elips_medicott", "bp_cover_elips_1");
@@ -8166,18 +8041,18 @@ g.setEdge("bp_covers_elips_medicott", "bp_cover_elips_1");
 g.setEdge("bp_covers_fresh", "bp_cover_fresh");
 g.setEdge("bp_covers_medicover", "bp_cover_medicover");
 g.setEdge("bp_covers_teenage", "bp_cover_teenage");
-g.setEdge("bp_covers_merced_elips", "bp_cover_merced_1");
-g.setEdge("bp_covers_merced_elips", "bp_cover_elips_2");
-g.setEdge("bp_covers_elips_tencel_top", "bp_cover_elips_top");
-g.setEdge("bp_covers_elips_tencel_top", "bp_cover_tencel_top");
-g.setEdge("bp_covers_sensity_top", "bp_cover_sensity_top");
+g.setEdge("bp_covers_italiano_hybrid", "bp_cover_italiano_1");
+g.setEdge("bp_covers_italiano_hybrid", "bp_cover_hybrid_2");
+g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_cashmere_top");
+g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_tencel_top");
+g.setEdge("bp_covers_tencel_top", "bp_cover_tencel_top");
 
 //************************************************
 
 g.setEdge("covers_velvet_tencel_t", "cover_velvet_t");
 g.setEdge("covers_velvet_tencel_t", "cover_tencel_t");
 
-g.setEdge("covers_velvet_t", "cover_velvet_t");
+g.setEdge("covers_cashmere_t", "cover_cashmere_t");
 
 g.setEdge("covers_elips_medicott_t", "cover_medicott_t");
 g.setEdge("covers_elips_medicott_t", "cover_elips_1_t");
@@ -8185,11 +8060,11 @@ g.setEdge("covers_elips_medicott_t", "cover_elips_1_t");
 g.setEdge("covers_fresh_t", "cover_fresh_t");
 g.setEdge("covers_medicover_t", "cover_medicover_t");
 g.setEdge("covers_teenage_t", "cover_teenage_t");
-g.setEdge("covers_merced_elips_t", "cover_merced_1_t");
-g.setEdge("covers_merced_elips_t", "cover_elips_2_t");
-g.setEdge("covers_elips_tencel_top_t", "cover_elips_top_t");
-g.setEdge("covers_elips_tencel_top_t", "cover_tencel_top_t");
-g.setEdge("covers_sensity_top_t", "cover_sensity_top_t");
+g.setEdge("covers_italiano_hybrid_t", "cover_italiano_1_t");
+g.setEdge("covers_italiano_hybrid_t", "cover_hybrid_2_t");
+g.setEdge("covers_cashmere_tencel_top_t", "cover_cashmere_top_t");
+g.setEdge("covers_cashmere_tencel_top_t", "cover_tencel_top_t");
+g.setEdge("covers_tencel_top_t", "cover_tencel_top_t");
 
 //************************************************
 
