@@ -3786,6 +3786,13 @@ g.setNode("materac_rumba", {
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_elips_medicott'
 });
+g.setNode("materac_boogie", {
+    node: 'materac_boogie',
+    label: 'Boogie',
+    img: '/materace/boogie.jpg',
+    render: 'materace/materac_salsa_h31.png',
+    cover: 'covers_elips_medicott'
+});
 g.setNode("materac_conga", {
     node: 'materac_conga',
     label: 'Conga',
@@ -4112,6 +4119,31 @@ g.setNode("materac_rumba_200_200", {
     label: '200/200',
     width: 200,
     price: {g1: 4598, g2: 4958},
+    nextStep: 'step_5'
+});
+
+g.setNode("materac_boogie_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 3249, g2: 3249},
+    nextStep: 'step_5'
+});
+g.setNode("materac_boogie_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 3499, g2: 3499},
+    nextStep: 'step_5'
+});
+g.setNode("materac_boogie_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 3849, g2: 3849},
+    nextStep: 'step_5'
+});
+g.setNode("materac_boogie_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 5298, g2: 8298},
     nextStep: 'step_5'
 });
 
@@ -4464,6 +4496,13 @@ g.setNode("bb_materac_rumba", {
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_elips_medicott'
 });
+g.setNode("bb_materac_boogie", {
+    node: 'bb_materac_boogie',
+    label: 'Boogie',
+    img: '/materace/boogie.jpg',
+    render: 'materace/materac_salsa_h31.png',
+    cover: 'covers_elips_medicott'
+});
 g.setNode("bb_materac_conga", {
     node: 'bb_materac_conga',
     label: 'Conga',
@@ -4784,6 +4823,31 @@ g.setNode("bb_materac_rumba_200_200", {
     extra: '*(2x 100/200)'
 });
 
+g.setNode("bb_materac_boogie_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 3249, g2: 3249},
+    nextStep: 'bb_nawierzchniowy'
+});
+g.setNode("bb_materac_boogie_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 3499, g2: 3499},
+    nextStep: 'bb_nawierzchniowy'
+});
+g.setNode("bb_materac_boogie_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 3849, g2: 3849},
+    nextStep: 'bb_nawierzchniowy'
+});
+g.setNode("bb_materac_boogie_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 5298, g2: 8298},
+    nextStep: 'bb_nawierzchniowy'
+});
+
 g.setNode("bb_materac_conga_140_200", {
     label: '140/200',
     width: 140,
@@ -5042,6 +5106,13 @@ g.setNode("bp_materac_rumba", {
     node: 'bp_materac_rumba',
     label: 'Rumba',
     img: '/materace/rumba.jpg',
+    render: 'materace/materac_salsa_h31.png',
+    cover: 'bp_covers_elips_medicott'
+});
+g.setNode("bp_materac_boogie", {
+    node: 'bp_materac_boogie',
+    label: 'Boogie',
+    img: '/materace/boogie.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'bp_covers_elips_medicott'
 });
@@ -5340,6 +5411,30 @@ g.setNode("bp_materac_rumba_200_200", {
     price: {g1: 4598, g2: 4958},
     nextStep: 'bp_nawierzchniowy'
 });
+g.setNode("bp_materac_boogie_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 3249, g2: 3249},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_boogie_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 3499, g2: 3499},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_boogie_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 3849, g2: 3849},
+    nextStep: 'bp_nawierzchniowy'
+});
+g.setNode("bp_materac_boogie_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 5298, g2: 8298},
+    nextStep: 'bp_nawierzchniowy'
+});
 g.setNode("bp_materac_conga_140_200", {
     label: '140/200',
     width: 140,
@@ -5598,6 +5693,13 @@ g.setNode("t_materac_melody", {
 g.setNode("t_materac_rumba", {
     node: 't_materac_rumba',
     label: 'Rumba',
+    img: '/materace/rumba.jpg',
+    render: 'materace/materac_salsa_h31.png',
+    cover: 'covers_elips_medicott_t'
+});
+g.setNode("t_materac_boogie", {
+    node: 't_materac_boogie',
+    label: 'Boogie',
     img: '/materace/rumba.jpg',
     render: 'materace/materac_salsa_h31.png',
     cover: 'covers_elips_medicott_t'
@@ -5949,6 +6051,36 @@ g.setNode("t_materac_rumba_200_200", {
     price: {g1: 4598, g2: 4958},
     nextStep: 'skrzynia_posciel_big',
     extra: '*(2x 100/200)'
+});
+g.setNode("t_materac_boogie_90_200", {
+    label: '90/200',
+    width: 90,
+    price: {g1: 2169, g2: 2169},
+    nextStep: 'skrzynia_posciel_90'
+});
+g.setNode("t_materac_boogie_140_200", {
+    label: '140/200',
+    width: 140,
+    price: {g1: 3249, g2: 3249},
+    nextStep: 'skrzynia_posciel_big'
+});
+g.setNode("t_materac_boogie_160_200", {
+    label: '160/200',
+    width: 160,
+    price: {g1: 3499, g2: 3499},
+    nextStep: 'skrzynia_posciel_big'
+});
+g.setNode("t_materac_boogie_180_200", {
+    label: '180/200',
+    width: 180,
+    price: {g1: 3849, g2: 3849},
+    nextStep: 'step_5'
+});
+g.setNode("t_materac_boogie_200_200", {
+    label: '200/200',
+    width: 200,
+    price: {g1: 5298, g2: 8298},
+    nextStep: 'skrzynia_posciel_big'
 });
 g.setNode("t_materac_conga_90_200", {
     label: '90/200',
@@ -7487,6 +7619,7 @@ g.setEdge("step_4", "materac_makarena");
 g.setEdge("step_4", "materac_rockroll");
 g.setEdge("step_4", "materac_melody");
 g.setEdge("step_4", "materac_rumba");
+g.setEdge("step_4", "materac_boogie");
 g.setEdge("step_4", "materac_conga");
 
 g.setEdge("step_4", "materac_chacha");
@@ -7504,6 +7637,7 @@ g.setEdge("step_pokrowiec", "materac_makarena");
 g.setEdge("step_pokrowiec", "materac_rockroll");
 g.setEdge("step_pokrowiec", "materac_melody");
 g.setEdge("step_pokrowiec", "materac_rumba");
+g.setEdge("step_pokrowiec", "materac_boogie");
 g.setEdge("step_pokrowiec", "materac_conga");
 g.setEdge("step_pokrowiec", "materac_foxtrot");
 g.setEdge("step_pokrowiec", "materac_chacha");
@@ -7567,6 +7701,11 @@ g.setEdge("materac_rumba", "materac_rumba_160_200");
 g.setEdge("materac_rumba", "materac_rumba_180_200");
 g.setEdge("materac_rumba", "materac_rumba_200_200");
 
+g.setEdge("materac_boogie", "materac_boogie_140_200");
+g.setEdge("materac_boogie", "materac_boogie_160_200");
+g.setEdge("materac_boogie", "materac_boogie_180_200");
+g.setEdge("materac_boogie", "materac_boogie_200_200");
+
 g.setEdge("materac_conga", "materac_conga_140_200");
 g.setEdge("materac_conga", "materac_conga_160_200");
 g.setEdge("materac_conga", "materac_conga_180_200");
@@ -7621,6 +7760,7 @@ g.setEdge("bb_step_pokrowiec", "bb_materac_makarena");
 g.setEdge("bb_step_pokrowiec", "bb_materac_rockroll");
 g.setEdge("bb_step_pokrowiec", "bb_materac_melody");
 g.setEdge("bb_step_pokrowiec", "bb_materac_rumba");
+g.setEdge("bb_step_pokrowiec", "bb_materac_boogie");
 g.setEdge("bb_step_pokrowiec", "bb_materac_conga");
 g.setEdge("bb_step_pokrowiec", "bb_materac_foxtrot");
 g.setEdge("bb_step_pokrowiec", "bb_materac_chacha");
@@ -7684,6 +7824,11 @@ g.setEdge("bb_materac_rumba", "bb_materac_rumba_160_200");
 g.setEdge("bb_materac_rumba", "bb_materac_rumba_180_200");
 g.setEdge("bb_materac_rumba", "bb_materac_rumba_200_200");
 
+g.setEdge("bb_materac_boogie", "bb_materac_boogie_140_200");
+g.setEdge("bb_materac_boogie", "bb_materac_boogie_160_200");
+g.setEdge("bb_materac_boogie", "bb_materac_boogie_180_200");
+g.setEdge("bb_materac_boogie", "bb_materac_boogie_200_200");
+
 g.setEdge("bb_materac_conga", "bb_materac_conga_140_200");
 g.setEdge("bb_materac_conga", "bb_materac_conga_160_200");
 g.setEdge("bb_materac_conga", "bb_materac_conga_180_200");
@@ -7738,6 +7883,7 @@ g.setEdge("bp_step_pokrowiec", "bp_materac_makarena");
 g.setEdge("bp_step_pokrowiec", "bp_materac_rockroll");
 g.setEdge("bp_step_pokrowiec", "bp_materac_melody");
 g.setEdge("bp_step_pokrowiec", "bp_materac_rumba");
+g.setEdge("bp_step_pokrowiec", "bp_materac_boogie");
 g.setEdge("bp_step_pokrowiec", "bp_materac_conga");
 g.setEdge("bp_step_pokrowiec", "bp_materac_foxtrot");
 g.setEdge("bp_step_pokrowiec", "bp_materac_chacha");
@@ -7801,6 +7947,11 @@ g.setEdge("bp_materac_rumba", "bp_materac_rumba_160_200");
 g.setEdge("bp_materac_rumba", "bp_materac_rumba_180_200");
 g.setEdge("bp_materac_rumba", "bp_materac_rumba_200_200");
 
+g.setEdge("bp_materac_boogie", "bp_materac_boogie_140_200");
+g.setEdge("bp_materac_boogie", "bp_materac_boogie_160_200");
+g.setEdge("bp_materac_boogie", "bp_materac_boogie_180_200");
+g.setEdge("bp_materac_boogie", "bp_materac_boogie_200_200");
+
 g.setEdge("bp_materac_conga", "bp_materac_conga_140_200");
 g.setEdge("bp_materac_conga", "bp_materac_conga_160_200");
 g.setEdge("bp_materac_conga", "bp_materac_conga_180_200");
@@ -7846,6 +7997,7 @@ g.setEdge("t_materac", "t_materac_makarena");
 g.setEdge("t_materac", "t_materac_rockroll");
 g.setEdge("t_materac", "t_materac_melody");
 g.setEdge("t_materac", "t_materac_rumba");
+g.setEdge("t_materac", "t_materac_boogie");
 g.setEdge("t_materac", "t_materac_conga");
 g.setEdge("t_materac", "t_materac_foxtrot");
 g.setEdge("t_materac", "t_materac_chacha");
@@ -7919,6 +8071,12 @@ g.setEdge("t_materac_rumba", "t_materac_rumba_140_200");
 g.setEdge("t_materac_rumba", "t_materac_rumba_160_200");
 g.setEdge("t_materac_rumba", "t_materac_rumba_180_200");
 g.setEdge("t_materac_rumba", "t_materac_rumba_200_200");
+
+g.setEdge("t_materac_boogie", "t_materac_boogie_90_200");
+g.setEdge("t_materac_boogie", "t_materac_boogie_140_200");
+g.setEdge("t_materac_boogie", "t_materac_boogie_160_200");
+g.setEdge("t_materac_boogie", "t_materac_boogie_180_200");
+g.setEdge("t_materac_boogie", "t_materac_boogie_200_200");
 
 g.setEdge("t_materac_conga", "t_materac_conga_90_200");
 g.setEdge("t_materac_conga", "t_materac_conga_140_200");
