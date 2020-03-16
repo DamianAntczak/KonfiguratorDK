@@ -1305,6 +1305,13 @@ g.setNode("cover_elips_1", {
     url: 'https://hilding.pl/png/product/Elips_1583151699.png',
     render: 'materace/materac_salsa_h31.png'
 });
+g.setNode("cover_elips_2", {
+    g: 2,
+    name: 'elips',
+    node: 'cover_elips_2',
+    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    render: 'materace/materac_salsa_h31.png'
+});
 g.setNode("cover_hybrid_2", {
     g: 2,
     name: 'hybrid',
@@ -1361,6 +1368,14 @@ g.setNode("cover_teenage", {
     name: 'Teenage',
     node: 'cover_teenage',
     url: './img/pokrowce/teenage.jpg',
+    render: 'materace/materac_salsa_h31.png'
+});
+g.setNode("covers_italiano", {});
+g.setNode("cover_italiano", {
+    g: 1,
+    name: 'Italiano',
+    node: 'cover_italiano',
+    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1500,6 +1515,14 @@ g.setNode("bp_cover_teenage", {
     url: './img/pokrowce/teenage.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
+g.setNode("bp_covers_italiano", {});
+g.setNode("bp_cover_italiano", {
+    g: 1,
+    name: 'Italiano',
+    node: 'bp_cover_italiano',
+    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    render: 'materace/materac_salsa_h39.png'
+});
 
 g.setNode("bp_covers_tencel_top", {});
 
@@ -1625,6 +1648,14 @@ g.setNode("cover_teenage_t", {
     name: 'Teenage',
     node: 'cover_teenage_t',
     url: './img/pokrowce/teenage.jpg',
+    render: 'materace/materac_salsa_h31.png'
+});
+g.setNode("covers_italiano_t", {});
+g.setNode("cover_italiano_t", {
+    g: 1,
+    name: 'Teenage',
+    node: 'cover_italiano_t',
+    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_tencel_top_t", {});
@@ -3923,14 +3954,14 @@ g.setNode("materac_dance", {
     label: 'Dance',
     img: '/materace/dance.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_teenage'
+    cover: 'covers_italiano'
 });
 g.setNode("materac_electro", {
     node: 'materac_electro',
     label: 'Electro',
     img: '/materace/electro.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_teenage'
+    cover: 'covers_tencel'
 });
 
 
@@ -4729,14 +4760,14 @@ g.setNode("bb_materac_dance", {
     label: 'Dance',
     img: '/materace/dance.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_teenage'
+    cover: 'covers_italiano'
 });
 g.setNode("bb_materac_electro", {
     node: 'bb_materac_electro',
     label: 'Electro',
     img: '/materace/electro.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_teenage'
+    cover: 'covers_tencel'
 });
 
 g.setNode("bb_materac_foxtrot_tapicerowany", {
@@ -5439,14 +5470,14 @@ g.setNode("bp_materac_dance", {
     label: 'Dance',
     img: '/materace/dance.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_teenage'
+    cover: 'bp_covers_italiano'
 });
 g.setNode("bp_materac_electro", {
     node: 'bp_materac_electro',
     label: 'Electro',
     img: '/materace/dance.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_teenage'
+    cover: 'bp_covers_tencel'
 });
 
 
@@ -6123,14 +6154,14 @@ g.setNode("t_materac_dance", {
     label: 'Dance',
     img: '/materace/dance.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_teenage_t'
+    cover: 'covers_italiano_t'
 });
 g.setNode("t_materac_electro", {
     node: 't_materac_electro',
     label: 'Electro',
     img: '/materace/electro.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_teenage_t'
+    cover: 'covers_tencel_t'
 });
 
 //***************************************
@@ -8739,6 +8770,7 @@ g.setEdge("covers_italiano_tencel", "cover_italiano");
 g.setEdge("covers_italiano_tencel", "cover_tencel");
 g.setEdge("covers_velvet_tencel", "cover_velvet");
 g.setEdge("covers_velvet_tencel", "cover_tencel");
+g.setEdge("covers_tencel", "cover_tencel");
 
 g.setEdge("covers_velvet", "cover_velvet");
 
@@ -8750,6 +8782,7 @@ g.setEdge("covers_elips_medicott", "cover_elips_1");
 g.setEdge("covers_fresh", "cover_fresh");
 g.setEdge("covers_medicover", "cover_medicover");
 g.setEdge("covers_teenage", "cover_teenage");
+g.setEdge("covers_italiano", "cover_italiano");
 g.setEdge("covers_italiano_hybrid", "cover_italiano_1");
 g.setEdge("covers_italiano_hybrid", "cover_hybrid_2");
 g.setEdge("covers_cashmere_tencel_top", "cover_cashmere_top");
@@ -8779,6 +8812,7 @@ g.setEdge("bp_covers_elips_medicott", "bp_cover_elips_1");
 g.setEdge("bp_covers_fresh", "bp_cover_fresh");
 g.setEdge("bp_covers_medicover", "bp_cover_medicover");
 g.setEdge("bp_covers_teenage", "bp_cover_teenage");
+g.setEdge("bp_covers_italiano", "bp_cover_italiano");
 g.setEdge("bp_covers_tencel", "bp_cover_tencel");
 
 g.setEdge("bp_covers_italiano_hybrid", "bp_cover_italiano_1");
@@ -8816,6 +8850,7 @@ g.setEdge("covers_elips_medicott_t", "cover_elips_1_t");
 g.setEdge("covers_fresh_t", "cover_fresh_t");
 g.setEdge("covers_medicover_t", "cover_medicover_t");
 g.setEdge("covers_teenage_t", "cover_teenage_t");
+g.setEdge("covers_italiano_t", "cover_italiano_t");
 g.setEdge("covers_italiano_hybrid_t", "cover_italiano_1_t");
 g.setEdge("covers_italiano_hybrid_t", "cover_hybrid_2_t");
 g.setEdge("covers_cashmere_tencel_top_t", "cover_cashmere_top_t");
