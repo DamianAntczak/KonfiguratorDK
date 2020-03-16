@@ -1250,7 +1250,7 @@ g.setNode("cover_italiano", {
     g: 1,
     name: 'italiano',
     node: 'cover_italiano',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1287,7 +1287,7 @@ g.setNode("cover_italiano_1", {
     g: 1,
     name: 'italiano',
     node: 'cover_italiano_1',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_merced_2", {
@@ -1302,14 +1302,14 @@ g.setNode("cover_elips_1", {
     g: 1,
     name: 'elips',
     node: 'cover_elips_1',
-    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
+    url: './img/pokrowce/elips.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_elips_2", {
     g: 2,
     name: 'elips',
     node: 'cover_elips_2',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    url: './img/pokrowce/elips.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_hybrid_2", {
@@ -1375,7 +1375,7 @@ g.setNode("cover_italiano", {
     g: 1,
     name: 'Italiano',
     node: 'cover_italiano',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1397,7 +1397,7 @@ g.setNode("bp_cover_italiano", {
     g: 1,
     name: 'italiano',
     node: 'bp_cover_italiano',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_covers_velvet_tencel", {});
@@ -1432,14 +1432,14 @@ g.setNode("bp_cover_italiano_1", {
     g: 1,
     name: 'italiano',
     node: 'bp_cover_italiano_1',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_elips_2", {
     g: 2,
     name: 'elips',
     node: 'bp_cover_elips_2',
-    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
+    url: './img/pokrowce/elips.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_merced_2", {
@@ -1454,7 +1454,7 @@ g.setNode("bp_cover_elips_1", {
     g: 1,
     name: 'elips',
     node: 'bp_cover_elips_1',
-    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
+    url: './img/pokrowce/elips.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_hybrid_2", {
@@ -1520,7 +1520,7 @@ g.setNode("bp_cover_italiano", {
     g: 1,
     name: 'Italiano',
     node: 'bp_cover_italiano',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1542,7 +1542,7 @@ g.setNode("cover_italiano_1", {
     g: 1,
     name: 'italiano',
     node: 'cover_italiano_1',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_velvet_t", {});
@@ -1578,7 +1578,7 @@ g.setNode("cover_italiano_1_t", {
     g: 1,
     name: 'italiano',
     node: 'cover_italiano_1_t',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_merced_2_t", {
@@ -1593,7 +1593,7 @@ g.setNode("cover_elips_1_t", {
     g: 1,
     name: 'elips',
     node: 'cover_elips_1_t',
-    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
+    url: './img/pokrowce/elips.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_hybrid_2_t", {
@@ -1655,7 +1655,7 @@ g.setNode("cover_italiano_t", {
     g: 1,
     name: 'Teenage',
     node: 'cover_italiano_t',
-    url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
+    url: './img/pokrowce/italiano.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_tencel_top_t", {});
