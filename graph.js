@@ -1253,6 +1253,17 @@ g.setNode("cover_italiano", {
     url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h31.png'
 });
+
+g.setNode("covers_velvet", {});
+g.setNode("cover_velvet", {
+    g: 1,
+    name: 'velvet',
+    node: 'cover_velvet',
+    url: './img/pokrowce/velvet.jpg',
+    render: 'materace/materac_salsa_h31.png'
+});
+
+g.setNode("covers_velvet_tencel", {});
 g.setNode("covers_tencel", {});
 g.setNode("cover_tencel", {
     g: 2,
@@ -1291,7 +1302,7 @@ g.setNode("cover_elips_1", {
     g: 1,
     name: 'elips',
     node: 'cover_elips_1',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_hybrid_2", {
@@ -1374,6 +1385,7 @@ g.setNode("bp_cover_italiano", {
     url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h39.png'
 });
+g.setNode("bp_covers_velvet_tencel", {});
 g.setNode("bp_covers_tencel", {});
 g.setNode("bp_cover_tencel", {
     g: 2,
@@ -1408,6 +1420,13 @@ g.setNode("bp_cover_italiano_1", {
     url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h39.png'
 });
+g.setNode("bp_cover_elips_2", {
+    g: 2,
+    name: 'elips',
+    node: 'bp_cover_elips_2',
+    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
+    render: 'materace/materac_salsa_h39.png'
+});
 g.setNode("bp_cover_merced_2", {
     g: 2,
     name: 'merced',
@@ -1420,7 +1439,7 @@ g.setNode("bp_cover_elips_1", {
     g: 1,
     name: 'elips',
     node: 'bp_cover_elips_1',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_hybrid_2", {
@@ -1446,7 +1465,7 @@ g.setNode("bp_cover_cashmere_top", {
     url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
     render: 'materace/top_blues_h39.png'
 });
-g.setNode("bp_covers_tencel_top", {})
+g.setNode("bp_covers_tencel_top", {});
 g.setNode("bp_cover_tencel_top", {
     g: 2,
     name: 'tencel',
@@ -1503,6 +1522,16 @@ g.setNode("cover_italiano_1", {
     url: 'https://hilding.pl/png/product/Italiano_1583151853.png',
     render: 'materace/materac_salsa_h31.png'
 });
+g.setNode("covers_velvet_t", {});
+g.setNode("cover_velvet_t", {
+    g: 1,
+    name: 'velvet',
+    node: 'cover_velvet_t',
+    url: './img/pokrowce/velvet.jpg',
+    render: 'materace/materac_salsa_h34.png'
+});
+
+g.setNode("covers_velvet_tencel_t", {});
 g.setNode("covers_tencel_t", {});
 g.setNode("cover_tencel_t", {
     g: 2,
@@ -1541,7 +1570,7 @@ g.setNode("cover_elips_1_t", {
     g: 1,
     name: 'elips',
     node: 'cover_elips_1_t',
-    url: 'https://hilding.pl/png/product/elips_1501505106.jpg',
+    url: 'https://hilding.pl/png/product/Elips_1583151699.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_hybrid_2_t", {
@@ -5178,7 +5207,7 @@ g.setNode("bb_materac_dance_200_200", {
     price: {g1: 5198, g2: 5198},
     nextStep: 'bb_nawierzchniowy',
     extra: '*(2x 100/200)'
-})
+});
 
 g.setNode("bb_materac_electro_140_200", {
     label: '140/200',
@@ -8708,7 +8737,10 @@ g.setEdge("bp_materac_bass", "bp_materac_bass_200_200");
 
 g.setEdge("covers_italiano_tencel", "cover_italiano");
 g.setEdge("covers_italiano_tencel", "cover_tencel");
-g.setEdge("covers_tencel", "cover_tencel");
+g.setEdge("covers_velvet_tencel", "cover_velvet");
+g.setEdge("covers_velvet_tencel", "cover_tencel");
+
+g.setEdge("covers_velvet", "cover_velvet");
 
 g.setEdge("covers_cashmere", "cover_cashmere");
 
@@ -8733,7 +8765,11 @@ g.setEdge("covers_sensity_top", "cover_sensity_top");
 
 g.setEdge("bp_covers_italiano_tencel", "bp_cover_italiano");
 g.setEdge("bp_covers_italiano_tencel", "bp_cover_tencel");
-g.setEdge("bp_tencel", "bp_cover_tencel");
+
+g.setEdge("bp_covers_velvet_tencel", "bp_cover_velvet");
+g.setEdge("bp_covers_velvet_tencel", "bp_cover_tencel");
+
+g.setEdge("bp_covers_velvet", "bp_cover_velvet");
 
 g.setEdge("bp_covers_cashmere", "bp_cover_cashmere");
 
@@ -8743,21 +8779,33 @@ g.setEdge("bp_covers_elips_medicott", "bp_cover_elips_1");
 g.setEdge("bp_covers_fresh", "bp_cover_fresh");
 g.setEdge("bp_covers_medicover", "bp_cover_medicover");
 g.setEdge("bp_covers_teenage", "bp_cover_teenage");
+g.setEdge("bp_covers_tencel", "bp_cover_tencel");
+
+g.setEdge("bp_covers_italiano_hybrid", "bp_cover_italiano_1");
+g.setEdge("bp_covers_italiano_hybrid", "bp_cover_hybrid_2");
+g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_cashmere_top");
+g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_tencel_top");
 g.setEdge("bp_covers_italiano_hybrid", "bp_cover_italiano_1");
 g.setEdge("bp_covers_italiano_hybrid", "bp_cover_hybrid_2");
 g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_cashmere_top");
 g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_tencel_top");
 g.setEdge("bp_covers_tencel_top", "bp_cover_tencel_top");
-g.setEdge("bp_covers_italiano_hybrid", "bp_cover_italiano_1");
-g.setEdge("bp_covers_italiano_hybrid", "bp_cover_hybrid_2");
-g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_cashmere_top");
-g.setEdge("bp_covers_cashmere_tencel_top", "bp_cover_tencel_top");
-g.setEdge("bp_covers_tencel_top", "bp_cover_tencel_top");
+g.setEdge("bp_covers_merced_elips", "bp_cover_merced_1");
+g.setEdge("bp_covers_merced_elips", "bp_cover_elips_2");
+g.setEdge("bp_covers_elips_tencel_top", "bp_cover_elips_top");
+g.setEdge("bp_covers_elips_tencel_top", "bp_cover_tencel_top");
+g.setEdge("bp_covers_sensity_top", "bp_cover_sensity_top");
 
 //************************************************
 
 g.setEdge("covers_italiano_tencel_t", "cover_italiano_t");
 g.setEdge("covers_italiano_tencel_t", "cover_tencel_t");
+
+g.setEdge("covers_velvet_tencel_t", "cover_velvet_t");
+g.setEdge("covers_velvet_tencel_t", "cover_tencel_t");
+
+g.setEdge("covers_velvet_t", "cover_velvet_t");
+
 g.setEdge("covers_tencel_t", "cover_tencel_t");
 
 g.setEdge("covers_cashmere_t", "cover_cashmere_t");
