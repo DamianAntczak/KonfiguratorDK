@@ -1241,7 +1241,7 @@ g.setNode("cover_cashmere", {
     g: 1,
     name: 'cashmere',
     node: 'cover_cashmere',
-    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
+    url: './img/pokrowce/cashmere.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1316,7 +1316,7 @@ g.setNode("cover_hybrid_2", {
     g: 2,
     name: 'hybrid',
     node: 'cover_hybrid_2',
-    url: 'https://hilding.pl/png/product/Hybrid_1583151814.png',
+    url: './img/pokrowce/hybrid.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_medicott", {
@@ -1332,7 +1332,7 @@ g.setNode("cover_cashmere_top", {
     g: 1,
     name: 'Cashmere',
     node: 'cover_cashmere_top',
-    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
+    url: './img/pokrowce/cashmere.jpg',
     render: 'materace/top_blues_h31.png'
 });
 g.setNode("covers_tencel_top", {});
@@ -1388,7 +1388,7 @@ g.setNode("bp_cover_cashmere", {
     g: 1,
     name: 'cashmere',
     node: 'bp_cover_cashmere',
-    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
+    url: './img/pokrowce/cashmere.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1461,7 +1461,7 @@ g.setNode("bp_cover_hybrid_2", {
     g: 2,
     name: 'hybrid',
     node: 'bp_cover_hybrid_2',
-    url: 'https://hilding.pl/png/product/Hybrid_1583151814.png',
+    url: './img/pokrowce/hybrid.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_medicott", {
@@ -1477,7 +1477,7 @@ g.setNode("bp_cover_cashmere_top", {
     g: 1,
     name: 'Cashmere',
     node: 'bp_cover_cashmere_top',
-    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
+    url: './img/pokrowce/cashmere.jpg',
     render: 'materace/top_blues_h39.png'
 });
 g.setNode("bp_covers_tencel_top", {});
@@ -1533,7 +1533,7 @@ g.setNode("cover_cashmere_t", {
     g: 1,
     name: 'cashmere',
     node: 'cover_cashmere_t',
-    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
+    url: './img/pokrowce/cashmere.jpg',
     render: 'materace/materac_salsa_h34.png'
 });
 
@@ -1600,7 +1600,7 @@ g.setNode("cover_hybrid_2_t", {
     g: 2,
     name: 'hybrid',
     node: 'cover_hybrid_2_t',
-    url: 'https://hilding.pl/png/product/Hybrid_1583151814.png',
+    url: './img/pokrowce/hybrid.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_medicott_t", {
@@ -1616,7 +1616,7 @@ g.setNode("cover_cashmere_top_t", {
     g: 1,
     name: 'Cashmere',
     node: 'cover_cashmere_top_t',
-    url: 'https://hilding.pl/png/product/Cashmere_1583151842.png',
+    url: './img/pokrowce/cashmere.jpg',
     render: 'materace/top_blues_h31.png'
 });
 g.setNode("cover_tencel_top_t", {
