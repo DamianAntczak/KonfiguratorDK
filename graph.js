@@ -1245,7 +1245,7 @@ g.setNode("cover_cashmere", {
     render: 'materace/materac_salsa_h31.png'
 });
 
-g.setNode("covers_italiano_tencel", {});
+g.setNode("covers_italiano_tencel_new", {});
 g.setNode("cover_italiano", {
     g: 1,
     name: 'italiano',
@@ -1262,14 +1262,31 @@ g.setNode("cover_velvet", {
     url: './img/pokrowce/velvet.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
+g.setNode("cover_velvet_new", {
+    g: 1,
+    name: 'velvet<br>new',
+    node: 'cover_velvet_new',
+    url: './img/pokrowce/velvet_new.jpg',
+    render: 'materace/materac_salsa_h31.png'
+});
 
 g.setNode("covers_velvet_tencel", {});
 g.setNode("covers_tencel", {});
 g.setNode("cover_tencel", {
     g: 2,
-    name: 'tencel new',
+    name: 'tencel',
     node: 'cover_tencel',
     url: './img/pokrowce/tencel.jpg',
+    render: 'materace/materac_salsa_h31.png'
+});
+
+g.setNode("covers_velvet_new_tencel_new", {});
+g.setNode("covers_tencel_new", {});
+g.setNode("cover_tencel_new", {
+    g: 2,
+    name: 'tencel<br>new',
+    node: 'cover_tencel_new',
+    url: './img/pokrowce/tencel_new.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1314,16 +1331,16 @@ g.setNode("cover_elips_2", {
 });
 g.setNode("cover_hybrid_2", {
     g: 2,
-    name: 'hybrid new' ,
+    name: 'hybrid' ,
     node: 'cover_hybrid_2',
     url: './img/pokrowce/hybrid.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_medicott", {
     g: 2,
-    name: 'medicot velur',
+    name: 'medicot<br>velur',
     node: 'cover_medicott',
-    url: './img/pokrowce/medicot velur.jpg',
+    url: './img/pokrowce/medicot<br>velur.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1338,7 +1355,7 @@ g.setNode("cover_cashmere_top", {
 g.setNode("covers_tencel_top", {});
 g.setNode("cover_tencel_top", {
     g: 2,
-    name: 'tencel new',
+    name: 'tencel',
     node: 'cover_tencel_top',
     url: './img/pokrowce/tencel.jpg',
     render: 'materace/top_blues_h31.png'
@@ -1382,7 +1399,7 @@ g.setNode("cover_italiano", {
 g.setNode("covers_probiotex", {});
 g.setNode("cover_probiotex", {
     g: 1,
-    name: 'Probiotex new',
+    name: 'Probiotex<br>new',
     node: 'cover_probiotex',
     url: './img/pokrowce/probiotex.jpg',
     render: 'materace/materac_salsa_h31.png'
@@ -1401,7 +1418,7 @@ g.setNode("bp_cover_cashmere", {
     render: 'materace/materac_salsa_h39.png'
 });
 
-g.setNode("bp_covers_italiano_tencel", {});
+g.setNode("bp_covers_italiano_tencel_new", {});
 g.setNode("bp_cover_italiano", {
     g: 1,
     name: 'italiano',
@@ -1413,7 +1430,7 @@ g.setNode("bp_covers_velvet_tencel", {});
 g.setNode("bp_covers_tencel", {});
 g.setNode("bp_cover_tencel", {
     g: 2,
-    name: 'tencel new',
+    name: 'tencel',
     node: 'bp_cover_tencel',
     url: './img/pokrowce/tencel.jpg',
     render: 'materace/materac_salsa_h39.png'
@@ -1424,6 +1441,24 @@ g.setNode("bp_cover_velvet", {
     name: 'velvet',
     node: 'bp_cover_velvet',
     url: './img/pokrowce/velvet.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+
+g.setNode("bp_covers_velvet_new_tencel_new", {});
+g.setNode("bp_covers_tencel_new", {});
+g.setNode("bp_cover_tencel_new", {
+    g: 2,
+    name: 'tencel<br>new',
+    node: 'bp_cover_tencel_new',
+    url: './img/pokrowce/tencel_new.jpg',
+    render: 'materace/materac_salsa_h39.png'
+});
+g.setNode("bp_covers_velvet_new", {});
+g.setNode("bp_cover_velvet_new", {
+    g: 1,
+    name: 'velvet<new>new',
+    node: 'bp_cover_velvet_new',
+    url: './img/pokrowce/velvet_new.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1468,14 +1503,14 @@ g.setNode("bp_cover_elips_1", {
 });
 g.setNode("bp_cover_hybrid_2", {
     g: 2,
-    name: 'hybrid new' ,
+    name: 'hybrid' ,
     node: 'bp_cover_hybrid_2',
     url: './img/pokrowce/hybrid.png',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_medicott", {
     g: 2,
-    name: 'medicot velur',
+    name: 'medicot<br>velur',
     node: 'bp_cover_medicott',
     url: './img/pokrowce/medicot velur.jpg',
     render: 'materace/materac_salsa_h39.png'
@@ -1492,7 +1527,7 @@ g.setNode("bp_cover_cashmere_top", {
 g.setNode("bp_covers_tencel_top", {});
 g.setNode("bp_cover_tencel_top", {
     g: 2,
-    name: 'tencel new',
+    name: 'tencel',
     node: 'bp_cover_tencel_top',
     url: './img/pokrowce/tencel.jpg',
     render: 'materace/top_blues_h39.png'
@@ -1536,7 +1571,7 @@ g.setNode("bp_cover_italiano", {
 g.setNode("bp_covers_probiotex", {});
 g.setNode("bp_cover_probiotex", {
     g: 1,
-    name: 'Probiotex new',
+    name: 'Probiotex<br>new',
     node: 'bp_cover_probiotex',
     url: './img/pokrowce/probiotex.jpg',
     render: 'materace/materac_salsa_h39.png'
@@ -1555,7 +1590,7 @@ g.setNode("cover_cashmere_t", {
     render: 'materace/materac_salsa_h34.png'
 });
 
-g.setNode("covers_italiano_tencel_t", {});
+g.setNode("covers_italiano_tencel_new_t", {});
 g.setNode("cover_italiano_1", {
     g: 1,
     name: 'italiano',
@@ -1571,14 +1606,31 @@ g.setNode("cover_velvet_t", {
     url: './img/pokrowce/velvet.jpg',
     render: 'materace/materac_salsa_h34.png'
 });
+g.setNode("cover_velvet_new_t", {
+    g: 1,
+    name: 'velvet<br>new',
+    node: 'cover_velvet_new_t',
+    url: './img/pokrowce/velvet_new.jpg',
+    render: 'materace/materac_salsa_h34.png'
+});
 
 g.setNode("covers_velvet_tencel_t", {});
 g.setNode("covers_tencel_t", {});
 g.setNode("cover_tencel_t", {
     g: 2,
-    name: 'tencel new',
+    name: 'tencel',
     node: 'cover_tencel_t',
     url: './img/pokrowce/tencel.jpg',
+    render: 'materace/materac_salsa_h31.png'
+});
+
+g.setNode("covers_velvet_new_tencel_new_t", {});
+g.setNode("covers_tencel_new_t", {});
+g.setNode("cover_tencel_new_t", {
+    g: 2,
+    name: 'tencel<br>new',
+    node: 'cover_tencel_new_t',
+    url: './img/pokrowce/tencel_new.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1623,14 +1675,14 @@ g.setNode("cover_elips_1_t", {
 });
 g.setNode("cover_hybrid_2_t", {
     g: 2,
-    name: 'hybrid new' ,
+    name: 'hybrid' ,
     node: 'cover_hybrid_2_t',
     url: './img/pokrowce/hybrid.png',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_medicott_t", {
     g: 2,
-    name: 'medicot velur',
+    name: 'medicot<br>velur',
     node: 'cover_medicott_t',
     url: './img/pokrowce/medicot velur.jpg',
     render: 'materace/materac_salsa_h31.png'
@@ -1646,7 +1698,7 @@ g.setNode("cover_cashmere_top_t", {
 });
 g.setNode("cover_tencel_top_t", {
     g: 2,
-    name: 'tencel new',
+    name: 'tencel',
     node: 'cover_tencel_top_t',
     url: './img/pokrowce/tencel.jpg',
     render: 'materace/top_blues_h31.png'
@@ -1686,7 +1738,7 @@ g.setNode("cover_italiano_t", {
 g.setNode("covers_probiotex_t", {});
 g.setNode("cover_probiotex_t", {
     g: 1,
-    name: 'Probiotex new',
+    name: 'Probiotex<br>new',
     node: 'cover_probiotex_t',
     url: './img/pokrowce/probiotex.jpg',
     render: 'materace/materac_salsa_h31.png'
@@ -1694,7 +1746,7 @@ g.setNode("cover_probiotex_t", {
 g.setNode("covers_tencel_top_t", {});
 g.setNode("cover_tencel_top_t", {
     g: 1,
-    name: 'tencel new',
+    name: 'tencel',
     node: 'cover_tencel_top_t',
     url: './img/pokrowce/tencel.jpg',
     render: 'materace/materac_salsa_h31.png'
@@ -3889,7 +3941,7 @@ g.setNode("materac_chacha", {
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_italiano_tencel'
+    cover: 'covers_italiano_tencel_new'
 });
 g.setNode("materac_pasodoble", {
     node: 'materac_pasodoble',
@@ -3903,7 +3955,7 @@ g.setNode("materac_flamenco", {
     label: 'Flamenco',
     img: '/materace/flamenco.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_velvet_tencel'
+    cover: 'covers_velvet_new_tencel_new'
 });
 g.setNode("materac_makarena", {
     node: 'materac_makarena',
@@ -3917,7 +3969,7 @@ g.setNode("materac_rockroll", {
     label: 'Rock & Roll',
     img: '/materace/rock_and_roll.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_italiano_tencel'
+    cover: 'covers_italiano_tencel_new'
 });
 g.setNode("materac_foxtrot", {
     node: 'materac_foxtrot',
@@ -4759,7 +4811,7 @@ g.setNode("bb_materac_chacha", {
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_italiano_tencel'
+    cover: 'covers_italiano_tencel_new'
 });
 g.setNode("bb_materac_pasodoble", {
     node: 'bb_materac_pasodoble',
@@ -4773,7 +4825,7 @@ g.setNode("bb_materac_flamenco", {
     label: 'Flamenco',
     img: '/materace/flamenco.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_velvet_tencel'
+    cover: 'covers_velvet_new_tencel_new'
 });
 g.setNode("bb_materac_makarena", {
     node: 'bb_materac_makarena',
@@ -4787,7 +4839,7 @@ g.setNode("bb_materac_rockroll", {
     label: 'Rock & Roll',
     img: '/materace/rock_and_roll.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_italiano_tencel'
+    cover: 'covers_italiano_tencel_new'
 });
 g.setNode("bb_materac_foxtrot", {
     node: 'bb_materac_foxtrot',
@@ -5196,28 +5248,28 @@ g.setNode("bb_materac_boogie_200_200", {
     nextStep: 'bb_nawierzchniowy'
 });
 
-g.setNode("bb_materac_boogie_140_200", {
+g.setNode("bb_materac_modern_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 2599, g2: 2599},
+    price: {g1: 3249, g2: 3249},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_boogie_160_200", {
+g.setNode("bb_materac_modern_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 2899, g2: 2899},
+    price: {g1: 3499, g2: 3499},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_boogie_180_200", {
+g.setNode("bb_materac_modern_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 3199, g2: 3199},
+    price: {g1: 3849, g2: 3849},
     nextStep: 'bb_nawierzchniowy'
 });
-g.setNode("bb_materac_boogie_200_200", {
+g.setNode("bb_materac_modern_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 4198, g2: 4198},
+    price: {g1: 5298, g2: 8298},
     nextStep: 'bb_nawierzchniowy'
 });
 
@@ -5535,7 +5587,7 @@ g.setNode("bp_materac_chacha", {
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_italiano_tencel'
+    cover: 'bp_covers_italiano_tencel_new'
 });
 g.setNode("bp_materac_pasodoble", {
     node: 'bp_materac_pasodoble',
@@ -5563,7 +5615,7 @@ g.setNode("bp_materac_rockroll", {
     label: 'Rock & Roll',
     img: '/materace/rock_and_roll.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'bp_covers_italiano_tencel'
+    cover: 'bp_covers_italiano_tencel_new'
 });
 g.setNode("bp_materac_foxtrot", {
     node: 'bp_materac_foxtrot',
@@ -6282,7 +6334,7 @@ g.setNode("t_materac_chacha", {
     label: 'Cha-Cha',
     img: '/materace/cha_cha.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_italiano_tencel_t'
+    cover: 'covers_italiano_tencel_new_t'
 });
 g.setNode("t_materac_pasodoble", {
     node: 't_materac_pasodoble',
@@ -6296,7 +6348,7 @@ g.setNode("t_materac_flamenco", {
     label: 'Flamenco',
     img: '/materace/flamenco.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_velvet_tencel_t'
+    cover: 'covers_velvet_new_tencel_new_t'
 });
 g.setNode("t_materac_makarena", {
     node: 't_materac_makarena',
@@ -6310,7 +6362,7 @@ g.setNode("t_materac_rockroll", {
     label: 'Rock & Roll',
     img: '/materace/rock_and_roll.jpg',
     render: 'materace/materac_salsa_h31.png',
-    cover: 'covers_italiano_tencel_t'
+    cover: 'covers_italiano_tencel_new_t'
 });
 g.setNode("t_materac_foxtrot", {
     node: 't_materac_foxtrot',
@@ -8417,7 +8469,6 @@ g.setEdge("step_4", "materac_rumba");
 g.setEdge("step_4", "materac_boogie");
 g.setEdge("step_4", "materac_modern");
 g.setEdge("step_4", "materac_conga");
-
 g.setEdge("step_4", "materac_chacha");
 g.setEdge("step_4", "materac_foxtrot");
 g.setEdge("step_4", "materac_flamenco");
@@ -9093,10 +9144,12 @@ g.setEdge("bp_materac_bass", "bp_materac_bass_200_200");
 
 //*****************************************
 
-g.setEdge("covers_italiano_tencel", "cover_italiano");
-g.setEdge("covers_italiano_tencel", "cover_tencel");
+g.setEdge("covers_italiano_tencel_new", "cover_italiano");
+g.setEdge("covers_italiano_tencel_new", "cover_tencel_new");
 g.setEdge("covers_velvet_tencel", "cover_velvet");
 g.setEdge("covers_velvet_tencel", "cover_tencel");
+g.setEdge("covers_velvet_new_tencel_new", "cover_velvet_new");
+g.setEdge("covers_velvet_new_tencel_new", "cover_tencel_new");
 g.setEdge("covers_tencel", "cover_tencel");
 
 g.setEdge("covers_velvet", "cover_velvet");
@@ -9124,11 +9177,14 @@ g.setEdge("covers_sensity_top", "cover_sensity_top");
 
 //************************************************
 
-g.setEdge("bp_covers_italiano_tencel", "bp_cover_italiano");
-g.setEdge("bp_covers_italiano_tencel", "bp_cover_tencel");
+g.setEdge("bp_covers_italiano_tencel_new", "bp_cover_italiano");
+g.setEdge("bp_covers_italiano_tencel_new", "bp_cover_tencel_new");
 
 g.setEdge("bp_covers_velvet_tencel", "bp_cover_velvet");
 g.setEdge("bp_covers_velvet_tencel", "bp_cover_tencel");
+
+g.setEdge("bp_covers_velvet_new_tencel_new", "bp_cover_velvet_new");
+g.setEdge("bp_covers_velvet_new_tencel_new", "bp_cover_tencel_new");
 
 g.setEdge("bp_covers_velvet", "bp_cover_velvet");
 
@@ -9161,11 +9217,14 @@ g.setEdge("bp_covers_sensity_top", "bp_cover_sensity_top");
 
 //************************************************
 
-g.setEdge("covers_italiano_tencel_t", "cover_italiano_t");
-g.setEdge("covers_italiano_tencel_t", "cover_tencel_t");
+g.setEdge("covers_italiano_tencel_new_t", "cover_italiano_t");
+g.setEdge("covers_italiano_tencel_new_t", "cover_tencel_new_t");
 
 g.setEdge("covers_velvet_tencel_t", "cover_velvet_t");
 g.setEdge("covers_velvet_tencel_t", "cover_tencel_t");
+
+g.setEdge("covers_velvet_new_tencel_new_t", "cover_velvet_new_t");
+g.setEdge("covers_velvet_new_tencel_new_t", "cover_tencel_new_t");
 
 g.setEdge("covers_velvet_t", "cover_velvet_t");
 
