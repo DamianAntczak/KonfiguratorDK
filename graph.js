@@ -1278,7 +1278,7 @@ g.setNode("cover_merced_1", {
     g: 1,
     name: 'merced',
     node: 'cover_merced_1',
-    url: './img/pokrowce/medicot.jpg',
+    url: './img/pokrowce/merced.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1294,7 +1294,7 @@ g.setNode("cover_merced_2", {
     g: 2,
     name: 'merced',
     node: 'cover_merced_2',
-    url: './img/pokrowce/medicot2.jpg',
+    url: './img/pokrowce/merced.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_elips_medicott", {});
@@ -1321,9 +1321,9 @@ g.setNode("cover_hybrid_2", {
 });
 g.setNode("cover_medicott", {
     g: 2,
-    name: 'medicott velur',
+    name: 'medicot velur',
     node: 'cover_medicott',
-    url: './img/pokrowce/medicott_silver.jpg',
+    url: './img/pokrowce/medicot velur.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1349,7 +1349,7 @@ g.setNode("cover_silver", {
     g: 1,
     name: 'silver',
     node: 'cover_silver',
-    url: './img/pokrowce/sensity.jpg',
+    url: './img/pokrowce/silver.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1358,7 +1358,7 @@ g.setNode("cover_medicover", {
     g: 1,
     name: 'Medicover',
     node: 'cover_medicover',
-    url: 'https://hilding.pl/png/product/medicott_1501579581.jpg',
+    url: './img/pokrowce/medicover.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1384,7 +1384,7 @@ g.setNode("cover_probiotex", {
     g: 1,
     name: 'Probiotex new',
     node: 'cover_probiotex',
-    url: './img/pokrowce/italiano.png',
+    url: './img/pokrowce/probiotex.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1432,7 +1432,7 @@ g.setNode("bp_cover_merced_1", {
     g: 1,
     name: 'merced',
     node: 'bp_cover_merced_1',
-    url: './img/pokrowce/medicot.jpg',
+    url: './img/pokrowce/merced.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1448,14 +1448,14 @@ g.setNode("bp_cover_elips_2", {
     g: 2,
     name: 'elips',
     node: 'bp_cover_elips_2',
-    url: './img/pokrowce/elips.png',
+    url: './img/pokrowce/elips.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_merced_2", {
     g: 2,
     name: 'merced',
     node: 'bp_cover_merced_2',
-    url: './img/pokrowce/medicot2.jpg',
+    url: './img/pokrowce/merced.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_covers_elips_medicott", {});
@@ -1463,7 +1463,7 @@ g.setNode("bp_cover_elips_1", {
     g: 1,
     name: 'elips',
     node: 'bp_cover_elips_1',
-    url: './img/pokrowce/elips.png',
+    url: './img/pokrowce/elips.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 g.setNode("bp_cover_hybrid_2", {
@@ -1475,9 +1475,9 @@ g.setNode("bp_cover_hybrid_2", {
 });
 g.setNode("bp_cover_medicott", {
     g: 2,
-    name: 'medicott velur',
+    name: 'medicot velur',
     node: 'bp_cover_medicott',
-    url: './img/pokrowce/medicott_silver.jpg',
+    url: './img/pokrowce/medicot velur.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1503,7 +1503,7 @@ g.setNode("bp_cover_silver", {
     g: 1,
     name: 'silver',
     node: 'bp_cover_silver',
-    url: './img/pokrowce/sensity.jpg',
+    url: './img/pokrowce/silver.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1512,7 +1512,7 @@ g.setNode("bp_cover_medicover", {
     g: 1,
     name: 'Medicover',
     node: 'bp_cover_medicover',
-    url: 'https://hilding.pl/png/product/medicott_1501579581.jpg',
+    url: './img/pokrowce/medicover.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1538,7 +1538,7 @@ g.setNode("bp_cover_probiotex", {
     g: 1,
     name: 'Probiotex new',
     node: 'bp_cover_probiotex',
-    url: './img/pokrowce/italiano.png',
+    url: './img/pokrowce/probiotex.jpg',
     render: 'materace/materac_salsa_h39.png'
 });
 
@@ -1587,7 +1587,7 @@ g.setNode("cover_merced_1_t", {
     g: 1,
     name: 'merced',
     node: 'cover_merced_1_t',
-    url: './img/pokrowce/medicot.jpg',
+    url: './img/pokrowce/merced.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_elips_2_t", {
@@ -1610,7 +1610,7 @@ g.setNode("cover_merced_2_t", {
     g: 2,
     name: 'merced',
     node: 'cover_merced_2_t',
-    url: './img/pokrowce/medicot2.jpg',
+    url: './img/pokrowce/merced.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_elips_medicott_t", {});
@@ -1618,7 +1618,7 @@ g.setNode("cover_elips_1_t", {
     g: 1,
     name: 'elips',
     node: 'cover_elips_1_t',
-    url: './img/pokrowce/elips.png',
+    url: './img/pokrowce/elips.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("cover_hybrid_2_t", {
@@ -1630,9 +1630,9 @@ g.setNode("cover_hybrid_2_t", {
 });
 g.setNode("cover_medicott_t", {
     g: 2,
-    name: 'medicott velur',
+    name: 'medicot velur',
     node: 'cover_medicott_t',
-    url: './img/pokrowce/medicott_silver.jpg',
+    url: './img/pokrowce/medicot velur.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 
@@ -1656,7 +1656,7 @@ g.setNode("cover_silver_t", {
     g: 1,
     name: 'silver',
     node: 'cover_silver_t',
-    url: './img/pokrowce/sensity.jpg',
+    url: './img/pokrowce/silver.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_medicover_t", {});
@@ -1664,7 +1664,7 @@ g.setNode("cover_medicover_t", {
     g: 1,
     name: 'Medicover',
     node: 'cover_medicover_t',
-    url: 'https://hilding.pl/png/product/medicott_1501579581.jpg',
+    url: './img/pokrowce/medicover.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_young_t", {});
@@ -1688,7 +1688,7 @@ g.setNode("cover_probiotex_t", {
     g: 1,
     name: 'Probiotex new',
     node: 'cover_probiotex_t',
-    url: './img/pokrowce/italiano.png',
+    url: './img/pokrowce/probiotex.jpg',
     render: 'materace/materac_salsa_h31.png'
 });
 g.setNode("covers_tencel_top_t", {});
