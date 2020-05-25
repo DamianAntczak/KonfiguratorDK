@@ -596,11 +596,11 @@ class Configurator {
             var counter = 0;
             colors.forEach(color => {
                 // html += '<div class="col-sm-3" onclick="configurator.onColorSelect($(this))">';
-                html += '<div style="display: inline-block;background-clip: content-box;"><div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_cover tiles" style="background-image: url(\'' + color.url + '\')" >';
+                html += '<div style="display: inline-block;background-clip: content-box;vertical-align:top;"><div color="' + color.node + '" onclick="configurator.onColorSelect($(this))" class="img_cover tiles" style="background-image: url(\'' + color.url + '\')" >';
                 // html += '</div>';
                 html += '</div>';
             });
-            html += '<span class="bold text-uppercase">' + group + '</span>';
+            html += '<div class="color bold text-uppercase">' + group + '</div>';
             html += '</div>';
         }
     }
