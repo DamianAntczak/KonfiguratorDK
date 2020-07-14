@@ -41,8 +41,8 @@
 <body>
 <div id="start-img">
     <div class="row text-center" id="configurator-start-view">
-        <h3 class="configurator-start-text ">Stwórz swoje własne łóżko</h3>
-        <button type="button" class="btn btn-lg btn-star" onclick="configurator.start()">START KONFIGURACJI</button>
+        <h3 class="configurator-start-text ">din stil - dit valg.</h3>
+        <button type="button" class="btn btn-lg btn-star" onclick="configurator.start()">Start konfigurator.</button>
     </div>
 </div>
 <section id="configurator-section" class="container-fluid margin-bottom-75 show-section configurator" hidden>
@@ -50,12 +50,12 @@
         <div class="col-sm-6 col-xs-12 configurator-left">
             <div id="configurator-preview" class="wrapper">
                 <div class="price-info">
-                    <h5>Wymiar i cena prezentowanego zestawu:</h5>
+                    <h5>størrelse og pris på det præsenterede sæt: :</h5>
                     <p class="discount-info">Cena regularna</p>
                     <span id="price" class="blue-text configurator-price"></span>
-                    <p class="discount-info">Cena po rabacie</p>
+                    <p class="discount-info">Udsalgspris</p>
                     <span id="price-discount" class="red-text configurator-price"></span>
-                    <p id="price-vat" hidden>Cena zawiera podatek VAT 23 %</p>
+                    <p id="price-vat" hidden>Prisen inkl. 25% moms</p>
                 </div>
                 <div id="example-visualization-info">
                 </div>
@@ -68,9 +68,9 @@
         <div class="col-sm-6 col-xs-12 configurator-right">
             <div class="row margin-bottom-25">
                 <div class="text-center">
-                    <p id="step-number" class="configurator-uppercase">Krok 1</p>
+                    <p id="step-number" class="configurator-uppercase">Første step</p>
                     <p id="step-title" class="blue-text configurator-uppercase"></p>
-                    <!--<button id="skip-step" type="button" class="btn btn-link" onclick="configurator.skipStep()">Pomiń ten krok></button>-->
+                    <!--<button id="skip-step" type="button" class="btn btn-link" onclick="configurator.skipStep()">Spring over></button>-->
                 </div>
             </div>
             <div class="row owl-width">
@@ -107,7 +107,7 @@
             </div>
             <div class="row" style="text-align: center;">
                 <button id="reload" class="btn btn-sm btn-link blue-text" onclick="configurator.repeat()"><span
-                        class="glyphicon glyphicon-repeat"></span> Zacznij ponownie
+                        class="glyphicon glyphicon-repeat"></span> Start forfra
                 </button>
             </div>
         </div>

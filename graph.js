@@ -1,19 +1,19 @@
-g.setNode("summary", {node: 'summary', title: 'Podsumowanie'});
+g.setNode("summary", {node: 'summary', title: 'Oversigt'});
 g.setNode("loadLevel", {});
 g.setNode("step_1", {
     node: 'step_1',
-    title: 'baza',
-    label: 'wybierz bazę',
+    title: 'bund',
+    label: 'Vælg bund',
     number: 1,
     zIndex: 10,
     optionsFilter: false,
     overlay: true,
     overlay_z: 150,
-    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver. '
 });
 g.setNode("base_box", {
     node: 'base_box',
-    label: 'Base box',
+    label: 'Box bund',
     img: 'baza_base_box.jpg',
     render: '/bazy/baza_base_box_h31_novel13.png',
     colors: 'base_box_colors_7',
@@ -21,28 +21,28 @@ g.setNode("base_box", {
 });
 g.setNode("baza_kontynentalna", {
     node: 'baza_kontynentalna',
-    label: 'Kontynent',
+    label: 'Kontinentalseng',
     img: 'kontynent.jpg',
     render: '/bazy/baza_kontynentalna_h31_novel13.png',
     colors: 'kontynent_colors_7',
 });
 g.setNode("baza_kontynentalna_z_szuflada", {
     node: 'baza_kontynentalna_z_szuflada',
-    label: 'Kontynent z szufladą',
+    label: 'Kontinentalseng m. opbevaring',
     img: 'kontynent_z_szuflada.jpg',
     render: '/bazy/baza_kontynentalna_szuflady_h34_novel13.png',
     colors: 'kontynent_szuflada_colors_7',
 });
 g.setNode("baza_tapicerowana", {
     node: 'baza_tapicerowana',
-    label: 'Baza tapicerowana',
+    label: 'Polstret sengebund',
     img: 'baza_tapicerowana.jpg',
     render: '/bazy/baza_tapicerowana_h34_novel13.png',
     colors: 'tapicerowana_colors_7',
 });
 g.setNode("box_podnoszony", {
     node: 'box_podnoszony',
-    label: 'Box-podnoszony',
+    label: 'Box bund m. opbevaring',
     img: 'box_podnoszony.jpg',
     render: '/bazy/baza_box_podnoszony_h31_novel13.png',
     colors: 'base_podnoszony_colors_7',
@@ -1862,15 +1862,15 @@ g.setNode("bp_tap_riviera", {
 
 g.setNode("step_2", {
     node: 'step_2',
-    title: 'wezgłowie',
-    label: 'wybierz wezgłowie',
+    title: ' Vælg sengegavl',
+    label: 'Vælg sengegavl',
     number: 2,
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
     overlay_z: 200,
-    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver. '
 });
 
 g.setNode("glamour", {
@@ -1932,15 +1932,15 @@ g.setNode("urban", {
 
 g.setNode("bb_wezglowie", {
     node: 'bb_wezglowie',
-    title: 'wezgłowie',
-    label: 'wybierz wezgłowie',
+    title: ' Vælg sengegavl',
+    label: 'Vælg sengegavl',
     number: 2,
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
     overlay_z: 200,
-    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver. '
 });
 
 g.setNode("bb_wezglowie_glamour", {
@@ -2002,15 +2002,15 @@ g.setNode("bb_wezglowie_urban", {
 
 g.setNode("bp_wezglowie", {
     node: 'bp_wezglowie',
-    title: 'wezgłowie',
-    label: 'wybierz wezgłowie',
+    title: ' Vælg sengegavl',
+    label: 'Vælg sengegavl',
     number: 2,
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
     overlay_z: 200,
-    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver. '
 });
 
 g.setNode("bp_wezglowie_glamour", {
@@ -2072,15 +2072,15 @@ g.setNode("bp_wezglowie_urban", {
 
 g.setNode("t_wezglowie", {
     node: 't_wezglowie',
-    title: 'wezgłowie',
-    label: 'wybierz wezgłowie',
+    title: ' Vælg sengegavl',
+    label: 'Vælg sengegavl',
     number: 2,
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
     overlay_z: 200,
-    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.',
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver. ',
 });
 
 g.setNode("t_wezglowie_glamour", {
@@ -2134,14 +2134,14 @@ g.setNode("t_wezglowie_momiko", {
 
 g.setNode("t_wezglowie_90", {
     node: 't_wezglowie_90',
-    title: 'wezgłowie',
-    label: 'wybierz wezgłowie',
+    title: ' Vælg sengegavl',
+    label: 'Vælg sengegavl',
     number: 2,
     zIndex: 5,
     colors: 'colors_7',
     optionsFilter: true,
     overlay: true,
-    info: 'Wizualizacja prezentuje model łóżka w wymiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver. '
 });
 g.setNode("t_wezglowie_urban", {
     node: 't_wezglowie_urban',
@@ -3373,117 +3373,117 @@ g.setNode("t_ladylike_200_115", {
 
 g.setNode("legs", {
     node: 'legs',
-    title: 'nóżki',
-    label: 'wybierz nożki',
+    title: 'Sengeben',
+    label: 'vælg sengeben',
     number: 3,
     zIndex: 7,
     optionsFilter: true
 });
 
 g.setNode("stozek_owal_buk", {
-    label: 'Stożek owal buk',
+    label: 'Oval bøg kegle-type ben',
     img: 'stozek_owal_buk.jpg',
     render: '/nogi/noga_stozek_owal_buk.png'
 });
 
 g.setNode("stozek_owal_dab", {
-    label: 'Stożek owal dąb',
+    label: 'Oval egetræ kegle-type ben',
     img: 'stozek_owal_dab.jpg',
     render: '/nogi/noga_stozek_owal_dab.png'
 });
 
 g.setNode("stozek_owal_wenge", {
-    label: 'Stożek owal wenge',
+    label: 'Oval wenge kegle-type ben',
     img: 'stozek_owal_wenge.jpg',
     render: '/nogi/noga_stozek_owal_wenge.png'
 });
 
 g.setNode("stozek_kwadrat_buk", {
-    label: 'Stożek kwadrat buk',
+    label: 'Firkantet bøg kegle-type ben',
     img: 'stozek_kwadrat_buk.jpg',
     render: '/nogi/noga_stozek_kwadrat_buk.png'
 });
 
 g.setNode("stozek_kwadrat_dab", {
-    label: 'Stożek kwadrat dąb',
+    label: 'Firkantet egetræ kegle-type ben',
     img: 'stozek_kwadrat_dab.jpg',
     render: '/nogi/noga_stozek_kwadrat_dab.png'
 });
 
 g.setNode("stozek_kwadrat_wenge", {
-    label: 'Stożek kwadrat wenge',
+    label: 'Firkantet wenge kegle-type bene',
     img: 'stozek_kwadrat_wenge.jpg',
     render: '/nogi/noga_stozek_kwadrat_wenge.png'
 });
 
 g.setNode("stozek_skos_buk", {
-    label: 'Stożek skos buk',
+    label: 'Skrå bøg kegle-type ben',
     img: 'stozek_skos_buk.jpg',
     render: '/nogi/noga_stozek_skos_buk.png'
 });
 
 g.setNode("stozek_skos_dab", {
-    label: 'Stożek skos dąb',
+    label: 'Skrå egetræ kegle-type ben',
     img: 'stozek_skos_dab.jpg',
     render: '/nogi/noga_stozek_skos_dab.png'
 });
 
 g.setNode("stozek_skos_wenge", {
-    label: 'Stożek skos wenge',
+    label: 'Skrå wenge kegle-type ben',
     img: 'stozek_skos_wenge.jpg',
     render: '/nogi/noga_stozek_skos_wenge.png'
 });
 
 g.setNode("stozek_ze_stopka_czern", {
-    label: 'Stożek ze stópką czerń',
+    label: 'Sort kegle-type ben',
     img: 'stozek_ze_stopka_czern.jpg',
     render: '/nogi/noga_stozek_stopka_czern.png'
 });
 
 g.setNode("stozek_ze_stopka_miedz", {
-    label: 'Stożek ze stópką miedź',
+    label: 'Kobber kegle-type ben',
     img: 'stozek_ze_stopka_miedz.jpg',
     render: '/nogi/noga_stozek_stopka_miedz.png'
 });
 
 g.setNode("stozek_ze_stopka_srebro", {
-    label: 'Stożek ze stópką srebro',
+    label: 'Sølv kegle-type ben',
     img: 'stozek_ze_stopka_srebro.jpg',
     render: '/nogi/noga_stozek_stopka_srebro.png'
 });
 
 g.setNode("trojkat_prosty_czern", {
-    label: 'Trójkąt prosty czerń',
+    label: 'Sort trekant-type ben',
     img: 'trojkat_prosty_czern.jpg',
     render: '/nogi/noga_trojkat_prosty_czern.png'
 });
 
 g.setNode("trojkat_prosty_miedz", {
-    label: 'Trójkąt prosty miedź',
+    label: 'Kobber trakabt-type ben',
     img: 'trojkat_prosty_miedz.jpg',
     render: '/nogi/noga_trojkat_prosty_miedz.png'
 });
 
 g.setNode("trojkat_prosty_srebro", {
-    label: 'Trójkąt prosty srebro',
+    label: 'Sølv enkel trekant-type ben',
     img: 'trojkat_prosty_srebro.jpg',
     render: '/nogi/noga_trojkat_prosty_srebro.png'
 });
 
 g.setNode("trojkat_skosny_czern", {
-    label: 'Trójkąt skośny czerń',
+    label: 'Sort skrå-trekant type ben',
     img: 'trojkat_skosny_czern.jpg',
     render: '/nogi/noga_trojkat_skos_czern.png'
 });
 
 g.setNode("trojkat_skosny_miedz", {
-    label: 'Trójkąt skośny miedź',
+    label: 'Kobber skrå-trekant type ben',
     img: 'trojkat_skosny_miedz.jpg',
     render: '/nogi/noga_trojkat_skos_miedz.png'
 });
 
 g.setNode("trojkat_skosny_srebro", {
-    label: 'Trójkąt skośny srebro',
+    label: 'Sølv skrå-trekant type ben',
     img: 'trojkat_skosny_srebro.jpg',
     render: '/nogi/noga_trojkat_skos_srebro.png'
 });
@@ -3501,65 +3501,65 @@ g.setNode("walek_czern", {
 });
 
 g.setNode("walek_miedz", {
-    label: 'Wałek miedź',
+    label: 'Kobber rulle ben',
     img: 'walek_miedz.jpg',
     render: '/nogi/noga_walek_miedz.png'
 });
 
 g.setNode("walek_srebro", {
-    label: 'Wałek srebro',
+    label: 'Sølv rulle ben',
     img: 'walek_srebro.jpg',
     render: '/nogi/noga_walek_srebro.png'
 });
 
 g.setNode("kielich_czern", {
-    label: 'Kielich czerń',
+    label: 'Sorte champaigneben',
     img: 'kielich_czern.jpg',
     render: '/nogi/noga_kielich_czern.png'
 });
 
 g.setNode("kielich_miedz", {
-    label: 'Kielich miedź',
+    label: 'Kobber champaigneben',
     img: 'kielich_miedz.jpg',
     render: '/nogi/noga_kielich_miedz.png'
 });
 
 g.setNode("kielich_srebro", {
-    label: 'Kielich srebro',
+    label: 'Sølv champaigneben',
     img: 'kielich_srebro.jpg',
     render: '/nogi/noga_kielich_srebro.png'
 });
 
 g.setNode("naroznik_czern", {
-    label: 'Narożnik czerń',
+    label: 'Sort hjørne ben',
     img: 'naroznik_czern.jpg',
     render: '/nogi/noga_naroznik_czern.png'
 });
 
 g.setNode("naroznik_miedz", {
-    label: 'Narożnik miedź',
+    label: 'Kobber hjørne ben',
     img: 'naroznik_miedz.jpg',
     render: '/nogi/noga_naroznik_miedz.png'
 });
 
 g.setNode("naroznik_srebro", {
-    label: 'Narożnik srebro',
+    label: 'Sølv hjørne ben',
     img: 'naroznik_srebro.jpg',
     render: '/nogi/noga_naroznik_srebro.png'
 });
 
 g.setNode("ploza_buk", {
-    label: 'Płoza buk',
+    label: 'Bøg ski-type sengebunds ben',
     img: 'ploza_buk.jpg',
     render: '/nogi/ploza_buk.png'
 });
 g.setNode("ploza_dab", {
-    label: 'Płoza dąb',
+    label: 'Eg ski-type sengebunds ben',
     img: 'ploza_dab.jpg',
     render: '/nogi/ploza_dab.png'
 });
 g.setNode("ploza_wenge", {
-    label: 'Płoza wenge',
+    label: 'Sort ski-type sengebunds ben',
     img: 'ploza_wenge.jpg',
     render: '/nogi/ploza_wenge.png'
 });
@@ -3788,34 +3788,34 @@ g.setNode("ploza_wenge_16", {
 
 g.setNode("t_legs", {
     node: 't_legs',
-    title: 'nóżki',
-    label: 'wybierz nożki',
+    title: 'sengeben',
+    label: 'vælg sengeben',
     number: 3,
     zIndex: 7,
     optionsFilter: true
 });
 g.setNode("t_metal_trojkat_srebro", {
-    label: 'Noga metalowa trójkąt srebro',
+    label: 'Sølv trekant metalben',
     img: 'trojkat_srebro.jpg',
     render: '/nogi/noga_trojkat_srebro.png',
 });
 g.setNode("t_metal_trojkat_miedz", {
-    label: 'Noga metalowa trójkąt miedź',
+    label: 'Kobber trekant metalben',
     img: 'trojkat_miedz.jpg',
     render: '/nogi/noga_trojkat_miedz.png',
 });
 g.setNode("t_metal_trojkat_czarny", {
-    label: 'Noga metalowa trójkąt czarny',
+    label: 'Sort trekant metalben',
     img: 'trojkat_czarny.jpg',
     render: '/nogi/noga_trojkat_czern.png',
 });
 g.setNode("t_noga_drewniana_long_bug", {
-    label: 'Noga drewnina long buk',
+    label: 'Lange bøge træben',
     img: 'prostokat_dab.jpg',
     render: '/nogi/noga_prostokat_buk.png',
 });
 g.setNode("t_noga_drewniana_long_wenge", {
-    label: 'Noga drewnina long wenge',
+    label: 'Lange træben',
     img: 'prostokat_wenge.jpg',
     render: '/nogi/noga_prostokat_wenge.png',
 });
@@ -3861,21 +3861,21 @@ g.setEdge("t_noga_drewniana_long_wenge", "t_noga_drewniana_long_wenge_2");
 
 g.setNode("step_typ_materaca", {
     node: 'step_typ_materaca',
-    title: 'typ materac',
-    label: 'wybierz typ materaca',
+    title: 'Madras type',
+    label: 'Vælg madras type',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary'
 });
 
 g.setNode("materac_pokrowiec", {
-    label: 'W pokrowcu',
+    label: 'I lagen',
     img: 'pokrowce/materac_w_pokrowcu_cover.jpg',
     render: 'transparent.png'
 });
 
 g.setNode("materac_tapicerowany", {
-    label: 'Tapicerowany',
+    label: 'Polstret',
     img: 'pokrowce/materac_tapicerowany_cover.jpg',
     render: 'transparent.png'
 });
@@ -3885,34 +3885,34 @@ g.setNode("materac_tapicerowany_1", {label: '', price: {g1: 0, g2: 0}, nextStep:
 
 g.setNode("step_pokrowiec", {
     node: 'step_pokrowiec',
-    title: 'materac w pokrowcu',
-    label: 'wybierz materac w pokrowcu',
+    title: 'Madras i lagen',
+    label: 'Vælg madras i lagen',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
+    info: "Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver."
 });
 g.setNode("step_tapicerowany", {
     node: 'step_tapicerowany',
-    title: 'materac tapicerowany',
-    label: 'wybierz materac tapicerowany',
+    title: 'Polstret madras',
+    label: 'Vælg polstret madras ',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
+    info: "Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver."
 });
 
 g.setNode("step_4", {
     node: 'step_4',
-    title: 'materac',
-    label: 'wybierz materac',
+    title: 'madras',
+    label: 'Vælg madras',
     number: 3,
     zIndex: 25,
     skipToNode: 'step_5',
     optionsFilter: true,
-    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
+    info: "Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver."
 });
 
 g.setNode("materac_tango", {
@@ -4694,21 +4694,21 @@ g.setNode("materac_flamenco_tap_200_200", {
 //*******************************************88
 g.setNode("bb_step_typ_materaca", {
     node: 'bb_step_typ_materaca',
-    title: 'typ materac',
-    label: 'wybierz typ materaca',
+    title: 'Madras type',
+    label: 'Vælg madras type',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary'
 });
 
 g.setNode("bb_materac_pokrowiec", {
-    label: 'W pokrowcu',
+    label: 'I lagen',
     img: 'pokrowce/materac_w_pokrowcu_cover.jpg',
     render: 'transparent.png'
 });
 
 g.setNode("bb_materac_tapicerowany", {
-    label: 'Tapicerowany',
+    label: 'I lagen',
     img: 'pokrowce/materac_tapicerowany_cover.jpg',
     render: 'transparent.png'
 });
@@ -4718,43 +4718,43 @@ g.setNode("bb_materac_tapicerowany_1", {label: '', price: {g1: 0, g2: 0}, nextSt
 
 g.setNode("bb_step_pokrowiec", {
     node: 'bb_step_pokrowiec',
-    title: 'materac w pokrowcu',
-    label: 'wybierz materac w pokrowcu',
+    title: 'Madras i lagen',
+    label: 'Vælg madras i lagen',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
+    info: "Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver."
 });
 g.setNode("bb_step_tapicerowany", {
     node: 'bb_step_tapicerowany',
-    title: 'materac tapicerowany',
-    label: 'wybierz materac tapicerowany',
+    title: 'Polstret madras',
+    label: 'Vælg polstret madras ',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
+    info: "Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver."
 });
 
 //*******************************************88
 g.setNode("bp_step_typ_materaca", {
     node: 'bp_step_typ_materaca',
-    title: 'typ materac',
-    label: 'wybierz typ materaca',
+    title: 'Madras type',
+    label: 'Vælg madras type',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary'
 });
 
 g.setNode("bp_materac_pokrowiec", {
-    label: 'W pokrowcu',
+    label: 'I lagen',
     img: 'pokrowce/materac_w_pokrowcu_cover.jpg',
     render: 'transparent.png'
 });
 
 g.setNode("bp_materac_tapicerowany", {
-    label: 'Tapicerowany',
+    label: 'I lagen',
     img: 'pokrowce/materac_tapicerowany_cover.jpg',
     render: 'transparent.png'
 });
@@ -4764,23 +4764,23 @@ g.setNode("bp_materac_tapicerowany_1", {label: '', price: {g1: 0, g2: 0}, nextSt
 
 g.setNode("bp_step_pokrowiec", {
     node: 'bp_step_pokrowiec',
-    title: 'materac w pokrowcu',
-    label: 'wybierz materac w pokrowcu',
+    title: 'Madras i lagen',
+    label: 'Vælg madras i lagen',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver.'
 });
 g.setNode("bp_step_tapicerowany", {
     node: 'bp_step_tapicerowany',
-    title: 'materac tapicerowany',
-    label: 'wybierz materac tapicerowany',
+    title: 'Polstret madras',
+    label: 'Vælg polstret madras ',
     number: 3,
     zIndex: 25,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver.'
 });
 
 //********************************************
@@ -6300,12 +6300,12 @@ g.setNode("bp_materac_flamenco_tap_200_200", {
 g.setNode("t_materac", {
     node: 't_materac',
     title: 'Materac',
-    label: 'wybierz materac',
+    label: 'Vælg madras',
     number: 4,
     zIndex: 25,
     skipToNode: 'skrzynia_posciel_big',
     optionsFilter: true,
-    info: "Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych."
+    info: "Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver."
 });
 
 g.setNode("t_materac_tango", {
@@ -7133,8 +7133,8 @@ g.setNode("t_materac_flamenco_tap_200_200", {
 
 g.setNode("step_5", {
     node: 'step_5',
-    title: 'materac nawierzchniowy',
-    label: 'wybierz materac nawierzchniowy',
+    title: 'Overmadras',
+    label: 'Vælg en overmadras',
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
@@ -7242,13 +7242,13 @@ g.setNode("materac_bass_200_200", {
 
 g.setNode("bb_nawierzchniowy", {
     node: 'bb_nawierzchniowy',
-    title: 'materac nawierzchniowy',
-    label: 'wybierz materac nawierzchniowy',
+    title: 'Overmadras',
+    label: 'Vælg en overmadras',
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver.'
 });
 
 g.setNode("bb_materac_bass", {
@@ -7356,13 +7356,13 @@ g.setNode("bb_materac_bass_200_200", {
 
 g.setNode("bp_nawierzchniowy", {
     node: 'bp_nawierzchniowy',
-    title: 'materac nawierzchniowy',
-    label: 'wybierz materac nawierzchniowy',
+    title: 'Overmadras',
+    label: 'Vælg en overmadras',
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
     optionsFilter: true,
-    info: 'Wizualizacja prezentuje przykładowy model materaca w rozmiarze 160 x 200 cm. Prezentowane kolory tkanin mogą odbiegać od kolorów rzeczywistych.'
+    info: 'Visualiseringen præsenteres i størrelsen 160 x 200 cm. De præsenterede stoffarver kan afvige fra de faktiske farver.'
 });
 
 g.setNode("bp_materac_bass", {
@@ -7612,8 +7612,8 @@ g.setNode("skrzynia_posciel_urban", {
 
 g.setNode("frame", {
     node: 'frame',
-    title: 'Stelaż',
-    label: 'wybierz stelaż',
+    title: 'Sengramme',
+    label: 'Vælg sengramme',
     number: 6,
     zIndex: 22,
     skipToNode: 'summary',
@@ -7623,8 +7623,8 @@ g.setNode("frame", {
 
 g.setNode("frame_with_box", {
     node: 'frame_with_box',
-    title: 'Stelaż',
-    label: 'wybierz stelaż',
+    title: 'Sengramme',
+    label: 'Vælg sengramme',
     number: 6,
     zIndex: 22,
     skipToNode: 'summary',
@@ -7633,8 +7633,8 @@ g.setNode("frame_with_box", {
 
 g.setNode("frame_with_box_90", {
     node: 'frame_with_box_90',
-    title: 'Stelaż',
-    label: 'wybierz stelaż',
+    title: 'Sengramme',
+    label: 'Vælg sengramme',
     number: 6,
     zIndex: 22,
     skipToNode: 'summary',
@@ -7680,8 +7680,8 @@ g.setEdge("frame_double_lift", "frame_double_lift_180");
 
 g.setNode("frame_no_box_big", {
     node: 'frame_no_box_big',
-    title: 'Stelaż',
-    label: 'wybierz stelaż',
+    title: 'Sengramme',
+    label: 'Vælg sengramme',
     number: 6,
     zIndex: 22,
     skipToNode: 'summary',
@@ -7690,8 +7690,8 @@ g.setNode("frame_no_box_big", {
 
 g.setNode("frame_no_box", {
     node: 'frame_no_box',
-    title: 'Stelaż',
-    label: 'wybierz stelaż',
+    title: 'Sengramme',
+    label: 'Vælg sengramme',
     number: 6,
     zIndex: 22,
     skipToNode: 'summary',
@@ -7700,8 +7700,8 @@ g.setNode("frame_no_box", {
 
 g.setNode("frame_no_box_90", {
     node: 'frame_no_box_90',
-    title: 'Stelaż',
-    label: 'wybierz stelaż',
+    title: 'Sengramme',
+    label: 'Vælg sengramme',
     number: 6,
     zIndex: 22,
     skipToNode: 'summary',
@@ -7739,7 +7739,7 @@ g.setNode("frame_select_classic", {
     render: 'ramiak.png',
 });
 g.setNode("frame_sam", {
-    label: 'Stelaż sam',
+    label: 'Sengramme sam',
     img: '/stelaze/stelaz_sam.jpg',
     render: 'ramiak.png',
 });
@@ -7847,8 +7847,8 @@ g.setEdge("frame_sam", "frame_sam_180");
 
 g.setNode("frame_no_box_small", {
     node: 'frame_no_box_small',
-    title: 'Stelaż',
-    label: 'wybierz stelaż',
+    title: 'Sengramme',
+    label: 'Vælg sengramme',
     number: 6,
     zIndex: 22,
     skipToNode: 'summary',

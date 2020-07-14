@@ -94,7 +94,7 @@ class Configurator {
     }
 
     refresh(node) {
-        $('#step-number').text('Krok ' + node.number);
+        $('#step-number').text('Step ' + node.number);
         $('#step-title').text(node.label);
         let $previousStep = $("#previous-step");
         let $previousStepXs = $("#previous-step-xs");
@@ -104,7 +104,7 @@ class Configurator {
         } else {
             $previousStepXs.show();
             $previousStep.show();
-            $previousStep.text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
+            $previousStep.text('<< Forrige step.: ' + this.allSteps[this.stepIndex - 1].title);
         }
 
         let $nextStep = $('#next-step');
@@ -112,7 +112,7 @@ class Configurator {
         if (this.step.skipEnable !== undefined) {
             $nextStepXs.show();
             $nextStep.show();
-            $nextStep.text('pomiń ten krok >>');
+            $nextStep.text('Spring over >>');
             $nextStep.attr("onclick", "configurator.skipStep()").attr("style", "color:red");
             $nextStepXs.text('pomiń >>');
             $nextStepXs.attr("onclick", "configurator.skipStep()").attr("style", "background-color:#ea4335");
@@ -174,9 +174,9 @@ class Configurator {
             }
         });
         let nodePrice = function (node_name) {
-            return '<div><h6 class="dimension-price">Wymiar i cena</h6>' +
+            return '<div><h6 class="dimension-price">Dimension og pris </h6>' +
                 '<p class="node-price blue-text" id="node-price-' + node_name + '" class="blue-text"></p>' +
-                '<p style="font-size: 6px;">Cena zawiera podatek VAT 23 %</p></div>';
+                '<p style="font-size: 6px;">Prisen inkl. 25% moms</p></div>';
         };
         successors.forEach(node_name => {
             var node = this.graph.node(node_name);
@@ -200,7 +200,7 @@ class Configurator {
 
                 if (counter === 1) {
                     $('#select-' + node_name).parent().hide();
-                    $('.dimension-price').text('Cena');
+                    $('.dimension-price').text('Prisen');
                 }
 
                 $(document.body).on('change', '#select-' + node_name, function () {
@@ -219,7 +219,7 @@ class Configurator {
                         $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
                         configurator.changeHeight(node);
                     } else if (price === -1) {
-                        $owl.find('#node-price-' + node_name).html('Cena łączna z wezgłowiem widoczna w kolejnym kroku')
+                        $owl.find('#node-price-' + node_name).html('Samlede pris inklusiv sengegavl - se det visuelt i næste step.')
                             .removeClass('node-price').addClass('node-price-small');
                     } else {
                         $owl.find('#node-price-' + node_name).parent().hide();
@@ -253,7 +253,7 @@ class Configurator {
         let $previousStepXs = $("#previous-step-xs");
         if (this.allSteps[this.stepIndex - 1] !== undefined) {
             $previousStep.show();
-            $previousStep.text('<< poprzedni krok: ' + this.allSteps[this.stepIndex - 1].title);
+            $previousStep.text('<< Forrige step.: ' + this.allSteps[this.stepIndex - 1].title);
             $previousStepXs.show();
         } else {
             $previousStep.hide();
@@ -339,7 +339,7 @@ class Configurator {
             if (mainNode.skipToNode !== undefined) {
                 $nextStep.show();
                 $nextStepXs.show();
-                $nextStep.text('pomiń ten krok >>');
+                $nextStep.text('Spring over >>');
                 $nextStep.attr("onclick", "configurator.skipStep()").attr("style", "color:red");
                 $nextStepXs.text('pomiń >>');
                 $nextStepXs.attr("onclick", "configurator.skipStep()").attr("style", "background-color:#ea4335");
@@ -392,7 +392,7 @@ class Configurator {
             $nextStep.attr("onclick", "configurator.nextStep()").removeAttr("style");
             $nextStepXs.attr("onclick", "configurator.nextStep()").removeAttr("style");
             let nextStep = configurator.graph.node(node.nextStep);
-            $nextStep.text('następny krok: ' + nextStep.title + ' >>');
+            $nextStep.text('næste step: ' + nextStep.title + ' >>');
             $nextStepXs.text('Dalej >>');
         }
     }
@@ -474,7 +474,7 @@ class Configurator {
     addOption(node_name, successors) {
         var mainNode = this.graph.node(node_name);
 
-        var labelText = "Wymiar";
+        var labelText = "Dimension";
         if (mainNode.img === 'empty.png') {
             labelText = "Wybierz";
         }
@@ -520,7 +520,7 @@ class Configurator {
         });
 
         var html = '<div id="item-color" class="col-sm-12">' +
-            '<h5 class="text-center">Wybierz tkaninę</h5>' +
+            '<h5 class="text-center">Vælg stof type</h5>' +
             '<div class="row">';
 
         html += '<div class="col-sm-12">';
@@ -543,7 +543,7 @@ class Configurator {
                 const color = colors[i];
                 html += '<div style="display: inline-block;background-clip: content-box;text-align: center;">';
                 if (i === 0) {
-                    html += '<span class="bold text-uppercase" style="font-size: 11px;">' + group + ' grupa</span>';
+                    html += '<span class="bold text-uppercase" style="font-size: 11px;">' + group + ' Gruppe</span>';
                 }
                 html += '<div color="' + color.node + '" name="' + color.name + '" onclick="configurator.onColorSelect($(this))" class="tiles img_tkan" style="background-image: url(\'' + color.url + '\')" ></div>';
                 html += '<span class="bold text-uppercase" style="font-size: 8px;">' + color.name + '</span>';
@@ -572,7 +572,7 @@ class Configurator {
         });
 
         var html = '<div id="item-color" class="col-sm-12">' +
-            '<h5 class="text-center">Wybierz pokrowiec</h5>' +
+            '<h5 class="text-center">Vælg lagen til madras</h5>' +
             '<div class="row">';
 
         html += '<div class="col-sm-12">';
@@ -691,7 +691,7 @@ class Configurator {
         var base_node_name = this.step.selectedNodes[1].node;
         if (node !== undefined) {
             if (node.price.g1 === -1 || node.price.g2 === -1) {
-                $owl.find('#node-price-' + base_node_name).html('Cena łączna z wezgłowiem widoczna w kolejnym kroku');
+                $owl.find('#node-price-' + base_node_name).html('Samlede pris inklusiv sengegavl - se det visuelt i næste step.');
             } else if (colorNode.g === 1) {
                 $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
             } else {
@@ -715,15 +715,15 @@ class Configurator {
         // $('#skip-step').hide();
         $('#example-visualization-info').html('');
 
-        this.step = new Step(100, "Podsumowanie", false, 'baza kontynetalna_roko08.png', null);
+        this.step = new Step(100, "Oversigt", false, 'baza kontynetalna_roko08.png', null);
         this.step.selectedNodes[0] = this.graph.node("summary");
         this.allSteps[this.stepIndex] = this.step;
 
         var stepElement = $('#step-content');
         stepElement.html('');
-        // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Podsumowanie')));
+        // var divElement = stepElement.append($('<div>').addClass("row").append($('h3').text('Oversigt')));
         let str = '<div class="col-sm-12">';
-        str += '<h2 class="text-center text-uppercase">podsumowanie</h2>';
+        str += '<h2 class="text-center text-uppercase">Oversigt</h2>';
         let fabricName = function (step) {
             return step.selectedNodes[3] !== undefined ? step.selectedNodes[3].name : '';
         };
@@ -740,17 +740,17 @@ class Configurator {
         });
         str += '</div>';
         str += '<div class="col-sm-6 col-sm-offset-6 margin-top-25 margin-bottom-25">';
-        str += '<h5>Wymiar i cena prezentowanego zestawu:</h5>';
+        str += '<h5>Størrelse og pris på det præsenterede sæt: </h5>';
         str += '<h3 class="blue-text ' + (this.isDiscount() ? 'line-through' : '') + '">' + this.numberWithSpaces(this.getPrice()) + ' PLN</h3>';
         if (this.isDiscount()) {
             str += '<h2 class="red-text">' + this.numberWithSpaces(this.getPriceWithDiscount()) + ' PLN</h2>';
         }
-        str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
+        str += '<p id="price-vat">Prisen inkl. 25% moms</p>';
         str += '</div>';
         str += '<div class="row summary-btn-row">';
-        str += '<div class="col-xs-6 text-center"><button class="btn text-uppercase btn-summary" onclick="location.href=\'https://hilding.pl/index/whereBuy\'" ><span class="fa fa-search"></span> Znajdź salon</button></div>';
+        str += '<div class="col-xs-6 text-center"><button class="btn text-uppercase btn-summary" onclick="location.href=\'https://hilding.pl/index/whereBuy\'" ><span class="fa fa-search"></span> Find et showroom</button></div>';
         str += '<div class="col-xs-6 text-center"><button id="print-btn" class="btn text-uppercase btn-summary"' +
-            'data-loading-text="<i class=\'fa fa-spinner fa-spin \'></i> Tworzenie wydruku"><i class="fa fa-print"></i> Wydrukuj</button></div>';
+            'data-loading-text="<i class=\'fa fa-spinner fa-spin \'></i> Tworzenie wydruku"><i class="fa fa-print"></i> Print</button></div>';
         str += '</div>';
         stepElement.html(str);
         $('#print-btn').click(function () {
@@ -907,7 +907,7 @@ class Configurator {
                                 style: {color: '#737477', fontSize: 16, bold: false}
                             },
                             {
-                                text: 'Cena zawiera podatek VAT 23%;',
+                                text: 'Prisen inkl. 25% moms;',
                                 style: {color: '#737477', fontSize: 8, bold: false}
                             },
                             {
