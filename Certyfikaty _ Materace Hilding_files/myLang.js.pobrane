@@ -1,2 +1,0 @@
-function My_Lang(){var langObject;this.set=function(lang){langObject=lang;}
-this.get=function(variable){if(langObject[variable])return langObject[variable];return variable;}}

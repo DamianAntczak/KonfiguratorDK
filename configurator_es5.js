@@ -159,7 +159,7 @@ var Configurator =
                             price = node.price.g1;
                         }
 
-                        $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' PLN');
+                        $owl.find('#node-price-' + node_name).html(configurator.numberWithSpaces(price) + ' DKK');
                         $owl.trigger('refresh.owl.carousel');
                         configurator.step.selectedNodes[2] = node;
                         configurator.showPrice();
@@ -251,7 +251,7 @@ var Configurator =
                         price += step.selectedNodes[2].price.g1;
                     }
                 });
-                $('#price').text(configurator.numberWithSpaces(price) + ' PLN*').removeAttr('hidden');
+                $('#price').text(configurator.numberWithSpaces(price) + ' DKK*').removeAttr('hidden');
                 $('#price-vat').removeAttr('hidden');
             }
         }, {
@@ -340,9 +340,9 @@ var Configurator =
 
                     if (node !== undefined) {
                         if (colorNode.g === 1) {
-                            $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' PLN');
+                            $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g1) + ' DKK');
                         } else {
-                            $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' PLN');
+                            $owl.find('#node-price-' + base_node_name).html(configurator.numberWithSpaces(node.price.g2) + ' DKK');
                         }
                     }
                 });
@@ -373,13 +373,13 @@ var Configurator =
                     var priceNode = step.selectedNodes[2];
                     str += '<div class="row summary-price-row"">';
                     str += '<div class="col-sm-6 text-capitalize">' + step.selectedNodes[0].title + ' ' + step.selectedNodes[1].label.replace(/<br[^>]*>/gi, ' ') + ' ' + fabricName(step) + '</div>';
-                    str += '<div class="col-sm-6 text-right">' + _this4.numberWithSpaces(priceNode.price.g1) + ' PLN*</div>' + '</div>';
+                    str += '<div class="col-sm-6 text-right">' + _this4.numberWithSpaces(priceNode.price.g1) + ' DKK*</div>' + '</div>';
                     priceSum += priceNode.price.g1;
                 });
                 str += '</div>';
                 str += '<div class="col-sm-6 col-sm-offset-6 margin-top-25 margin-bottom-25">';
                 str += '<h5>Wymiar i cena prezentowanego<br> zestawu:</h5>';
-                str += '<h3 class="blue-text">' + this.numberWithSpaces(priceSum) + ' PLN</h3>';
+                str += '<h3 class="blue-text">' + this.numberWithSpaces(priceSum) + ' DKK</h3>';
                 str += '<p id="price-vat">Cena zawiera podatek VAT 23 %</p>';
                 str += '</div>';
                 str += '<div class="row summary-btn-row">';

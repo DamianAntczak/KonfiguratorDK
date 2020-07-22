@@ -7133,8 +7133,8 @@ g.setNode("t_materac_flamenco_tap_200_200", {
 
 g.setNode("step_5", {
     node: 'step_5',
-    title: 'Overmadras',
-    label: 'Vælg en overmadras',
+    title: 'topmadras',
+    label: 'Vælg en topmadras',
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
@@ -7242,8 +7242,8 @@ g.setNode("materac_bass_200_200", {
 
 g.setNode("bb_nawierzchniowy", {
     node: 'bb_nawierzchniowy',
-    title: 'Overmadras',
-    label: 'Vælg en overmadras',
+    title: 'topmadras',
+    label: 'Vælg en topmadras',
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
@@ -7356,8 +7356,8 @@ g.setNode("bb_materac_bass_200_200", {
 
 g.setNode("bp_nawierzchniowy", {
     node: 'bp_nawierzchniowy',
-    title: 'Overmadras',
-    label: 'Vælg en overmadras',
+    title: 'topmadras',
+    label: 'Vælg en topmadras',
     number: 4,
     zIndex: 30,
     skipToNode: 'summary',
