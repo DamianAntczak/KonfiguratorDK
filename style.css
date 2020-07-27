@@ -397,3 +397,17 @@ body, html {
 .extra-text-summary{
     font-size: 0.8rem;
 }
+
+.wall-color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #b3b3b3;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.wall-color-circle:hover {
+    border: 2px solid #4378b4;
+}

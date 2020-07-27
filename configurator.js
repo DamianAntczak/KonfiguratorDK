@@ -79,6 +79,7 @@ class Configurator {
     start() {
         $('#start-img').remove();
         $('#configurator-section').show();
+        $('#background-color-header').after(this.addBackgroundColor());
         this.loadLevel("step_1");
     }
 
@@ -553,6 +554,30 @@ class Configurator {
             // html += '<div class="row">';
             html += '</div>';
         }
+    }
+
+    addBackgroundColor() {
+        var colors = [
+            {color:"#ffffff", bcg: "wnetrze_biel.jpg"},
+            {color:"#b1b1b1", bcg: "wnetrze_szary.jpg"},
+            {color:"#f9ddbc", bcg: "wnetrze_bez.jpg"},
+            {color:"#2d6645", bcg: "wnetrze_zielony.jpg"},
+            {color:"#81b2ec", bcg: "wnetrze_niebieski.jpg"},
+            {color:"#e5cdd6", bcg: "wnetrze_rozowy.jpg"},
+            {color:"#262626", bcg: "wnetrze_czarny.jpg"}];
+
+        var html =
+            '<div class="row text-center">';
+        colors.forEach(color => {
+            html += '<div class="wall-color-circle" style="background-color: ' + color.color +'" onclick="configurator.onBackgroundColorChange(\'' + color.bcg +'\')"></div>';
+        });
+        html += '</div>';
+        return html;
+    }
+
+    onBackgroundColorChange(background) {
+        console.log("Background color change");
+        $('#base-img-src').attr("src","./img/background/"+background);
     }
 
     addCover(coverNode) {
