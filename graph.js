@@ -51,50 +51,50 @@ g.setNode("box_podnoszony", {
 g.setNode("base_box_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1649, g2: 1749},
+    price: {g1: 3844, g2: 4013},
     nextStep: 'bb_wezglowie'
 });
 g.setNode("base_box_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1769, g2: 1869},
+    price: {g1: 4139, g2: 4351},
     nextStep: 'bb_wezglowie'
 });
 g.setNode("base_box_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2099, g2: 2199},
+    price: {g1: 4942, g2: 5195},
     nextStep: 'bb_wezglowie'
 });
 g.setNode("base_box_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2398, g2: 2598},
+    price: {g1: 5676, g2: 5998},
     nextStep: 'bb_wezglowie'
 });
 
 g.setNode("baza_kontynentalna_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 2099, g2: 2299},
+    price: {g1: 4942, g2: 5364},
     nextStep: 'step_2'
 });
 g.setNode("baza_kontynentalna_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 3198, g2: 3498},
+    price: {g1: 7518, g2: 8194},
     nextStep: 'step_2'
 });
 g.setNode("baza_kontynentalna_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 3298, g2: 3598},
+    price: {g1: 7772, g2: 8448},
     nextStep: 'step_2'
 });
 g.setNode("baza_kontynentalna_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 3598, g2: 3898},
+    price: {g1: 8448, g2: 9124},
     nextStep: 'step_2'
 });
 
