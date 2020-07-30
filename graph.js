@@ -4143,50 +4143,50 @@ g.setNode("materac_step_200_200", {
 g.setNode("materac_salsa_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1699, g2: 1699},
+    price: {g1: 5896, g2: 5896},
     nextStep: 'step_5'
 });
 g.setNode("materac_salsa_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1899, g2: 1899},
+    price: {g1: 6569, g2: 6569},
     nextStep: 'step_5'
 });
 g.setNode("materac_salsa_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2069, g2: 2069},
+    price: {g1: 7154, g2: 7154},
     nextStep: 'step_5'
 });
 g.setNode("materac_salsa_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2718, g2: 2718},
+    price: {g1: 2* 4720, g2: 2* 4720},
     nextStep: 'step_5'
 });
 
 g.setNode("materac_chacha_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1329, g2: 1329},
+    price: {g1: 4324, g2: 4324},
     nextStep: 'step_5'
 });
 g.setNode("materac_chacha_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1459, g2: 1459},
+    price: {g1: 4732, g2: 4732},
     nextStep: 'step_5'
 });
 g.setNode("materac_chacha_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 1639, g2: 1639},
+    price: {g1: 5299, g2: 5299},
     nextStep: 'step_5'
 });
 g.setNode("materac_chacha_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2198, g2: 2198},
+    price: {g1: 2* 5299, g2: 2* 5299},
     nextStep: 'step_5'
 });
 
@@ -5014,25 +5014,25 @@ g.setNode("bb_materac_step_200_200", {
 g.setNode("bb_materac_salsa_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1699, g2: 1699},
+    price: {g1: 5896, g2: 5896},
     nextStep: 'bb_nawierzchniowy'
 });
 g.setNode("bb_materac_salsa_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1899, g2: 1899},
+    price: {g1: 6569, g2: 6569},
     nextStep: 'bb_nawierzchniowy'
 });
 g.setNode("bb_materac_salsa_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2069, g2: 2069},
+    price: {g1: 7154, g2: 7154},
     nextStep: 'bb_nawierzchniowy'
 });
 g.setNode("bb_materac_salsa_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2718, g2: 2718},
+    price: {g1: 2* 4720, g2: 2* 4720},
     nextStep: 'bb_nawierzchniowy',
     extra: '*(2x 100/200)'
 });
@@ -5040,25 +5040,25 @@ g.setNode("bb_materac_salsa_200_200", {
 g.setNode("bb_materac_chacha_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1329, g2: 1329},
+    price: {g1: 4324, g2: 4324},
     nextStep: 'bb_nawierzchniowy'
 });
 g.setNode("bb_materac_chacha_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1459, g2: 1459},
+    price: {g1: 4732, g2: 4732},
     nextStep: 'bb_nawierzchniowy'
 });
 g.setNode("bb_materac_chacha_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 1639, g2: 1639},
+    price: {g1: 5299, g2: 5299},
     nextStep: 'bb_nawierzchniowy'
 });
 g.setNode("bb_materac_chacha_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2198, g2: 2198},
+    price: {g1: 3574, g2: 3574},
     nextStep: 'bb_nawierzchniowy',
     extra: '*(2x 100/200)'
 });
@@ -5786,49 +5786,49 @@ g.setNode("bp_materac_step_200_200", {
 g.setNode("bp_materac_salsa_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1699, g2: 1699},
+    price: {g1: 5896, g2: 5896},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_salsa_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1899, g2: 1899},
+    price: {g1: 6569, g2: 6569},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_salsa_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2069, g2: 2069},
+    price: {g1: 7154, g2: 7154},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_salsa_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2718, g2: 2718},
+    price: {g1: 2 * 4720, g2: 2 * 4720},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_chacha_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1329, g2: 1329},
+    price: {g1: 4324, g2: 4324},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_chacha_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1459, g2: 1459},
+    price: {g1: 4732, g2: 4732},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_chacha_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 1639, g2: 1639},
+    price: {g1: 5299, g2: 5299},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_chacha_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2198, g2: 2198},
+    price: {g1: 2* 3574, g2: 2* 3574},
     nextStep: 'bp_nawierzchniowy'
 });
 g.setNode("bp_materac_pasodoble_140_200", {
@@ -6527,31 +6527,31 @@ g.setNode("t_materac_step_200_200", {
 g.setNode("t_materac_salsa_90_200", {
     label: '90/200',
     width: 90,
-    price: {g1: 1119, g2: 1119},
+    price: {g1: 3864, g2: 3864},
     nextStep: 'skrzynia_posciel_90'
 });
 g.setNode("t_materac_salsa_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1699, g2: 1699},
+    price: {g1: 5896, g2: 5896},
     nextStep: 'skrzynia_posciel_big'
 });
 g.setNode("t_materac_salsa_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1899, g2: 1899},
+    price: {g1: 6569, g2: 6569},
     nextStep: 'skrzynia_posciel_big'
 });
 g.setNode("t_materac_salsa_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 2069, g2: 2069},
+    price: {g1: 7154, g2: 7154},
     nextStep: 'skrzynia_posciel_big'
 });
 g.setNode("t_materac_salsa_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2718, g2: 2718},
+    price: {g1: 2 * 4720, g2: 2 * 4720},
     nextStep: 'skrzynia_posciel_big',
     extra: '*(2x 100/200)'
 });
@@ -6564,25 +6564,25 @@ g.setNode("t_materac_chacha_90_200", {
 g.setNode("t_materac_chacha_140_200", {
     label: '140/200',
     width: 140,
-    price: {g1: 1329, g2: 1329},
+    price: {g1: 4324, g2: 4324},
     nextStep: 'skrzynia_posciel_small'
 });
 g.setNode("t_materac_chacha_160_200", {
     label: '160/200',
     width: 160,
-    price: {g1: 1459, g2: 1459},
+    price: {g1: 4732, g2: 4732},
     nextStep: 'skrzynia_posciel_small'
 });
 g.setNode("t_materac_chacha_180_200", {
     label: '180/200',
     width: 180,
-    price: {g1: 1639, g2: 1639},
+    price: {g1: 5299, g2: 5299},
     nextStep: 'skrzynia_posciel_small'
 });
 g.setNode("t_materac_chacha_200_200", {
     label: '200/200',
     width: 200,
-    price: {g1: 2198, g2: 2198},
+    price: {g1: 2* 3574, g2: 2* 3574},
     nextStep: 'skrzynia_posciel_small',
     extra: '*(2x 100/200)'
 });
