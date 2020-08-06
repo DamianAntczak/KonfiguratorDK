@@ -79,7 +79,7 @@ class Configurator {
     start() {
         $('#start-img').remove();
         $('#configurator-section').show();
-        $('#background-color-header').after(this.addBackgroundColor());
+        $('#background-color-header').before(this.addBackgroundColor());
         this.loadLevel("step_1");
     }
 
@@ -90,6 +90,7 @@ class Configurator {
         this.width = 0;
         this.selectedColor = undefined;
         $("img[id^='render-']").remove();
+        $('#wall-colors').remove();
         $('#reload').hide();
         this.start();
     }
@@ -567,7 +568,7 @@ class Configurator {
             {color:"#262626", bcg: "wnetrze_czarny.jpg"}];
 
         var html =
-            '<div class="row text-center">';
+            '<div id="wall-colors" class="row text-center">';
         colors.forEach(color => {
             html += '<div class="wall-color-circle" style="background-color: ' + color.color +'" onclick="configurator.onBackgroundColorChange(\'' + color.bcg +'\')"></div>';
         });
