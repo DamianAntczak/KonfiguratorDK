@@ -559,16 +559,21 @@ class Configurator {
 
     addBackgroundColor() {
         var colors = [
-            {color:"#ffffff", bcg: "wnetrze_biel.jpg"},
-            {color:"#b1b1b1", bcg: "wnetrze_szary.jpg"},
-            {color:"#f9ddbc", bcg: "wnetrze_bez.jpg"},
-            {color:"#2d6645", bcg: "wnetrze_zielony.jpg"},
-            {color:"#81b2ec", bcg: "wnetrze_niebieski.jpg"},
-            {color:"#e5cdd6", bcg: "wnetrze_rozowy.jpg"},
-            {color:"#262626", bcg: "wnetrze_czarny.jpg"}];
+            {color:"#ffffff", bcg: "1.jpg"},
+            {color:"#b1b1b1", bcg: "2.jpg"},
+            {color:"#ead2b0", bcg: "3.jpg"},
+            {color:"#9b8173", bcg: "4.jpg"},
+            {color:"#f4d969", bcg: "5.jpg"},
+            {color:"#eaccd6", bcg: "6.jpg"},
+            {color:"#db7178", bcg: "7.jpg"},
+            {color:"#7da3af", bcg: "8.jpg"},
+            {color:"#71b3f1", bcg: "9.jpg"},
+            {color:"#0d3182", bcg: "10.jpg"},
+            {color:"#006842", bcg: "11.jpg"},
+            {color:"#262626", bcg: "12.jpg"}];
 
         var html =
-            '<div id="wall-colors" class="row text-center">';
+            '<div id="wall-colors" class="row text-center" style="padding-top: 25px;">';
         colors.forEach(color => {
             html += '<div class="wall-color-circle" style="background-color: ' + color.color +'" onclick="configurator.onBackgroundColorChange(\'' + color.bcg +'\')"></div>';
         });

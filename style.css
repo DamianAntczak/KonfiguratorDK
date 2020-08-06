@@ -399,8 +399,8 @@ body, html {
 }
 
 .wall-color-circle {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 1px solid #b3b3b3;
     display: inline-block;
