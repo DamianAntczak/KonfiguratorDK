@@ -559,7 +559,8 @@ class Configurator {
 
     addBackgroundColor() {
         var colors = [
-            {color:"#ffffff", bcg: "1.jpg"},
+            {color:"#ffffff", bcg: "wnetrze_biel.jpg"},
+            {color:"#dedede", bcg: "1.jpg"},
             {color:"#b1b1b1", bcg: "2.jpg"},
             {color:"#ead2b0", bcg: "3.jpg"},
             {color:"#9b8173", bcg: "4.jpg"},
